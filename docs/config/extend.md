@@ -257,7 +257,7 @@ busuanzi: false
 
 ## 数学公式
 
-> 请查看作者文章：[Theme: 渲染器 markdown-it]()
+> 请查看作者文章：[Theme: 渲染器 markdown-it](https://www.efu.me/posts/941787ac.html)
 
 主题支持使用 **Latex** 数学公式 当需要使用数学公式时，在文章的 **Front-Matter** 添加。
 

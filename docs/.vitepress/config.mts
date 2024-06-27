@@ -3,11 +3,11 @@ import {tabsMarkdownPlugin} from 'vitepress-plugin-tabs'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-    lang: 'zh-Hans',
+    lang: 'zh-CN',
     title: "Solitude 文档",
     description: "一款优雅简洁易使用的 Hexo 主题",
     head: [
-        ['link', {rel: 'icon', href: '/favicon.ico'}],
+        ['link', {rel: 'icon', href: '/favicon.ico', type: 'image/x-icon'}],
         ['meta', { name: 'theme-color', content: '#5f67ee' }],
         ['meta', { property: 'og:type', content: 'website' }],
         ['meta', { property: 'og:locale', content: 'zh-hans' }],
@@ -141,11 +141,7 @@ export default defineConfig({
         },
 
         lastUpdated: {
-            text: '最后更新于',
-            formatOptions: {
-                dateStyle: 'short',
-                timeStyle: 'medium'
-            }
+            text: '最后更新于'
         },
 
         langMenuLabel: '多语言',
@@ -162,12 +158,7 @@ export default defineConfig({
     },
     sitemap: {
         hostname: 'https://solitude.js.org',
-        transformItems(items) {
-            return items.filter((item) => !item.url.includes('migration'))
-        }
     },
     lastUpdated: true,
-    cleanUrls: true,
-    metaChunk: true,
-    ignoreDeadLinks: true
+    metaChunk: true
 })
