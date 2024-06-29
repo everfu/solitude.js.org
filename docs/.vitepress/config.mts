@@ -160,6 +160,5 @@ export default defineConfig({
         hostname: 'https://solitude.js.org',
     },
     lastUpdated: true,
-    metaChunk: true,
-    mpa: true
+    metaChunk: true
 })
