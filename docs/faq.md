@@ -20,3 +20,12 @@ description: 一些常见问题的解答
 ## 如何配置出像作者博客中的相册页面？
 
 作者通过使用 tags plugin 的 gallery 实现。
+
+## TypeError: Cannot read properties of null (reading 'utcOffset')
+
+检查 `Hexo` 配置文件的 `timezone` 是否正确配置。
+
+示例：
+```yaml
+timezone: Asia/Shanghai
+```
