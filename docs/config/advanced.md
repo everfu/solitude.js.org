@@ -59,7 +59,3 @@ description: Solitude 主题的高级配置
     'compress', 'minify-css', 'minify-html'
     ))
     ```
-
-::: danger 注意
-如果使用了 Mermaid 需要跳过那个页面压缩，代码位置：
-:::

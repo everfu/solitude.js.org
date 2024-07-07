@@ -3,14 +3,10 @@ title: 项目介绍
 description: 欢迎使用 Hexo 主题 Solitude
 ---
 
-![Solitude](https://s3.qjqq.cn/47/66210db68b7f2.webp!color)
+![Solitude](/screenshot.avif)
 
 Solitude 是一款设计师风格的主题，它提供了很多易于博客书写的功能，以帮助你构建美丽且优雅的博客站。
 它的目标是使用简洁的代码即可完成复杂的构建。
-
-预览： [Ever Fu](https://www.efu.me/){target='_blank'}
-
-社区： [QQ群](https://qm.qq.com/q/mYIJRTqo0w){target='_blank'}
 
 主题设计由 [@张洪 Heo](https://github.com/zhheo){target='_blank'} 全权授权。
 
@@ -27,8 +23,6 @@ Solitude 是一款设计师风格的主题，它提供了很多易于博客书�
 - 文章功能：AI 摘要、代码高亮
 
 ## 赞助者
-
-[爱发电](https://afdian.net/a/everfu){target='_blank'}丨[GitHub Sponsor](https://github.com/sponsors/everfu){target='_blank'}
 
 赞助的朋友们，因为你们的支持使我能够继续开源计划，谢谢！
 

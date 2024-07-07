@@ -6,7 +6,7 @@ hero:
   text: "一款简洁的 Hexo 主题"
   tagline: 你所需要即是我所创造。
   image:
-    src: /favicon.svg
+    src: /persona.avif
   actions:
     - theme: brand
       text: 什么是 Solitude？
@@ -18,19 +18,16 @@ hero:
       text: Github
       link: https://github.com/everfu/hexo-theme-solitude
 features:
-  - icon: 📝
-    title: Markdown
-    details: 支持丰富的 Tags Plugin，让你可以更方便的写作。
-  - icon: 🎨
-    title: PWA
-    details: 支持 PWA，可以让你的网站离线访问。
-  - icon: 🌙
-    title: 评论系统
-    details: 支持多种评论系统(Valine、Waline、Twikoo、Artalk、Gisqus)。
-  - icon: 📱
-    title: 响应式
-    details: 适配移动端，以最少的代码实现丰富的功能。
-  - icon: 🎉
-    title: 支持网站机器人和文章摘要
-    details: 通过配置文件，可以自定义网站机器人和文章摘要。
+  - title: "简洁"
+    details: "简洁的设计，专注于内容。"
+  - title: "易用"
+    details: "简单易用，快速上手。"
+  - title: "响应式"
+    details: "适配各种设备，保证用户体验。"
+  - title: "自定义"
+    details: "支持多种自定义配置，满足个性化需求。"
+  - title: "多语言"
+    details: "支持多种语言。"
+  - title: "SEO"
+    details: "优化 SEO，提升搜索引擎排名。"
 ---
