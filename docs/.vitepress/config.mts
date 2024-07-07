@@ -8,13 +8,20 @@ export default defineConfig({
     description: "一款优雅简洁易使用的 Hexo 主题",
     head: [
         ['link', {rel: 'icon', href: '/favicon.ico', type: 'image/x-icon'}],
-        ['meta', { name: 'theme-color', content: '#5f67ee' }],
-        ['meta', { property: 'og:type', content: 'website' }],
-        ['meta', { property: 'og:locale', content: 'zh-hans' }],
-        ['meta', { property: 'og:title', content: 'Solitude 文档 | 一款简洁优雅的 Hexo 主题' }],
-        ['meta', { property: 'og:site_name', content: 'Solitude 文档' }],
-        ['meta', { property: 'og:image', content: 'https://s3.qjqq.cn/47/6616165b0c3de.webp!color' }],
-        ['meta', { property: 'og:url', content: 'https://solitude.js.org/' }],
+        ['meta', {name: 'theme-color', content: '#5f67ee'}],
+        ['meta', {property: 'og:type', content: 'website'}],
+        ['meta', {property: 'og:locale', content: 'zh-hans'}],
+        ['meta', {property: 'og:title', content: 'Solitude 文档'}],
+        ['meta', {property: 'og:site_name', content: 'Solitude 文档'}],
+        ['meta', {property: 'og:image', content: 'https://s3.qjqq.cn/47/6616165b0c3de.webp!color'}],
+        ['meta', {property: 'og:url', content: 'https://solitude.js.org/'}],
+        ['meta', {property: 'og:description', content: '一款优雅简洁易使用的 Hexo 主题'}],
+        ['meta', {property: 'google-adsense-account', content: 'ca-pub-6338523842252061'}],
+        ['script', {
+            async: 'async',
+            src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6338523842252061',
+            crossorigin: 'anonymous'
+        }]
     ],
     themeConfig: {
         logo: '/favicon.ico',
