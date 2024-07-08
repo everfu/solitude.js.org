@@ -26,7 +26,7 @@ export default defineConfig({
     themeConfig: {
         logo: '/favicon.ico',
         nav: [
-            {text: '作者', link: 'https://www.efu.me'},
+            {text: '作者', link: 'https://everfu.org'},
             {text: 'QQ 群', link: 'https://qm.qq.com/q/mYIJRTqo0w'}
         ],
 
