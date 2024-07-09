@@ -304,6 +304,8 @@ extends:
 
 PWA 全称为 Progressive Web App ，中文译为渐进式 Web APP，其目的是通过各种 Web 技术实现与原生 App 相近的用户体验。 纵观现有 Web 应用与原生应用的对比差距，如离线缓存、沉浸式体验等等，可以通过已经实现的 Web 技术去弥补这些差距，最终达到与原生应用相近的用户体验效果。
 
+[SWPP 官方文档 & 项目地址](https://github.com/EmptyDreams/swpp-backends)
+
 **提供一个 SWPP 文件**
 ```js
         module.exports.config = {
