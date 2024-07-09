@@ -306,6 +306,27 @@ PWA 全称为 Progressive Web App ，中文译为渐进式 Web APP，其目的�
 
 [SWPP 官方文档 & 项目地址](https://github.com/EmptyDreams/swpp-backends)
 
+1. 安装插件
+  ```bash
+  npm install hexo-swpp swpp-backends --save
+  ```
+2. 开启主题配置
+  ```yaml
+  # PWA
+  # https://developer.mozilla.org/zh-CN/docs/Web/Progressive_web_apps
+  # docs: https://solitude.js.org/config/extra#pwa
+  pwa:
+    enable: false
+    manifest: /manifest.json # manifest.json 文件路径
+    theme_color: "#006a73" # 主题颜色
+    mask_icon: /img/pwa/favicon.ico # 遮罩图标
+    apple_touch_icon: /img/pwa/favicon.ico # 苹果触摸图标
+    bookmark_icon: /img/pwa/favicon.ico # 书签图标
+    favicon_32_32: /img/pwa/favicon_32.ico # 32x32图标
+    favicon_16_16: /img/pwa/favicon_16.ico # 16x16图标
+  ```
+3. 在项目根目录新建 `sw-rules.js` 加入以下内容。
+
 **提供一个 SWPP 文件**
 ```js
         module.exports.config = {
@@ -451,6 +472,101 @@ PWA 全称为 Progressive Web App ，中文译为渐进式 Web APP，其目的�
         module.exports.skipRequest = (request) => request.url.startsWith("https://i0.hdslb.com") ||
           request.url.startsWith('https://meting.qjqq.cn') ||
           request.url.startsWith('https://api.i-meto.com');
+```
+
+4. 根据需求在 source 文件夹下新建 `manifest.json` 文件并增加内容，以下是示例：
+```json
+{
+    "name": "放养平凡",
+    "short_name": "BTA",
+    "theme_color": "#b00000",
+    "background_color": "#b00000dd",
+    "description": "世界为你简单",
+    "display": "fullscreen",
+    "scope": "/",
+    "start_url": "/",
+    "lang": "zh-CN",
+    "id": "/",
+    "icons": [
+      {
+        "src": "pwa/16.ico",
+        "sizes": "16x16",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "pwa/16.ico",
+        "sizes": "16x16",
+        "type": "image/png",
+        "purpose": "maskable"
+      },
+      {
+        "src": "pwa/32.ico",
+        "sizes": "32x32",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "pwa/32.ico",
+        "sizes": "32x32",
+        "type": "image/png",
+        "purpose": "maskable"
+      },
+      {
+        "src": "pwa/64.ico",
+        "sizes": "64x64",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "pwa/64.ico",
+        "sizes": "64x64",
+        "type": "image/png",
+        "purpose": "maskable"
+      },
+      {
+        "src": "pwa/128.ico",
+        "sizes": "128x128",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "pwa/128.ico",
+        "sizes": "128x128",
+        "type": "image/png",
+        "purpose": "maskable"
+      },
+      {
+        "src": "pwa/256.ico",
+        "sizes": "256x256",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "pwa/256.ico",
+        "sizes": "256x256",
+        "type": "image/png",
+        "purpose": "maskable"
+      }
+    ],
+    "screenshots": [
+      {
+          "src": "https://assets.btwoa.com/blogbtwoacom.avif",
+          "sizes": "1920x1080",
+          "type": "image/png",
+          "form_factor": "wide",
+          "label": "Fullscreen of BTA"
+      },
+      {
+        "src": "https://assets.btwoa.com/darkblogbtwoacom.avif",
+        "sizes": "1920x1080",
+        "type": "image/png",
+        "form_factor": "wide",
+        "label": "Fullscreen of BTA"
+      }
+    ],
+    "splash_pages": null
+  }
 ```
 
 ## CDN
