@@ -16,6 +16,7 @@ export default defineConfig({
         ['meta', {property: 'og:image', content: 'https://s3.qjqq.cn/47/6616165b0c3de.webp!color'}],
         ['meta', {property: 'og:url', content: 'https://solitude.js.org/'}],
         ['meta', {property: 'og:description', content: '一款优雅简洁易使用的 Hexo 主题'}],
+        ['meta', {name: 'google-site-verification', content: 'OQ-FnVME50EgIvv5nO4fsNl7EHkEl0vUSoFUe_fAMgY'}],
         ['meta', {property: 'google-adsense-account', content: 'ca-pub-6338523842252061'}],
         ['script', {
             async: 'async',
