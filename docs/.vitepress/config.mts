@@ -28,7 +28,8 @@ export default defineConfig({
         logo: '/favicon.ico',
         nav: [
             {text: '作者', link: 'https://everfu.org'},
-            {text: 'QQ 群', link: 'https://qm.qq.com/q/mYIJRTqo0w'}
+            {text: 'QQ 群', link: 'https://qm.qq.com/q/mYIJRTqo0w'},
+            {text: '预览', link: 'https://everfu.github.io/Solitude/'},
         ],
 
         sidebar: [
@@ -84,6 +85,7 @@ export default defineConfig({
                     {text: '豆瓣', link: '/feature/douban'},
                     {text: '弹幕留言页', link: '/feature/danmaku'},
                     {text: '即刻短文', link: '/feature/jike'},
+                    {text: '最近评论', link: '/feature/recent-comments'},
                 ]
             },
             {
@@ -102,11 +104,11 @@ export default defineConfig({
 
         socialLinks: [
             {icon: 'github', link: 'https://github.com/everfu/hexo-theme-solitude'},
-            {icon: 'twitter', link: 'https://twitter.com/efu_oo'},
+            {icon: 'twitter', link: 'https://twitter.com/everfu8'},
         ],
 
         footer: {
-            copyright: `版权所有 © 2023-${new Date().getFullYear()} Ever Fu`,
+            copyright: `版权所有 © ${new Date().getFullYear()} Ever Fu`,
             message: '基于 MIT 许可发布'
         },
 
@@ -163,6 +165,10 @@ export default defineConfig({
     markdown: {
         config(md) {
             md.use(tabsMarkdownPlugin)
+        },
+        lineNumbers: true,
+        image: {
+            lazyLoading: true
         }
     },
     sitemap: {

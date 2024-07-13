@@ -26,4 +26,4 @@ Solitude 是一款设计师风格的主题，它提供了很多易于博客书�
 
 赞助的朋友们，因为你们的支持使我能够继续开源计划，谢谢！
 
-[![](https://fastly.jsdelivr.net/gh/efuo/static/sponsors.svg)](https://fastly.jsdelivr.net/gh/efuo/static/sponsors.svg){target='_blank'}
+[Sponsor](https://everfu.org/spnsor){target='_blank'}

@@ -468,6 +468,44 @@ font:
   font-family: 'PingFang SC,Hiragino Sans GB,Microsoft YaHei'
   code-font-family: '"monospace", "monospace"'
 ```
+
+```yaml [网站背景]
+# 背景图片
+# Background image
+background:
+  enable: false
+  opacity: .2
+  dark: https://bu.dusays.com/2023/09/29/651685ce667d1.jpg
+  light: https://bu.dusays.com/2023/09/29/651685cc18d39.jpg
+```
+
+```yaml [诱骗点击]
+# 诱骗
+# lure
+lure:
+  enable: false
+  # 跳出
+  # Jump out
+  jump: "404 Not Found"
+  # 切回
+  # Switch back
+  back: "ヾ(≧∇≦*)ゝ嘿嘿，上当了吧"
+```
+
+```yaml [文章过期提醒]
+# 文章过期提醒
+# Article expiration reminder
+expire:
+  enable: false
+  # 过期时间
+  # Expiration time
+  time: 30
+  position: top # top / bottom
+  # 过期提示
+  # Expiration prompt
+  text_prev: "本文已于"
+  text_next: "天前过期，如果内容不符，请联系站长更新。"
+```
 :::
 
 ## 首页文章列表
