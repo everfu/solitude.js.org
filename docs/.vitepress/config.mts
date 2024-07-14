@@ -30,6 +30,7 @@ export default defineConfig({
             {text: '作者', link: 'https://everfu.org'},
             {text: 'QQ 群', link: 'https://qm.qq.com/q/mYIJRTqo0w'},
             {text: '预览', link: 'https://everfu.github.io/Solitude/'},
+            {text: '晞云云计算', link: 'https://www.lightxi.com/'}
         ],
 
         sidebar: [
@@ -109,7 +110,7 @@ export default defineConfig({
 
         footer: {
             copyright: `版权所有 © ${new Date().getFullYear()} Ever Fu`,
-            message: '基于 MIT 许可发布'
+            message: '特别赞助：<a href="https://www.lightxi.com/" target="_blank">晞云云计算</a>'
         },
 
         editLink: {
