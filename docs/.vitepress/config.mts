@@ -110,7 +110,7 @@ export default defineConfig({
 
         footer: {
             copyright: `版权所有 © ${new Date().getFullYear()} Ever Fu`,
-            message: '特别赞助：<a href="https://www.lightxi.com/" target="_blank">晞云云计算</a>'
+            message: '特别赞助：<a href="https://www.lightxi.com/" target="_blank"><img src="https://www.lightxi.com/favicon.ico" style="height: 28px; display: inline-block; margin-bottom: -8px"/> 晞云云计算</a>'
         },
 
         editLink: {
