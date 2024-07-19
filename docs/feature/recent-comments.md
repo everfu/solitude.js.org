@@ -15,7 +15,7 @@ description: 定制最近评论显示页面
     ---
     title: 最近评论
     date: 2023-11-01 13:43:20
-    type: recentcomments
+    type: recentcomment
     cover: ''
     desc: 最近评论
     leftend: ''
