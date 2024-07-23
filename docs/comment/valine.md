@@ -5,19 +5,19 @@ description: Valine 评论系统配置介绍
 
 # Valine 评论系统
 
-## 获取APP ID 和 APP Key 与 serverURLs
+## 获取 APP ID、APP Key 与 serverURLs
 
 请先登录或注册 LeanCloud, 进入控制台后点击左下角创建应用：
 
-应用创建好以后，进入刚刚创建的应用，选择左下角的设置>应用凭证，然后就能看到你的APP ID和APP Key了
+应用创建好以后，进入刚刚创建的应用，选择左下角的`设置>应用凭证`，然后就能看到你的 APP ID 和 APP Key 了。
 
 ## 主题配置
 
 ```yaml
 valine:
-  appId: 'your app id' # leancloud application app id
-  appKey: 'your app key' # leancloud application app key
-  serverURLs: 'your serverURL' # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
+  appId: your app id # leancloud application app id
+  appKey: your app key # leancloud application app key
+  serverURLs: your serverURL # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
   avatar: monsterid
   visitor: true # 是否显示访问统计
   option: # options list
@@ -25,10 +25,10 @@ valine:
 
 # 自定义 enjoy
 
-在 **_data** 文件夹下新建文件 **valine.json**
+在 `_data` 文件夹下新建文件 `valine.json`
 
 ```json
-{ 
+{
   "tv_doge": "6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png",
   "tv_亲亲": "a8111ad55953ef5e3be3327ef94eb4a39d535d06.png",
   "tv_偷笑": "bb690d4107620f1c15cff29509db529a73aee261.png",

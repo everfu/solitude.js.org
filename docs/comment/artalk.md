@@ -12,10 +12,10 @@ description: Artalk 是一个简单的私有评论系统，支持多种评论方
 ## 主题配置
 
 ```yaml
-# artalk 配置信息
-# artalk settings
+# Artalk 配置信息
+# Artalk settings
 artalk:
-  server: # server url / 后端地址
-  site: # site name / 站点名
-  option: # options    
+  server: # Server URL / 后端地址
+  site: # Site name / 站点名
+  option: # Options / 附加选项
 ```

@@ -5,7 +5,7 @@ description: 添加我的装备页面
 
 # 我的装备
 
-1. 在cmd面板中输入以下命令，它将在source文件夹下生成equipment目录，其中包含index.md​文件。
+1. 在终端中输入以下命令，它将在source文件夹下生成equipment目录，其中包含index.md​文件。
     ```shell
     hexo new page equipment
     ```
@@ -15,13 +15,13 @@ description: 添加我的装备页面
     title: 我的装备
     date: 2023-11-01 13:14:42
     type: equipment
-    cover: ''
+    cover: ""
     desc: 实物装备推荐
     leftend: 跟 王卓Sco 一起享受科技带来的乐趣
-    rightend: ''
+    rightend: ""
     ---
     ```
-3. 在source\_data\​文件夹下建立名为equipment.yaml​的文件，下方内容为模版，根据要求按需添加。
+3. 在 `source/_data/` ​文件夹下建立名为equipment.yaml​的文件，下方内容为模版，根据要求按需添加。
     ```yaml
     - class_name: 生产力
       description: 提升自己生产效率的硬件设备

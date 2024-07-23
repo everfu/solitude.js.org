@@ -11,11 +11,11 @@ description: 为您的网站添加弹幕留言板功能
     ```
 2. 修改 source/message/index.md 文件
     ```markdown
-     ---
-     title: 留言板
-     date: 2021-01-01 00:00:00
-     type: message
-     ---
+    ---
+    title: 留言板
+    date: 2021-01-01 00:00:00
+    type: message
+    ---
     ```
 3. 修改配置文件
     ```yaml

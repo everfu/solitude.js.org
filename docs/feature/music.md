@@ -5,11 +5,11 @@ description: 添加音乐馆页面
 
 # 音乐馆
 
-1. 在cmd面板中输入以下命令，它将在source文件夹下生成 music 目录，其中包含 index.md ​文件。
+1. 在终端中输入以下命令，它将在 `source` 文件夹下生成 `music` 文件夹，其中包含 `index.md` ​文件。
     ```shell
     hexo new page music
     ```
-2. 将 index.md ​中的内容替换成以下：
+2. 将 `index.md` ​中的内容替换成以下：
     ```markdown
     ---
     title: 音乐馆
@@ -23,7 +23,7 @@ description: 添加音乐馆页面
     # -------------------------
     # meeting-api，用于界面中的音乐胶囊和音乐馆页，可自定义api，不会请勿动。
     # meeting-api, used for music capsules and music halls in the interface, can customize api, do not move if you don't know.
-    meting_api: "https://meting.qjqq.cn/?server=:server&type=:type&id=:id&auth=:auth&r=:r" #自定义api
+    meting_api: https://meting.qjqq.cn/?server=:server&type=:type&id=:id&auth=:auth&r=:r #自定义api
     # 音乐馆页
     # music hall
     music:

@@ -15,15 +15,15 @@ description: 一些常见问题的解答
 
 ## 为什么我自定义了主题字体，但没有生效？
 
-请检查是否正确配置了字体，以及是否正确引入了字体文件（需要自行添加相应字体引入CSS，你可以写到 extends 中）。
+请检查是否正确配置了字体，以及是否正确引入了字体文件（需要自行添加相应字体引入 CSS，你可以写到 `extends` 中）。
 
 ## 如何配置出像作者博客中的相册页面？
 
-作者通过使用 tags plugin 的 gallery 实现。
+作者通过使用 Tags Plugin 的 `gallery` 实现。
 
 ## TypeError: Cannot read properties of null (reading 'utcOffset')
 
-检查 `Hexo` 配置文件的 `timezone` 是否正确配置。
+检查 `_config.yml` 的 `timezone` 是否正确配置。
 
 示例：
 ```yaml
