@@ -7,13 +7,13 @@ description: Giscus 是一个简单的 GitHub Issue 评论系统，支持多种�
 
 ## 后端部署
 
-[Giscus.app](https://giscus.app/zh-CN)
+[Giscus 文档](https://giscus.app/zh-CN)
 
 ## 主题配置
 
 ```yaml
-# gitalk 配置信息
-# gitalk settings
+# Giscus 配置信息
+# Giscus settings
 giscus:
   repo: # GitHub 仓库名称 / GitHub repository name
   repo_id: # GitHub 仓库ID / GitHub repository ID

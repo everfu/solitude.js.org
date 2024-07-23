@@ -15,10 +15,10 @@ Solitude 是一款设计师风格的主题，它提供了很多易于博客书�
 ## 特色
 
 - 页面懒加载（Pjax）、图片懒加载（LazyLoad）、离线应用（PWA）
-- 评论(Twikoo、Waline)
-- 显示切换(ColorMode)
-- 灯箱(medium-zoom、fancybox)
-- 数学公式(Latex)
+- 评论（Twikoo、Waline）
+- 显示切换（ColorMode）
+- 灯箱（medium-zoom、fancybox）
+- 数学公式（Latex）
 - 特色页面：即刻短文、我的装备、在线工具、音乐馆、友链鱼塘、相册页、豆瓣页
 - 文章功能：AI 摘要、代码高亮
 

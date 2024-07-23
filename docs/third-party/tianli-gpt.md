@@ -7,7 +7,7 @@ description: Tianli GPT 是由 Heo 与 Tianli 制作的一个文章摘要生成�
 
 > 此功能仅中国大陆区域可用，其他地区不保证可用性。
 
-使用前到 [Post Chat](https://ai.tianli0.top/?InviteID=OZ3Z0V2R) 注册 到 [Heo Store](https://store.zhheo.com/?cid=1&mid=2) 购买兑换
+使用前请在 [Post Chat](https://ai.tianli0.top/?InviteID=OZ3Z0V2R) 注册，在 [Heo Store](https://store.zhheo.com/?cid=1&mid=2) 购买兑换。
 * 购买完成后，进入 [管理后台](https://summary.zhheo.com/)，登录后点击右上角的“添加新网站”，输入密钥即可绑定成功。
 * 若需要进行本地调试，请在管理后台将 127.0.0.1:端口 加入白名单，否则会触发防盗 KEY，无法正常获取摘要。
 

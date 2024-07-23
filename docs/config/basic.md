@@ -10,20 +10,20 @@ description: Solitude 主题基础配置
 > 修改网站各种资料，例如标题、副标题和邮箱等个人资料。
 
 :::code-group
-```yaml [_config.yaml]
+```yaml [_config.yml]
 # Site
 title: Efu # 博客标题
-subtitle: '' # 博客子标题
-description: '小心翼翼的努力并拥有着。' # 博客简介
-keywords: 'Efu' # 博客关键词
+subtitle: "" # 博客子标题
+description: 小心翼翼的努力并拥有着。 # 博客简介
+keywords: Efu # 博客关键词
 author: Efu # 博主名称
 language: zh-CN # 语言
-timezone: 'Asia/Shanghai' # 时区（请自行查询）
+timezone: Asia/Shanghai # 时区（请自行查询）
 ```
 
-```yaml [_config.solitude.yaml]
+```yaml [_config.solitude.yml]
 # 站点设置
-# site settings
+# Site settings
 site:
   # Logo
   name:
@@ -33,7 +33,7 @@ site:
     # 具体内容 例如：solitude st-logo / Efu / /img/logo.png
     # Specific content, for example: solitude st-logo / Efu / /img/logo.png
     custom: Solitude
-  # 网页icon
+  # 网页 Icon
   # Web icon
   siteIcon: /img/pwa/favicon.ico
   # 页脚的Logo、加载动画默认的logo
@@ -165,7 +165,7 @@ hometop:
     img: /img/default.png
     # 阴影颜色
     # Shadow color
-    color: "none"
+    color: none
 ```
 
 ## 首页顶部轮播图
@@ -184,14 +184,14 @@ carousel: false
 
 ```yaml
 home: # 在主页显示的侧边栏信息
-  noSticky: 'about'
-  Sticky: 'allInfo'
+  noSticky: about
+  Sticky: allInfo
 post: # 在文章页显示的侧边栏信息
-  noSticky: 'about'
-  Sticky: 'newestPost'
+  noSticky: about
+  Sticky: newestPost
 page: # 在页面中显示的侧边栏信息
-  noSticky: 'about'
-  Sticky: 'newestPost,allInfo'
+  noSticky: about
+  Sticky: newestPost,allInfo
 ```
 position: 确定侧边栏在哪一侧
 ```yaml
@@ -313,7 +313,7 @@ tags:
   # 高亮显示标签列表
   # Highlighted tag list
   list:
-    - 'Solitude-使用'
+    - Solitude-使用
 ```
 
 ```yaml [文章归档]
@@ -321,8 +321,9 @@ tags:
 # aside archive
 archive:
   enable: false
-  # 显示类型
-  type: 'month' # monthly: 按月 / yearly: 按年 : monthly: by month / yearly: by year
+  # 显示类型：month（按月） / year（按年）
+  # Display Method: month (by month) / year (by year)
+  type: month 
 ```
 
 ```yaml [建站信息]
@@ -347,9 +348,9 @@ siteinfo:
   # 建站时间
   # Website creation time
   runtimeenable: true
-  # 格式：yyyy-MM-dd hh-mm-ss
-  # Format: yyyy-MM-dd hh-mm-ss
-  runtime: '2023-04-20 00:00:00'
+  # 格式：yyyy-MM-dd hh:mm:ss
+  # Format: yyyy-MM-dd hh:mm:ss
+  runtime: 2023-04-20 00:00:00
 ```
 :::
 
@@ -360,9 +361,9 @@ siteinfo:
 # page default settings
 page:
   error: true # 404页面 / 404 page
-  tags: true # 标签页 /  Tags page
-  categories: true # 分类页 /  Categories page
-  default: # 默认值 /  Default value
+  tags: true # 标签页 / Tags page
+  categories: true # 分类页 / Categories page
+  default: # 默认值 / Default value
     # 默认图片
     # default cover
     # tip：随机数组图片，每次生成的时候都会从中随机抽取一张
@@ -375,13 +376,13 @@ page:
 
 ```yaml
 # 文章页默认设置
-# post default settings
+# Post default settings
 post:
   default:
     # 文章默认图片
     # default cover
     cover:
-    # -  # 默认图片 / default cover
+      # - # 默认图片 / default cover
     # 文章发布默认地址
     # default post locate
     locate: 衡阳
@@ -405,16 +406,16 @@ post:
     pv: false # 浏览量 / pv
     comment: false # 评论数 / Comment count
   # 打赏
-  # reward
+  # Reward
   award:
     enable: false
     appreciators: /about # 赞赏记录 / Appreciative records
     title: 感谢您的赞赏。
     desc: 因为有你们的支持，我才体会到写文章的价值。
     list:
-    #  - name: 支付宝
-    #    qcode: https://7.isyangs.cn/34/65f2e5a6d2ef5-34.png
-    #    color: var(--efu-blue)
+      # - name: 支付宝
+      #   qcode: https://7.isyangs.cn/34/65f2e5a6d2ef5-34.png
+      #   color: var(--efu-blue)
   # 版权中订阅按钮跳转链接，填写地址后开启
   # Subscription button jump link in copyright
   rss: # /atom.xml
@@ -433,24 +434,24 @@ post:
 
 ```yaml [自定义配色]
 # 自定义配色
-# custom theme color
-# 注意：颜色值必须使用引号，如“#000”，否则可能会导致错误！
+# Custom theme color
+# 注意：颜色值必须使用引号，如 "#000"，否则可能会导致错误！
 # Note: The color value must be enclosed in quotation marks, such as "#000", otherwise it may cause an error!
 # --------------------------------------
 theme_color:
-  dark: '#ffc848' # 暗色模式 / Dark mode
-  dark_op: '#f2b94b23' # 暗色模式透明 / Dark mode transparent
-  dark_op_deep: '#f2b94bdd' # 暗色模式透明深色 / Dark mode transparent dark
-  dark_none: '#f2b94b00' # 暗色模式透明无色 / Dark mode transparent colorless
-  light: '#425AEF' # 亮色模式 / Light mode
-  light_op: '#4259ef23' # 亮色模式透明 / Light mode transparent
-  light_op_deep: '#4259efdd' # 亮色模式透明深色 / Light mode transparent dark
-  light_none: '#4259ef01' # 亮色模式透明无色 / Light mode transparent colorless
+  dark: "#ffc848" # 暗色模式 / Dark mode
+  dark_op: "#f2b94b23" # 暗色模式透明 / Dark mode transparent
+  dark_op_deep: "#f2b94bdd" # 暗色模式透明深色 / Dark mode transparent dark
+  dark_none: "#f2b94b00" # 暗色模式透明无色 / Dark mode transparent colorless
+  light: "#425aef" # 亮色模式 / Light mode
+  light_op: "#4259ef23" # 亮色模式透明 / Light mode transparent
+  light_op_deep: "#4259efdd" # 亮色模式透明深色 / Light mode transparent dark
+  light_none: "#4259ef01" # 亮色模式透明无色 / Light mode transparent colorless
 ```
 
 ```yaml [昼夜切换]
 # 主题显示模式调整
-# theme display mode adjustment
+# Theme display mode adjustment
 # 主题支持三种模式：自动切换、暗色模式、亮色模式
 # The theme supports three modes: automatic switching, dark mode, and light mode
 # --------------------------------------
@@ -465,8 +466,8 @@ display_mode:
 font:
   font-size: 16px
   code-font-size: 16px
-  font-family: 'PingFang SC,Hiragino Sans GB,Microsoft YaHei'
-  code-font-family: '"monospace", "monospace"'
+  font-family: 'PingFang SC, Hiragino Sans GB, Microsoft YaHei'
+  code-font-family: '"monospace", monospace'
 ```
 
 ```yaml [网站背景]
@@ -481,15 +482,15 @@ background:
 
 ```yaml [诱骗点击]
 # 诱骗
-# lure
+# Lure
 lure:
   enable: false
   # 跳出
   # Jump out
-  jump: "404 Not Found"
+  jump: 404 Not Found
   # 切回
   # Switch back
-  back: "ヾ(≧∇≦*)ゝ嘿嘿，上当了吧"
+  back: ヾ(≧∇≦*)ゝ嘿嘿，上当了吧
 ```
 
 ```yaml [文章过期提醒]

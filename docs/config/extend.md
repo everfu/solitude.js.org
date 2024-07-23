@@ -107,7 +107,7 @@ capsule:
 QQ 音乐更换了接口，无法播放。
 :::
 
-## 快接菜单
+## 快捷菜单
 
 ```yaml
 keyboard:
@@ -125,24 +125,24 @@ keyboard:
   # sco: sco built-in method
   # url: 跳转链接
   # url: Jump link
-#    - name: 关闭快捷键功能
-#      key: K
-#      func: keyboard
-#    - name: 打开中控台
-#      key: A
-#      sco: showConsole
-#    - name: 播放/暂停音乐
-#      key: M
-#      sco: musicToggle
-#    - name: 打开友情链接
-#      key: L
-#      url: '/links/'
+  #  - name: 关闭快捷键功能
+  #    key: K
+  #    func: keyboard
+  #  - name: 打开中控台
+  #    key: A
+  #    sco: showConsole
+  #  - name: 播放/暂停音乐
+  #    key: M
+  #    sco: musicToggle
+  #  - name: 打开友情链接
+  #    key: L
+  #    url: /links/
 ```
 
 ## 中控台扩展
 
 ```yaml
-# 中控台扩展 ： 最新评论 + 标签 + 文章
+# 中控台扩展：最新评论 + 标签 + 文章
 console_plus: false
 ```
 
@@ -169,7 +169,7 @@ lazyload:
 
 ```yaml
 # 加载动画
-# loading animation
+# Loading animation
 loading:
   # 全局加载动画
   # Global loading animation
@@ -184,8 +184,8 @@ loading:
 > 开启代码高亮后，代码块会有对应的语言提示，但是会增加网页体积，如果你不需要这个功能，可以关闭。
 
 ```yaml
-#代码高亮增强
-# code highlight
+# 代码高亮增强
+# Code highlight
 highlight:
   enable: true
   limit: 200 # 代码行高限制 / Code line limit
@@ -226,13 +226,13 @@ mediumZoom: false
 Opengraph:
   enable: false
   options:
-#    twitter_card:
-#    twitter_image:
-#    twitter_id:
-#    twitter_site:
-#    google_plus:
-#    fb_admins:
-#    fb_app_id:
+    # twitter_card:
+    # twitter_image:
+    # twitter_id:
+    # twitter_site:
+    # google_plus:
+    # fb_admins:
+    # fb_app_id:
 ```
 
 ## 字数统计
@@ -241,7 +241,7 @@ Opengraph:
 
 ```yaml
 # 字数统计
-# word count
+# Word count
 # warning：开启前需要安装字数统计插件
 # warning: You need to install the word count plugin before turning it on
 wordcount: false
@@ -251,7 +251,7 @@ wordcount: false
 
 ```yaml
 # 访问统计
-# access statistics
+# Access statistics
 busuanzi: false
 ```
 
@@ -269,10 +269,10 @@ busuanzi: false
 # 仅需要填写验证代码即可，譬如：codeva-KReTIJu5us
 # Only need to fill in the verification code, such as: codeva-KReTIJu5us
 verify_site:
-#  - name: google-site-verification
-#    content: xxxxxx
-#  - name: baidu-site-verification
-#    content: xxxxxxx
+  # - name: google-site-verification
+  #   content: xxxxxx
+  # - name: baidu-site-verification
+  #   content: xxxxxxx
 ```
 
 ## CSS 前缀
@@ -296,282 +296,281 @@ css_prefix: false
 # Insert additional code such as: statistics, advertising, etc.
 extends:
   head: # 在head中插入 / Insert in head
-  #    - <script src="https://cdn.bootcdn.net/ajax/libs/pace/1.2.4/pace.min.js"></script>
+    # - <script src="https://cdn.bootcdn.net/ajax/libs/pace/1.2.4/pace.min.js"></script>
   body: # 在body中插入 / Insert in body
 ```
 
 ## PWA
 
-PWA 全称为 Progressive Web App ，中文译为渐进式 Web APP，其目的是通过各种 Web 技术实现与原生 App 相近的用户体验。 纵观现有 Web 应用与原生应用的对比差距，如离线缓存、沉浸式体验等等，可以通过已经实现的 Web 技术去弥补这些差距，最终达到与原生应用相近的用户体验效果。
+PWA 全称为 Progressive Web App，中文译为渐进式 Web APP，其目的是通过各种 Web 技术实现与原生 App 相近的用户体验。纵观现有 Web 应用与原生应用的对比差距，如离线缓存、沉浸式体验等等，可以通过已经实现的 Web 技术去弥补这些差距，最终达到与原生应用相近的用户体验效果。
 
 [SWPP 官方文档 & 项目地址](https://github.com/EmptyDreams/swpp-backends)
 
 1. 安装插件
-  ```bash
-  npm install hexo-swpp swpp-backends --save
-  ```
+    ```bash
+    npm install hexo-swpp swpp-backends --save
+    ```
 2. 开启主题配置
-  ```yaml
-  # PWA
-  # https://developer.mozilla.org/zh-CN/docs/Web/Progressive_web_apps
-  # docs: https://solitude.js.org/config/extra#pwa
-  pwa:
-    enable: false
-    manifest: /manifest.json # manifest.json 文件路径
-    theme_color: "#006a73" # 主题颜色
-    mask_icon: /img/pwa/favicon.ico # 遮罩图标
-    apple_touch_icon: /img/pwa/favicon.ico # 苹果触摸图标
-    bookmark_icon: /img/pwa/favicon.ico # 书签图标
-    favicon_32_32: /img/pwa/favicon_32.ico # 32x32图标
-    favicon_16_16: /img/pwa/favicon_16.ico # 16x16图标
-  ```
+    ```yaml
+    # PWA
+    # https://developer.mozilla.org/zh-CN/docs/Web/Progressive_web_apps
+    # docs: https://solitude.js.org/config/extra#pwa
+    pwa:
+        enable: false
+        manifest: /manifest.json # manifest.json 文件路径
+        theme_color: "#006a73" # 主题颜色
+        mask_icon: /img/pwa/favicon.ico # 遮罩图标
+        apple_touch_icon: /img/pwa/favicon.ico # 苹果触摸图标
+        bookmark_icon: /img/pwa/favicon.ico # 书签图标
+        favicon_32_32: /img/pwa/favicon_32.ico # 32x32图标
+        favicon_16_16: /img/pwa/favicon_16.ico # 16x16图标
+    ```
 3. 在项目根目录新建 `sw-rules.js` 加入以下内容。
 
-**提供一个 SWPP 文件**
-```js
-        module.exports.config = {
-          /** @type {?ServiceWorkerConfig|boolean} */
-          serviceWorker: {
-            escape: 0,
-            cacheName: 'SolitudeCache',
-            debug: false,
-          },
-          register: {
-            onsuccess: undefined,
-            onerror: () =>
-              console.error(
-                'Service Worker 注册失败！可能是由于您的浏览器不支持该功能！'
-              ),
-            builder: (root, framework, pluginConfig) => {
-              const { onerror, onsuccess } = pluginConfig.register;
-              return `
+    **提供一个 SWPP 文件**
+    ```js
+    module.exports.config = {
+      /** @type {?ServiceWorkerConfig|boolean} */
+      serviceWorker: {
+        escape: 0,
+        cacheName: 'SolitudeCache',
+        debug: false,
+      },
+      register: {
+        onsuccess: undefined,
+        onerror: () =>
+          console.error(
+            'Service Worker 注册失败！可能是由于您的浏览器不支持该功能！'
+          ),
+        builder: (root, framework, pluginConfig) => {
+          const { onerror, onsuccess } = pluginConfig.register;
+          return `
                 <script>
                     (() => {
                         const sw = navigator.serviceWorker;
                         const error = ${onerror && onerror.toString()};
                         if (!sw?.register('${new URL(root).pathname}sw.js')
-                            ${onsuccess ? `?.then(${onsuccess.toString()})` : ''}
+                            ${onsuccess ? `?.then(${onsuccess.toString()})` : ""}
                             ?.catch(error)
                         ) error()
                     })()
                 </script>`;
-            },
-          },
-          /** @type {?DomConfig|boolean} */
-          dom: {
-            /** @type {?VoidFunction} */
-            onsuccess: () => {
-              caches
-                .match(location.href)
-                .then((res) => {
-                  if (res)
-                    res.json().then((json) => {
-                      utils &&
-                        utils.snackbarShow(
-                          `已刷新缓存，更新为${
-                            json.global + '.' + json.local
-                          }版本最新内容`,
-                          false,
-                          2000
-                        );
-                    });
-                  else console.info('未找到缓存');
-                })
-                .catch((error) => console.error('缓存匹配出错', error));
-            },
-          },
-          /** @type {?VersionJsonConfig|boolean} */
-          json: {
-            /** @type {number} */
-            maxHtml: 15,
-            /** @type {number} */
-            charLimit: 1024,
-            /** @type {string[]} */
-            merge: [],
-            exclude: {
-              /** @type {RegExp[]} */
-              localhost: [],
-              /** @type {RegExp[]} */
-              other: [],
-            },
-          },
-          /** @type {?ExternalMonitorConfig|boolean} */
-          external: {
-            /** @type {number} */
-            timeout: 5000,
-            /** 拉取文件时地并发限制 */
-            concurrencyLimit: 100,
-            /** @type {({head: string, tail: string}|function(string):string[])[]} */
-            js: [],
-            /** @type {RegExp[]} */
-            stable: [
-              /^https:\/\/npm\.elemecdn\.com\/[^/@]+\@[^/@]+\/[^/]+\/[^/]+$/,
-              /^https:\/\/cdn\.cbd\.int\/[^/@]+\@[^/@]+\/[^/]+\/[^/]+$/,
-              /^https:\/\/cdn\.jsdelivr\.net\/npm\/[^/@]+\@[^/@]+\/[^/]+\/[^/]+$/,
-            ],
-            replacer: (srcUrl) => {
-              if (srcUrl.startsWith('https://cdn.jsdelivr.net/npm/')) {
-                const pathname = new URL(srcUrl).pathname;
-                return [
-                  srcUrl,
-                  `https://cdn.cbd.int/${pathname}`,
-                  `https://npm.elemecdn.com/${pathname}`,
-                  `https://fastly.jsdelivr.net/npm/${pathname}`,
-                ];
-              } else {
-                return srcUrl;
-              }
-            },
-          },
-        };
-
-        module.exports.cacheRules = {
-          simple: {
-            clean: true,
-            search: false,
-            match: (url, $eject) =>
-              url.host === $eject.domain && ['/404.html'].includes(url.pathname),
-          },
-          cdn: {
-            clean: true,
-            match: (url) =>
-              [
-                'cdn.cbd.int',
-                'lf26-cdn-tos.bytecdntp.com',
-                'lf6-cdn-tos.bytecdntp.com',
-                'lf3-cdn-tos.bytecdntp.com',
-                'lf9-cdn-tos.bytecdntp.com',
-                'cdn.staticfile.org',
-                'npm.elemecdn.com',
-              ].includes(url.host) &&
-              url.pathname.match(/\.(js|css|woff2|woff|ttf|cur)$/),
-          },
-        };
-
-        module.exports.getSpareUrls = (srcUrl) => {
-          if (srcUrl.startsWith('https://npm.elemecdn.com')) {
-            return {
-              timeout: 3000,
-              list: [
-                srcUrl,
-                `https://fastly.jsdelivr.net/${new URL(srcUrl).pathname}`,
-              ],
-            };
+        },
+      },
+      /** @type {?DomConfig|boolean} */
+      dom: {
+        /** @type {?VoidFunction} */
+        onsuccess: () => {
+          caches
+            .match(location.href)
+            .then((res) => {
+              if (res)
+                res.json().then((json) => {
+                  utils &&
+                    utils.snackbarShow(
+                      `已刷新缓存，更新为${json.global + '.' + json.local
+                      }版本最新内容`,
+                      false,
+                      2000
+                    );
+                });
+              else console.info('未找到缓存');
+            })
+            .catch((error) => console.error('缓存匹配出错', error));
+        },
+      },
+      /** @type {?VersionJsonConfig|boolean} */
+      json: {
+        /** @type {number} */
+        maxHtml: 15,
+        /** @type {number} */
+        charLimit: 1024,
+        /** @type {string[]} */
+        merge: [],
+        exclude: {
+          /** @type {RegExp[]} */
+          localhost: [],
+          /** @type {RegExp[]} */
+          other: [],
+        },
+      },
+      /** @type {?ExternalMonitorConfig|boolean} */
+      external: {
+        /** @type {number} */
+        timeout: 5000,
+        /** 拉取文件时地并发限制 */
+        concurrencyLimit: 100,
+        /** @type {({head: string, tail: string}|function(string):string[])[]} */
+        js: [],
+        /** @type {RegExp[]} */
+        stable: [
+          /^https:\/\/npm\.elemecdn\.com\/[^/@]+\@[^/@]+\/[^/]+\/[^/]+$/,
+          /^https:\/\/cdn\.cbd\.int\/[^/@]+\@[^/@]+\/[^/]+\/[^/]+$/,
+          /^https:\/\/cdn\.jsdelivr\.net\/npm\/[^/@]+\@[^/@]+\/[^/]+\/[^/]+$/,
+        ],
+        replacer: (srcUrl) => {
+          if (srcUrl.startsWith('https://cdn.jsdelivr.net/npm/')) {
+            const pathname = new URL(srcUrl).pathname;
+            return [
+              srcUrl,
+              `https://cdn.cbd.int/${pathname}`,
+              `https://npm.elemecdn.com/${pathname}`,
+              `https://fastly.jsdelivr.net/npm/${pathname}`,
+            ];
+          } else {
+            return srcUrl;
           }
-        };
+        },
+      },
+    };
 
-        module.exports.ejectValues = (hexo, rules) => {
-          return {
-            domain: {
-              prefix: 'const',
-              value: new URL(hexo.config.url).host,
-            },
-          };
-        };
-  
-        module.exports.skipRequest = (request) => request.url.startsWith("https://i0.hdslb.com") ||
-          request.url.startsWith('https://meting.qjqq.cn') ||
-          request.url.startsWith('https://api.i-meto.com');
-```
+    module.exports.cacheRules = {
+      simple: {
+        clean: true,
+        search: false,
+        match: (url, $eject) =>
+          url.host === $eject.domain && ['/404.html'].includes(url.pathname),
+      },
+      cdn: {
+        clean: true,
+        match: (url) =>
+          [
+            'cdn.cbd.int',
+            'lf26-cdn-tos.bytecdntp.com',
+            'lf6-cdn-tos.bytecdntp.com',
+            'lf3-cdn-tos.bytecdntp.com',
+            'lf9-cdn-tos.bytecdntp.com',
+            'cdn.staticfile.org',
+            'npm.elemecdn.com',
+          ].includes(url.host) &&
+          url.pathname.match(/\.(js|css|woff2|woff|ttf|cur)$/),
+      },
+    };
 
-4. 根据需求在 source 文件夹下新建 `manifest.json` 文件并增加内容，以下是示例：
-```json
-{
-    "name": "放养平凡",
-    "short_name": "BTA",
-    "theme_color": "#b00000",
-    "background_color": "#b00000dd",
-    "description": "世界为你简单",
-    "display": "fullscreen",
-    "scope": "/",
-    "start_url": "/",
-    "lang": "zh-CN",
-    "id": "/",
-    "icons": [
-      {
-        "src": "pwa/16.ico",
-        "sizes": "16x16",
-        "type": "image/png",
-        "purpose": "any"
-      },
-      {
-        "src": "pwa/16.ico",
-        "sizes": "16x16",
-        "type": "image/png",
-        "purpose": "maskable"
-      },
-      {
-        "src": "pwa/32.ico",
-        "sizes": "32x32",
-        "type": "image/png",
-        "purpose": "any"
-      },
-      {
-        "src": "pwa/32.ico",
-        "sizes": "32x32",
-        "type": "image/png",
-        "purpose": "maskable"
-      },
-      {
-        "src": "pwa/64.ico",
-        "sizes": "64x64",
-        "type": "image/png",
-        "purpose": "any"
-      },
-      {
-        "src": "pwa/64.ico",
-        "sizes": "64x64",
-        "type": "image/png",
-        "purpose": "maskable"
-      },
-      {
-        "src": "pwa/128.ico",
-        "sizes": "128x128",
-        "type": "image/png",
-        "purpose": "any"
-      },
-      {
-        "src": "pwa/128.ico",
-        "sizes": "128x128",
-        "type": "image/png",
-        "purpose": "maskable"
-      },
-      {
-        "src": "pwa/256.ico",
-        "sizes": "256x256",
-        "type": "image/png",
-        "purpose": "any"
-      },
-      {
-        "src": "pwa/256.ico",
-        "sizes": "256x256",
-        "type": "image/png",
-        "purpose": "maskable"
+    module.exports.getSpareUrls = (srcUrl) => {
+      if (srcUrl.startsWith('https://npm.elemecdn.com')) {
+        return {
+          timeout: 3000,
+          list: [
+            srcUrl,
+            `https://fastly.jsdelivr.net/${new URL(srcUrl).pathname}`,
+          ],
+        };
       }
-    ],
-    "screenshots": [
-      {
-          "src": "https://assets.btwoa.com/blogbtwoacom.avif",
-          "sizes": "1920x1080",
-          "type": "image/png",
-          "form_factor": "wide",
-          "label": "Fullscreen of BTA"
-      },
-      {
-        "src": "https://assets.btwoa.com/darkblogbtwoacom.avif",
-        "sizes": "1920x1080",
-        "type": "image/png",
-        "form_factor": "wide",
-        "label": "Fullscreen of BTA"
-      }
-    ],
-    "splash_pages": null
-  }
-```
+    };
+
+    module.exports.ejectValues = (hexo, rules) => {
+      return {
+        domain: {
+          prefix: 'const',
+          value: new URL(hexo.config.url).host,
+        },
+      };
+    };
+
+    module.exports.skipRequest = (request) => request.url.startsWith("https://i0.hdslb.com") ||
+      request.url.startsWith('https://meting.qjqq.cn') ||
+      request.url.startsWith('https://api.i-meto.com');
+    ```
+
+4. 根据需求在 `source` 文件夹下新建 `manifest.json` 文件并增加内容，以下是示例：
+    ```json
+    {
+        "name": "放养平凡",
+        "short_name": "BTA",
+        "theme_color": "#b00000",
+        "background_color": "#b00000dd",
+        "description": "世界为你简单",
+        "display": "fullscreen",
+        "scope": "/",
+        "start_url": "/",
+        "lang": "zh-CN",
+        "id": "/",
+        "icons": [
+        {
+            "src": "pwa/16.ico",
+            "sizes": "16x16",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "pwa/16.ico",
+            "sizes": "16x16",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "pwa/32.ico",
+            "sizes": "32x32",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "pwa/32.ico",
+            "sizes": "32x32",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "pwa/64.ico",
+            "sizes": "64x64",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "pwa/64.ico",
+            "sizes": "64x64",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "pwa/128.ico",
+            "sizes": "128x128",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "pwa/128.ico",
+            "sizes": "128x128",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "pwa/256.ico",
+            "sizes": "256x256",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "pwa/256.ico",
+            "sizes": "256x256",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+        ],
+        "screenshots": [
+        {
+            "src": "https://assets.btwoa.com/blogbtwoacom.avif",
+            "sizes": "1920x1080",
+            "type": "image/png",
+            "form_factor": "wide",
+            "label": "Fullscreen of BTA"
+        },
+        {
+            "src": "https://assets.btwoa.com/darkblogbtwoacom.avif",
+            "sizes": "1920x1080",
+            "type": "image/png",
+            "form_factor": "wide",
+            "label": "Fullscreen of BTA"
+        }
+        ],
+        "splash_pages": null
+    }
+    ```
 
 ## CDN
 
-主题资源已经被 CDNJS 收录，所以大家可以放心食用，如果你有自己的 CDN，可以自定义配置。
+主题资源已经被 cdnjs 收录，所以大家可以放心食用，如果你有自己的 CDN，可以自定义配置。
 
 ```yaml
 # CDN

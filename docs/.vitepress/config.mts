@@ -1,23 +1,23 @@
-import {defineConfig} from 'vitepress'
-import {tabsMarkdownPlugin} from 'vitepress-plugin-tabs'
+import { defineConfig } from 'vitepress'
+import { tabsMarkdownPlugin } from 'vitepress-plugin-tabs'
 
-// https://vitepress.dev/reference/site-config
+// https://vitepress.dev/zh/reference/site-config
 export default defineConfig({
     lang: 'zh-CN',
     title: "Solitude 文档",
     description: "一款优雅简洁易使用的 Hexo 主题",
     head: [
-        ['link', {rel: 'icon', href: '/favicon.png', type: 'image/x-icon'}],
-        ['meta', {name: 'theme-color', content: '#1188fa'}],
-        ['meta', {property: 'og:type', content: 'website'}],
-        ['meta', {property: 'og:locale', content: 'zh-hans'}],
-        ['meta', {property: 'og:title', content: 'Solitude 文档'}],
-        ['meta', {property: 'og:site_name', content: 'Solitude 文档'}],
-        ['meta', {property: 'og:image', content: 'https://s3.qjqq.cn/47/6616165b0c3de.webp!color'}],
-        ['meta', {property: 'og:url', content: 'https://solitude.js.org/'}],
-        ['meta', {property: 'og:description', content: '一款优雅简洁易使用的 Hexo 主题'}],
-        ['meta', {name: 'google-site-verification', content: 'OQ-FnVME50EgIvv5nO4fsNl7EHkEl0vUSoFUe_fAMgY'}],
-        ['meta', {property: 'google-adsense-account', content: 'ca-pub-6338523842252061'}],
+        ['link', { rel: 'icon', href: '/favicon.png', type: 'image/x-icon' }],
+        ['meta', { name: 'theme-color', content: '#1188fa' }],
+        ['meta', { property: 'og:type', content: 'website' }],
+        ['meta', { property: 'og:locale', content: 'zh-hans' }],
+        ['meta', { property: 'og:title', content: 'Solitude 文档' }],
+        ['meta', { property: 'og:site_name', content: 'Solitude 文档' }],
+        ['meta', { property: 'og:image', content: 'https://s3.qjqq.cn/47/6616165b0c3de.webp!color' }],
+        ['meta', { property: 'og:url', content: 'https://solitude.js.org/' }],
+        ['meta', { property: 'og:description', content: '一款优雅简洁易使用的 Hexo 主题' }],
+        ['meta', { name: 'google-site-verification', content: 'OQ-FnVME50EgIvv5nO4fsNl7EHkEl0vUSoFUe_fAMgY' }],
+        ['meta', { property: 'google-adsense-account', content: 'ca-pub-6338523842252061' }],
         ['script', {
             async: 'async',
             src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6338523842252061',
@@ -27,10 +27,10 @@ export default defineConfig({
     themeConfig: {
         logo: '/favicon.png',
         nav: [
-            {text: '作者', link: 'https://everfu.org'},
-            {text: 'QQ 群', link: 'https://qm.qq.com/q/mYIJRTqo0w'},
-            {text: '预览', link: 'https://everfu.github.io/Solitude/'},
-            {text: '晞云云计算', link: 'https://www.lightxi.com/'}
+            { text: '作者', link: 'https://everfu.org' },
+            { text: 'QQ 群', link: 'https://qm.qq.com/q/mYIJRTqo0w' },
+            { text: '预览', link: 'https://everfu.github.io/Solitude/' },
+            { text: '晞云云计算', link: 'https://www.lightxi.com/' }
         ],
 
         sidebar: [
@@ -38,63 +38,63 @@ export default defineConfig({
                 text: '简介',
                 collapsed: false,
                 items: [
-                    {text: '介绍', link: '/guide/intro'},
-                    {text: '安装', link: '/guide/quick-start'},
-                    {text: '页面', link: '/guide/page'},
-                    {text: 'Front Matter', link: '/guide/front-matter'},
-                    {text: 'Tags Plugin', link: '/guide/tags-plugin'},
+                    { text: '介绍', link: '/guide/intro' },
+                    { text: '安装', link: '/guide/quick-start' },
+                    { text: '页面', link: '/guide/page' },
+                    { text: 'Front Matter', link: '/guide/front-matter' },
+                    { text: 'Tags Plugin', link: '/guide/tags-plugin' },
                 ]
             },
             {
                 text: '配置',
                 collapsed: false,
                 items: [
-                    {text: '基本', link: '/config/basic'},
-                    {text: '扩展', link: '/config/extend'},
-                    {text: '高级', link: '/config/advanced'},
+                    { text: '基本', link: '/config/basic' },
+                    { text: '扩展', link: '/config/extend' },
+                    { text: '高级', link: '/config/advanced' },
                 ]
             },
             {
                 text: '评论系统',
                 collapsed: false,
                 items: [
-                    {text: '基本', link: '/comment/basic'},
-                    {text: 'Valine', link: '/comment/valine'},
-                    {text: 'Waline', link: '/comment/waline'},
-                    {text: 'Twikoo', link: '/comment/twikoo'},
-                    {text: 'Artalk', link: '/comment/artalk'},
-                    {text: 'Giscus', link: '/comment/giscus'},
+                    { text: '基本', link: '/comment/basic' },
+                    { text: 'Valine', link: '/comment/valine' },
+                    { text: 'Waline', link: '/comment/waline' },
+                    { text: 'Twikoo', link: '/comment/twikoo' },
+                    { text: 'Artalk', link: '/comment/artalk' },
+                    { text: 'Giscus', link: '/comment/giscus' },
                 ]
             },
             {
                 text: '搜索',
                 collapsed: false,
                 items: [
-                    {text: '本地搜索', link: '/search/local'},
-                    {text: 'Algolia', link: '/search/algolia'},
+                    { text: '本地搜索', link: '/search/local' },
+                    { text: 'Algolia', link: '/search/algolia' },
                 ]
             },
             {
                 text: '特色页面',
                 collapsed: false,
                 items: [
-                    {text: '友情链接', link: '/feature/links'},
-                    {text: '关于我', link: '/feature/about'},
-                    {text: '音乐馆', link: '/feature/music'},
-                    {text: '我的装备', link: '/feature/equipment'},
-                    {text: '在线工具', link: '/feature/tools'},
-                    {text: '豆瓣', link: '/feature/douban'},
-                    {text: '弹幕留言页', link: '/feature/danmaku'},
-                    {text: '即刻短文', link: '/feature/jike'},
-                    {text: '最近评论', link: '/feature/recent-comments'},
+                    { text: '友情链接', link: '/feature/links' },
+                    { text: '关于我', link: '/feature/about' },
+                    { text: '音乐馆', link: '/feature/music' },
+                    { text: '我的装备', link: '/feature/equipment' },
+                    { text: '在线工具', link: '/feature/tools' },
+                    { text: '豆瓣', link: '/feature/douban' },
+                    { text: '弹幕留言页', link: '/feature/danmaku' },
+                    { text: '即刻短文', link: '/feature/jike' },
+                    { text: '最近评论', link: '/feature/recent-comments' },
                 ]
             },
             {
                 text: '第三方',
                 collapsed: false,
                 items: [
-                    {text: 'Tianli GPT', link: '/third-party/tianli-gpt'},
-                    {text: 'Post Chat', link: '/third-party/post-chat'},
+                    { text: 'Tianli GPT', link: '/third-party/tianli-gpt' },
+                    { text: 'Post Chat', link: '/third-party/post-chat' },
                 ]
             },
             {
@@ -104,8 +104,8 @@ export default defineConfig({
         ],
 
         socialLinks: [
-            {icon: 'github', link: 'https://github.com/everfu/hexo-theme-solitude'},
-            {icon: 'twitter', link: 'https://twitter.com/everfu8'},
+            { icon: 'github', link: 'https://github.com/everfu/hexo-theme-solitude' },
+            { icon: 'twitter', link: 'https://twitter.com/everfu8' },
         ],
 
         footer: {

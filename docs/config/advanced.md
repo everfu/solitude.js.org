@@ -11,7 +11,7 @@ description: Solitude 主题的高级配置
     ```bash
     npm install gulp compress gulp-clean-css gulp-html-minifier-terser gulp-htmlclean gulp-terser --save-dev
     ```
-2. 创建 **gulpfile.js** 文件：
+2. 创建 `gulpfile.js` 文件：
     ```js
     var gulp = require('gulp');
     var cleanCSS = require('gulp-clean-css');
