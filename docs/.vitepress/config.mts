@@ -7,8 +7,8 @@ export default defineConfig({
     title: "Solitude 文档",
     description: "一款优雅简洁易使用的 Hexo 主题",
     head: [
-        ['link', {rel: 'icon', href: '/favicon.ico', type: 'image/x-icon'}],
-        ['meta', {name: 'theme-color', content: '#5f67ee'}],
+        ['link', {rel: 'icon', href: '/favicon.png', type: 'image/x-icon'}],
+        ['meta', {name: 'theme-color', content: '#1188fa'}],
         ['meta', {property: 'og:type', content: 'website'}],
         ['meta', {property: 'og:locale', content: 'zh-hans'}],
         ['meta', {property: 'og:title', content: 'Solitude 文档'}],
