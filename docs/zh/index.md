@@ -10,10 +10,10 @@ hero:
   actions:
     - theme: brand
       text: 什么是 Solitude？
-      link: /guide/intro
+      link: /zh/guide/intro
     - theme: alt
       text: 快速开始
-      link: /guide/quick-start
+      link: /zh/guide/quick-start
     - theme: alt
       text: Github
       link: https://github.com/everfu/hexo-theme-solitude
