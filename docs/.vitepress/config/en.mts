@@ -2,24 +2,6 @@ export const en = {
     lang: 'en-US',
     title: "Solitude Documentation",
     description: "An elegant, simple and easy-to-use Hexo theme",
-    head: [
-        ['link', {rel: 'icon', href: '/favicon.png', type: 'image/x-icon'}],
-        ['meta', {name: 'theme-color', content: '#1188fa'}],
-        ['meta', {property: 'og:type', content: 'website'}],
-        ['meta', {property: 'og:locale', content: 'en-US'}],
-        ['meta', {property: 'og:title', content: 'Solitude Documentation'}],
-        ['meta', {property: 'og:site_name', content: 'Solitude Documentation'}],
-        ['meta', {property: 'og:image', content: 'https://s3.qjqq.cn/47/6616165b0c3de.webp!color'}],
-        ['meta', {property: 'og:url', content: 'https://solitude.js.org/'}],
-        ['meta', {property: 'og:description', content: 'An elegant, simple and easy-to-use Hexo theme'}],
-        ['meta', {name: 'google-site-verification', content: 'OQ-FnVME50EgIvv5nO4fsNl7EHkEl0vUSoFUe_fAMgY'}],
-        ['meta', {property: 'google-adsense-account', content: 'ca-pub-6338523842252061'}],
-        ['script', {
-            async: 'async',
-            src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6338523842252061',
-            crossorigin: 'anonymous'
-        }]
-    ],
     themeConfig: {
         logo: '/favicon.png',
         nav: [
