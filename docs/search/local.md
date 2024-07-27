@@ -1,25 +1,22 @@
 ---
-title: 本地搜索
-description: 使用本地搜索
+title: Local Search
+description: Using local search
 ---
 
-# 本地搜索
+# Local Search
 
-## 安装插件
+## Install Plugin
 
-安装 [hexo-generator-searchdb](https://github.com/next-theme/hexo-generator-searchdb) 或者 [hexo-generator-search](https://github.com/PaicHyperionDev/hexo-generator-search) 根据仓库文档添加配置信息到 `_config.yml`
+Install [hexo-generator-searchdb](https://github.com/next-theme/hexo-generator-searchdb) or [hexo-generator-search](https://github.com/PaicHyperionDev/hexo-generator-search) and add configuration information to `_config.yml` according to the repository documentation.
 
-## 主题配置
+## Theme Configuration
 
 ```yaml
-# 搜索
-# search
-# warning：开启前需要安装搜索插件
+# Search
 # warning: You need to install the search plugin before turning it on
 search:
   enable: true
-  type: local # 选择local
-  # 推荐标签
+  type: local # Choose local
   # Recommended tags
   tags:
   # - Solitude
@@ -32,7 +29,7 @@ search:
     CDN:
 ```
 
-## 搜索标签
+## Search Tags
 
 ```yaml
 tags:

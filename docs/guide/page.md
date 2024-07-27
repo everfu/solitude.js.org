@@ -1,27 +1,27 @@
 ---
-title: 内置页面
-description: 了解 Hexo Theme Solitude 的内置页面。
+title: Built-in Pages
+description: Learn about the built-in pages of Hexo Theme Solitude.
 ---
 
-# 404、标签、分类页
+# 404, Tags, and Categories Pages
 
-## 标签页和分类页
+## Tags and Categories Pages
 
-> 主题已内置标签页和分类页，无需额外配置，只需在主题配置文件中开启。
+> The theme comes with built-in tags and categories pages, no additional configuration is required, just enable them in the theme configuration file.
 
 ```yaml [_config.solitude.yml]
-# 页面页默认设置
+# Default settings for pages
 page:
-  error: true # 404页面
-  tags: true # 标签页
-  categories: true # 分类页
-  default: # 默认值
+  error: true # 404 page
+  tags: true # tags page
+  categories: true # categories page
+  default: # default values
     cover:
-      - /img/default.png # 默认图片
+      - /img/default.png # default image
 ```
 
-## 404 页面
+## 404 Page
 
-> 主题已内置 404 页面，无需额外配置，只需在主题配置文件中开启。
+> The theme comes with a built-in 404 page, no additional configuration is required, just enable it in the theme configuration file.
 
-[查看 404 页面](https://www.efu.me/404.html)
+[View 404 Page](https://www.efu.me/404.html)

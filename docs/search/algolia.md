@@ -1,27 +1,24 @@
 ---
-title: Algolia 搜索
-description: 使用 Algolia 作为搜索引擎
+title: Algolia Search
+description: Using Algolia as a search engine
 ---
 
-# Algolia 搜索
+# Algolia Search
 
-## 安装插件
+## Install Plugin
 
-> 如果你使用 hexo-algoliasearch，请记得配置 fields 参数的 title, permalink 和 content
+> If you are using hexo-algoliasearch, remember to configure the fields parameter: title, permalink, and content.
 
-安装 [hexo-algolia](https://github.com/oncletom/hexo-algolia) 或 [hexo-algoliasearch](https://github.com/LouisBarranqueiro/hexo-algoliasearch) 根据它们的使用文档去做相应的配置。
+Install [hexo-algolia](https://github.com/oncletom/hexo-algolia) or [hexo-algoliasearch](https://github.com/LouisBarranqueiro/hexo-algoliasearch) and follow their respective documentation for configuration.
 
-## 主题配置
+## Theme Configuration
 
 ```yaml
-# 搜索
-# search
-# warning：开启前需要安装搜索插件
-# warning: You need to install the search plugin before turning it on
+# Search
+# warning: Install the search plugin before enabling it
 search:
   enable: true
   type: algolia
-  # 推荐标签
   # Recommended tags
   tags:
     # - Solitude
@@ -31,7 +28,7 @@ search:
     # per_page: 6
 ```
 
-## 搜索标签
+## Search Tags
 
 ```yaml
 tags:

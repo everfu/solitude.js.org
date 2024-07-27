@@ -1,105 +1,104 @@
 ---
-title: 快速开始
-description: 快速开始使用 Hexo Theme Solitude
+title: Quick Start
+description: Quick Start using Hexo Theme Solitude
 ---
 
-# 安装
+# Installation
 
-## 搭建 Hexo
+## Setting up Hexo
 
-如果你还没有 Hexo 博客，请按照 [Hexo 官方文档](https://hexo.io/zh-cn/docs/) 进行安装、建站。
+If you don't have a Hexo blog yet, please follow the [Hexo official documentation](https://hexo.io/docs/) for installation and site creation.
 
-## 作者的话
+## Author's Note
 
-> *请仔细阅读文档，主题的使用在文档中都能找到，请先查找文档，`不要浪费他人时间`。*
+> *Please read the documentation carefully. The usage of the theme can be found in the documentation. `Do not waste others' time`.*
 
-请注意 `_config.solitude.yml` 中的配置优先级大于主题的 `_config.yml` ，所以更新主题后需要比对主题文件夹中的 `theme/solitude/_config.yml` 文件内容，一般在 [release](https://github.com/everfu/hexo-theme-solitude/releases) 的说明里会特别提示或给出配置文件版本对比 diff，同步修改原配置文件即可。
+Please note that the configuration in `_config.solitude.yml` takes precedence over the theme's `_config.yml`. So, after updating the theme, compare the content of the `theme/solitude/_config.yml` file with the original configuration file. Usually, the release notes will provide specific instructions or a diff of the configuration file versions. Make the necessary changes to the original configuration file accordingly.
 
-本指南并未包含所有配置的说明，但几乎每个配置在主题配置中都有注释，你可以结合指南和注释一起参考使用。
+This guide does not cover all configuration explanations, but almost every configuration has comments in the theme configuration. You can refer to both the guide and the comments for usage reference.
 
-此外，本指南仅包含主题范围内的使用说明。如果涉及到 Hexo 的使用或 Hexo 插件的使用，请参阅它们各自的文档。
+In addition, this guide only includes instructions within the scope of the theme. If it involves the usage of Hexo or Hexo plugins, please refer to their respective documentation.
 
-若发现主题有 Bug 或者想要新增功能，请在 [issues](https://github.com/everfu/Hexo-theme-solitude/issues) 留言，使用上的问题请在 [Discussions](https://github.com/orgs/everfu/discussions) 中提问。
+If you find any bugs in the theme or want to add new features, please leave a message in the [issues](https://github.com/everfu/Hexo-theme-solitude/issues). For usage-related questions, please ask in the [Discussions](https://github.com/orgs/everfu/discussions).
 
-
-## 主题安装
+## Theme Installation
 
 :::tabs key=install
 == GitHub
 :::code-group
-```bash [稳定版]
+```bash [Stable]
 git clone -b main https://github.com/everfu/hexo-theme-solitude.git themes/solitude
 ```
 
-```bash [开发版]
+```bash [Dev]
 git clone -b dev https://github.com/everfu/hexo-theme-solitude.git themes/solitude
 ```
 
-```bash [升级方法]
+```bash [Upgrade]
 git pull
 ```
 == Gitee
 :::code-group
-```bash [稳定版]
+```bash [Stable]
 git clone -b main https://gitee.com/everfu/hexo-theme-solitude themes/solitude
 ```
 
-```bash [开发版]
+```bash [Dev]
 git clone -b dev https://gitee.com/everfu/hexo-theme-solitude themes/solitude
 ```
 
-```bash [升级方法]
+```bash [Upgrade]
 git pull
 ```
 == npm
 :::code-group
-```bash [稳定版]
+```bash [Stable]
 npm install hexo-theme-solitude
 ```
 
-```bash [升级方法]
+```bash [Upgrade]
 npm update hexo-theme-solitude
 ```
 :::
 
-## 应用主题
+## Applying the Theme
 
-修改 hexo 根目录配置文件 `_config.yml`，把主题改为 `solitude`。​
+Modify the root configuration file `_config.yml` of Hexo and change the theme to `solitude`.
 
 ```yaml [_config.yml]
 theme: solitude
 ```
 
-## 安装依赖
+## Installing Dependencies
 
-主题使用了 `Pug` 与 `Stylus`，需要额外安装各自的渲染器。
+The theme uses `Pug` and `Stylus` and requires installing their respective renderers.
 
 ```shell [Terminal]
 npm install hexo-renderer-pug hexo-renderer-stylus --save
 ```
 
-## 语言配置
+## Language Configuration
 
-修改站点配置文件 `_config.yml`（不是主题配置文件）。
+Modify the site configuration file `_config.yml` (not the theme configuration file).
 
-支持语言：`en` (美式英文) 、 `zh-CN` (简体中文)、`zh-TW` (繁体中文)
+Supported languages: `en` (American English), `zh-CN` (Simplified Chinese), `zh-TW` (Traditional Chinese)
 
 ```yaml [_config.yml]
-language: zh-CN # 语言
+language: zh-CN # Language
 ```
 
-## 本地启动
+## Local Server Start
 ```shell [Terminal]
 hexo server
 ```
 
-::: danger 使用注意
-如果遇到展示缓存问题，可以尝试 `hexo clean` 清除缓存再次启动。
+::: danger Usage Note
+If you encounter display caching issues, you can try `hexo clean` to clear the cache and start again.
 :::
 
-## 优化配置
+## Optimization Configuration
 
-在博客根目录运行以下命令，将主题的配置文件复制到根目录，以便更好地配置主题。
+Run the following command in the blog's root directory to copy the theme's configuration file to the root directory for better theme configuration.
 
 :::tabs
 == Git
@@ -122,23 +121,23 @@ copy .\node_modules\hexo-theme-solitude\_config.yml .\_config.solitude.yml
 ```
 :::
 
-::: info 提示
-- 根目录的 `_config.solitude.yml` 的配置都是高优先级，因此，渲染时会优先采用此文件的配置项内容。
-- 在更新主题时可能会存在配置变更，请注意更新说明，可能需要手动对 `_config.solitude.yml` 同步修改。
-- 想查看覆盖配置有没有生效，可以通过 `hexo generate --debug` 查看命令行输出。
+::: info Tip
+- The configuration in the root directory's `_config.solitude.yml` takes precedence. Therefore, the content of this file's configuration items will be used during rendering.
+- When updating the theme, there may be configuration changes. Please pay attention to the update instructions, as you may need to manually modify `_config.solitude.yml`.
+- To check if the overridden configuration has taken effect, you can use `hexo generate --debug` to view the command line output.
 :::
 
 ---
-## 视频教程
+## Video Tutorial
 
-如果无法通过文档成功配置，这里有视频 [Solitude 主题使用教程](https://space.bilibili.com/1329819902/channel/seriesdetail?sid=3761808)。
+If you are unable to successfully configure using the documentation, there is a video tutorial available: [Solitude Theme Usage Tutorial](https://space.bilibili.com/1329819902/channel/seriesdetail?sid=3761808).
 
-## 版本号释义
+## Version Number Explanation
 
-本项目的版本号为 `X.Y.Z` 格式，但与常见的 [语义化版本号规范](https://semver.org/lang/zh-CN/) 有部分区别，具体释义如下：
+The version number of this project is in the format `X.Y.Z`, but it has some differences from the common [Semantic Versioning Specification](https://semver.org/). The specific explanations are as follows:
 
-- `X`：产品层面的重新设计，包含重大框架重构，会涉及大范围功能变更与配置变更，更新前必须阅读相关文档
+- `X`: Redesign at the product level, including major framework refactoring, significant functional changes, and configuration changes. Please read the relevant documentation before updating.
 
-- `Y`：包含中大型新功能，及无法向下兼容的功能变更与配置变更，更新该版本号可能会需要修改配置或者移除一些原功能
+- `Y`: Contains medium to large new features and non-backward compatible functional changes and configuration changes. Updating this version may require modifying configurations or removing some original features.
 
-- `Z`：不仅包含 BUG 修复、小型新功能，还会包含可以向下兼容的原功能更新与配置变更，原则上更新该版本号无需额外动作
+- `Z`: Includes bug fixes, small new features, and backward-compatible updates to original features and configuration changes. In principle, updating this version does not require any additional actions.

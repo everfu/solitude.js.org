@@ -1,29 +1,29 @@
 ---
 title: Post Chat
-description: Post Chat 是由 Heo 与 Tianli 共同开发的网站聊天机器人。
+description: Post Chat is a website chatbot developed by Heo and Tianli.
 ---
 
 # Post Chat
 
-> 此功能仅中国大陆区域可用，其他地区不保证可用性。
+> This feature is only available in mainland China and availability in other regions is not guaranteed.
 
-使用前请在 [Post Chat](https://ai.tianli0.top/?InviteID=OZ3Z0V2R) 注册并购买。
+Please register and purchase at [Post Chat](https://ai.tianli0.top/?InviteID=OZ3Z0V2R) before use.
 
 ```yaml
 # Post Chat AI
-# 后台地址：https://ai.tianli0.top/?InviteID=OZ3Z0V2R
+# Backend address: https://ai.tianli0.top/?InviteID=OZ3Z0V2R
 tianli_talk:
   enable: false
-  title: 智能客服与搜索
-  key: # 购买的key
-  # 默认值
+  title: Intelligent Customer Service and Search
+  key: # purchased key
+  # Default values
   # backgroundColor: var(--efu-main)
   # bottom: 60px
   option: # https://ai.tianli0.top/codeMaker.html
   #  defaultInput: false
   #  upLoadWeb: true
   #  userTitle: Efu Chat
-  #  userDesc: 你好，我是 Efu 的智能客服，有什么可以帮助你的？
+  #  userDesc: Hello, I am Efu's intelligent customer service. How can I assist you?
   #  showInviteLink: https://ai.tianli0.top/?InviteID=OZ3Z0V2R
   #  blackDom:
   #    - .aplayer

@@ -1,30 +1,30 @@
 ---
-title: 高级配置
-description: Solitude 主题的高级配置
+title: Advanced Configuration
+description: Advanced configuration for the Solitude theme
 ---
 
-# 高级配置
+# Advanced Configuration
 
 ## Gulp
 
-1. 安装相关插件：
+1. Install the required plugins:
     ```bash
     npm install gulp compress gulp-clean-css gulp-html-minifier-terser gulp-htmlclean gulp-terser --save-dev
     ```
-2. 创建 `gulpfile.js` 文件：
+2. Create the `gulpfile.js` file:
     ```js
     var gulp = require('gulp');
     var cleanCSS = require('gulp-clean-css');
     var htmlmin = require('gulp-html-minifier-terser');
     var htmlclean = require('gulp-htmlclean');
     var terser = require('gulp-terser');
-    // 压缩js
+    // Compress JS
     gulp.task('compress', () =>
     gulp.src(['./public/**/*.js', '!./public/**/*.min.js'])
     .pipe(terser())
     .pipe(gulp.dest('./public'))
     )
-    //压缩css
+    // Compress CSS
     gulp.task('minify-css', () => {
     return gulp.src(['./public/**/*.css'])
     .pipe(cleanCSS({
@@ -32,29 +32,29 @@ description: Solitude 主题的高级配置
     }))
     .pipe(gulp.dest('./public'));
     });
-    //压缩html
+    // Compress HTML
     gulp.task('minify-html', () => {
     return gulp.src('./public/**/*.html')
     .pipe(htmlclean())
     .pipe(htmlmin({
-    removeComments: true, //清除html注释
-    collapseWhitespace: true, //压缩html
+    removeComments: true, // Remove HTML comments
+    collapseWhitespace: true, // Compress HTML
     collapseBooleanAttributes: true,
-    //省略布尔属性的值，例如：<input checked="true"/> ==> <input />
+    // Omit boolean attribute values, e.g. <input checked="true"/> ==> <input />
     removeEmptyAttributes: true,
-    //删除所有空格作属性值，例如：<input id="" /> ==> <input />
+    // Remove all attributes with empty values, e.g. <input id="" /> ==> <input />
     removeScriptTypeAttributes: true,
-    //删除<script>的type="text/javascript"
+    // Remove type="text/javascript" from <script>
     removeStyleLinkTypeAttributes: true,
-    //删除<style>和<link>的 type="text/css"
-    minifyJS: true, //压缩页面 JS
-    minifyCSS: true, //压缩页面 CSS
-    minifyURLs: true  //压缩页面URL
+    // Remove type="text/css" from <style> and <link>
+    minifyJS: true, // Minify JS
+    minifyCSS: true, // Minify CSS
+    minifyURLs: true  // Minify URLs
     }))
     .pipe(gulp.dest('./public'))
     });
     
-    // 运行gulp命令时依次执行以下任务
+    // Run the following tasks when running the gulp command
     gulp.task('default', gulp.parallel(
     'compress', 'minify-css', 'minify-html'
     ))

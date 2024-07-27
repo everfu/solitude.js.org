@@ -1,46 +1,46 @@
 ---
-title: 我的装备
-description: 添加我的装备页面
+title: My Equipment
+description: Add My Equipment page
 ---
 
-# 我的装备
+# My Equipment
 
-1. 在终端中输入以下命令，它将在source文件夹下生成equipment目录，其中包含index.md​文件。
-    ```shell
-    hexo new page equipment
-    ```
-2. 将index.md​中的内容替换成以下：（按需修改）
-    ```markdown
-    ---
-    title: 我的装备
-    date: 2023-11-01 13:14:42
-    type: equipment
-    cover: ""
-    desc: 实物装备推荐
-    leftend: 跟 王卓Sco 一起享受科技带来的乐趣
-    rightend: ""
-    ---
-    ```
-3. 在 `source/_data/` ​文件夹下建立名为equipment.yaml​的文件，下方内容为模版，根据要求按需添加。
-    ```yaml
-    - class_name: 生产力
-      description: 提升自己生产效率的硬件设备
-      equipment_list:
-          - name: 群晖 DS920+
-            specification: 性价比超高
-            description: 很棒的网络存储解决方案以及流媒体传输服务器
-            image: https://7.isyangs.cn/1/65eb3d5f8057b-1.png
-          - name: iPhone 12 Pro Max
-            specification: 海蓝色 / 1TB
-            description: 功能强大，外观抢眼，设计耐用。
-            image: https://7.isyangs.cn/1/65eb3d70c59d9-1.png
-            link: https://support.apple.com/kb/SP832?locale=zh_CN
-    - class_name: 出行
-      description: 用来出行的实物及设备
-      equipment_list:
-         - name: AirPods Pro
-           specification: 标准版
-           description: 可以说是非常强的耳机了，还有好几次固件大幅度更新。apple生态只要有两个设备及以上，必入。
-           image: https://7.isyangs.cn/1/65eb3d84dea25-1.png
-           link: https://www.apple.com.cn/airpods-pro/
-    ```
+1. Enter the following command in the terminal, it will generate an equipment directory under the source folder, which includes the index.md file.
+  ```shell
+  hexo new page equipment
+  ```
+2. Replace the content in index.md with the following: (modify as needed)
+  ```markdown
+  ---
+  title: My Equipment
+  date: 2023-11-01 13:14:42
+  type: equipment
+  cover: ""
+  desc: Recommendations for physical equipment
+  leftend: Enjoy the fun of technology with Wang Zhuo Sco
+  rightend: ""
+  ---
+  ```
+3. Create a file named equipment.yaml in the `source/_data/` folder, with the following template content. Add as required.
+  ```yaml
+  - class_name: Productivity
+    description: Hardware devices to improve personal productivity
+    equipment_list:
+      - name: Synology DS920+
+      specification: Great value for money
+      description: Excellent network storage solution and media streaming server
+      image: https://7.isyangs.cn/1/65eb3d5f8057b-1.png
+      - name: iPhone 12 Pro Max
+      specification: Pacific Blue / 1TB
+      description: Powerful functionality, eye-catching design, and durable.
+      image: https://7.isyangs.cn/1/65eb3d70c59d9-1.png
+      link: https://support.apple.com/kb/SP832?locale=en_US
+  - class_name: Travel
+    description: Physical items and devices for travel
+    equipment_list:
+     - name: AirPods Pro
+       specification: Standard Edition
+       description: These are very powerful headphones, with several significant firmware updates. A must-have for the Apple ecosystem with two or more devices.
+       image: https://7.isyangs.cn/1/65eb3d84dea25-1.png
+       link: https://www.apple.com/airpods-pro/
+  ```

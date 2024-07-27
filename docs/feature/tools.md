@@ -1,12 +1,12 @@
 ---
-title: 在线工具
-description: 添加在线工具页面
+title: Online Tools
+description: Add online tools page
 ---
 
-# 在线工具
+# Online Tools
 
-在线工具页面和友情链接页面数据文件结构相同。
+The data structure for the online tools page is the same as the data structure for the "tlink" page.
 
-`tlink.yml` 数据文件。
+Use the `tlink.yml` data file.
 
-tlink 页面只需将 `type` 字段设置为 `tlink` 即可。
+For the tlink page, simply set the `type` field to `tlink`.

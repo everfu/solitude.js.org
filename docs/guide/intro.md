@@ -1,29 +1,29 @@
 ---
-title: 项目介绍
-description: 欢迎使用 Hexo 主题 Solitude
+title: Project Introduction
+description: Welcome to Hexo theme Solitude
 ---
 
 ![Solitude](/screenshot.avif)
 
-Solitude 是一款设计师风格的主题，它提供了很多易于博客书写的功能，以帮助你构建美丽且优雅的博客站。
-它的目标是使用简洁的代码即可完成复杂的构建。
+Solitude is a designer-style theme that provides many features for easy blog writing, helping you build beautiful and elegant blog sites.
+Its goal is to achieve complex builds with simple code.
 
-主题设计由 [@张洪 Heo](https://github.com/zhheo){target='_blank'} 全权授权。
+The theme design is fully authorized by [@张洪 Heo](https://github.com/zhheo){target='_blank'}.
 
-> 欢迎你对本主题做出贡献！[贡献指南](https://github.com/everfu/hexo-theme-solitude/blob/main/CONTRIBUTING.md){target='_blank'}
+> Welcome to contribute to this theme! [Contribution Guide](https://github.com/everfu/hexo-theme-solitude/blob/main/CONTRIBUTING.md){target='_blank'}
 
-## 特色
+## Features
 
-- 页面懒加载（Pjax）、图片懒加载（LazyLoad）、离线应用（PWA）
-- 评论（Twikoo、Waline）
-- 显示切换（ColorMode）
-- 灯箱（medium-zoom、fancybox）
-- 数学公式（Latex）
-- 特色页面：即刻短文、我的装备、在线工具、音乐馆、友链鱼塘、相册页、豆瓣页
-- 文章功能：AI 摘要、代码高亮
+- Page lazy loading (Pjax), image lazy loading (LazyLoad), offline application (PWA)
+- Comments (Twikoo, Waline)
+- Display switch (ColorMode)
+- Lightbox (medium-zoom, fancybox)
+- Mathematical formulas (Latex)
+- Featured pages: Instant short articles, My equipment, Online tools, Music library, Friends link pond, Album page, Douban page
+- Article features: AI summary, Code highlighting
 
-## 赞助者
+## Sponsors
 
-赞助的朋友们，因为你们的支持使我能够继续开源计划，谢谢！
+To the sponsored friends, thank you for your support that allows me to continue the open source project!
 
 [Sponsor](https://everfu.org/spnsor){target='_blank'}

@@ -1,23 +1,23 @@
 ---
-title: Giscus 评论系统
-description: Giscus 是一个简单的 GitHub Issue 评论系统，支持多种评论方式。
+title: Giscus Comment System
+description: Giscus is a simple GitHub Issue comment system that supports multiple comment methods.
 ---
 
-# Giscus 评论系统
+# Giscus Comment System
 
-## 后端部署
+## Backend Deployment
 
-[Giscus 文档](https://giscus.app/zh-CN)
+[Giscus Documentation](https://giscus.app/zh-CN)
 
-## 主题配置
+## Theme Configuration
 
 ```yaml
-# Giscus 配置信息
+# Giscus Configuration
 # Giscus settings
 giscus:
-  repo: # GitHub 仓库名称 / GitHub repository name
-  repo_id: # GitHub 仓库ID / GitHub repository ID
-  category_id: # GitHub 仓库分类ID / GitHub repository category ID
+  repo: # GitHub repository name
+  repo_id: # GitHub repository ID
+  category_id: # GitHub repository category ID
   theme:
     light: light
     dark: dark

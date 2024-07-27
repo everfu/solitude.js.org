@@ -1,8 +1,8 @@
 ---
-title: 豆瓣
-description: 添加豆瓣页面
+title: Douban
+description: Add Douban page
 ---
 
-# 豆瓣
+# Douban
 
-[Hexo：添加豆瓣页并自定义样式](https://www.efu.me/posts/a2fcd92c.html)
+[Hexo: Add Douban page and customize style](https://www.efu.me/posts/a2fcd92c.html)

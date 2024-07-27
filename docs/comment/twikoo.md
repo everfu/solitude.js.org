@@ -1,23 +1,23 @@
 ---
-title: Twikoo 评论系统
-description: Twikoo 是一个简洁、安全、免费的静态网站评论系统，支持在任何静态网站上使用。
+title: Twikoo Comment System
+description: Twikoo is a simple, secure, and free static website comment system that can be used on any static website.
 ---
 
-# Twikoo 评论系统
+# Twikoo Comment System
 
-## 后端部署
+## Backend Deployment
 
-[云函数部署](https://twikoo.js.org/backend.html)
+[Cloud Function Deployment](https://twikoo.js.org/backend.html)
 
-> 推荐食用 `netlify` 部署
+> Recommended to use `netlify` for deployment
 
-## 主题配置
+## Theme Configuration
 
 ```yaml
-# Twikoo 配置信息
+# Twikoo Configuration
 # Twikoo settings
 twikoo: # https://twikoo.js.org/
-  envId: your envid # 你部署twikoo的地址
-  lang: zh-CN # 语言
-  accessToken: # accessToken（在浏览器控制台cookies获取）
+  envId: your envid # The address where you deploy Twikoo
+  lang: zh-CN # Language
+  accessToken: # accessToken (obtained from browser console cookies)
 ```
