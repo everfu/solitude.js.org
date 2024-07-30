@@ -14,9 +14,6 @@ hero:
     - theme: alt
       text: 快速开始
       link: /zh/guide/quick-start
-    - theme: alt
-      text: Github
-      link: https://github.com/everfu/hexo-theme-solitude
 features:
   - title: "简洁"
     details: "简洁的设计，专注于内容。"

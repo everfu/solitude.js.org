@@ -7,4 +7,6 @@ description: 支持丰富的 Tags Plugin，让你可以更方便地写作。
 
 > Tags Plugin 是 Solitude 主题的一个特色功能，它可以让你更方便地写作。
 
-具体效果请查看主题演示站博客文章：[Solitude 主题标签 Tag Plugins](https://www.efu.me/posts/e19cb4b7.html)
+具体效果请查看主题演示站博客文章：[Solitude 主题标签 Tag Plugins](https://everfu.github.io/Solitude/posts/e19cb4b7.html)
+
+> 纯英文文章，如遇到不知如何解决的问题请留言。

@@ -58,44 +58,31 @@ group:
 ```
 
 ```yaml [菜单]
-# 导航栏内容
-# Navigation bar content
-# tip：此部分内容是顶部导航栏中间菜单区域
-# tip: This part of the content is the menu area in the middle of the top navigation bar
-menu:
-  首页: / # 显示名称：路径 / Display name: path
-  文库: # 显示名称 / Display name
-    文章列表: /archives/ || st-folder-fill # 子菜单名称：路径 || 图标 / Submenu name: path || icon
-    全部分类: /categories/ || st-checkbox-multiple-blank-fill
-    全部标签: /tags/ || st-price-tag-fill
-  友链:
-    友链鱼塘: /moments/ || st-wifi-fill
-    友情链接: /links/ || st-group-fill
-    宝藏博主: javascript:travelling() || st-gift-fill
-  我的:
-    相册集: /gallery/ || st-image-fill
-    装备: /equipment/ || st-laptop-line
-    工具箱: /tlink/ || st-tools-fill
-    音乐馆: /music/ || st-disc-fill
-  关于:
-    关于本站: /about/ || st-contacts-fill
+  menu:
+    Home: / # name: link
+    Article: # name
+      Archives: /archives/ || fas fa-folder-closed # item name: link || icon
+      Categories: /categories/ || fas fa-clone
+      Tags: /tags/ || fas fa-tags
+    Friends:
+      Moments: /moments/ || fas fa-wifi
+      Links: /links/ || fas fa-user-group
+      Treasure: javascript:travelling() || fas fa-gift
+    Myself:
+      Equipment: /equipment/ || fas fa-laptop
+      Toobox: /tlink/ || fas fa-toolbox
+      Music: /music/ || fas fa-music
+    About: /about/
 ```
 ```yaml [按钮]
-# 导航栏右侧按钮
-# Button on the right side of the navigation bar
-# tip：只需填写true和false即可
-# tip: Just fill in true and false
-right:
-  random: false # 随机文章跳转 true：开启 / false：关闭 : random post jump true: on / false: off
-  console: false #控制台 true：开启 / false：关闭 : console true: on / false: off
-  # 从左至右
-  # From left to right
-  custom:
-    - name: 开往 - 友链接力 # 显示文字 / Displayed text
-      url: https://www.travellings.cn/go.html # 跳转链接 / Jump link
-      icon: st-train-line # 图标 / Icon
-      onclick: # 点击事件 / Click event
-      id: travellings_button # id
+  right: # right button
+    random: false # Random article
+    custom:
+    #  - name: Start # name
+    #    url: https://www.travellings.cn/go.html # Jump link
+    #    icon: fas fa-train # Icon
+    #    onclick: # Click event
+    #    id: travellings_button # id
 ```
 :::
 
