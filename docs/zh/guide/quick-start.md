@@ -4,8 +4,10 @@ description: 快速开始使用 Hexo Theme Solitude
 ---
 
 ::: danger 温馨提醒
-`hexo-theme-solitude@2.0.5` 即本主题之后发布的所有版本均使用 `Font Awesome` 图标，如需要从低版本更新，请准备好备份。
-欢迎新来的大家👏
+`hexo-theme-solitude` 即本主题在 `v2.0.1` 之后发布的所有版本均使用 [`Font Awesome`](https://fontawesome.com/search?o=r&m=free) 图标
+
+如需要从低版本更新，请准备好备份。
+
 :::
 
 # 安装

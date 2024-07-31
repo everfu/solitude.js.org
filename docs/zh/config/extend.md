@@ -5,19 +5,32 @@ description: Hexo Theme Solitude 的扩展配置。
 
 # 扩展配置
 
+## 中控台
+
+```yaml
+# Console
+console:
+  enable: false
+  recentComment: # Recent comments
+    enable: false
+    storage: .2 # Cache time 1: 1 day / .5 : half a day
+  card:
+    tags: true # Tags
+    archive: true # Archive
+```
+
 ## 页脚（Footer）
 
 :::code-group
 ```yaml [上方图标]
-# 底部上方一排图标
-# Bottom row of icons
 information:
-  left: # 左侧显示图标
-    Github: https://github.com/efuo || st-github-line # 名称：链接 || 图标 / Name: link || icon
-    Mail: mailto:o@efu.me || st-mail-line
-  right: # 右侧显示图标
-    Bilibili: https://space.bilibili.com/1329819902 || st-bilibili-line
-    抖音: https://v.douyin.com/iJsLc8jt/ || st-douyin-fill
+    author: true # 是否显示siteicon
+    left:
+      # Github: https://github.com/efuo || fab fa-github # Name: link || icon
+      # Mail: mailto:o@efu.me || fab fa-envelope
+    right:
+      # Bilibili: https://space.bilibili.com/1329819902 || fab fa-bilibili
+      # Douyin: https://v.douyin.com/iJsLc8jt/ || fab fa-tiktok
 ```
 
 ```yaml [底部导航栏]
@@ -169,13 +182,10 @@ lazyload:
 
 ```yaml
 # 加载动画
-# Loading animation
 loading:
   # 全局加载动画
-  # Global loading animation
   fullpage: false
   # 顶部加载胶囊
-  # Top loading capsule
   pace: true
 ```
 
@@ -185,18 +195,14 @@ loading:
 
 ```yaml
 # 代码高亮增强
-# Code highlight
+# Highlight
 highlight:
   enable: true
-  limit: 200 # 代码行高限制 / Code line limit
-  copy: true # 是否开启复制按钮 / Whether to enable the copy button
-  expand: true # 是否默认展开 / Whether to expand by default
-  # 代码块样式
-  # Code block style
-  theme: default # default: 默认 / mac : apple terminal
-  # 代码配色
-  # Code color
-  color: default # default: 默认  / vscode / solarized-dark / solarized-light / dracula / monokai
+  limit: 200 # Code line limit
+  copy: true # Whether to enable the copy button
+  expand: true # Whether to expand by default
+  theme: mac # default: default / mac : apple terminal
+  color: default # default / solidity / dracula
 ```
 
 ## 图片灯箱
@@ -257,9 +263,26 @@ busuanzi: false
 
 ## 数学公式
 
-> 请查看作者文章：[Theme: 渲染器 markdown-it](https://www.efu.me/posts/941787ac.html)
-
 主题支持使用 **Latex** 数学公式 当需要使用数学公式时，在文章的 **Front-Matter** 添加。
+
+安装 `hexo-markdown-it` 与 `@renbaoshuo/markdown-it-katex`
+
+```bash
+npm un hexo-renderer-marked --save
+npm i hexo-markdown-it @renbaoshuo/markdown-it-katex
+```
+
+在配置文件配置并启用 katex 插件
+
+打开主题内 `katex` 配置项
+
+```yaml [_config.solitude.yml]
+# Katex
+katex:
+  enable: false
+  per_page: false # Whether to load on each page
+  copytex: false # Whether to enable copy formula
+```
 
 ## 站点验证
 

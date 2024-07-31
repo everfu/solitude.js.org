@@ -88,7 +88,7 @@ group:
 
 ## 首页顶部
 
-> 开启 **banner** 必须填写 **icon** ，否则会报错。 开启后可在文章的front matter中添加 **recommend: true**，即可在右侧显示置顶文章。
+> ~~开启 **banner** 必须填写 **icon** ，否则会报错~~  v2支持不开启。 开启后可在文章的front matter中添加 **recommend: true**，即可在右侧显示置顶文章。
 
 ```yaml
 # 首页顶部样式
@@ -189,61 +189,28 @@ position: 1 # left(0): 左侧 / right(1):右侧
 ```yaml [个人信息卡片]
 # 侧边栏个人信息卡片
 # Sidebar personal information
-card:
-  style: 0 # 0: Heo样式 ：1: 设计样式
-  # 头像信息
-  # Avatar information
-  author:
-    # 头像
-    # Avatar
-    img: https://7.isyangs.cn/1/65eb200ee4dea-1.png
-    # 表情图片链接
-    # Emoticon image link
-    # tip: 推荐尺寸 26x26
-    # tip: Recommended size 26x26
-    sticker: https://7.isyangs.cn/1/65eb22ac6952e-1.png
-  # 点击作者名称跳转链接
-  # Click the author name to jump link
-  url: /about/
-  # 背景图片
-  # Background image
-  background: # https://s3.qjqq.cn/47/663af296b85f4.webp!color # 不设置不会展示（仅样式为1、2时有效）
-  # 文案1
-  # label1
-  # tip：可使用html标签
-  # tip: html tags can be used
-  content: 分享自己对编程的<b>热爱</b>，对美好生活的<b>向往</b>，对知识海洋<b>探索历程</b>。
-  # 文案2
-  # label2
-  # tip：可使用html标签
-  # tip: html tags can be used
-  content2: 相信你可以在这里找到对你有用的知识和教程。
-  # 个人信息卡片底部的小图标，按照例子填写
-  # Small icons at the bottom of the personal information card, fill in according to the example
-  # 个人信息卡片顶部按钮的打招呼语句
-  # Greeting statement of the button at the top of the personal information card
-  sayhello:
-    morning: 一日之计在于晨
-    noon: 吃饱了才有力气干活
-    afternoon: 集中精力，攻克难关
-    night: 不要太劳累了，早睡更健康
-    goodnight: 睡个好觉，保证精力充沛
-  # 个人信息卡片顶部按钮的切换文字
-  # Switching text of the button at the top of the personal information card
-  sayhello2:
-    - 🤖️ 数码科技爱好者
-    - 🔍 分享与热心帮助
-    - 🏠 智能家居小能手
-    - 🔨 设计开发一条龙
-    - 🤝 专修交互与设计
-    - 🏃 脚踏实地行动派
-    - 🧱 团队小组发动机
-    - 💢 壮汉人狠话不多
-    - 🎮 电竞游戏爱好者
-  # 个人信息卡片底部的小图标，按照例子填写
-  information:
-    Github: https://github.com/efuo || st-github-line # 名称：链接 || 图标 / Name: link || icon
-    Bilibili: https://space.bilibili.com/1329819902 || st-bilibili-line
+  card:
+    style: 0 # 0: default 1: style 1 2: style 2
+    author:
+      img: /img/avatar.avif # url (avatar)
+      sticker: # url (sticker), 24x24
+    url: /about/ # Click name to jump to address 
+    background: # https://s3.qjqq.cn/47/663af296b85f4.webp!color # Background image(Invalid if style is 0)
+    content: Here is my personal blog # Introduction (Invalid if style is 1)
+    content2: I believe you can find knowledge and tutorials here that will be useful to you. # Introduction (Invalid if style is 1)
+    sayhello: # Style 2 is invalid
+      morning: ✨ Good morning. It's a new day 
+      noon: It's time for a midday break 
+      afternoon: Tea time. 🍵
+      night: early bedtime
+      goodnight: Good night 😴
+    sayhello2: # Style 2 is invalid, Triggered when sayhello is clicked.
+      # - You'll make it.
+      # - You're gonna make it.
+      # - Good luck, stranger.
+    information:
+    #  Github: https://github.com/everfu || fab fa-github # Name: link || icon
+    #  Bilibili: https://space.bilibili.com/1329819902 || fab fa-bilibili
 ```
 
 ```yaml [公众号二维码]

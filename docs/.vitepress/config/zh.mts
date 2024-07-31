@@ -7,83 +7,7 @@ export const zh = defineConfig({
     themeConfig: {
         nav: nav(),
 
-        sidebar: {
-            '/zh/v1': [
-                {
-                    items: [
-                        {
-                            text: '简介',
-                            collapsed: false,
-                            items: [
-                                {text: '介绍', link: '/zh/v1/guide/intro'},
-                                {text: '安装', link: '/zh/v1/guide/quick-start'},
-                                {text: '页面', link: '/zh/v1/guide/page'},
-                                {text: 'Front Matter', link: '/zh/v1/guide/front-matter'},
-                                {text: 'Tags Plugin', link: '/zh/v1/guide/tags-plugin'},
-                            ]
-                        },
-                        {
-                            text: '配置',
-                            collapsed: false,
-                            items: [
-                                {text: '基本', link: '/zh/v1/config/basic'},
-                                {text: '扩展', link: '/zh/v1/config/extend'},
-                                {text: '高级', link: '/zh/v1/config/advanced'},
-                            ]
-                        },
-                        {
-                            text: '评论系统',
-                            collapsed: false,
-                            items: [
-                                {text: '基本', link: '/zh/v1/comment/basic'},
-                                {text: 'Valine', link: '/zh/v1/comment/valine'},
-                                {text: 'Waline', link: '/zh/v1/comment/waline'},
-                                {text: 'Twikoo', link: '/zh/v1/comment/twikoo'},
-                                {text: 'Artalk', link: '/zh/v1/comment/artalk'},
-                                {text: 'Giscus', link: '/zh/v1/comment/giscus'},
-                            ]
-                        },
-                        {
-                            text: '搜索',
-                            collapsed: false,
-                            items: [
-                                {text: '本地搜索', link: '/zh/v1/search/local'},
-                                {text: 'Algolia', link: '/zh/v1/search/algolia'},
-                            ]
-                        },
-                        {
-                            text: '特色页面',
-                            collapsed: false,
-                            items: [
-                                {text: '友情链接', link: '/zh/v1/feature/links'},
-                                {text: '关于我', link: '/zh/v1/feature/about'},
-                                {text: '音乐馆', link: '/zh/v1/feature/music'},
-                                {text: '我的装备', link: '/zh/v1/feature/equipment'},
-                                {text: '在线工具', link: '/zh/v1/feature/tools'},
-                                {text: '豆瓣', link: '/zh/v1/feature/douban'},
-                                {text: '弹幕留言页', link: '/zh/v1/feature/danmaku'},
-                                {text: '即刻短文', link: '/zh/v1/feature/jike'},
-                                {text: '最近评论', link: '/zh/v1/feature/recent-comments'},
-                            ]
-                        },
-                        {
-                            text: '第三方',
-                            collapsed: false,
-                            items: [
-                                {text: 'Tianli GPT', link: '/zh/v1/third-party/tianli-gpt'},
-                                {text: 'Post Chat', link: '/zh/v1/third-party/post-chat'},
-                            ]
-                        },
-                        {
-                            text: 'FAQ',
-                            link: '/zh/v1/faq'
-                        }
-                    ]
-                },
-            ],
-            '/zh/': [
-                {
-                    items: [
+        sidebar: [
                         {
                             text: '简介',
                             collapsed: false,
@@ -151,10 +75,7 @@ export const zh = defineConfig({
                             text: 'FAQ',
                             link: '/zh/faq'
                         }
-                    ]
-                }
-            ]
-        },
+                    ],
 
         editLink: {
             pattern: 'https://github.com/everfu/solitude.js.org/edit/main/docs/:path',
@@ -165,7 +86,7 @@ export const zh = defineConfig({
             provider: 'local',
             options: {
                 locales: {
-                    root: {
+                    zh: {
                         translations: {
                             button: {
                                 buttonText: '搜索文档',
