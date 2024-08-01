@@ -75,9 +75,5 @@ export const en = {
             pattern: 'https://github.com/everfu/solitude.js.org/edit/main/docs/:path',
             text: 'Edit this page on GitHub',
         },
-
-        search: {
-            provider: 'local',
-        }
     },
 }
