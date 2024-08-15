@@ -21,7 +21,7 @@ In addition, this guide only includes instructions within the scope of the theme
 
 If you find any bugs in the theme or want to add new features, please leave a message in the [issues](https://github.com/everfu/Hexo-theme-solitude/issues). For usage-related questions, please ask in the [Discussions](https://github.com/orgs/everfu/discussions).
 
-## Theme Installation
+## Installation
 
 :::tabs key=install
 == GitHub
@@ -61,7 +61,7 @@ npm update hexo-theme-solitude
 ```
 :::
 
-## Applying the Theme
+## Applying
 
 Modify the root configuration file `_config.yml` of Hexo and change the theme to `solitude`.
 
@@ -69,25 +69,27 @@ Modify the root configuration file `_config.yml` of Hexo and change the theme to
 theme: solitude
 ```
 
-## Installing Dependencies
+## Dependencies
 
 The theme uses `Pug` and `Stylus` and requires installing their respective renderers.
 
 ```shell [Terminal]
 npm install hexo-renderer-pug hexo-renderer-stylus --save
+# or
+pnpm add hexo-renderer-pug hexo-renderer-stylus
 ```
 
-## Language Configuration
+## Language
 
 Modify the site configuration file `_config.yml` (not the theme configuration file).
 
-Supported languages: `en` (American English), `zh-CN` (Simplified Chinese), `zh-TW` (Traditional Chinese)
+Supported languages: `en-US` (American English), `zh-CN` (Simplified Chinese), `zh-TW` (Traditional Chinese)
 
 ```yaml [_config.yml]
-language: zh-CN # Language
+language: en-US # Language
 ```
 
-## Local Server Start
+## Start
 ```shell [Terminal]
 hexo server
 ```
@@ -96,7 +98,7 @@ hexo server
 If you encounter display caching issues, you can try `hexo clean` to clear the cache and start again.
 :::
 
-## Optimization Configuration
+## Optimization
 
 Run the following command in the blog's root directory to copy the theme's configuration file to the root directory for better theme configuration.
 
@@ -126,11 +128,6 @@ copy .\node_modules\hexo-theme-solitude\_config.yml .\_config.solitude.yml
 - When updating the theme, there may be configuration changes. Please pay attention to the update instructions, as you may need to manually modify `_config.solitude.yml`.
 - To check if the overridden configuration has taken effect, you can use `hexo generate --debug` to view the command line output.
 :::
-
----
-## Video Tutorial
-
-If you are unable to successfully configure using the documentation, there is a video tutorial available: [Solitude Theme Usage Tutorial](https://space.bilibili.com/1329819902/channel/seriesdetail?sid=3761808).
 
 ## Version Number Explanation
 

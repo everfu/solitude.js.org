@@ -26,4 +26,6 @@ The theme design is fully authorized by [@张洪 Heo](https://github.com/zhheo){
 
 To the sponsored friends, thank you for your support that allows me to continue the open source project!
 
-[Sponsor](https://everfu.org/spnsor){target='_blank'}
+[![polar.sh](https://polar.sh/embed/seeks-funding-shield.svg?org=everfu)](https://polar.sh/everfu)
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W1YSMOK)

@@ -4,8 +4,8 @@ import { tabsMarkdownPlugin } from 'vitepress-plugin-tabs'
 export const shared = defineConfig({
 
     head: [
-        ['link', {rel: 'icon', href: '/favicon.png', type: 'image/x-icon'}],
-        ['meta', {name: 'theme-color', content: '#1188fa'}],
+        ['link', {rel: 'icon', href: '/favicon.avif', type: 'image/x-icon'}],
+        ['meta', {name: 'theme-color', content: '#92f8b8'}],
         ['meta', {name: 'google-site-verification', content: 'OQ-FnVME50EgIvv5nO4fsNl7EHkEl0vUSoFUe_fAMgY'}],
     ],
 
@@ -31,7 +31,6 @@ export const shared = defineConfig({
     },
 
     themeConfig: {
-        logo: '/favicon.png',
 
         socialLinks: [
             {icon: 'github', link: 'https://github.com/everfu/hexo-theme-solitude'},

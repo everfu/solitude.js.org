@@ -57,7 +57,6 @@ export const zh = defineConfig({
                                 {text: '音乐馆', link: '/zh/feature/music'},
                                 {text: '我的装备', link: '/zh/feature/equipment'},
                                 {text: '在线工具', link: '/zh/feature/tools'},
-                                {text: '豆瓣', link: '/zh/feature/douban'},
                                 {text: '弹幕留言页', link: '/zh/feature/danmaku'},
                                 {text: '即刻短文', link: '/zh/feature/jike'},
                                 {text: '最近评论', link: '/zh/feature/recent-comments'},
@@ -103,7 +102,7 @@ export const zh = defineConfig({
         darkModeSwitchTitle: '切换到深色模式',
 
         footer: {
-            copyright: `版权所有 © ${new Date().getFullYear()} Ever Fu`,
+            copyright: `版权所有 © ${new Date().getFullYear()} <a target="_blank" href="https://github.com/everfu">Ever Fu</a>`,
             message: '特别赞助：<a href="https://www.lightxi.com/" target="_blank"><img src="https://www.lightxi.com/favicon.ico" style="height: 28px; display: inline-block; margin-bottom: -8px"/> 晞云云计算</a>'
         },
     }
@@ -111,7 +110,7 @@ export const zh = defineConfig({
 
 function nav() {
     return [
-        {text: '作者', link: 'https://everfu.org'},
+        {text: '作者', link: 'https://github.com/everfu'},
         {text: 'QQ 群', link: 'https://qm.qq.com/q/mYIJRTqo0w'},
         {text: '预览', link: 'https://everfu.github.io/Solitude/'},
         {text: '晞云云计算', link: 'https://www.lightxi.com/'}

@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: "Hexo Theme Solitude"
-  text: "A clean Hexo theme"
-  tagline: "What you need is what I create."
+  text: "A clean, responsive Hexo theme"
+  tagline: "Focused on content, providing an excellent reading experience."
   image:
     src: /persona.avif
   actions:
@@ -14,19 +14,22 @@ hero:
     - theme: alt
       text: "Quick Start"
       link: /guide/quick-start
-    - theme: alt
-      text: "Github"
-      link: https://github.com/everfu/hexo-theme-solitude
 features:
   - title: "Simplicity"
+    icon: "📝"
     details: "Clean design, focused on content."
   - title: "Ease of Use"
+    icon: "🚀"
     details: "Simple and easy to use, quick to get started."
   - title: "Responsive"
+    icon: "📱"
     details: "Adapts to various devices, ensuring a good user experience."
   - title: "Customizable"
+    icon: "🎨"
     details: "Supports multiple customization options to meet individual needs."
   - title: "Multilingual"
+    icon: "🌐"
     details: "Supports multiple languages."
   - title: "SEO"
+    icon: "🔍"
     details: "Optimized for SEO, improves search engine rankings."

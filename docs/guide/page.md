@@ -5,7 +5,7 @@ description: Learn about the built-in pages of Hexo Theme Solitude.
 
 # 404, Tags, and Categories Pages
 
-## Tags and Categories Pages
+## Tags and Categories
 
 > The theme comes with built-in tags and categories pages, no additional configuration is required, just enable them in the theme configuration file.
 
@@ -20,7 +20,7 @@ page:
       - /img/default.png # default image
 ```
 
-## 404 Page
+## 404
 
 > The theme comes with a built-in 404 page, no additional configuration is required, just enable it in the theme configuration file.
 
