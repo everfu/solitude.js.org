@@ -1,0 +1,15 @@
+essay_list:
+  - content: 视频播放测试！
+    date: 2023-10-31 15:32
+    video:
+      bilibili: BV1Cv4y1p717
+  - content: 音乐播放测试！
+    date: 2023-10-31 15:32
+    aplayer:
+      server: netease
+      id: 571340283
+  - content: 主题交流群已建立！
+    date: 2023-10-31 15:32
+    image:
+      - https://7.isyangs.cn/1/65e9de42e32cd-1.png
+    link: https://efu.me/

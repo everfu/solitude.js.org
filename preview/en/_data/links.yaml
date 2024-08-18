@@ -1,0 +1,226 @@
+    banner_suffix: 
+    links:
+      - class_name: Recommended # Category name
+        descr: Some recommended blogs or websites # Category description
+        type: card  # Display mode, either card or item
+        suffix: 
+        link_list:
+          - name: Ever Fu # Link name
+            link: https://www.efu.me    # Link address
+            descr: An Open Source worker.   # Link description
+            avatar: https://s3.qjqq.cn/47/660a7ece07609.webp!color # Display avatar
+            topimg: https://s3.qjqq.cn/47/660a7ece07609.webp!color # If in card mode, it will be displayed
+            tag: EFU
+            color: vip
+      - class_name: Technology
+        descr: Technology blogs, unordered
+        type: item
+        suffix: 
+        link_list:
+          - name: isYangs   # Link name
+            link: https://isyangs.cn    # Link address
+            avatar: https://s3.qjqq.cn/47/660a81b6dcdca.webp!color  # Display avatar
+            descr: A front-end bug constructor's blog    # Link description
+          - name: Sh1n3zZ
+            link: https://www.yizhicheng.com
+            descr: A little secret baseヾ(^▽^*)))
+            avatar: https://s3.qjqq.cn/47/662f17f73353c.webp!color
+            tag: Sh1n3zZ
+            color: vip
+          - name: Qingji Balloon
+            link: https://blog.qjqq.cn/
+            descr: A front-end developer who likes to tinker
+            avatar: https://s3.qjqq.cn/47/660a82a602ef7.webp!color
+            tag: Qingji Balloon
+            color: vip
+          - name: Hulebaji
+            link: https://blog.hulebaji.me/
+            descr: Ink into ink, think with a pen
+            avatar: https://s3.qjqq.cn/47/660a829094fa7.webp!color
+            tag: Hulebaji
+            color: vip
+          - name: Coutrue
+            link: https://www.coutures.top/
+            descr: Stay true to the original aspiration and keep going
+            avatar: https://s3.qjqq.cn/47/662f107412c8f.webp!color
+            tag: Coutrue
+            color: vip
+          - name: Miaomint
+            link: https://0u0.ren/
+            descr: A little cat~, loves EDM and watching anime but is a fake otaku.
+            avatar: https://s3.qjqq.cn/47/660a819c68784.webp!color
+            tag: Miaomint
+            color: vip
+          - name: Guoguang
+            link: https://www.sqlsec.com/
+            descr: Sailing against the current, not advancing is retreating. A famous network security engineer.
+            avatar: https://s3.qjqq.cn/47/660a81057369b.webp!color
+          - name: btwoa
+            link: https://blog.btwoa.com/
+            descr: A technology nerd.
+            avatar: https://s3.qjqq.cn/47/660a820d2c30a.webp!color
+          - name: CasecoRI
+            link: https://www.casecori.top/
+            descr: Have a try, don't be shy.
+            avatar: https://s3.qjqq.cn/47/660a817342557.webp!color
+          - name: Leonus
+            descr: There is joy in every inch of progress.
+            link: https://blog.leonus.cn/
+            avatar: https://s3.qjqq.cn/47/660a81e115806.webp!color
+          - name: Chuckle
+            descr: Dust falls in the sky, light laughter in the wind
+            link: https://www.qcqx.cn/
+            avatar: https://s3.qjqq.cn/47/660a81ee204bf.webp!color
+          - name: Tianli
+            descr: Self-awareness is the most valuable knowledge!
+            link: https://tianli-blog.club/
+            avatar: https://s3.qjqq.cn/47/660a81f82f0ba.webp!color
+          - name: June
+            descr: When in doubt, ask the spring breeze
+            link: https://blog.june-pj.cn/
+            avatar: https://s3.qjqq.cn/47/6623633bb575e.webp!color
+          - name: Jerry Zhou
+            descr: Jerry Zhou's personal blog
+            link: https://blog.jerryz.com.cn/
+            avatar: https://s3.qjqq.cn/47/6627d384dcb91.webp!color
+          - name: Anjiurine
+            descr: sleeeeep
+            link: https://anjiurine.top/
+            avatar: https://s3.qjqq.cn/47/662baefd87e2f.webp!color
+          - name: Qingyu Feiyang
+            descr: Willow shadows swaying, clear wine and solitary lamp, brush and ink splattering, heart like frost
+            link: https://blog.qyliu.top/
+            avatar: https://s3.qjqq.cn/47/662c615fdd3f3.webp!color
+          - name: Huansnow
+            descr: Decayed in a sea of flowers, died for love
+            link: https://huanxueblog.top/
+            avatar: https://s3.qjqq.cn/47/662d123b6e327.webp!color
+          - name: Liu Lang Ge
+            descr: An optimistic life explorer!
+            link: https://yjvc.cn/
+            avatar: https://s3.qjqq.cn/47/66306d6cf4046.webp!color
+          - name: Mengze Is Not a Dream
+            descr: Recording the bitter days in the world/My days of pretending to be in the world
+            link: https://www.mengze2.cn/
+            avatar: https://s3.qjqq.cn/47/663340bd99e09.webp!color
+          - name: Star's Field
+            descr: I am young, and the world is full of warmth
+            link: https://byer.top/
+            avatar: https://s3.qjqq.cn/47/663472f40679f.webp!color
+          - name: Silent Xiaojia
+            descr: A Java development engineer who loves to tinker
+            link: https://blog.imzjw.cn/
+            avatar: https://s3.qjqq.cn/47/6634beb51baf8.webp!color
+          - name: HiPeach
+            descr: Inexpressible beauty
+            link: https://blog.opeach.cn/
+            avatar: https://s3.qjqq.cn/47/6635b41874ac1.webp!color
+          - name: Minecraft-Sep
+            descr: Life only has a few chances to fight, where there is no grass in the world🌟
+            link: https://minecraftsep.pages.dev/
+            avatar: https://s3.qjqq.cn/47/6649831bb5ff5.webp!color
+          - name: MysticStars
+            descr: Discover Infinity
+            link: https://www.mysticstars.cn
+            avatar: https://www.mysticstars.cn/upload/MysticStars.svg
+          - name: Baihe
+            descr: BAIHE, sharing knowledge about data, products, and life insights
+            link: https://blog.baispace.cn
+            avatar: https://s3.qjqq.cn/47/665aeecccb0da.webp!color
+          - name: SerMs
+            link: https://blog.serms.top
+            avatar: https://s3.qjqq.cn/47/66797eb8ab8ae.png!color
+            descr: Code is like poetry, details make perfection, logic achieves perfection.
+      - class_name: Life
+        descr: Everyone has a life, arranged in the order of addition
+        type: item
+        suffix:
+        link_list:
+          - name: Zhang Hong
+            descr: Sharing technology and scientific life.
+            link: https://blog.zhheo.com/
+            avatar: https://s3.qjqq.cn/47/660a81669cb23.webp!color
+          - name: Chi Boxun
+            descr: Random thoughts
+            link: https://www.chiboxun.com/
+            avatar: https://s3.qjqq.cn/47/660a832d2a216.webp!color
+          - name: PeterJXL
+            descr: Starting from 01
+            link: https://www.peterjxl.com/
+            avatar: https://s3.qjqq.cn/47/660a82177a727.webp!color
+          - name: Karuboniru
+            descr: Doing a Ph.D. in experimental particle physics, mainly studying neutrinos
+            link: https://yanqiyu.info/
+            avatar: https://s3.qjqq.cn/47/660a82222c292.webp!color
+          - name: Ading
+            descr: We will eventually meet and know each other, in that distant sky
+            link: https://blog.saop.cc/
+            avatar: https://s3.qjqq.cn/47/660a8231e2cbc.webp!color
+          - name: Nangfang Jiamu
+            descr: Fearless future, not nostalgic for the past.
+            link: https://gavin-chen.top/
+            avatar: https://s3.qjqq.cn/47/660a823d02a53.webp!color
+          - name: Qingjian Huaqingyan
+            descr: Yanyu Mu Jun Nian
+            link: https://blog.qjhqy.com/
+            avatar: https://s3.qjqq.cn/47/660a8248eb100.webp!color
+          - name: Naokuo
+            descr: Please give me a billion bowls of three fresh noodles
+            link: https://www.naokuo.top/
+            avatar: https://s3.qjqq.cn/47/660a825c0bcc1.webp!color
+          - name: W1ndys
+            descr: If you want to wear a crown, you must bear its weight
+            link: https://blog.w1ndys.top/
+            avatar: https://s3.qjqq.cn/47/661a7243e2e2b.webp!color
+          - name: Pzai
+            descr: From beginner to give up
+            link: https://blog.pzai.cloud/
+            avatar: https://s3.qjqq.cn/47/660a8277c3fad.webp!color
+          - name: Teacher Du Says
+            descr: A teacher imparts knowledge and wisdom!
+            link: https://dusays.com/
+            avatar: https://s3.qjqq.cn/47/660a829a3c196.webp!color
+          - name: CyberWEI
+            descr: This is CyberWEI, a ghost wandering in cyberspace (bushi)
+            link: https://www.cyberwei.com/
+            avatar: https://s3.qjqq.cn/47/660a82b3c3f06.webp!color
+          - name: Haikuo Lan
+            descr: Born with enthusiasm, also happy
+            link: https://blog.hklan.top/
+            avatar: https://s3.qjqq.cn/47/660a82be11792.webp!color
+          - name: Shangguan Yunchen
+            descr: The wind blows down the phoenix tree, and others comment on its strengths and weaknesses
+            link: https://www.sgyunc.com/
+            avatar: https://s3.qjqq.cn/47/660a82c8ebf8a.webp!color
+          - name: Congling Sama
+            descr: Dare && Do
+            link: https://blog.ciraos.top/
+            avatar: https://s3.qjqq.cn/47/660a82d2a7d02.webp!color
+          - name: Bajiu
+            descr: Recording the bitter days in the world.
+            link: https://bkm.net/
+            avatar: https://s3.qjqq.cn/47/660a82dbdd0d7.webp!color
+          - name: Yiyu Mengxuan
+            descr: Enjoy life with heart
+            link: https://blog.awaae001.top/
+            avatar: https://s3.qjqq.cn/47/660a82e564634.webp!color
+          - name: Yusheng
+            descr: Enjoy life with heart
+            link: https://yszwbk.com/
+            avatar: https://s3.qjqq.cn/47/660a82edcf5d7.webp!color
+          - name: Yizhi Song
+            descr: The wider the heart, the farther the world
+            link: https://sotkg.link/
+            avatar: https://s3.qjqq.cn/47/660a82f9ca504.webp!color
+          - name: Tangbao Qingxie
+            descr: Besides eating, I also like to eat.
+            link: https://www.tbqx.com/
+            avatar: https://s3.qjqq.cn/47/660a83059e9e3.webp!color
+          - name: Liuyue Is Just a Cat
+            descr: Life, half family affairs, half mountains, rivers, lakes, and seas.
+            link: https://www.lyszm.com/
+            avatar: https://s3.qjqq.cn/47/660a83116f0db.webp!color
+          - name: Lisiu
+            descr: Born fearless, standing until the final chapter.
+            link: https://blog.lisui.top/
+            avatar: https://s3.qjqq.cn/47/660a831f37c53.webp!color
