@@ -5,7 +5,7 @@ export const en = {
     themeConfig: {
         nav: [
             {text: 'Author', link: 'https://github.com/everfu'},
-            {text: 'Preview', link: 'https://everfu.github.io/Solitude/'},
+            {text: 'Preview', link: 'https://solitude.js.org/preview/'},
             {text: 'LightXi Cloud', link: 'https://www.lightxi.com/'}
         ],
 
