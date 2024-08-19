@@ -1,45 +1,45 @@
 ---
-title: Practical tips
-description: Gather some practical tips for using Solitude.
+title: 实用技巧
+description: 收集一些使用 Solitude 的实用技巧。
 recommend: true
 sticky: 1
 tags:
-  - Practical
+  - 实用技巧
 categories:
-    - Course
+    - 课程
 abbrlink: 2135ef16
 date: 2024-07-04 00:00:00
 not_cover: true
-cover: https://i.pinimg.com/originals/56/95/a3/5695a314bd8dd47de77c224aa3e05601.jpg
+cover: https://s3.qjqq.cn/47/66c2af80073e7.png!color
 ---
 
-## Article Sticky
+## 文章置顶
 
-Add `sticky: 1` to the `Front-matter` of a new article, where a higher number indicates a higher priority for being sticky.
+在新文章的 `Front-matter` 中添加 `sticky: 1`，其中较高的数字表示较高的置顶优先级。
 
 ```markdown
 ---
-title: Solitude: Practical Tips
+title: Solitude: 实用技巧
 date: 2024-07-04 00:00:00
-description: Gather some practical tips for using Solitude.
+description: 收集一些使用 Solitude 的实用技巧。
 recommend: true
 tags:
-  - Website Building
+  - 网站建设
 categories:
   - Solitude
 sticky: 1
 ---
 ```
 
-## Article Cover Size
+## 文章封面尺寸
 
-According to Heo's design, use the size `508x225` for article covers.
+根据 Heo 的设计，使用尺寸为 `508x225` 的文章封面。
 
-## Using Qingjia's Busuanzi
+## 使用 Qingjia 的 Busuanzi
 
 ```yaml
 busuanzi: true
-busuanzi_use: 1 # 0: Original / 1: Qingjia (other: other custom busuanzi platforms)
+busuanzi_use: 1 # 0: 原版 / 1: Qingjia（其他：其他自定义 busuanzi 平台）
 CDN:
   option:
     busuanzi_qj_js: https://pv.lemonso.com/js

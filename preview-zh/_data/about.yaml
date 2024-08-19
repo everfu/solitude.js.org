@@ -1,68 +1,69 @@
-title: About Us
+title: 关于本站
 authorinfo:
   leftTags:
-    - '🤖️ Tech Enthusiast'
-    - '🔍 Sharing and Helping'
-    - '🏠 Smart Home Guru'
+    - '🤖️ 技术爱好者'
+    - '🔍 分享与帮助'
+    - '🏠 智能家居专家'
   rightTags:
-    - 'Action-oriented 🏃'
-    - 'Team Player 🧱'
-    - 'Strong and Silent 💢'
+    - '行动派 🏃'
+    - '团队合作者 🧱'
+    - '坚忍不拔 💢'
   image: https://github.com/everfu.png
 
 contentinfo:
-  sup: Hello, nice to meet you! 👋
-  name: I'm Ever Fu, you can also call me Little Fu.
-  title: An open-source enthusiast, tech geek, software engineer.
-  tip: Pursuing
-  slogan: Born from<br>passion to create
+  sup: 你好，很高兴见到你！👋
+  name: 我是付小富，你也可以叫我小富。
+  title: 一个开源爱好者，技术极客，软件工程师。
+  tip: 追求
+  slogan: 源于<br>创造的激情
   mask:
-    - Product
-    - Design
-    - Programming
+    - 产品
+    - 设计
+    - 编程
 
 motto:
-  title: Motto
-  prefix: Burn the boats,
-  content: Forge ahead.
+  title: 座右铭
+  prefix: 烧掉船只，
+  content: 勇往直前。
 expertise:
-  title: Expertise
-  prefix: Automation Testing, Front-end Development
-  specialist: ' Expert'
-  content: Learning ability
-  level: ' MAX'
+  title: 专业技能
+  prefix: 自动化测试，前端开发
+  specialist: ' 专家'
+  content: 学习能力
+  level: ' 最高'
 
-# Custom
+# 自定义
 cause:
-  tip: Journey
-  title: Why build a website?
+  tip: 旅程
+  title: 为什么建立一个网站？
   content:
-    <br>When creating this website, the goal was to have a place where I could <b>accumulate knowledge and interests</b>. Sharing with others would make these things accumulate and settle. If I can help more people, help them solve problems, that would be great.
+    <br>创建这个网站的目标是为了有一个地方可以<b>积累知识和兴趣</b>。与他人分享会使这些事物积累和沉淀。如果我能帮助更多的人，帮助他们解决问题，那就太好了。
     <br>
-    Unlike most vertical technical blogs, the categories here will be very diverse, with <b>tutorials and practical knowledge</b>, <b>life anecdotes and tips</b>, <b>thoughts and ideas on various topics</b>. Whatever I research or discover, I will share it here.
+    与大多数垂直技术博客不同，这里的分类将非常多样化，包括<b>教程和实用知识</b>、<b>生活趣事和小贴士</b>、<b>各种主题的思考和想法</b>。无论我研究或发现什么，我都会在这里分享。
     <br>
-    This is the purpose of creating this website, and it is also <b>my way of sharing life</b>. I am fortunate to meet you here, and I believe we can leave behind some wonderful memories together.
+    这就是创建这个网站的目的，也是<b>我分享生活的方式</b>。很幸运在这里遇见你，我相信我们可以一起留下一些美好的回忆。
     <br>
 
 award:
   enable: false
-  description: Thanks to those who appreciate and support me. Because of you, I feel that writing a blog can create value for you. This will allow me to go further on this path.
-  tips: 'Total amount: ¥ {sum}, will be used for the maintenance and updates of the blog.' # {sum} must be included, otherwise the total amount will not be displayed
-rewardList: # Bottom Donations
-  - name: Yuehua
+  description: 感谢那些欣赏和支持我的人。因为有你们，我觉得写博客可以为你们创造价值。这将使我在这条道路上走得更远。
+  tips: '总金额：¥ {sum}，将用于博客的维护和更新。' # 必须包含{sum}，否则总金额将不会显示
+rewardList: # 底部捐赠
+  - name: 悦华
     money: 5
     time: 2023-04-20
-  - name: Cake Xiaocai
+  - name: 糕小菜
     money: 6.66
     time: 2023-08-11
     vip: true
-  - name: Mu Mu
+  - name: 木木
     money: 5
     time: 2023-08-11
-  - name: Yuehua
+  - name: 月华
     money: 56
     vip: true
     time: 2023-08-25
-  - name: Cake Xiaocai
+  - name: 糕小菜
     money: 3.33
     time: 2023-12-24
+

@@ -1,10 +1,10 @@
 ---
-title: Add Friends Link Pond
+title: 添加友链朋友圈
 categories:
-  - Course
+  - 教程
 tags:
   - Hexo
-cover: https://i.pinimg.com/originals/92/55/6d/92556dea468c37e1c1ebee41b7537c1b.jpg
+cover: https://s3.qjqq.cn/47/66c2adf0ecf4d.png!color
 abbrlink: d3883050
 date: 2024-03-28 08:00:00
 recommend: true
@@ -12,39 +12,39 @@ update: 2024-03-28 08:00:00
 ---
 
 {% note 'success simple' %}
-Before we begin: Starting from version 1.8.10, the theme will no longer include the Friends Link Pond. If you want to use it, please add it manually.
+在开始之前：从版本1.8.10开始，主题将不再包含朋友链接池。如果您想使用它，请手动添加。
 
-This tutorial uses the Friends Link Pond style of Hexo.
+本教程使用Hexo的朋友链接池样式。
 {% endnote %}
 
-## Introduction
+## 介绍
 
-The Friends Link Pond is a way to display your friends' links and their latest articles, making your website more active.
+朋友链接池是一种展示您朋友的链接和他们最新文章的方式，使您的网站更加活跃。
 
-## Tutorial
+## 教程
 
-1. Create a page using the following command:
+1. 使用以下命令创建一个页面：
     ```bash
     hexo new page moments
     ```
-2. Copy the following content to source/moments/index.md:
+2. 将以下内容复制到source/moments/index.md：
 ```markdown
 ---
-title: Friends Link Pond
-desc: Latest article subscription
+title: 朋友链接池
+desc: 最新文章订阅
 date: 2024-01-28 21:29:15
 type: "banner"
 cover: ''
-leftend: Subscribe to the latest articles of your friends' links using Friends Link Pond
+leftend: 使用朋友链接池订阅您朋友的最新文章
 ---
-## 🐟 Pond
+## 🐟 池塘
 <div id="hexo-circle-of-friends-root"></div>
 <script>
     let UserConfig = {
-        private_api_url: 'http://192.168.31.44:8000/', /* Replace with your API URL */
-        page_turning_number: 12, /* Maximum number of articles to load when clicking "Load More", default is 10 */
-        error_img: 'https://sdn.geekzu.org/avatar/57d8260dfb55501c37dde588e7c3852c', /* Default avatar URL when loading fails */
-        sort_rule: 'created', /* Sorting rule for the first time entering the page */
+        private_api_url: 'http://192.168.31.44:8000/', /* 替换为您的API URL */
+        page_turning_number: 12, /* 点击“加载更多”时加载的文章的最大数量，默认为10 */
+        error_img: 'https://sdn.geekzu.org/avatar/57d8260dfb55501c37dde588e7c3852c', /* 加载失败时的默认头像URL */
+        sort_rule: 'created', /* 首次进入页面的排序规则 */
     };
 </script>
    
@@ -58,32 +58,32 @@ leftend: Subscribe to the latest articles of your friends' links using Friends L
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhheo/JS-Heo@master/moments5/bundle.js"></script>
 ```
 
-3. Modify the private_api_url to your API URL.
-4. Regenerate your website using the following command:
+3. 将private_api_url修改为您的API URL。
+4. 使用以下命令重新生成您的网站：
     ```bash
     hexo clean && hexo g
     ```
 
-## Adding Fishing
+## 添加钓鱼功能
 
-1. Add the following code at the top of moments/index.md (below the front-matter):
+1. 在moments/index.md的顶部（在front-matter下方）添加以下代码：
 ```markdown
 <div class="title-h2-a">
     <div class="title-h2-a-left">
-        <h2 style="padding-top: 0;margin:0.6rem 0 0.6rem;">🎣 Fishing</h2>
+        <h2 style="padding-top: 0;margin:0.6rem 0 0.6rem;">🎣 钓鱼</h2>
         <a href="javascript:fetchRandomPost();" id="random-post-start" style="transition-duration: 0.3s; transform: rotate(63000deg); opacity: 1;" data-pjax-state="">
             <i class="solitude st-restart-line"></i>
         </a>
     </div>
     <div class="title-h2-a-right">
-        <a href="/links/" data-pjax-state="">All Links</a>
+        <a href="/links/" data-pjax-state="">所有链接</a>
     </div>
 </div>
 <div id="random-post"></div>
 
 <script>
 var fdata = {
-    apiurl: "http://192.168.31.44:8000/", /* Replace with your API URL */
+    apiurl: "http://192.168.31.44:8000/", /* 替换为您的API URL */
     defaultFish: 100,
     hungryFish: 100,
 }
@@ -92,7 +92,7 @@ var fdata = {
 <script type="text/javascript" src="https://cdn.cbd.int/solitude-source@1.0.5/js/moment/random_post.min.js"></script>
 ```
 
-2. Add the following code inside the style tag in moments/index.md:
+2. 在moments/index.md的style标签内添加以下代码：
 ```css
 #random-post {
   min-height: 32px;
@@ -148,34 +148,34 @@ var fdata = {
 }
 ```
 
-## Complete Code
+## 完整代码
 
 ```markdown
 ---
-title: Friends Link Pond
-desc: Latest article subscription
+title: 朋友链接池
+desc: 最新文章订阅
 date: 2024-01-28 21:29:15
 type: "banner"
 cover: ''
-leftend: Subscribe to the latest articles of your friends' links using Friends Link Pond
+leftend: 使用朋友链接池订阅您朋友的最新文章
 ---
 
 <div class="title-h2-a">
     <div class="title-h2-a-left">
-        <h2 style="padding-top: 0;margin:0.6rem 0 0.6rem;">🎣 Fishing</h2>
+        <h2 style="padding-top: 0;margin:0.6rem 0 0.6rem;">🎣 钓鱼</h2>
         <a href="javascript:fetchRandomPost();" id="random-post-start" style="transition-duration: 0.3s; transform: rotate(63000deg); opacity: 1;" data-pjax-state="">
             <i class="solitude st-restart-line"></i>
         </a>
     </div>
     <div class="title-h2-a-right">
-        <a href="/links/" data-pjax-state="">All Links</a>
+        <a href="/links/" data-pjax-state="">所有链接</a>
     </div>
 </div>
 <div id="random-post"></div>
 
 <script>
 var fdata = {
-    apiurl: "http://192.168.31.44:8000/", /* Replace with your API URL */
+    apiurl: "http://192.168.31.44:8000/", /* 替换为您的API URL */
     defaultFish: 100,
     hungryFish: 100,
 }
@@ -183,15 +183,15 @@ var fdata = {
 
 <script type="text/javascript" src="https://cdn.cbd.int/solitude-source@1.0.5/js/moment/random_post.min.js"></script>
 
-## 🐟 Pond
+## 🐟 池塘
 
 <div id="hexo-circle-of-friends-root"></div>
 <script>
     let UserConfig = {
-        private_api_url: 'http://192.168.31.44:8000/', /* Replace with your API URL */
-        page_turning_number: 12, /* Maximum number of articles to load when clicking "Load More", default is 10 */
-        error_img: 'https://sdn.geekzu.org/avatar/57d8260dfb55501c37dde588e7c3852c', /* Default avatar URL when loading fails */
-        sort_rule: 'created' /* Sorting rule for the first time entering the page */
+        private_api_url: 'http://192.168.31.44:8000/', /* 替换为您的API URL */
+        page_turning_number: 12, /* 点击“加载更多”时加载的文章的最大数量，默认为10 */
+        error_img: 'https://sdn.geekzu.org/avatar/57d8260dfb55501c37dde588e7c3852c', /* 加载失败时的默认头像URL */
+        sort_rule: 'created' /* 首次进入页面的排序规则 */
     }
 </script>
 <style>
@@ -253,6 +253,7 @@ var fdata = {
 </style>
 ```
 
-## Result
+## 结果
 
 ![](https://s3.qjqq.cn/47/66223d41d13b2.webp!color)
+
