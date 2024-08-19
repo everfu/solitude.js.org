@@ -105,7 +105,7 @@ theme_config:
       custom: Solitude
     # 网页icon
     # Web icon
-    icon: https://i.postimg.cc/MpGShdhd/favicon.png
+    icon: https://s3.qjqq.cn/47/66c2b219a226f.png!color
 
   nav:
     menu:
@@ -163,7 +163,7 @@ theme_config:
     # 左下跳转按钮
     # Banner lower left jump button
     group:
-      Course: /categories/Course/ || fas fa-book || linear-gradient(to right,#358bff,#15c6ff)
+      Course: /categories/教程/ || fas fa-book || linear-gradient(to right,#358bff,#15c6ff)
 
     # 右侧置顶列表（在文章的front matter中添加“recommend: true”）
     # Right top list (add "recommend: true" in the front matter of the article)
@@ -173,13 +173,13 @@ theme_config:
       sup: Top
       # 左下角大字
       # Large text in the lower left corner
-      title: Solitude Documentation
+      title: Solitude 文档
       # 点击跳转链接
       # Click the jump link
       url: https://solitude.js.org/
       # 显示背景图片
       # Display background image
-      img: https://i.postimg.cc/fy8k7kGK/668da89f2b920.webp
+      img: https://s3.qjqq.cn/47/66c2b25979b09.png!color
       # 阴影颜色
       # Shadow color
       color: "none"
@@ -320,17 +320,17 @@ theme_config:
     award:
       enable: true
       appreciators: /about # 赞赏记录 / Appreciative records
-      title: Thank you for your appreciation.
-      desc: Because of your support, I realized the value of writing articles.
+      title: 感谢您的赞赏
+      desc: 因为您的支持，我才意识到写文章的价值
       list:
-        - name: Polar
-          qcode: https://i.postimg.cc/sx9zR8j0/https-polar-sh-everfu-M-x20.avif
-          url: https://polar.sh/everfu
-          color: "#ff4d4f"
-        - name: Patreon
-          qcode: https://i.postimg.cc/3JY7ZK9M/https-www-patreon-com-everfu-M-x20.avif
-          url: https://www.patreon.com/everfu
-          color: "#ffe58f"
+        - name: 微信
+          qcode: https://s3.qjqq.cn/47/66c2b322adbd3.png!color
+          url: https://s3.qjqq.cn/47/66c2b322adbd3.png!color
+          color: "#7bbd3f"
+        - name: 支付宝
+          qcode: https://s3.qjqq.cn/47/66c2b37d1aa6e.png!color
+          url: https://s3.qjqq.cn/47/66c2b37d1aa6e.png!color
+          color: "#1C8BFF"
     # 分享按钮，需要是什么哪些按钮，填写后开启
     share:
       enable: true
@@ -401,7 +401,7 @@ theme_config:
 
   errorpage:
     img: /img/404.avif
-    text: Try searching the site for articles.
+    text: 404 Not Found
     recommendList: true
 
   copy:
@@ -461,7 +461,7 @@ theme_config:
     #   per_page: 6
     local:
       preload: false
-      CDN: /Solitude/search.xml
+      CDN: /preview/zh/search.xml
 
   katex:
     enable: true
@@ -483,7 +483,7 @@ theme_config:
     body: # 在body中插入 / Insert in body
 
   pwa:
-    enable: true
+    enable: false
     manifest: /manifest.json # manifest.json 文件路径
     theme_color: "#006a73" # 主题颜色
     mask_icon: /img/pwa/favicon.ico # 遮罩图标

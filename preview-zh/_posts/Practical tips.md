@@ -6,7 +6,7 @@ sticky: 1
 tags:
   - 实用技巧
 categories:
-    - 课程
+    - 教程
 abbrlink: 2135ef16
 date: 2024-07-04 00:00:00
 not_cover: true

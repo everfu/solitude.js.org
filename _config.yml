@@ -461,7 +461,7 @@ theme_config:
     #   per_page: 6
     local:
       preload: false
-      CDN: /Solitude/search.xml
+      CDN: /preview/search.xml
 
   katex:
     enable: true
@@ -483,7 +483,7 @@ theme_config:
     body: # 在body中插入 / Insert in body
 
   pwa:
-    enable: true
+    enable: false
     manifest: /manifest.json # manifest.json 文件路径
     theme_color: "#006a73" # 主题颜色
     mask_icon: /img/pwa/favicon.ico # 遮罩图标
