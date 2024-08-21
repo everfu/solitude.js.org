@@ -18,15 +18,15 @@ npm install hexo-solitude-tag
 
 ## 使用
 
-### 注意事项（Bootstrap）
+### note事项（Bootstrap）
 
-{% tabs 注意 %}
+{% tabs note %}
 <!-- tab 语法 -->
 
 ```markdown
-{% 注意 class='className' icon='icon' %}
+{% note class='className' icon='icon' %}
 任何内容（支持内联标签）。
-{% 结束注意 %}
+{% endnote %}
 ```
 
 <!-- endtab -->
@@ -42,112 +42,112 @@ npm install hexo-solitude-tag
 
 > 默认
 
-{% 注意 'default' %}
+{% note 'default' %}
 
-默认注意事项。
+默认note事项。
 
-{% 结束注意 %}
+{% endnote %}
 
-{% 注意 'primary' 'fas fa-circle-minus' %}
-带图标的主要注意事项。
-{% 结束注意 %}
+{% note 'primary' 'fas fa-circle-minus' %}
+带图标的主要note事项。
+{% endnote %}
 
-{% 注意 'success' 'fas fa-circle-check' %}
-带图标的成功注意事项。
-{% 结束注意 %}
+{% note 'success' 'fas fa-circle-check' %}
+带图标的成功note事项。
+{% endnote %}
 
-{% 注意 'info' 'fas fa-circle-info' %}
-带图标的信息注意事项。
-{% 结束注意 %}
+{% note 'info' 'fas fa-circle-info' %}
+带图标的信息note事项。
+{% endnote %}
 
-{% 注意 'warning' 'fas fa-circle-xmark' %}
-带图标的警告注意事项。
-{% 结束注意 %}
+{% note 'warning' 'fas fa-circle-xmark' %}
+带图标的警告note事项。
+{% endnote %}
 
-{% 注意 'danger' 'fas fa-circle-exclamation' %}
-带图标的危险注意事项。
-{% 结束注意 %}
+{% note 'danger' 'fas fa-circle-exclamation' %}
+带图标的危险note事项。
+{% endnote %}
 
 > 平面
 
-{% 注意 'default flat' %}
-默认注意事项。
+{% note 'default flat' %}
+默认note事项。
 
-{% 结束注意 %}
+{% endnote %}
 
-{% 注意 'primary flat' 'fas fa-circle-minus' %}
-带图标的主要注意事项。
-{% 结束注意 %}
+{% note 'primary flat' 'fas fa-circle-minus' %}
+带图标的主要note事项。
+{% endnote %}
 
-{% 注意 'success flat' 'fas fa-circle-check' %}
-带图标的成功注意事项。
-{% 结束注意 %}
+{% note 'success flat' 'fas fa-circle-check' %}
+带图标的成功note事项。
+{% endnote %}
 
-{% 注意 'info flat' 'fas fa-circle-info' %}
-带图标的信息注意事项。
-{% 结束注意 %}
+{% note 'info flat' 'fas fa-circle-info' %}
+带图标的信息note事项。
+{% endnote %}
 
-{% 注意 'warning flat' 'fas fa-circle-xmark' %}
-带图标的警告注意事项。
-{% 结束注意 %}
+{% note 'warning flat' 'fas fa-circle-xmark' %}
+带图标的警告note事项。
+{% endnote %}
 
-{% 注意 'danger flat' 'fas fa-circle-exclamation' %}
-带图标的危险注意事项。
-{% 结束注意 %}
+{% note 'danger flat' 'fas fa-circle-exclamation' %}
+带图标的危险note事项。
+{% endnote %}
 
 > 简单
 
-{% 注意 'default simple' %}
-默认注意事项。
+{% note 'default simple' %}
+默认note事项。
 
-{% 结束注意 %}
+{% endnote %}
 
-{% 注意 'primary simple' 'fas fa-circle-minus' %}
-带图标的主要注意事项。
-{% 结束注意 %}
+{% note 'primary simple' 'fas fa-circle-minus' %}
+带图标的主要note事项。
+{% endnote %}
 
-{% 注意 'success simple' 'fas fa-circle-check' %}
-带图标的成功注意事项。
-{% 结束注意 %}
+{% note 'success simple' 'fas fa-circle-check' %}
+带图标的成功note事项。
+{% endnote %}
 
-{% 注意 'info simple' 'fas fa-circle-info' %}
-带图标的信息注意事项。
-{% 结束注意 %}
+{% note 'info simple' 'fas fa-circle-info' %}
+带图标的信息note事项。
+{% endnote %}
 
-{% 注意 'warning simple' 'fas fa-circle-xmark' %}
-带图标的警告注意事项。
-{% 结束注意 %}
+{% note 'warning simple' 'fas fa-circle-xmark' %}
+带图标的警告note事项。
+{% endnote %}
 
-{% 注意 'danger simple' 'fas fa-circle-exclamation' %}
-带图标的危险注意事项。
-{% 结束注意 %}
+{% note 'danger simple' 'fas fa-circle-exclamation' %}
+带图标的危险note事项。
+{% endnote %}
 
 > 现代
 
-{% 注意 'default modern' %}
-默认注意事项。
+{% note 'default modern' %}
+默认note事项。
 
-{% 结束注意 %}
+{% endnote %}
 
-{% 注意 'primary modern' 'fas fa-circle-minus' %}
-带图标的主要注意事项。
-{% 结束注意 %}
+{% note 'primary modern' 'fas fa-circle-minus' %}
+带图标的主要note事项。
+{% endnote %}
 
-{% 注意 'success modern' 'fas fa-circle-check' %}
-带图标的成功注意事项。
-{% 结束注意 %}
+{% note 'success modern' 'fas fa-circle-check' %}
+带图标的成功note事项。
+{% endnote %}
 
-{% 注意 'info modern' 'fas fa-circle-info' %}
-带图标的信息注意事项。
-{% 结束注意 %}
+{% note 'info modern' 'fas fa-circle-info' %}
+带图标的信息note事项。
+{% endnote %}
 
-{% 注意 'warning modern' 'fas fa-circle-xmark' %}
-带图标的警告注意事项。
-{% 结束注意 %}
+{% note 'warning modern' 'fas fa-circle-xmark' %}
+带图标的警告note事项。
+{% endnote %}
 
-{% 注意 'danger modern' 'fas fa-circle-exclamation' %}
-带图标的危险注意事项。
-{% 结束注意 %}
+{% note 'danger modern' 'fas fa-circle-exclamation' %}
+带图标的危险note事项。
+{% endnote %}
 
 <!-- endtab -->
 
@@ -156,112 +156,112 @@ npm install hexo-solitude-tag
 ```markdown
 > 默认
 
-{% 注意 'default' %}
+{% note 'default' %}
 
-默认注意事项。
+默认note事项。
 
-{% 结束注意 %}
+{% endnote %}
 
-{% 注意 'primary' 'fas fa-circle-minus' %}
-带图标的主要注意事项。
-{% 结束注意 %}
+{% note 'primary' 'fas fa-circle-minus' %}
+带图标的主要note事项。
+{% endnote %}
 
-{% 注意 'success' 'fas fa-circle-check' %}
-带图标的成功注意事项。
-{% 结束注意 %}
+{% note 'success' 'fas fa-circle-check' %}
+带图标的成功note事项。
+{% endnote %}
 
-{% 注意 'info' 'fas fa-circle-info' %}
-带图标的信息注意事项。
-{% 结束注意 %}
+{% note 'info' 'fas fa-circle-info' %}
+带图标的信息note事项。
+{% endnote %}
 
-{% 注意 'warning' 'fas fa-circle-xmark' %}
-带图标的警告注意事项。
-{% 结束注意 %}
+{% note 'warning' 'fas fa-circle-xmark' %}
+带图标的警告note事项。
+{% endnote %}
 
-{% 注意 'danger' 'fas fa-circle-exclamation' %}
-带图标的危险注意事项。
-{% 结束注意 %}
+{% note 'danger' 'fas fa-circle-exclamation' %}
+带图标的危险note事项。
+{% endnote %}
 
 > 平面
 
-{% 注意 'default flat' %}
-默认注意事项。
+{% note 'default flat' %}
+默认note事项。
 
-{% 结束注意 %}
+{% endnote %}
 
-{% 注意 'primary flat' 'fas fa-circle-minus' %}
-带图标的主要注意事项。
-{% 结束注意 %}
+{% note 'primary flat' 'fas fa-circle-minus' %}
+带图标的主要note事项。
+{% endnote %}
 
-{% 注意 'success flat' 'fas fa-circle-check' %}
-带图标的成功注意事项。
-{% 结束注意 %}
+{% note 'success flat' 'fas fa-circle-check' %}
+带图标的成功note事项。
+{% endnote %}
 
-{% 注意 'info flat' 'fas fa-circle-info' %}
-带图标的信息注意事项。
-{% 结束注意 %}
+{% note 'info flat' 'fas fa-circle-info' %}
+带图标的信息note事项。
+{% endnote %}
 
-{% 注意 'warning flat' 'fas fa-circle-xmark' %}
-带图标的警告注意事项。
-{% 结束注意 %}
+{% note 'warning flat' 'fas fa-circle-xmark' %}
+带图标的警告note事项。
+{% endnote %}
 
-{% 注意 'danger flat' 'fas fa-circle-exclamation' %}
-带图标的危险注意事项。
-{% 结束注意 %}
+{% note 'danger flat' 'fas fa-circle-exclamation' %}
+带图标的危险note事项。
+{% endnote %}
 
 > 简单
 
-{% 注意 'default simple' %}
-默认注意事项。
+{% note 'default simple' %}
+默认note事项。
 
-{% 结束注意 %}
+{% endnote %}
 
-{% 注意 'primary simple' 'fas fa-circle-minus' %}
-带图标的主要注意事项。
-{% 结束注意 %}
+{% note 'primary simple' 'fas fa-circle-minus' %}
+带图标的主要note事项。
+{% endnote %}
 
-{% 注意 'success simple' 'fas fa-circle-check' %}
-带图标的成功注意事项。
-{% 结束注意 %}
+{% note 'success simple' 'fas fa-circle-check' %}
+带图标的成功note事项。
+{% endnote %}
 
-{% 注意 'info simple' 'fas fa-circle-info' %}
-带图标的信息注意事项。
-{% 结束注意 %}
+{% note 'info simple' 'fas fa-circle-info' %}
+带图标的信息note事项。
+{% endnote %}
 
-{% 注意 'warning simple' 'fas fa-circle-xmark' %}
-带图标的警告注意事项。
-{% 结束注意 %}
+{% note 'warning simple' 'fas fa-circle-xmark' %}
+带图标的警告note事项。
+{% endnote %}
 
-{% 注意 'danger simple' 'fas fa-circle-exclamation' %}
-带图标的危险注意事项。
-{% 结束注意 %}
+{% note 'danger simple' 'fas fa-circle-exclamation' %}
+带图标的危险note事项。
+{% endnote %}
 
 > 现代
 
-{% 注意 'default modern' %}
-默认注意事项。
+{% note 'default modern' %}
+默认note事项。
 
-{% 结束注意 %}
+{% endnote %}
 
-{% 注意 'primary modern' 'fas fa-circle-minus' %}
-带图标的主要注意事项。
-{% 结束注意 %}
+{% note 'primary modern' 'fas fa-circle-minus' %}
+带图标的主要note事项。
+{% endnote %}
 
-{% 注意 'success modern' 'fas fa-circle-check' %}
-带图标的成功注意事项。
-{% 结束注意 %}
+{% note 'success modern' 'fas fa-circle-check' %}
+带图标的成功note事项。
+{% endnote %}
 
-{% 注意 'info modern' 'fas fa-circle-info' %}
-带图标的信息注意事项。
-{% 结束注意 %}
+{% note 'info modern' 'fas fa-circle-info' %}
+带图标的信息note事项。
+{% endnote %}
 
-{% 注意 'warning modern' 'fas fa-circle-xmark' %}
-带图标的警告注意事项。
-{% 结束注意 %}
+{% note 'warning modern' 'fas fa-circle-xmark' %}
+带图标的警告note事项。
+{% endnote %}
 
-{% 注意 'danger modern' 'fas fa-circle-exclamation' %}
-带图标的危险注意事项。
-{% 结束注意 %}
+{% note 'danger modern' 'fas fa-circle-exclamation' %}
+带图标的危险note事项。
+{% endnote %}
 
 <!-- endtab -->
 
