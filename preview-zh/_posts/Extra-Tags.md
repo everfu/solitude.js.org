@@ -273,7 +273,7 @@ npm install hexo-solitude-tag
 <!-- tab 语法 -->
 
 ```markdown
-{% 按钮 'icon' 'content' 'url' %}
+{% button 'icon' 'content' 'url' %}
 ```
 
 <!-- endtab -->
@@ -288,25 +288,25 @@ npm install hexo-solitude-tag
 
 <!-- tab 预览 -->
 
-{% 按钮 'fab fa-github' 'GitHub' 'https://github.com' %}
-{% 按钮 'fas fa-home' '主页' '/' %}
-{% 按钮 'fas fa-envelope' '发送邮件' 'mailto:o@efu.me' %}
+{% button 'fab fa-github' 'GitHub' 'https://github.com' %}
+{% button 'fas fa-home' '主页' '/' %}
+{% button 'fas fa-envelope' '发送邮件' 'mailto:o@efu.me' %}
 <!-- endtab -->
 
 <!-- tab 源代码 -->
 
 ```markdown
-{% 按钮 'fab fa-github' 'GitHub' 'https://github.com' %}
-{% 按钮 'fas fa-home' '主页' '/' %}
+{% button 'fab fa-github' 'GitHub' 'https://github.com' %}
+{% button 'fas fa-home' '主页' '/' %}
 ```
 
 <!-- endtab -->
 
 {% endtabs %}
 
-### 仓库
+### Repo
 
-{% tabs 仓库 %}
+{% tabs Repo %}
 <!-- tab 语法 -->
 
 ```markdown
