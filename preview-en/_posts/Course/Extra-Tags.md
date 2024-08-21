@@ -267,3 +267,83 @@ Danger note with icon.
 <!-- endtab -->
 
 {% endtabs %}
+
+### Button
+
+{% tabs Button %}
+<!-- tab Syntax -->
+
+```markdown
+{% button 'icon' 'content' 'url' %}
+```
+
+<!-- endtab -->
+
+<!-- tab Parameters -->
+
+1. 'icon': The icon name (full name, e.g., "fas fa-github").
+2. 'content': The content of the button.
+3. 'url': The URL of the button.
+
+<!-- endtab -->
+
+<!-- tab Preview -->
+
+{% button 'fab fa-github' 'GitHub' 'https://github.com' %}
+{% button 'fas fa-home' 'Home' '/' %}
+{% button 'fas fa-envelope' 'mailto:o@efu.me' %}
+<!-- endtab -->
+
+<!-- tab Source -->
+
+```markdown
+{% button 'fab fa-github' 'GitHub' 'https://github.com' %}
+{% button 'fas fa-home' 'Home' '/' %}
+```
+
+<!-- endtab -->
+
+{% endtabs %}
+
+### Repo
+
+{% tabs repo %}
+<!-- tab Syntax -->
+
+```markdown
+{% github 'owner/repo' %}
+{% gitlab 'projectID' %}
+{% gitee 'owner/repo' %}
+{% gitea 'server' 'owner/repo' %}
+```
+
+<!-- endtab -->
+
+<!-- tab Parameters -->
+
+1. 'owner': The owner of the repository.
+2. 'repo': The name of the repository.
+3. 'projectID': The ID of the project.
+4. 'server': The server address of the repository.
+
+<!-- endtab -->
+
+<!-- tab Preview -->
+
+{% github 'everfu/hexo-theme-solitude' %}
+{% gitlab '56198505' %}
+{% gitee 'everfu/hexo-theme-solitude' %}
+
+<!-- endtab -->
+
+<!-- tab Source -->
+
+```markdown
+{% github 'everfu/hexo-theme-solitude' %}
+{% gitlab '56198505' %}
+{% gitee 'everfu/hexo-theme-solitude' %}
+```
+
+<!-- endtab -->
+
+{% endtabs %}

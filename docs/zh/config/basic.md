@@ -12,11 +12,11 @@ description: Solitude 主题基础配置
 :::code-group
 ```yaml [_config.yml]
 # Site
-title: Efu # 博客标题
+title: Ever Fu # 博客标题
 subtitle: "" # 博客子标题
 description: 小心翼翼的努力并拥有着。 # 博客简介
-keywords: Efu # 博客关键词
-author: Efu # 博主名称
+keywords: Everfu # 博客关键词
+author: Ever Fu # 博主名称
 language: zh-CN # 语言
 timezone: Asia/Shanghai # 时区（请自行查询）
 ```
