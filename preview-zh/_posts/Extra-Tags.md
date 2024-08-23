@@ -252,8 +252,6 @@ npm install hexo-solitude-tag
 <!-- tab 预览 -->
 
 {% youtube 'dQw4w9WgXcQ' %}
-{% youtube 'dQw4w9WgXcQ' 'playlist' %}
-{% youtube 'dQw4w9WgXcQ' 'playlist' 'true' %}
 
 <!-- endtab -->
 
@@ -261,8 +259,6 @@ npm install hexo-solitude-tag
 
 ```markdown
 {% youtube 'dQw4w9WgXcQ' %}
-{% youtube 'dQw4w9WgXcQ' 'playlist' %}
-{% youtube 'dQw4w9WgXcQ' 'playlist' 'true' %}
 ```
 
 <!-- endtab -->
