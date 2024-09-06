@@ -110,7 +110,6 @@ export const zh = defineConfig({
 
 function nav() {
     return [
-        {text: '作者', link: 'https://github.com/everfu'},
         {text: 'QQ 群', link: 'https://qm.qq.com/q/mYIJRTqo0w'},
         {text: '预览', link: 'https://solitude.js.org/preview/zh/'},
         {text: '晞云云计算', link: 'https://www.lightxi.com/'}

@@ -4,7 +4,6 @@ export const en = {
     description: "An elegant, simple and easy-to-use Hexo theme",
     themeConfig: {
         nav: [
-            {text: 'Author', link: 'https://github.com/everfu'},
             {text: 'Preview', link: 'https://solitude.js.org/preview/'},
             {text: 'LightXi Cloud', link: 'https://www.lightxi.com/'}
         ],
