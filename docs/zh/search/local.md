@@ -12,24 +12,19 @@ description: 使用本地搜索
 ## 主题配置
 
 ```yaml
-# 搜索
-# search
-# warning：开启前需要安装搜索插件
-# warning: You need to install the search plugin before turning it on
+# --------------------------- start ---------------------------
+# Search
 search:
-  enable: true
-  type: local # 选择local
-  # 推荐标签
-  # Recommended tags
+  enable: false
+  # type: 使用的搜索引擎 / search engine
+  type: local # local / algolia
   tags:
-  # - Solitude
-  # - Hexo
-  algolia:
-  # hits:
-  # per_page: 6
+    # - Solitude
+    # - Hexo
   local:
     preload: false
-    CDN:
+    CDN: # url: search.xml
+# --------------------------- end ---------------------------
 ```
 
 ## 搜索标签

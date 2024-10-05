@@ -8,15 +8,67 @@ description: Hexo Theme Solitude 的扩展配置。
 ## 中控台
 
 ```yaml
+# --------------------------- start ---------------------------
 # Console
+# 控制台
 console:
   enable: false
-  recentComment: # Recent comments
+  # Recent comments
+  # 最新评论
+  recentComment:
     enable: false
-    storage: .2 # Cache time 1: 1 day / .5 : half a day
+    # Cache time 1: 1 day / .5 : half a day
+    # 缓存时间 1: 1天 / .5 : 半天
+    storage: .2
   card:
-    tags: true # Tags
-    archive: true # Archive
+    # Tags
+    # 标签
+    tags: true
+    # Archives
+    # 归档
+    archive: true
+# --------------------------- end ---------------------------
+```
+
+## 简繁转换
+
+```yaml
+# --------------------------- start ---------------------------
+translate:
+  enable: true
+  defaultEncoding: 2 # 1: 默认繁体 2: 默认简体
+  translateDelay: 0 # 首次加载翻译迟疑时间
+# --------------------------- end ---------------------------
+
+# --------------------------- start ---------------------------
+# Right-Sidebar
+# 右下角悬停导航栏
+rightside:
+  enable: false
+  percent: false
+  hide:
+    enable: false
+    translate: false
+    mode: false
+    aside: false
+# --------------------------- start --------------------------------
+```
+
+## 侧边栏
+
+```yaml
+# --------------------------- start ---------------------------
+# Right-Sidebar
+# 右下角悬停导航栏
+rightside:
+  enable: false
+  percent: false
+  hide:
+    enable: false
+    translate: false
+    mode: false
+    aside: false
+# --------------------------- start ---------------------------
 ```
 
 ## 页脚（Footer）
@@ -24,9 +76,9 @@ console:
 :::code-group
 ```yaml [上方图标]
 information:
-    author: true # 是否显示siteicon
+    author: false # url or false
     left:
-      # Github: https://github.com/efuo || fab fa-github # Name: link || icon
+      # Github: https://github.com/everfu || fab fa-github # Name: link || icon
       # Mail: mailto:o@efu.me || fab fa-envelope
     right:
       # Bilibili: https://space.bilibili.com/1329819902 || fab fa-bilibili
@@ -61,9 +113,6 @@ group: # 从左至右 / From left to right
 # warning: 打开前必须先配置links
 # warning: links must be configured before opening
 randomlink: false
-# 隐私助手右侧弹窗，填写路径后开启
-# Privacy assistant right pop-up window, fill in the path to open
-privacy: # /privacy/
 # 版权
 # Copyright
 license: # /license/
@@ -79,7 +128,7 @@ links:
 ```
 :::
 
-::: danger 忠告建议
+::: danger 注意
 希望你能够保留主题链接，我曾今也想过将它内置固定，但这样会觉得不太好，所以我选择了这种方式，还是希望你能保留支持我的工作。
 :::
 
@@ -88,18 +137,27 @@ links:
 > 自定义 404 页面
 
 ```yaml
-# 404 页面
+# --------------------------- start ---------------------------
 # 404 page
+# 404 页面
 errorpage:
-  # 图片
-  # image
-  img: https://7.isyangs.cn/1/65eb24f94fcbd-1.gif
-  # 文字
-  # text
-  text: =awa= 页面走丢了
-  # 推荐文章列表
-  # Recommended article list
+  img: /img/404.avif
+  text: =awa= Page Not Found # Text
   recommendList: true
+# --------------------------- end ---------------------------
+```
+
+## Meting API
+
+```yaml
+# --------------------------- start ---------------------------
+# Meting API
+# This part of the content uses metingjs,
+# can only use NetEase Cloud Music, QQ Music and other music platforms supported by the mainland China region,
+# the subsequent consideration of the use of JSON files to store music information and customize the implementation of the third-party API does not depend on the page.
+# Music Page
+meting_api: "https://meting.everfu.cn/?server=:server&type=:type&id=:id&auth=:auth&r=:r" # Custom API
+# --------------------------- end ---------------------------
 ```
 
 ## 音乐胶囊
@@ -107,56 +165,48 @@ errorpage:
 > 显示在左下角的音乐播放器，根据注解填写对应的歌单 id 和服务商。
 
 ```yaml
+# --------------------------- start ---------------------------
+# Capsule music
 # 音乐胶囊
-# capsule music
 capsule:
   enable: false
-  id: 8407304077 # 歌单id / playlist id
-  server: netease # 播放列表的服务商。netease：网易云 / tencent：腾讯 / kugou：酷狗 / xiami：小米 / baidu：百度 : Music service provider. netease: Netease Cloud / tencent: Tencent / kugou: Kugou / xiaomi: Xiaomi / baidu: Baidu
-  type: playlist # 播放列表的类型。song：单曲 / playlist：歌单 / album：专辑 / artist：歌手 : Type of playlist. song: Single / playlist: Playlist / album: Album / artist: Singer
+  # 歌单 ID / 单曲 ID
+  id: 8407304077
+  # 服务商：netease / qq / xiami / kugou / baidu
+  server: netease
+  # 类型：playlist / song
+  type: playlist
+# --------------------------- end ---------------------------
 ```
 
 ::: danger 注意
-QQ 音乐更换了接口，无法播放。
+QQ 音乐近期进行了加密，后续都不再支持 QQ 音乐。
 :::
 
 ## 快捷菜单
 
 ```yaml
+# --------------------------- start ---------------------------
+# Quick Menu
+# Open with shift + ?
+# 快捷菜单
+# 使用 shift + ? 打开
 keyboard:
-  enable: false # 是否开启键盘控制 / Whether to enable keyboard control
-  # 键盘控制配置
-  # Keyboard control configuration
+  enable: false
   list:
-  # name: 按键名称
-  # name: Key name
-  # key: 按键
-  # key: Key
-  # func: 方法
-  # func: Function
-  # sco: sco内置方法
-  # sco: sco built-in method
-  # url: 跳转链接
-  # url: Jump link
-  #  - name: 关闭快捷键功能
-  #    key: K
-  #    func: keyboard
-  #  - name: 打开中控台
-  #    key: A
-  #    sco: showConsole
-  #  - name: 播放/暂停音乐
-  #    key: M
-  #    sco: musicToggle
-  #  - name: 打开友情链接
-  #    key: L
-  #    url: /links/
-```
-
-## 中控台扩展
-
-```yaml
-# 中控台扩展：最新评论 + 标签 + 文章
-console_plus: false
+    # - name: Close Keyboard
+    #   key: K
+    #   func: keyboard
+    # - name: Open Console
+    #   key: A
+    #   sco: showConsole
+    # - name: Play/Pause Music
+    #   key: M
+    #   sco: musicToggle
+    # - name: Open Links
+    #   key: L
+    #   url: /links/
+# --------------------------- end ---------------------------
 ```
 
 ## 懒加载
@@ -164,16 +214,18 @@ console_plus: false
 > 开启懒加载后，图片会在进入可视区域后加载，可以减少网页体积，提高网页加载速度。
 
 ```yaml
-# 懒加载
-# lazyload
+# --------------------------- start ---------------------------
+# Lazyload
+# 图片懒加载
 lazyload:
   enable: false
-  # 加载中显示图片
-  # Loading display image
-  placeholder: /img/loading.gif
-  # 加载失败显示图片
-  # Loading failed display image
-  errorimg: /img/error_load.png
+  # post, site
+  field: site
+  # 加载时替换图
+  placeholder: /img/loading.avif
+  # 加载失败替换图
+  errorimg: /img/error_load.avif
+# --------------------------- end ---------------------------
 ```
 
 ## 加载动画
@@ -181,28 +233,42 @@ lazyload:
 > 在页面加载时会显示一个页面覆盖内容，加载完成消失。
 
 ```yaml
-# 加载动画
+# --------------------------- start ---------------------------
+# Loading
+# 加载
 loading:
-  # 全局加载动画
+  # Full screen loading
+  # 全屏加载
   fullpage: false
-  # 顶部加载胶囊
+  # Pace loading
+  # Pace 加载
   pace: true
+# --------------------------- end ---------------------------
 ```
 
 ## 代码高亮
 
-> 开启代码高亮后，代码块会有对应的语言提示，但是会增加网页体积，如果你不需要这个功能，可以关闭。
-
 ```yaml
-# 代码高亮增强
+# --------------------------- start ---------------------------
 # Highlight
+# 代码块高亮
 highlight:
   enable: true
-  limit: 200 # Code line limit
-  copy: true # Whether to enable the copy button
-  expand: true # Whether to expand by default
-  theme: mac # default: default / mac : apple terminal
-  color: default # default / solidity / dracula
+  # Display the fold button when the number of words exceeds
+  # 当超过多少字时显示折叠按钮
+  limit: 200
+  # Whether to enable the copy button
+  # 是否启用复制按钮
+  copy: true
+  # Whether to expand by default
+  # 是否默认展开
+  expand: true
+  # default: default / mac : apple terminal
+  # default: 默认 / mac : 苹果终端
+  theme: mac
+  # default / solidity / dracula
+  color: default
+# --------------------------- end ---------------------------
 ```
 
 ## 图片灯箱
@@ -210,15 +276,31 @@ highlight:
 > fancybox 和 mediumZoom 二选一，一定要关闭 fancybox 才能开启 mediumZoom
 
 ```yaml
-# image lightbox
-lightbox: true # 是否开启图片灯箱
+# --------------------------- start ---------------------------
+# Lightbox
+# 图片灯箱
+lightbox: false
+# warning: Please select any one, but cannot be turned on at the same time.
+# 警告: 请任选其一，但不能同时开启。
+fancybox: false # fancybox
+mediumZoom: false # mediumZoom
+# --------------------------- end ---------------------------
+```
 
-# fancybox
-# https://fancyapps.com/fancybox/
-fancybox: true
+## 纪念日
 
-# mediumZoom
-mediumZoom: false
+```yaml
+# --------------------------- start ---------------------------
+# Memorial
+# Turn the entire site gray on memorable days.
+# 在纪念日整个网站变灰
+memorial:
+  enable: false
+  date:
+  #  - 7-7
+  #  - 9-18
+  #  - 12-13 # 国家公祭日
+# --------------------------- end ---------------------------
 ```
 
 ## Open graph
@@ -226,10 +308,9 @@ mediumZoom: false
 > 开启后，网站会自动添加 Open Graph 标签，用于社交分享。
 
 ```yaml
-# Open Graph
-# https://ogp.me/
-# https://developers.facebook.com/docs/sharing/webmasters/
-Opengraph:
+# --------------------------- start ---------------------------
+# OpenGraph
+OpenGraph:
   enable: false
   options:
     # twitter_card:
@@ -239,6 +320,7 @@ Opengraph:
     # google_plus:
     # fb_admins:
     # fb_app_id:
+# --------------------------- end ---------------------------
 ```
 
 ## 字数统计
@@ -246,19 +328,13 @@ Opengraph:
 > 需要安装 `hexo-wordcount` 插件。
 
 ```yaml
-# 字数统计
+# --------------------------- start ---------------------------
 # Word count
-# warning：开启前需要安装字数统计插件
-# warning: You need to install the word count plugin before turning it on
+# 字数统计
+# warning: Please install the hexo-wordcount plugin first.
+# 警告: 请先安装 hexo-wordcount 插件。
 wordcount: false
-```
-
-## busuanzi
-
-```yaml
-# 访问统计
-# Access statistics
-busuanzi: false
+# --------------------------- end ---------------------------
 ```
 
 ## 数学公式
@@ -274,53 +350,75 @@ npm i hexo-markdown-it @renbaoshuo/markdown-it-katex
 
 在配置文件配置并启用 katex 插件
 
-打开主题内 `katex` 配置项
-
 ```yaml [_config.solitude.yml]
+# --------------------------- start ---------------------------
 # Katex
+# Latex formula support
+# Latex 公式支持
 katex:
   enable: false
-  per_page: false # Whether to load on each page
-  copytex: false # Whether to enable copy formula
+  # Whether to load on each page
+  # 是否在每个页面加载
+  per_page: false
+  # Whether to enable copy formula
+  # 是否启用复制公式
+  copytex: false
+# --------------------------- end ---------------------------
 ```
 
 ## 站点验证
 
 ```yaml
-# 站点验证
-# Site verification
-# 仅需要填写验证代码即可，譬如：codeva-KReTIJu5us
-# Only need to fill in the verification code, such as: codeva-KReTIJu5us
+# --------------------------- start ---------------------------
+# verification
+# 验证
 verify_site:
   # - name: google-site-verification
   #   content: xxxxxx
   # - name: baidu-site-verification
   #   content: xxxxxxx
+# --------------------------- end ---------------------------
 ```
 
 ## CSS 前缀
 
 ```yaml
+# --------------------------- start ---------------------------
+# verification
+# 验证
+verify_site:
+  # - name: google-site-verification
+  #   content: xxxxxx
+  # - name: baidu-site-verification
+  #   content: xxxxxxx
+# --------------------------- end ---------------------------
+
+# --------------------------- start ---------------------------
+# CSS Prefix
 # CSS 前缀
-# CSS prefix
-# 有些 CSS 并不是所有浏览器都支持，需要增加对应的前缀才会生效
-# Some CSS is not supported by all browsers, and you need to add the corresponding prefix to take effect
-# 开启 css_prefix 后，会自动为一些 CSS 增加前缀。（会增加 20%的体积）
-# After opening css_prefix, some CSS will be automatically prefixed. (Will increase 20% of the volume)
+# When turned on, it will automatically prefix the CSS (to get better browser support), but this will increase the size of the CSS file.
+# 开启后会自动给 CSS 加前缀（以获得更好的浏览器支持），但这会增加 CSS 文件的大小。
 css_prefix: false
+# --------------------------- end ---------------------------
 ```
 
-## Inject
+## Extend（Inject）
 
 ```yaml
-# 插入代码到头部 </head> 之前 和 底部 </body> 之前
-# Insert code before </head> and before </body>
-# 插入额外代码 如：统计，广告等
-# Insert additional code such as: statistics, advertising, etc.
+# --------------------------- start ---------------------------
+# Extend
+# 扩展
 extends:
-  head: # 在head中插入 / Insert in head
-    # - <script src="https://cdn.bootcdn.net/ajax/libs/pace/1.2.4/pace.min.js"></script>
-  body: # 在body中插入 / Insert in body
+  # Insert in head
+  # 插入到 head
+  head:
+  #  - <script src="https://cdn.bootcdn.net/ajax/libs/pace/1.2.4/pace.min.js"></script>
+
+  # Insert in body
+  # 插入到 body
+  body:
+  #  - <script src="https://cdn.bootcdn.net/ajax/libs/pace/1.2.4/pace.min.js"></script>
+# --------------------------- end ---------------------------
 ```
 
 ## PWA
@@ -335,18 +433,19 @@ PWA 全称为 Progressive Web App，中文译为渐进式 Web APP，其目的是
     ```
 2. 开启主题配置
     ```yaml
+    # --------------------------- start ---------------------------
     # PWA
-    # https://developer.mozilla.org/zh-CN/docs/Web/Progressive_web_apps
-    # docs: https://solitude.js.org/config/extra#pwa
+    # Progressive Web App
     pwa:
-        enable: false
-        manifest: /manifest.json # manifest.json 文件路径
-        theme_color: "#006a73" # 主题颜色
-        mask_icon: /img/pwa/favicon.ico # 遮罩图标
-        apple_touch_icon: /img/pwa/favicon.ico # 苹果触摸图标
-        bookmark_icon: /img/pwa/favicon.ico # 书签图标
-        favicon_32_32: /img/pwa/favicon_32.ico # 32x32图标
-        favicon_16_16: /img/pwa/favicon_16.ico # 16x16图标
+      enable: false
+      manifest: /manifest.json # manifest.json
+      theme_color: "#006a73" # Theme color
+      mask_icon: /img/pwa/favicon.png # Mask icon
+      apple_touch_icon: /img/pwa/favicon.png # Apple touch icon
+      bookmark_icon: /img/pwa/favicon.png # Bookmark icon
+      favicon_32_32: /img/pwa/favicon_32.png # 32x32 icon
+      favicon_16_16: /img/pwa/favicon_16.png # 16x16 icon
+    # --------------------------- end ---------------------------
     ```
 3. 在项目根目录新建 `sw-rules.js` 加入以下内容。
 
@@ -596,35 +695,22 @@ PWA 全称为 Progressive Web App，中文译为渐进式 Web APP，其目的是
 主题资源已经被 cdnjs 收录，所以大家可以放心食用，如果你有自己的 CDN，可以自定义配置。
 
 ```yaml
-# CDN
-# Don't modify the following settings unless you know how they work
-# 非必要请不要修改
+# --------------------------- start ---------------------------
+# Do not modify unless necessary
+# 非必要请勿修改
 CDN:
-  # The CDN provider of internal scripts (主题内 js 的 cdn 配置)
-  # option: local.md/jsdelivr/unpkg/cdnjs/custom
-  # Dev version can only choose. ( dev版本只能为 local.md )
-  internal: local.md
-  # The CDN provider of third party scripts (第三方 js 的 cdn 配置)
-  # option: jsdelivr/unpkg/cdnjs/custom
-  third_party: custom
-
-  # Add version number to url, true or false
-  version: true
-
-  # Custom format
-  # For example: https://cdn.staticfile.net/${cdnjs_name}/${version}/${min_cdnjs_file}
-  custom_format: https://cdn.staticfile.net/${cdnjs_name}/${version}/${min_cdnjs_file}
-
-  option:
-    solitude_css: https://cdn2.codesign.qq.com/icons/7pOrz0WXB5ZWJPX/latest/iconfont.css
+  internal: local # local / cdnjs / jsdelivr / unpkg / custom
+  third_party: cdnjs # cdnjs / jsdelivr / unpkg / custom
+  version: true # Whether to use the version number
+  custom_format: //open.lightxi.com/cdnjs/ajax/libs/${cdnjs_name}/${version}/${min_cdnjs_file} # Custom format
+  # Directly override the default CDN link (highest priority)
+  options:
     # algolia_search:
     # instantsearch:
     # pjax:
     # twikoo:
     # waline_js:
     # waline_css:
-    # sharejs:
-    # sharejs_css:
     # katex:
     # katex_copytex:
     # lazyload:
@@ -636,4 +722,5 @@ CDN:
     # swiper_js:
     # busuanzi_js:
     # snackbar_js:
+# --------------------------- end ---------------------------
 ```

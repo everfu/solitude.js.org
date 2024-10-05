@@ -14,9 +14,7 @@ export const zh = defineConfig({
                             items: [
                                 {text: '介绍', link: '/zh/guide/intro'},
                                 {text: '安装', link: '/zh/guide/quick-start'},
-                                {text: '页面', link: '/zh/guide/page'},
-                                {text: 'Front Matter', link: '/zh/guide/front-matter'},
-                                {text: 'Tags Plugin', link: '/zh/guide/tags-plugin'},
+                                {text: 'Front Matter', link: '/zh/guide/front-matter'}
                             ]
                         },
                         {
@@ -29,7 +27,7 @@ export const zh = defineConfig({
                             ]
                         },
                         {
-                            text: '评论系统',
+                            text: '评论',
                             collapsed: false,
                             items: [
                                 {text: '基本', link: '/zh/comment/basic'},
@@ -49,7 +47,7 @@ export const zh = defineConfig({
                             ]
                         },
                         {
-                            text: '特色页面',
+                            text: '页面',
                             collapsed: false,
                             items: [
                                 {text: '友情链接', link: '/zh/feature/links'},
@@ -66,6 +64,7 @@ export const zh = defineConfig({
                             text: '第三方',
                             collapsed: false,
                             items: [
+                                {text: 'Busuanzi', link: '/zh/third-party/busuanzi'},
                                 {text: 'Tianli GPT', link: '/zh/third-party/tianli-gpt'},
                                 {text: 'Post Chat', link: '/zh/third-party/post-chat'},
                             ]
@@ -102,7 +101,7 @@ export const zh = defineConfig({
         darkModeSwitchTitle: '切换到深色模式',
 
         footer: {
-            copyright: `版权所有 © ${new Date().getFullYear()} <a target="_blank" href="https://github.com/everfu">Ever Fu</a>`,
+            copyright: `版权所有 © ${new Date().getFullYear()} <a target="_blank" href="https://github.com/everfu">伍十七</a>`,
             message: '特别赞助：<a href="https://www.lightxi.com/" target="_blank"><img src="https://www.lightxi.com/favicon.ico" style="height: 28px; display: inline-block; margin-bottom: -8px"/> 晞云云计算</a>'
         },
     }
@@ -111,7 +110,7 @@ export const zh = defineConfig({
 function nav() {
     return [
         {text: 'QQ 群', link: 'https://qm.qq.com/q/mYIJRTqo0w'},
-        {text: '预览', link: 'https://solitude.js.org/preview/zh/'},
+        {text: '预览', link: 'https://blog.everfu.cn'},
         {text: '晞云云计算', link: 'https://www.lightxi.com/'}
     ]
 }

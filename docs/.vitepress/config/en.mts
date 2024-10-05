@@ -4,7 +4,7 @@ export const en = {
     description: "An elegant, simple and easy-to-use Hexo theme",
     themeConfig: {
         nav: [
-            {text: 'Preview', link: 'https://solitude.js.org/preview/'},
+            {text: 'Preview', link: 'https://blog.everfu.cn/'},
             {text: 'LightXi Cloud', link: 'https://www.lightxi.com/'}
         ],
 
@@ -15,9 +15,7 @@ export const en = {
                 items: [
                     {text: 'Intro', link: '/guide/intro'},
                     {text: 'Install', link: '/guide/quick-start'},
-                    {text: 'Page', link: '/guide/page'},
-                    {text: 'Front Matter', link: '/guide/front-matter'},
-                    {text: 'Tags Plugin', link: '/guide/tags-plugin'},
+                    {text: 'Front Matter', link: '/guide/front-matter'}
                 ],
             },
             {
@@ -64,7 +62,7 @@ export const en = {
         ],
 
         footer: {
-            copyright: `Copyright © ${new Date().getFullYear()} <a href="https://github.com/everfu" target="_blank">Ever Fu</a>`,
+            copyright: `Copyright © ${new Date().getFullYear()} <a href="https://github.com/everfu" target="_blank">everfu</a>`,
             message: 'Special Sponsor: <a href="https://www.lightxi.com/" target="_blank"><img src="https://www.lightxi.com/favicon.ico" style="height: 28px; display: inline-block; margin-bottom: -8px"/> LightXi Cloud</a>'
         },
 

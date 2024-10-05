@@ -5,45 +5,14 @@ description: Front Matter 是 Markdown 的一种特殊语法，用于定义页�
 
 # Front Matter
 
-> Front-matter 是 Markdown 文件最上方以 `---` 分隔的区域，用于指定页面的特殊值。
+## Front Matter 是什么？
 
-:::tabs
-== Post Front Matter
-```markdown
----
-title:
-date:
-type:
-comment:
-cover:
-katex:
-reprint:
-locate:
----
-```
-== Page Front Matter
-```markdown
----
-title:
-date:
-updated:
-type:
-comment:
-desc:
-cover:
-katex:
-aside:
----
-```
-== 即刻、工具箱、我的装备、豆瓣页（音乐、图书、游戏）
-```markdown
----
-leftend:
-rightend:
-rightbtn:
-rightbtnlink:
----
-```
+Front Matter 是 Markdown 的一种特殊语法，用于定义页面的元数据。
+
+## 主题可使用的 Front Matter 属性
+
+::: tip 提示
+不需要在页面中全部添加，有些属性是必须的，有些是可选的。
 :::
 
 |     属性     | 值类型   | 解释                                                                 |
@@ -53,6 +22,7 @@ rightbtnlink:
 |     type     | string   | <Badge>必需</Badge> 关于、友情链接、朋友圈、即刻、工具箱页面需要配置 |
 |   updated    | datetime | <Badge>可选</Badge> 页面更新日期                                     |
 |     desc     | string   | <Badge>可选</Badge> 页面描述                                         |
+|   description| string   | <Badge>可选</Badge> 页面描述                                         |
 |    aside     | boolean  | <Badge>可选</Badge> 是否开启侧边栏（默认true）                       |
 |   comment    | boolean  | <Badge>可选</Badge> 显示页面评论模块(默认 true)                      |
 |    cover     | string   | <Badge>可选</Badge> 页面顶部图片URL                                  |
@@ -64,10 +34,8 @@ rightbtnlink:
 |   rightbtn   | string   | <Badge>可选</Badge> banner底部右侧按钮文字                           |
 | rightbtnlink | string   | <Badge>可选</Badge> banner底部右侧按钮跳转链接                       |
 |  container   | boolean  | <Badge>可选</Badge> 是否开启容器（默认true）                         |
-
-::: warning 警告
-如果标注可选的参数，可根据自己需要添加，不用全部都写在 Markdown 里。
-:::
+|  author      | string   | <Badge>可选</Badge> 文章作者                                         |
+|  avatar      | string   | <Badge>可选</Badge> 文章作者头像URL                                  |
 
 **自定义拥有 banner 图的页面**
 

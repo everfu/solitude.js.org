@@ -58,7 +58,7 @@ git clone -b dev https://gitee.com/everfu/hexo-theme-solitude themes/solitude
 ```bash [升级方法]
 git pull
 ```
-== npm
+== NPM
 :::code-group
 ```bash [稳定版]
 npm install hexo-theme-solitude
@@ -109,7 +109,7 @@ hexo server
 在博客根目录运行以下命令，将主题的配置文件复制到根目录，以便更好地配置主题。
 
 :::tabs
-== Git
+== Git or Release   
 :::code-group
 ```bash [Mac/Linux]
 cp -rf ./themes/solitude/_config.yml ./_config.solitude.yml
@@ -118,7 +118,7 @@ cp -rf ./themes/solitude/_config.yml ./_config.solitude.yml
 ```bash [Windows]
 copy .\themes\solitude\_config.yml .\_config.solitude.yml
 ```
-== npm
+== NPM
 :::code-group
 ```bash [Mac/Linux]
 cp -rf ./node_modules/hexo-theme-solitude/_config.yml ./_config.solitude.yml
@@ -135,17 +135,10 @@ copy .\node_modules\hexo-theme-solitude\_config.yml .\_config.solitude.yml
 - 想查看覆盖配置有没有生效，可以通过 `hexo generate --debug` 查看命令行输出。
 :::
 
----
-## 视频教程
-
-如果无法通过文档成功配置，这里有视频 [Solitude 主题使用教程](https://space.bilibili.com/1329819902/channel/seriesdetail?sid=3761808)。
-
 ## 版本号释义
 
 本项目的版本号为 `X.Y.Z` 格式，但与常见的 [语义化版本号规范](https://semver.org/lang/zh-CN/) 有部分区别，具体释义如下：
 
 - `X`：产品层面的重新设计，包含重大框架重构，会涉及大范围功能变更与配置变更，更新前必须阅读相关文档
-
 - `Y`：包含中大型新功能，及无法向下兼容的功能变更与配置变更，更新该版本号可能会需要修改配置或者移除一些原功能
-
 - `Z`：不仅包含 BUG 修复、小型新功能，还会包含可以向下兼容的原功能更新与配置变更，原则上更新该版本号无需额外动作

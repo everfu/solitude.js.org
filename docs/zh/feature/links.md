@@ -26,13 +26,13 @@ description: 为你的站点添加友情链接
          type: card  # 显示方式，有两种 card / item
          suffix: 
          link_list:
-           - name: Efu # 友链名称
-             link: https://www.efu.me # 友链地址
-             descr: An Open Source worker. # 友链简介
-             avatar: https://s3.qjqq.cn/47/660a7ece07609.webp!color # 显示头像
-             topimg: https://s3.qjqq.cn/47/660a7ece07609.webp!color # 如果是card模式下，将显示
-             tag: 博主
-             color: vip
+            - name: 伍十七 # 友链名称
+              link: / # 友链地址
+              descr: 一个狂热的开源工作者 # 友链简介
+              avatar: https://ui.everfu.cn/avatar/20240827172640.png # 显示头像
+              topimg: https://ui.everfu.cn/siteshot/202408280110974.png/siteshot # 如果是card模式下，将显示
+              tag: 博主
+              color: vip
        - class_name: 技术
          descr: 技术知识为主的博客
          type: item

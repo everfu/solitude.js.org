@@ -7,167 +7,133 @@ description: Solitude 主题基础配置
 
 ## 站点配置
 
-> 修改网站各种资料，例如标题、副标题和邮箱等个人资料。
+修改网站各种资料，例如标题、副标题和邮箱等个人资料。
 
 :::code-group
 ```yaml [_config.yml]
 # Site
-title: Ever Fu # 博客标题
-subtitle: "" # 博客子标题
-description: 小心翼翼的努力并拥有着。 # 博客简介
-keywords: Everfu # 博客关键词
-author: Ever Fu # 博主名称
-language: zh-CN # 语言
-timezone: Asia/Shanghai # 时区（请自行查询）
+title: 伍十七 # 网站标题
+subtitle: '' # 副标题
+description: '伍十七的博客' # 网站描述
+keywords: 'everfu, 伍十七' # 网站关键字
+author: 伍十七 # 网站作者
+language: zh-CN # 网站语言
+timezone: 'Asia/Shanghai' # 时区
 ```
 
 ```yaml [_config.solitude.yml]
-# 站点设置
-# Site settings
+# --------------------------- start ---------------------------
+# Site information
+# 网站信息
 site:
-  # Logo
   name:
-    # 显示类型 （i_class/text/img）
-    # Display type (i_class/text/img)
-    class: text
-    # 具体内容 例如：solitude st-logo / Efu / /img/logo.png
-    # Specific content, for example: solitude st-logo / Efu / /img/logo.png
-    custom: Solitude
-  # 网页 Icon
-  # Web icon
-  siteIcon: /img/pwa/favicon.ico
-  # 页脚的Logo、加载动画默认的logo
-  # Logo in the footer, default logo for loading animation
-  icon: /img/pwa/favicon.ico
+    class: text # text / i_class / img
+    custom: 伍十七 # Solitude / fas fa-ghost / /img/pwa/favicon.ico
+  icon: https://ui.everfu.cn/c625e37b3cf9054d92a52ec04ce8abf0.png/avatar # Site icon / 网站图标
+# --------------------------- end ---------------------------
 ```
 :::
 
 ## 导航菜单
 
 :::code-group
-```yaml [Group]
-# 导航栏左侧
-# Left side of the navigation bar
-group:
-  # 分类名称: 链接地址 || 图标
-  # Category name: link address || icon
-  项目:
-    # 子菜单名称: 链接地址 || 图标
-    # Submenu name: link address || icon
-    Solitude: https://github.com/everfu/hexo-theme-solitude || https://7.isyangs.cn/1/65eb200ee4dea-1.png
-```
-
-```yaml [菜单]
+```yaml [导航栏]
+# --------------------------- start ---------------------------
+# Navigation bar
+# 导航栏
+nav:
+  # Left Box
+  # 左侧盒子
+  group:
+    我的:
+      个人主页: https://everfu.cn || https://ui.everfu.cn/c625e37b3cf9054d92a52ec04ce8abf0.png/avatar
+    # 项目:
+    #   Solitude: https://github.com/everfu/hexo-theme-solitude || https://ui.everfu.cn/cover/202408301243345.webp/avatar
+  # Menu
+  # 菜单
   menu:
-    Home: / # name: link
-    Article: # name
-      Archives: /archives/ || fas fa-folder-closed # item name: link || icon
-      Categories: /categories/ || fas fa-clone
-      Tags: /tags/ || fas fa-tags
-    Friends:
-      Moments: /moments/ || fas fa-wifi
-      Links: /links/ || fas fa-user-group
-      Treasure: javascript:travelling() || fas fa-gift
-    Myself:
-      Equipment: /equipment/ || fas fa-laptop
-      Toobox: /tlink/ || fas fa-toolbox
-      Music: /music/ || fas fa-music
-    About: /about/
-```
-```yaml [按钮]
-  right: # right button
-    random: false # Random article
+    # 首页: / # name: link
+    文库: # name
+      全部文章: /archives/ || fas fa-folder-closed # item name: link || icon
+      分类列表: /categories/ || fas fa-clone
+      标签列表: /tags/ || fas fa-tags
+    友链:
+      文章矩阵: https://summary.zhheo.com/static/matrix-posts.html || fas fa-wifi
+      友情链接: /links/ || fas fa-user-group
+      宝藏博主: javascript:travelling() || fas fa-gift
+    我的:
+      我的装备: /equipment/ || fas fa-tools
+      # 在线工具: /tlink/ || fas fa-toolbox
+      关于本站: /about/ || fas fa-user
+  # Right button
+  # 右侧按钮
+  right:
+    random: false # Random article / 随机文章按钮
     custom:
-    #  - name: Start # name
-    #    url: https://www.travellings.cn/go.html # Jump link
-    #    icon: fas fa-train # Icon
-    #    onclick: # Click event
-    #    id: travellings_button # id
+      # - name: 开往 # name
+      #   url: https://www.travellings.cn/go.html # Jump link
+      #   icon: fas fa-train # Icon
+      #   onclick: # Click event
+      #   id: travellings_button # id
+# --------------------------- end ---------------------------
 ```
 :::
 
 ## 首页顶部
 
-> ~~开启 **banner** 必须填写 **icon** ，否则会报错~~  v2支持不开启。 开启后可在文章的front matter中添加 **recommend: true**，即可在右侧显示置顶文章。
+开启后可在文章的front matter中添加 `recommend: true` ，即可在右侧显示置顶文章。
 
 ```yaml
-# 首页顶部样式
-# Home top style
+# --------------------------- start ---------------------------
+# Home Top Banner
+# 首页顶部
 hometop:
-  enable: false # 是否打开 / if enable
-  # banner display
+  enable: true
   banner:
-    # 左上角显示大文字
-    # Large text displayed in the upper left corner
-    # tip：可使用html标签
-    # tip: html tags be used
-    title: 宁静致远<br>热爱生活
-    # 左上角显示小文字
-    # Small text displayed in the upper left corner
-    url: Hexo Theme Solitude
-    # 轮播icon
-    # Carousel icon
-    # tip: 76x76 size
+    title: 宁静致远<br> 热爱生活
+    url: 开发、设计、制作、运维
     icon:
-      # HTML: # 名字 / Name
-      #   img: https://7.isyangs.cn/34/65f2e42921677-34.png # 图片 / Image
-      #   color: "#e9572b" # 背景色 / Background color
-      # JS:
-      #   img: https://7.isyangs.cn/34/65f2e43ceddda-34.png
-      #   color: "#f7cb4f"
-      # Docker:
-      #   img: https://7.isyangs.cn/34/65f2e45462045-34.png
-      #   color: "#57b6e6"
-      # Flutter:
-      #   img: https://7.isyangs.cn/34/65f2e47acbe98-34.png
-      #   color: "#ffffff"
-      # WebPack:
-      #   img: https://7.isyangs.cn/34/65f2e488bf8ed-34.png
-      #   color: "#2e3a41"
-      # Git:
-      #   img: https://7.isyangs.cn/34/65f2e499066fa-34.png
-      #   color: "#df5b40"
-
-  # 左下跳转按钮
-  # Banner lower left jump button
+      Nodejs:
+        img: https://ui.everfu.cn/cover/20240827172946.png/cover
+        color: "#242938"
+      Vue:
+        img: https://ui.everfu.cn/cover/20240827173146.png/cover
+        color: "#242938"
+      React:
+        img: https://ui.everfu.cn/avatar/20240827172839.png/cover
+        color: "#242938"
+      HTML:
+        img: https://ui.everfu.cn/cover/20240827173208.png/cover
+        color: "#e34c26"
+      CSS:
+        img: https://ui.everfu.cn/cover/20240827173227.png/cover
+        color: "#0277BD"
+      JavaScript:
+        img: https://ui.everfu.cn/cover/20240827173248.png/cover
+        color: "#EFDB50"
   group:
-    # 热门: /tags/热门/ || st-fire-fill || linear-gradient(to right,#f65,#ffbf37)
-    # 教程: /tags/教程/ || st-book-mark-fill || linear-gradient(to right,#358bff,#15c6ff)
-    # 精选: /tags/精选/ || st-star-smile-fill || linear-gradient(to right,#18e7ae,#1eebeb)
-
-  # 右侧置顶列表（在文章的front matter中添加“recommend: true”）
-  # Right top list (add "recommend: true" in the front matter of the article)
+    # 热门: /tags/Fire/ || fas fa-fire || linear-gradient(to right,#f65,#ffbf37)
   recommendList:
-    # 左上角显示文字
-    # Large text displayed in the upper left corner
     sup: 置顶
-    # 左下角大字
-    # Large text in the lower left corner
-    title: Solitude 主题文档
-    # 点击跳转链接
-    # Click the jump link
+    title: Solitude 官方文档
     url: https://solitude.js.org/
-    # 显示背景图片
-    # Display background image
-    img: /img/default.png
-    # 阴影颜色
-    # Shadow color
-    color: none
+    img: https://ui.everfu.cn/cover/20240827173743.png/cover
+    color: "none"
+# --------------------------- end ---------------------------
 ```
 
 ## 首页顶部轮播图
 
+在文章的front matter中添加 `recommend: true` ，即可在右侧显示置顶文章。
+
 ```yaml
-# carousel
-# 顶部推荐轮播图
-# 使用方法：在文章的front matter中添加“recommend: true”
 # tip：建议开了这个就不要开hometop，其功能类似
 carousel: false
 ```
 
 ## 侧边栏
 
-> Sticky: 跟随，noSticky: 不跟随 Sticky 和 noSticky 的值：about、allInfo、newestPost、flip、newest_comment
+> Sticky: 跟随，noSticky: 不跟随 Sticky 和 noSticky 的值：about、allInfo、newestPost、flip
 
 ```yaml
 home: # 在主页显示的侧边栏信息
@@ -187,199 +153,257 @@ position: 1 # left(0): 左侧 / right(1):右侧
 
 :::code-group
 ```yaml [个人信息卡片]
-# 侧边栏个人信息卡片
-# Sidebar personal information
-  card:
-    style: 0 # 0: default 1: style 1 2: style 2
-    author:
-      img: /img/avatar.avif # url (avatar)
-      sticker: # url (sticker), 24x24
-    url: /about/ # Click name to jump to address 
-    background: # https://s3.qjqq.cn/47/663af296b85f4.webp!color # Background image(Invalid if style is 0)
-    content: Here is my personal blog # Introduction (Invalid if style is 1)
-    content2: I believe you can find knowledge and tutorials here that will be useful to you. # Introduction (Invalid if style is 1)
-    sayhello: # Style 2 is invalid
-      morning: ✨ Good morning. It's a new day 
-      noon: It's time for a midday break 
-      afternoon: Tea time. 🍵
-      night: early bedtime
-      goodnight: Good night 😴
-    sayhello2: # Style 2 is invalid, Triggered when sayhello is clicked.
-      # - You'll make it.
-      # - You're gonna make it.
-      # - Good luck, stranger.
-    information:
-    #  Github: https://github.com/everfu || fab fa-github # Name: link || icon
-    #  Bilibili: https://space.bilibili.com/1329819902 || fab fa-bilibili
+# --------------------------- start ---------------------------
+# Information card
+# 信息卡
+card:
+  style: 0 # 0: default 1: style 1 2: style 2
+  author:
+    img: https://ui.everfu.cn/avatar/20240827172640.png/banner
+    url: https://everfu.cn # link / 点击头像跳转链接
+  background: # https://s3.qjqq.cn/47/663af296b85f4.webp!color # Background image(Invalid if style is 0)
+  # Content(Invalid if style is 0)
+  # 内容(Style 0 无效)
+  content: 这是我分享自己写作的一个平台 # 这是我的博客 / This is my Blog
+  content2: 我是一个热爱开源的小子 # 一个热爱生活的人 / A person who loves life
+  # Style 2 is invalid
+  # Style 2 无效
+  sayhello:
+    morning: ✨ 早上好，新的一天开始了
+    noon: 中午饭时间
+    afternoon: 下午茶时间 ☕️
+    night: 不要熬夜哦
+    goodnight: 晚安，早点休息
+  # Style 2 is invalid, Triggered when sayhello is clicked.
+  # Style 2 无效, 点击 sayhello 时触发
+  sayhello2:
+    - 你可以的
+    - 相信你可以的
+    - 你一定可以的
+  # social
+  # 社交信息图标
+  information:
+    Github: https://github.com/everfu || fab fa-github # Name: link || icon
+    Bilibili: https://space.bilibili.com/1329819902 || fab fa-bilibili
+# --------------------------- end ---------------------------
 ```
 
 ```yaml [公众号二维码]
-# 二维码
-# Official account QR code
+# --------------------------- start ---------------------------
+# Sidebar QR code component
+# 侧边栏二维码组件
 flip:
-  # 右下角头像
-  # Avatar in the lower right corner
-  favicon:
-  # 正面
-  # Front
-  face:
-  # 鼠标悬停翻转图片
-  # Mouse hover flip image
-  backface:
-  # 背景色：var(--efu-blue) / #000 / rgba(0,0,0,0.5) / linear-gradient(to right,#f65,#ffbf37)
-  # Background color: var(--efu-blue) / #000 / rgba(0,0,0,0.5) / linear-gradient(to right,#f65,#ffbf37)
-  backcolor: "var(--efu-blue)"
-```
-
-```yaml [最新文章]
-newest_comment:
-  enable: true
-  storage: .5 # 缓存时间 1: 1天 / .5 : 半天 / Cache time 1: 1 day .5 : half a day
-  limit: 5 # 评论数 / Number of comments
+  favicon: # url (favicon)
+  face: # url (QR code)
+  backface: # url (QR code)
+  backcolor: "var(--efu-blue)" # Background color
+# --------------------------- end ---------------------------
 ```
 
 ```yaml [页面目录]
-# 页面目录
-# Page directory
+# --------------------------- start ---------------------------
+# article table of contents
+# 文章目录
 toc:
-  # 在文章页显示
-  # Display on the article page
   post: true
-  # 在任意页显示
-  # Display on any page
   page: false
-  # 开启后不悬停目录有模糊效果
-  # After opening, there is a fuzzy effect without hovering over the directory
   vague: true
+# --------------------------- end ---------------------------
 ```
 
 ```yaml [文章列表]
-# 侧边栏文章列表
-# Sidebar article list
+# --------------------------- start ---------------------------
+# Tags
+# 标签
 tags:
-  enable: false
-  # 显示标签数量，当高于标签总数时，显示全部标签按钮
-  # Display the number of tags, when it is higher than the total number of tags, display all tags button
-  limit: 20
-  # 高亮显示
-  # Highlight
-  highlight: false
-  # 高亮显示标签列表
-  # Highlighted tag list
-  list:
-    - Solitude-使用
+  enable: true
+  limit: 20 # Number of tags displayed
+  # Highlighted tags
+  highlight_list:
+    # - hexo
+# --------------------------- end ---------------------------
 ```
 
 ```yaml [文章归档]
-# 侧边栏归档
-# aside archive
+# --------------------------- start ---------------------------
+# Archive
+# 归档
 archive:
   enable: false
-  # 显示类型：month（按月） / year（按年）
-  # Display Method: month (by month) / year (by year)
-  type: month 
+  type: "month" # month: by month / year: by year
+# --------------------------- end ---------------------------
 ```
 
 ```yaml [建站信息]
-# 建站信息
-# Website information
+# --------------------------- start ---------------------------
+# Site Info
+# 网站信息
 siteinfo:
-  # 文章数
   # Number of articles
+  # 文章数量
   postcount: true
-  # 总字数
   # Total number of words
+  # 总字数
   wordcount: true
-  # 访问量
-  # Number of visits
+  # PV
   pv: true
-  # 访客数
-  # Number of visitors
+  # UV
   uv: true
-  # 最后更新日期
   # Last update date
+  # 最后更新日期
   updatetime: true
-  # 建站时间
   # Website creation time
+  # 网站创建时间
   runtimeenable: true
-  # 格式：yyyy-MM-dd hh:mm:ss
-  # Format: yyyy-MM-dd hh:mm:ss
-  runtime: 2023-04-20 00:00:00
+  # Format: yyyy-MM-dd hh-mm-ss
+  # 格式: yyyy-MM-dd hh-mm-ss
+  runtime: "2024-08-24 00:00:00"
+# --------------------------- end ---------------------------
 ```
 :::
 
 ## 页面配置
 
 ```yaml
+# --------------------------- start ---------------------------
+# Page default settings
 # 页面默认设置
-# page default settings
 page:
-  error: true # 404页面 / 404 page
-  tags: true # 标签页 / Tags page
-  categories: true # 分类页 / Categories page
-  default: # 默认值 / Default value
-    # 默认图片
-    # default cover
-    # tip：随机数组图片，每次生成的时候都会从中随机抽取一张
-    # tip: Random array pictures, each time you generate, you will randomly extract one from them
+  # 404 page
+  # 404 页面
+  error: true
+  # Tags page
+  # 标签页面
+  tags: true
+  # Categories page
+  # 分类页面
+  categories: true
+  # list: Sort List / 1: Follow HomeList
+  # list: 排序列表 / 1: 跟随首页列表
+  archives: 0
+  # Default value
+  # 默认值
+  default:
+    # Default image when no cover is set
+    # 未设置封面时的默认图片
     cover:
-      - /img/default.png # 默认图片 / default cover
+      # - /img/default.png # 默认图片 / default cover
+# --------------------------- end ---------------------------
 ```
 
 ## 文章配置
 
 ```yaml
-# 文章页默认设置
+# --------------------------- start ---------------------------
 # Post default settings
+# 文章默认设置
 post:
   default:
-    # 文章默认图片
-    # default cover
+    # The cover of the article is displayed
+    # 文章封面显示
+    top_cover: true
+    # Default image when no cover is set
+    # 未设置封面时的默认图片
     cover:
-      # - # 默认图片 / default cover
-    # 文章发布默认地址
-    # default post locate
-    locate: 衡阳
-    # 文章默认版权
-    # default post copyright
+      # -  # 默认图片 / default cover
+    # Location
+    # 位置
+    locate: 南昌
+    # Copyright
+    # 版权
     copyright:
       enable: true
       author:
-        url: /about/ # 点击头像跳转地址
-        img: # 显示头像，不填写默认显示site_icon
+        url: https://everfu.cn # Author link
+        # Default use site.icon
+        # 默认使用 site.icon
+        img: https://ui.everfu.cn/avatar/20240827172640.png/banner
+      # License
+      # 许可证
       license: CC BY-NC-SA 4.0
+      # License link
+      # 许可证链接
       licenurl: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh
-  # 顶部文章简介
-  # Top article introduction
+  # Article meta information
+  # 文章元信息
   meta:
-    date: false # 发布日期 / Release date
-    updated: false # 更新日期 / Update date
-    locate: false # 位置 / Location
-    wordcount: false # 字数 / Number of words
-    readtime: false # 访问 / uv
-    pv: false # 浏览量 / pv
-    comment: false # 评论数 / Comment count
-  # 打赏
+    # Release date
+    # 发布日期
+    date: true
+    # Update date
+    # 更新日期
+    updated: true
+    # Location
+    # 位置
+    locate: true
+    # Number of words
+    # 字数
+    wordcount: true
+    # uv
+    readtime: true
+    # pv
+    pv: true
+    # Comment count
+    # 评论数
+    comment: true
   # Reward
+  # 打赏
   award:
-    enable: false
-    appreciators: /about # 赞赏记录 / Appreciative records
-    title: 感谢您的赞赏。
-    desc: 因为有你们的支持，我才体会到写文章的价值。
+    enable: true
+    appreciators: /about/ # Reward page
+    # Reward Title
+    # 打赏标题
+    title: 感谢您的赞赏
+    desc: 由于您的支持，我才能够实现写作的价值。
+    # Reward list
+    # 打赏列表
     list:
-      # - name: 支付宝
-      #   qcode: https://7.isyangs.cn/34/65f2e5a6d2ef5-34.png
-      #   color: var(--efu-blue)
-  # 版权中订阅按钮跳转链接，填写地址后开启
-  # Subscription button jump link in copyright
-  rss: # /atom.xml
-  # 文章主题色获取
-  # Article theme color acquisition
-  covercolor:
+      # - name: Github Sponsor
+      #   qcode: https://s3.qjqq.cn/47/661ba900c4bc1.webp!color
+      #   url: https://github.com/sponsors/everfu
+      #   color: var(--efu-black)
+      - name: 微信
+        qcode: https://ui.everfu.cn/avatar/202408291335398.png/cover
+        url: https://s3.qjqq.cn/47/663742bac8e52.webp!color
+        color: var(--efu-green)
+      - name: 支付宝
+        qcode: https://ui.everfu.cn/avatar/202408291338530.png/cover
+        url: https://s3.qjqq.cn/47/66d00a4c7107d.png!color
+        color: var(--efu-blue)
+
+  # Share icon
+  # 分享图标
+  share:
     enable: false
-    mode: local.md # local.md：本地取色 / api：img2color取色 : local.md: local.md color / api: img2color color
-    api: https://api.qjqq.cn/api/Imgcolor?img= # api地址 / api address
-    time: 43200000 # api取色间隔（毫秒），默认为12小时 / api color interval (milliseconds), default is 12 hours
+    list:
+      # - qq
+      # - weibo
+      # - twitter
+      # - facebook
+      # - telegram
+      # - whatsapp
+      # - linkedin
+      # - link
+      # - qrcode
+  rss: /atom.xml
+  # Article reading progress
+  # 文章封面取色
+  covercolor:
+    enable: true
+    # local: local color / api: api color / ave: oss covercolor
+    mode: ave
+    # api address / api 地址
+    api: https://api.qjqq.cn/api/Imgcolor?img=
+    # Storage / 缓存时间
+    time: 43200000
+  footer:
+    enable: false
+    desc: # Articles from Ever Fu. / 文章来自 Ever Fu # description
+    button: # Button
+      enable: true
+      name: # Learn more / 了解更多
+      url: /about/
+# --------------------------- end ---------------------------
 ```
 
 ## 自定义主题
@@ -387,136 +411,196 @@ post:
 :::code-group
 
 ```yaml [自定义配色]
-# 自定义配色
-# Custom theme color
-# 注意：颜色值必须使用引号，如 "#000"，否则可能会导致错误！
-# Note: The color value must be enclosed in quotation marks, such as "#000", otherwise it may cause an error!
-# --------------------------------------
+# --------------------------- start ---------------------------
+# Custom Theme Color
 theme_color:
-  dark: "#ffc848" # 暗色模式 / Dark mode
-  dark_op: "#f2b94b23" # 暗色模式透明 / Dark mode transparent
-  dark_op_deep: "#f2b94bdd" # 暗色模式透明深色 / Dark mode transparent dark
-  dark_none: "#f2b94b00" # 暗色模式透明无色 / Dark mode transparent colorless
-  light: "#425aef" # 亮色模式 / Light mode
-  light_op: "#4259ef23" # 亮色模式透明 / Light mode transparent
-  light_op_deep: "#4259efdd" # 亮色模式透明深色 / Light mode transparent dark
-  light_none: "#4259ef01" # 亮色模式透明无色 / Light mode transparent colorless
+  dark: "#8eaccd" # dark
+  light: "#ff8080" # light
+# --------------------------- end ---------------------------
 ```
 
 ```yaml [昼夜切换]
-# 主题显示模式调整
-# Theme display mode adjustment
-# 主题支持三种模式：自动切换、暗色模式、亮色模式
-# The theme supports three modes: automatic switching, dark mode, and light mode
-# --------------------------------------
+# --------------------------- start ---------------------------
+# display mode
+# 显示模式
 display_mode:
-  type: auto # auto: 自动切换 / dark: 暗色模式 / light: 亮色模式 / auto: automatic switching / dark: dark mode / light: light mode
-  universe: true # 开启后暗色模式下会显示星空背景 / After opening, the dark mode will display the starry sky background
+  # auto: automatic switching(Recognize the current theme mode of the device) / dark: dark mode / light: light mode
+  # auto: 自动切换（识别设备当前主题模式） / dark: 深色模式 / light: 浅色模式
+  type: auto
+  # After opening, the dark mode will display the starry sky background
+  # 开启后深色模式会显示星空背景
+  universe: false
+# --------------------------- end ---------------------------
 ```
 
 ```yaml [字体]
-# Font 字体
+# --------------------------- start ---------------------------
 # Font
+# 字体
 font:
   font-size: 16px
   code-font-size: 16px
-  font-family: 'PingFang SC, Hiragino Sans GB, Microsoft YaHei'
+  # Global font
+  # 全局字体
+  font-family: "PingFang SC, Hiragino Sans GB, Microsoft YaHei"
+  # Code font
+  # 代码字体
   code-font-family: '"monospace", monospace'
+# --------------------------- end ---------------------------
 ```
 
 ```yaml [网站背景]
+# --------------------------- start ---------------------------
+# Background
 # 背景图片
-# Background image
 background:
   enable: false
   opacity: .2
-  dark: https://bu.dusays.com/2023/09/29/651685ce667d1.jpg
-  light: https://bu.dusays.com/2023/09/29/651685cc18d39.jpg
+  dark: https://i.pinimg.com/originals/d8/b3/9d/d8b39d12b653810db452c437211aeb2e.png
+  light: https://i.pinimg.com/originals/93/57/38/935738ed9657b296c2ef0ebd2151eb66.jpg
+# --------------------------- end ---------------------------
 ```
 
 ```yaml [诱骗点击]
-# 诱骗
+# --------------------------- start ---------------------------
 # Lure
+# When the user exits the page, modify the title
+# 当用户退出页面时，修改标题
 lure:
   enable: false
-  # 跳出
-  # Jump out
   jump: 404 Not Found
-  # 切回
-  # Switch back
-  back: ヾ(≧∇≦*)ゝ嘿嘿，上当了吧
+  back: ヾ(≧∇≦*)ゝHey, hey, you fell for it.
+# --------------------------- end ---------------------------
 ```
 
 ```yaml [文章过期提醒]
-# 文章过期提醒
-# Article expiration reminder
+# --------------------------- start ---------------------------
+# Article expiration
+# 文章过期
 expire:
   enable: false
-  # 过期时间
-  # Expiration time
-  time: 30
+  time: 30 # days
   position: top # top / bottom
-  # 过期提示
-  # Expiration prompt
-  text_prev: "本文已于"
-  text_next: "天前过期，如果内容不符，请联系站长更新。"
+  text_prev: "This article expired "
+  text_next: " day ago, if the content does not match, please contact the webmaster to update it."
+# --------------------------- end ---------------------------
 ```
 :::
 
 ## 首页文章列表
 
 ```yaml
+# --------------------------- start ---------------------------
+# Home page article configuration information
 # 首页文章配置信息
-# Configure information on the home page
 index_post_list:
   direction: column # row / column
-  content: 3 # 1: post.description / 2: 自动获取description或截取内容(Automatically get descriptions or screenshots) / 3: 只使用截取内容(Use only screenshots) / false: 不显示内容(No content is displayed)
-  length: 500 # 截取内容的长度 : The length of the screenshot content
-  cover: both # left: 在左侧 : left / right: 在右侧 : right / both: 两侧 : both
+  column: 2 # 2: 2 columns 3: 3 columns
+  cover: both
+# --------------------------- end ---------------------------
 ```
 
 ## 推荐文章
 
 ```yaml
-# 文章底部推荐文章
+# --------------------------- start ---------------------------
+# Related articles
+# 相关文章
 related_post:
-  enable: true # 是否开启推荐
-  limit: 2 # 推荐文章数量
-  date_type: created # 根据创建日期（created）或是更新日期（updated）
+  enable: false
+  limit: 2
+  # created: release date / updated: update date
+  # created: 发布日期 / updated: 更新日期
+  date_type: created
+# --------------------------- end ---------------------------
 ```
 
 ## 右键菜单
 
 ```yaml
-# 自定义右键菜单 (Custom Right Menu)
+# --------------------------- start ---------------------------
+# Custom right menu
+# 自定义右键菜单
 right_menu:
   enable: false
-  commentBarrage: false # 是否显示热评开关 / Whether to display the hot comment switch.
-  translate: # 翻译功能（仅支持简繁）/ Translation function (Simplified and Traditional Chinese only)
-    enable: false
-    defaultEncoding: 2 # 1: 默认繁体 2: 默认简体
-    translateDelay: 0 # 翻译迟疑时间
-  # 自定义菜单项列表
-  # Customize the list of menu items.
+  # Whether to display the hot comment switch.
+  # 是否显示热门评论开关
+  commentBarrage: false
+  # Whether to display the browser's context menu when hold Ctrl key.
+  # 是否在按住 Ctrl 键时显示浏览器右键菜单
+  ctrlOriginalMenu: false
+  # Simplified and Traditional Chinese translation.
+  # 简繁体转换
+  translate: false
+  # Custom list
+  # 自定义列表
   custom_list:
-    - name: 随机短文
-      click: toRandomPost()
-      id: menu-randomPost
-      class:
-      icon: st-signal-tower-fill
-    - name: 全部分类
-      click: pjax.loadUrl('/categories/')
-      id:
-      class:
-      icon: st-checkbox-multiple-blank-fill
-    - name: 全部标签
-      click: pjax.loadUrl('/tags/')
-      id:
-      class:
-      icon: st-price-tag-fill
-    - name: 赞助主题
-      click: window.open('https://afdian.net/a/efu0u0/', '_blank')
-      id:
-      class:
-      icon: st-afdian-line
+    # - name: 随机文章
+    #   click: toRandomPost()
+    #   id: menu-randomPost
+    #   class:
+    #   icon: fas fa-tower-broadcast
+    # - name: 全部分类
+    #   click: pjax.loadUrl('/categories/') # External links with window.open, pjax can not request cross-domain content.
+    #   id:
+    #   class:
+    #   icon: fas fa-clone
+    # - name: 全部标签
+    #   click: pjax.loadUrl('/tags/')
+    #   id:
+    #   class:
+    #   icon: fas fa-tags
+# --------------------------- end ---------------------------
+```
+
+## 复制
+
+```yaml
+# --------------------------- start ---------------------------
+# Copy
+#  information
+# 复制信息
+copy:
+  enable: false
+  # Turn on Link copyright information after copying.
+  # 复制后链接版权信息
+  copyright:
+    enable: false
+    # Display when the number of words copied exceeds
+    # 复制文字时超过多少字数显示
+    limit: 50
+# --------------------------- end ---------------------------
+```
+
+## Mermaid
+
+> Mermaid 是一个用于生成流程图、序列图、甘特图等的 JavaScript 库。
+
+```yaml
+# --------------------------- start ---------------------------
+# Mermaid
+mermaid: false
+# --------------------------- end ---------------------------
+```
+
+## Chartjs
+
+> Chart.js 是一个简单的 JavaScript 图表库。
+
+```yaml
+# --------------------------- start ---------------------------
+# Chart.js
+chart: false
+# --------------------------- end ---------------------------
+```
+
+## Typeit
+
+> TypeIt 是一个简单的 JavaScript 类型动画库。
+
+```yaml
+# --------------------------- start ---------------------------
+# typeit
+typeit: false
+# --------------------------- end ---------------------------
 ```

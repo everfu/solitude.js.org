@@ -12,14 +12,13 @@ description: Giscus 是一个简单的 GitHub Issue 评论系统，支持多种�
 ## 主题配置
 
 ```yaml
-# Giscus 配置信息
-# Giscus settings
+# Giscus: https://solitude.js.org/comment/giscus
 giscus:
-  repo: # GitHub 仓库名称 / GitHub repository name
-  repo_id: # GitHub 仓库ID / GitHub repository ID
-  category_id: # GitHub 仓库分类ID / GitHub repository category ID
+  repo: # GitHub repository name
+  repo_id: # GitHub repository ID
+  category_id: # GitHub repository category ID
   theme:
     light: light
     dark: dark
-  option: 
+  option:
 ```

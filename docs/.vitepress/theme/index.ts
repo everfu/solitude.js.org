@@ -2,8 +2,9 @@
 import { h } from 'vue'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
-import './style.css'
+import '@theojs/lumen/theme'
 import { enhanceAppWithTabs } from 'vitepress-plugin-tabs/client'
+import { DocVideoLink,DocBox, DocLinks, DocBoxCube } from '@theojs/lumen'
 
 export default {
   extends: DefaultTheme,
@@ -13,6 +14,10 @@ export default {
     })
   },
   enhanceApp({ app }) {
-    enhanceAppWithTabs(app)
+    enhanceAppWithTabs(app),
+    app.component('VideoLink', DocVideoLink),
+    app.component('Box', DocBox),
+    app.component('Links', DocLinks),
+    app.component('BoxCube', DocBoxCube)
   }
 } satisfies Theme

@@ -59,3 +59,7 @@ description: Solitude 主题的高级配置
     'compress', 'minify-css', 'minify-html'
     ))
     ```
+3. 运行 `gulp` 命令：
+    ```bash
+    gulp
+    ```

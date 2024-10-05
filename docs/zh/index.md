@@ -7,6 +7,7 @@ hero:
   tagline: "专注于内容，提供优秀的阅读体验。"
   image:
     src: /persona.avif
+    alt: "Solitude"
   actions:
     - theme: brand
       text: 什么是 Solitude？

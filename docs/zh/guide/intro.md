@@ -3,7 +3,7 @@ title: 项目介绍
 description: 欢迎使用 Hexo 主题 Solitude
 ---
 
-![Solitude](https://s3.qjqq.cn/47/66c32b46a39ca.png!color)
+![Solitude](https://ui.everfu.cn/22ebf03f6e16edada213b0848013b6fc.webp/cover)
 
 Solitude 是一款设计师风格的主题，它提供了很多易于博客书写的功能，以帮助你构建美丽且优雅的博客站。
 它的目标是使用简洁的代码即可完成复杂的构建。
@@ -26,6 +26,18 @@ Solitude 是一款设计师风格的主题，它提供了很多易于博客书�
 
 赞助的朋友们，因为你们的支持使我能够继续开源计划，谢谢！
 
-| 支付宝 | 微信|
-|-----|------|
-| [![alipay](https://s3.qjqq.cn/47/66c2b37d1aa6e.png!color){style="width: 200px"}](https://s3.qjqq.cn/47/66c2b37d1aa6e.png!color) | [![wechat](https://s3.qjqq.cn/47/66c2b322adbd3.png!color){style="width: 200px"}](https://s3.qjqq.cn/47/66c2b322adbd3.png!color)|
+<Box
+  :items="[
+    //使用FontAwesome图标 + 标签 + 颜色
+    { name: '支付宝', link: 'https://ui.everfu.cn/e95a23ba4f84e2c027bae7a6cbe14b37.png/cover', icon: 'fab fa-alipay', color: '#00a1e9', tag: '赞助' },
+    { name: '微信', link: 'https://ui.everfu.cn/b4056c0b1e5c220c97e344bbda0d97ce.png/cover', icon: 'fab fa-weixin', color: '#2ca83c', tag: '赞助' },
+  ]"
+/>
+
+特别赞助：
+
+<Box
+    :items="[
+        { name: '晞云云计算', link: 'https://www.lightxi.com/', tag: '赞助', icon: 'https://www.lightxi.com/favicon.ico' },
+    ]"
+/>

@@ -1,10 +1,10 @@
 import { defineConfig } from 'vitepress';
-import { tabsMarkdownPlugin } from 'vitepress-plugin-tabs'
+import { tabsMarkdownPlugin } from 'vitepress-plugin-tabs';
+import { figure } from '@mdit/plugin-figure';
 
 export const shared = defineConfig({
-
     head: [
-        ['link', {rel: 'icon', href: '/favicon.avif', type: 'image/x-icon'}],
+        ['link', {rel: 'icon', href: '/favicon.svg', type: 'image/x-icon'}],
         ['meta', {name: 'theme-color', content: '#92f8b8'}],
         ['meta', {name: 'google-site-verification', content: 'OQ-FnVME50EgIvv5nO4fsNl7EHkEl0vUSoFUe_fAMgY'}],
     ],
@@ -16,6 +16,11 @@ export const shared = defineConfig({
     markdown: {
         config(md) {
             md.use(tabsMarkdownPlugin)
+            md.use(figure, {
+        figcaption: 'alt',
+        copyAttrs: '^class$',
+        lazy: true
+      }) 
         },
         codeTransformers: [
             {

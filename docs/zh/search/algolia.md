@@ -14,21 +14,19 @@ description: 使用 Algolia 作为搜索引擎
 ## 主题配置
 
 ```yaml
-# 搜索
-# search
-# warning：开启前需要安装搜索插件
-# warning: You need to install the search plugin before turning it on
+# --------------------------- start ---------------------------
+# Search
 search:
-  enable: true
-  type: algolia
-  # 推荐标签
-  # Recommended tags
+  enable: false
+  # type: 使用的搜索引擎 / search engine
+  type: local # local / algolia
   tags:
     # - Solitude
     # - Hexo
   algolia:
     # hits:
-    # per_page: 6
+    #   per_page: 6
+# --------------------------- end ---------------------------
 ```
 
 ## 搜索标签

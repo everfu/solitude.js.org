@@ -14,12 +14,14 @@ description: Valine 评论系统配置介绍
 ## 主题配置
 
 ```yaml
+# Valine: https://solitude.js.org/comment/valine
 valine:
-  appId: your app id # leancloud application app id
-  appKey: your app key # leancloud application app key
-  serverURLs: your serverURL # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
-  avatar: monsterid
-  visitor: true # 是否显示访问统计
+  appId: # leancloud application app id
+  appKey: # leancloud application app key
+  serverURLs: # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
+  avatar: # https://valine.js.org/avatar.html
+  visitor: false
+  style: true # Use custom styles when turned on
   option: # options list
 ```
 
