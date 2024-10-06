@@ -41,3 +41,8 @@ Solitude 是一款设计师风格的主题，它提供了很多易于博客书�
         { name: '晞云云计算', link: 'https://www.lightxi.com/', tag: '赞助', icon: 'https://www.lightxi.com/favicon.ico' },
     ]"
 />
+
+<InArticleAdsense
+    data-ad-client="ca-pub-6338523842252061"
+    data-ad-slot="f08c47fec0942fa0">
+</InArticleAdsense>

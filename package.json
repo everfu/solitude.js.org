@@ -10,6 +10,8 @@
     "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
-    "@theojs/lumen": "^3.3.3"
+    "@theojs/lumen": "^3.3.3",
+    "vue-google-adsense": "^2.0.0",
+    "vue-scriptx": "^0.2.5"
   }
 }
