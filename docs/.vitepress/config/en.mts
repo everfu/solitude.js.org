@@ -57,8 +57,23 @@ export const en = {
                     {text: 'Equipment', link: '/feature/equipment'},
                     {text: 'Toolbox', link: '/feature/tools'},
                     {text: 'Message', link: '/feature/danmaku'},
+                    {text: 'Essay', link: '/feature/jike'},
+                    {text: 'Recent Comments', link: '/feature/recent-comments'},
                 ],
             },
+            {
+                text: 'Third Party',
+                collapsed: false,
+                items: [
+                    {text: 'Busuanzi', link: '/third-party/busuanzi'},
+                    {text: 'Tianli GPT', link: '/third-party/tianli-gpt'},
+                    {text: 'Post Chat', link: '/third-party/post-chat'},
+                ],
+            },
+            {
+                text: 'FAQ',
+                link: '/faq'
+            }
         ],
 
         footer: {

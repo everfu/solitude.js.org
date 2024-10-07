@@ -1,6 +1,6 @@
 ---
 title: Artalk Comment System
-description: Artalk is a simple private comment system that supports multiple comment methods.
+description: Artalk is a simple private comment system that supports multiple commenting methods.
 ---
 
 # Artalk Comment System
@@ -12,10 +12,10 @@ description: Artalk is a simple private comment system that supports multiple co
 ## Theme Configuration
 
 ```yaml
-# Artalk Configuration
+# Artalk configuration information
 # Artalk settings
 artalk:
   server: # Server URL
   site: # Site name
-  option: # Options
+  option: # Additional options
 ```

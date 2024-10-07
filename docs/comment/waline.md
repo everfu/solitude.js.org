@@ -1,6 +1,6 @@
 ---
 title: Waline
-description: Basic Configuration for Waline
+description: Basic configuration for Waline
 ---
 
 # Waline Comment System
@@ -12,10 +12,9 @@ description: Basic Configuration for Waline
 ## Theme Configuration
 
 ```yaml
-# Waline Configuration Information
-# Waline settings
+# Waline: https://solitude.js.org/comment/waline
 waline: # https://waline.js.org/
-  envId: your serverURL # url: https://waline.wzsco.top
+  envId: # url: https://waline.wzsco.top
   pageview: false # Whether to enable page access statistics
   option: # waline configuration item
 ```

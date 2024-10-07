@@ -59,3 +59,8 @@ description: Advanced configuration for the Solitude theme
     'compress', 'minify-css', 'minify-html'
     ))
     ```
+3. Run the `gulp` command:
+    ```bash
+    gulp
+    ```
+    

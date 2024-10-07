@@ -10,19 +10,34 @@ description: Basic Comment Configuration
 ```yaml
 # Comment
 comment:
-  use: # waline, twikoo, valine, artalk
-  commentBarrage: false # Hot comment switch
-  lazyload: false # Lazy loading
-  count: false # Display comment count
-  avatar: https://cravatar.cn # Source for fetching avatars for hot comments
-  newest_comment: # Newest comments
+  # Which commenting system to use(e.g. waline or waline,twikoo)
+  use: # waline, twikoo, valine, artalk, giscus # Up to two comment systems can be turned on at the same time
+  # Whether to display the hot comment switch.
+  commentBarrage: false
+  # Lazy load
+  lazyload: false
+  # Whether to display the comment count
+  count: false
+  # PV
+  pv: false
+  # Avatar
+  avatar: https://gravatar.com/avatar
+  # Hot comment tips
+  hot_tip:
     enable: false
-    storage: .2 # Cache time
+    # Number of hot comments
+    count: 3
+  # recent comments(⚠️ Comments need to be configured first.)
+  newest_comment:
+    enable: true
+    storage: .5 # Cache time 1: 1 day / .5 : half a day
+    limit: 5 # Number of comments
 ```
 
-* `use`: The comment system to use. You can specify up to two comment systems here. Leave it blank if you don't want to use any comment system.
-* `commentBarrage`: Enable the hot comment barrage. When enabled, the comments will appear in a loop at the bottom right of the page.
-* `lazyload`: Enable lazy loading. When enabled, the comments will only be loaded when needed.
-* `count`: Display the comment count. When enabled, the number of comments will be shown on the article page.
-* `avatar`: Source for fetching avatars for hot comments, such as gravatar or cravatar.
-* `newest_comment`: Enable the display of newest comments in the console. Requires console_plus to be enabled.
+* `use`: The comment system to use. You can fill in up to two comment systems here. If left empty, no comment system will be used.
+* `commentBarrage`: Hot comment switch. When enabled, comments will appear in a loop at the bottom right of pages with comments enabled.
+* `lazyload`: Whether to use lazy loading. When enabled, comments will only be loaded when needed.
+* `count`: Whether to display the comment count. When enabled, the article page will show the number of comments.
+* `avatar`: The source for fetching avatars for hot comments: gravatar/cravatar, etc.
+* `hot_tip`: Hot comment tips. When enabled, it will add hot comment tips to articles on the homepage.
+* `newest_comment`: Latest comments. When enabled, the control panel will display the latest comments.

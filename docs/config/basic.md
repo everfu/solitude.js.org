@@ -7,28 +7,30 @@ description: Solitude Theme Basic Configuration
 
 ## Site Configuration
 
-> Modify various information of the website, such as title, subtitle, and email.
+Modify various information of the website, such as title, subtitle, and email.
 
 :::code-group
 ```yaml [_config.yml]
 # Site
-title: Efu 
-subtitle: "" 
-description: Carefully strive and possess. 
-keywords: Efu 
-author: Efu 
-language: en-US
-timezone: Asia/Shanghai 
+title: Efu # title
+subtitle: '' # subtitle
+description: 'Carefully strive and possess.' # description
+keywords: 'everfu, Efu' # keywords
+author: Efu # author
+language: en-US # language
+timezone: 'Asia/Shanghai' # tz
 ```
 
 ```yaml [_config.solitude.yml]
+# --------------------------- start ---------------------------
+# Site information
+# 网站信息
 site:
-  # Logo
   name:
-    class: text # i_class/text/img
-    custom: Solitude # fas fa-home / Solitude / logo.png
-  siteIcon: /img/pwa/favicon.ico # favicon
-  icon: /img/pwa/favicon.ico # Logo in the footer, default logo for loading animation
+    class: text # text / i_class / img
+    custom: Solitude # Solitude / fas fa-ghost / /img/pwa/favicon.ico
+  icon: /img/pwa/favicon.ico # Site icon / 网站图标
+# --------------------------- end ---------------------------
 ```
 :::
 
@@ -122,13 +124,15 @@ hometop:
 
 ## Homepage Carousel
 
+Add `recommend: true` to the front matter of the article to display the top article on the right side.
+
 ```yaml
 carousel: false # Add "recommend: true" in the front matter of an article
 ```
 
 ## Sidebar
 
-> Sticky: Follow, noSticky: Do not follow. Values for Sticky and noSticky: about, allInfo, newestPost, flip, newest_comment
+> Sticky: Follow, noSticky: Do not follow. Values for Sticky and noSticky: about、allInfo、newestPost、flip
 
 ```yaml
 home: # Sidebar information displayed on the homepage
