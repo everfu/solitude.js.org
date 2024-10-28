@@ -29,3 +29,7 @@ description: 一些常见问题的解答
 ```yaml
 timezone: Asia/Shanghai
 ```
+
+## 新建页面时发现报错，识别不到数据
+
+检查新建的 `.yaml` 文件是否为源文件，不要使用 `win` 直接新建，请在编辑器中创建。
