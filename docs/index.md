@@ -3,33 +3,33 @@ layout: home
 
 hero:
   name: "Hexo Theme Solitude"
-  text: "A clean, responsive Hexo theme"
-  tagline: "Focused on content, providing an excellent reading experience."
+  text: "A sleek, responsive Hexo theme"
+  tagline: "Content-centric, offering an outstanding reading experience."
   image:
     src: /persona.avif
   actions:
     - theme: brand
-      text: "What is Solitude?"
+      text: "Discover Solitude"
       link: /guide/intro
     - theme: alt
-      text: "Quick Start"
+      text: "Get Started Quickly"
       link: /guide/quick-start
 features:
   - title: "Simplicity"
     icon: "📝"
-    details: "Clean design, focused on content."
-  - title: "Ease of Use"
+    details: "Streamlined design, centered on content."
+  - title: "User-Friendly"
     icon: "🚀"
-    details: "Simple and easy to use, quick to get started."
+    details: "Intuitive and easy to use, quick to launch."
   - title: "Responsive"
     icon: "📱"
-    details: "Adapts to various devices, ensuring a good user experience."
+    details: "Adjusts to various devices, ensuring a superior user experience."
   - title: "Customizable"
     icon: "🎨"
-    details: "Supports multiple customization options to meet individual needs."
+    details: "Offers numerous customization options to suit individual preferences."
   - title: "Multilingual"
     icon: "🌐"
     details: "Supports multiple languages."
   - title: "SEO"
     icon: "🔍"
-    details: "Optimized for SEO, improves search engine rankings."
+    details: "SEO-optimized, enhances search engine visibility."

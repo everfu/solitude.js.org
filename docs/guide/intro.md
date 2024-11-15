@@ -1,31 +1,34 @@
 ---
 title: Project Introduction
-description: Welcome to Hexo theme Solitude
+description: Welcome to the Hexo Theme Solitude
 ---
 
 ![Solitude](/screenshot.avif)
 
-Solitude is a designer-style theme that provides many features for easy blog writing, helping you build beautiful and elegant blog sites.
-Its goal is to achieve complex builds with simple code.
+Solitude is a designer-style theme that offers numerous features for effortless blog writing, enabling you to create beautiful and elegant blog sites. Its aim is to achieve complex builds with simple code.
 
-The theme design is fully authorized by [@张洪 Heo](https://github.com/zhheo){target='_blank'}.
+The theme design is fully authorized by [@Zhang Hong Heo](https://github.com/zhheo){target='_blank'}.
 
-> Welcome to contribute to this theme! [Contribution Guide](https://github.com/everfu/hexo-theme-solitude/blob/main/CONTRIBUTING.md){target='_blank'}
+> We welcome contributions to this theme! [Contribution Guide](https://github.com/everfu/hexo-theme-solitude/blob/main/CONTRIBUTING.md){target='_blank'}
 
 ## Features
 
 - Page lazy loading (Pjax), image lazy loading (LazyLoad), offline application (PWA)
 - Comments (Twikoo, Waline)
-- Display switch (ColorMode)
+- Display toggle (ColorMode)
 - Lightbox (medium-zoom, fancybox)
-- Mathematical formulas (Latex)
+- Mathematical formulas (LaTeX)
 - Featured pages: Instant short articles, My equipment, Online tools, Music library, Friends link pond, Album page, Douban page
 - Article features: AI summary, Code highlighting
 
 ## Sponsors
 
-To the sponsored friends, thank you for your support that allows me to continue the open source project!
+To our sponsors, thank you for your support, which allows me to continue this open-source project!
 
-[![polar.sh](https://polar.sh/embed/seeks-funding-shield.svg?org=everfu)](https://polar.sh/everfu)
+[![](https://img.shields.io/github/sponsors/everfu?label=Sponsor&style=for-the-badge)](https://github.com/sponsors/everfu)
 
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W1YSMOK)
+<p align="center">
+  <a href="https://cdn.jsdelivr.net/gh/everfu/static/sponsors.svg">
+    <img src='https://cdn.jsdelivr.net/gh/everfu/static/sponsors.svg'/>
+  </a>
+</p>

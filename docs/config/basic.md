@@ -1,13 +1,13 @@
 ---
 title: Basic Configuration
-description: Solitude Theme Basic Configuration
+description: Configuration Basics for the Solitude Theme
 ---
 
 # Basic Configuration
 
 ## Site Configuration
 
-Modify various information of the website, such as title, subtitle, and email.
+Here, you can modify various aspects of your website, such as the title, subtitle, and email.
 
 :::code-group
 ```yaml [_config.yml]
@@ -77,7 +77,7 @@ right:
 
 ## Top of Homepage
 
-> When enabled, you can add **recommend: true** in the front matter of an article to display it on the right side.
+If enabled, you can add **recommend: true** in the front matter of an article to display it on the right side.
 
 ```yaml
 hometop:

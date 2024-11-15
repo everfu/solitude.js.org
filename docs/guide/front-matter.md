@@ -46,39 +46,25 @@ rightbtnlink:
 ```
 :::
 
-|     Property     | Value Type | Explanation                                                          |
-| :--------------: | :-------- | :------------------------------------------------------------------- |
-|      title       | string    | <Badge>Required</Badge> Page title                                   |
-|       date       | datetime  | <Badge>Required</Badge> Page creation date                           |
-|       type       | string    | <Badge>Required</Badge> Configuration needed for About, Links, Moments, Instant, Toolbox pages |
-|     updated      | datetime  | <Badge>Optional</Badge> Page update date                             |
-|       desc       | string    | <Badge>Optional</Badge> Page description                             |
-|      aside       | boolean   | <Badge>Optional</Badge> Enable sidebar (default true)                |
-|     comment      | boolean   | <Badge>Optional</Badge> Show page comment module (default true)      |
-|      cover       | string    | <Badge>Optional</Badge> URL of the top image of the page             |
-|     reprint      | boolean   | <Badge>Optional</Badge> Copyright (default is original) set to true for reprint |
-|      katex       | boolean   | <Badge>Optional</Badge> Show katex (default false)                   |
-|      locate      | string    | <Badge>Optional</Badge> Location of article                          |
-|     leftend      | string    | <Badge>Optional</Badge> Text on the bottom left of the banner        |
-|    rightend      | string    | <Badge>Optional</Badge> Text on the bottom right of the banner       |
-|    rightbtn      | string    | <Badge>Optional</Badge> Text on the button on the bottom right of the banner |
-|  rightbtnlink    | string    | <Badge>Optional</Badge> Link to be opened when the button on the bottom right of the banner is clicked |
-|    container     | boolean   | <Badge>Optional</Badge> Enable container (default true)              |
+| Property      | Value Type | Explanation                                                                 |
+|:-------------:|:----------:|:---------------------------------------------------------------------------:|
+| title         | string     | <Badge type="tip" text="Required" /> Page title                             |
+| date          | datetime   | <Badge type="tip" text="Required" /> Page creation date                     |
+| type          | string     | <Badge type="tip" text="Required" /> Configuration needed for specific pages|
+| updated       | datetime   | <Badge type="info" text="Optional" /> Page update date                      |
+| desc          | string     | <Badge type="info" text="Optional" /> Page description                      |
+| aside         | boolean    | <Badge type="info" text="Optional" /> Enable sidebar (default true)         |
+| comment       | boolean    | <Badge type="info" text="Optional" /> Show page comment module (default true)|
+| cover         | string     | <Badge type="info" text="Optional" /> URL of the top image of the page      |
+| reprint       | boolean    | <Badge type="info" text="Optional" /> Copyright (default is original)       |
+| katex         | boolean    | <Badge type="info" text="Optional" /> Show katex (default false)            |
+| locate        | string     | <Badge type="info" text="Optional" /> Location of article                   |
+| leftend       | string     | <Badge type="info" text="Optional" /> Text on the bottom left of the banner |
+| rightend      | string     | <Badge type="info" text="Optional" /> Text on the bottom right of the banner|
+| rightbtn      | string     | <Badge type="info" text="Optional" /> Text on the button on the bottom right|
+| rightbtnlink  | string     | <Badge type="info" text="Optional" /> Link for the button on the bottom right|
+| container     | boolean    | <Badge type="info" text="Optional" /> Enable container (default true)       |
 
-::: warning Warning
+::: warning
 If marking optional parameters, you can add them according to your needs, and you don't need to write them all in the Markdown.
-:::
-
-**Custom page with a banner image**
-
-```markdown
----
-title: Test
-type: banner
-container: true
----
-```
-
-::: tip Note
-If you only need a regular banner effect, you can omit the container property.
 :::

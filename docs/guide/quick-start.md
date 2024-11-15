@@ -7,7 +7,7 @@ description: Quick Start using Hexo Theme Solitude
 
 ## Setting up Hexo
 
-If you don't have a Hexo blog yet, please follow the [Hexo official documentation](https://hexo.io/docs/) for installation and site creation.
+If you don't have a Hexo blog yet, please refer to the [Hexo official documentation](https://hexo.io/docs/) for installation and site creation.
 
 ## Author's Note
 
