@@ -1,75 +1,81 @@
 ---
-title: About
-description: About page configuration
+title: 关于
+description: 关于页面配置
 ---
 
-# About
+# 关于
 
-1. Enter the following command in the terminal, it will generate an `about` folder under the `source` folder, which contains the `index.md` file.
+1. 在终端中输入以下命令，它将在 `source` 文件夹下生成一个 `about` 文件夹，其中包含 `index.md` 文件。
 
   ```shell
   hexo new page about
   ```
 
-2. Replace the content in `index.md` with the following:
+2. 将 `index.md` 中的内容替换为以下内容：
 
   ```markdown
   ---
-  title: About This Site
+  title: 关于本站
   date: 2023-10-31 22:24:22
   type: about
   ---
   ```
 
-3. Create a file named `about.yml` in the `source/_data` folder, and add the following content as a template. Customize it as needed.
+3. 在 `source/_data` 文件夹中创建一个名为 `about.yml` 的文件，并添加以下内容作为模板。根据需要进行自定义。
 
   ```yaml authorinfo
   authorinfo:
     leftTags:
-    - 🤖️ Tech Enthusiast
-    - 🔍 Sharing and Helping
-    - 🏠 Smart Home Enthusiast
+      - 🤖️ 技术爱好者 
+      - 🔍 分享与帮助
+      - 🏠 智能家居爱好者
     rightTags:
-    - Down-to-earth Action Taker 🏃
-    - Team Player 🧱
-    - Strong and Silent 💢
-    image: https://7.isyangs.cn/1/65eb27e69bcff-1.png
+      - 脚踏实地行动派 🏃
+      - 团队合作者 🧱
+      - 坚强而沉默 💢
+    image: https://7.isyangs.cn/66/6739c968d0e1f-66.webp
   ```
 
-* `leftTags` and `rightTags` are optional.
-* `image` is the avatar image of the author.
+  `leftTags`: 左侧标签
 
-```yaml
-title: About This Site
-```
+  `rightTags`: 右侧标签
 
-* `title`: The title of the page.
+  `image`: 头像
 
-```yaml contentinfo
-contentinfo: # Top personal information display
-    sup: Hello, nice to meet you👋
-    name: My name is Wang Zhuo Sco # Name
-    title: Student, Software Engineer, Indie Developer, Blogger # Introduction
-    tip: Pursuing
-    slogan: Creating from<br>Passion
+  ```yaml title
+  title: 关于本站
+  ```
+
+  `title`: 标题
+
+  ```yaml contentinfo
+  contentinfo: # Top personal information display
+    sup: 你好，很高兴认识你👋
+    name: 我是伍十七 # Name
+    title: 学生, 软件工程师, 独立开发者, 博主 # Introduction
+    tip: 追求卓越
+    slogan: 创造源于激情
     mask:
-    - Excellent Products
-    - Outstanding Design
-    - Efficient Programming
-    - User-friendly Experience
-```
+      - 卓越产品
+      - 卓越设计
+      - 高效编程
+      - 用户友好体验
+  ```
 
-* `sup`: The greeting message displayed at the top.
-* `name`: The name of the author.
-* `title`: The introduction of the author.
-* `tip`: The pursuit of the author.
-* `slogan`: The slogan of the author.
-* `mask`: The mask displayed at the top.
+  `sup`: 上标
 
-```yaml skills
-skills: # Add as needed
-    title: Skills
-    subtitle: Unlock Creativity
+  `name`: 名字
+
+  `title`: 介绍
+
+  `tip`: 提示
+
+  `slogan`: 口号
+
+  ```yaml skills
+  skills: # Add as needed
+    title: 技能
+    subtitle: 解锁创造力
     tags:
       - title: HTML
         icon: https://npm.elemecdn.com/wleelw-blog-abs@1.0.0/img/icon/HTML.png
@@ -92,216 +98,161 @@ skills: # Add as needed
       - title: Visual Studio
         icon: https://npm.elemecdn.com/wleelw-blog-abs@1.0.0/img/icon/vs-logo.svg
         color: "#ffffff"
-```
+  ```
 
-* `title`: The title of the skills.
-* `subtitle`: The subtitle of the skills.
-* `tags`: The tags of the skills.
-
-```yaml careers
-careers:
-    title: Careers
-    subtitle: Infinite Progress
+  ```yaml careers
+  careers:
+    title: 经历
+    subtitle: 无限进步
     items:
-    - school: Software Engineering
-      major: Study
-      color: "#357ef5"
+      - school: 软件工程
+        major: 学习
+        color: "#357ef5"
     image: https://7.isyangs.cn/1/65eb2d10ba24d-1.png
-```
+  ```
 
-* `title`: The title of the careers.
-* `subtitle`: The subtitle of the careers.
-* `items`: The items of the careers.
-
-```yaml personalities
-personalities:
-    tips: Personality
-    title: Executive
+  ```yaml personalities
+  personalities:
+    tips: 性格
+    title: 执行者
     color: "#56a178"
     type: ESFJ-A
-    image: https:/example.com/ESFJ-A.svg
+    image: https://ui.everfu.cn/cover/202408271816314.svg
     link: https://www.16personalities.com/
     linkText: 16personalities
     typeLink: https://www.16personalities.com/ch/esfj-人格
-    typeName: Executive
+    typeName: 执行者
     myphoto: https://7.isyangs.cn/1/65eb2d340cad3-1.png
-```
+  ```
 
-* `tips`: The tips of the personalities.
-* `title`: The title of the personalities.
-* `color`: The color of the personalities.
-* `type`: The type of the personalities.
-* `image`: The image of the personalities.
-* `link`: The link of the personalities.
-* `linkText`: The link text of the personalities.
-* `typeLink`: The type link of the personalities.
-* `typeName`: The type name of the personalities.
-* `myphoto`: The my photo of the personalities.
+  ```yaml motto
+  motto:
+    title: 座右铭
+    prefix: 破釜沉舟，
+    content: 勇往直前。
+  ```
 
-```yaml motto
-motto:
-    title: Motto
-    prefix: Burn the boats,
-    content: Forge ahead.
-```
+  `title`: 座右铭
 
-* `title`: The title of the motto.
-* `prefix`: The prefix of the motto.
-* `content`: The content of the motto.
+  `prefix`: 破釜沉舟，
 
-```yaml expertise
-expertise:
-    title: Expertise
-    prefix: Mathematics, Physics, Chemistry
-    specialist: Expert
-    content: Learning Ability
+  `content`: 勇往直前。
+
+  ```yaml expertise
+  expertise:
+    title: 专长
+    prefix: 数学, 物理, 化学
+    specialist: 专家
+    content: 学习能力
     level: MAX
-```
+  ```
 
-* `title`: The title of the expertise.
-* `prefix`: The prefix of the expertise.
-* `specialist`: The specialist of the expertise.
-* `content`: The content of the expertise.
-* `level`: The level of the expertise.
+  ```yaml game
+  game:
+    - title: 游戏爱好
+      img: https://7.isyangs.cn/66/6738b3614140c-66.webp
+      subtitle: 英雄联盟
+      box_shadow: '0 -69px 203px 11px #04120f inset'
+      icon_group:
+        - https://7.isyangs.cn/66/6738b472ce11f-66.webp
+        - https://7.isyangs.cn/66/6738b48045a5b-66.webp
+      tips_right: 比尔吉沃特
+    - title: 游戏爱好
+      img: https://7.isyangs.cn/66/6738b3618ee12-66.webp
+      subtitle: 狼人杀
+      box_shadow: '0 -69px 203px 11px #415dc9 inset'
+      tips_left: ID 1333E3FF
+  ```
 
-```yaml game1
-    title: Gaming Hobby
-    img: https://7.isyangs.cn/1/65eb2d8954aac-1.png
-    icon: fas fa-gamepad
-    subtitle: APEX LEGENDS
-    tips_left: Position C
-    tips_right: ID Wleelw
-```
+  ```yaml likes
+  likes:
+    - type: like-technology
+      bg: https://7.isyangs.cn/66/6738b3606d9d3-66.webp
+      tips: 兴趣偏好
+      title: 数码科技
+      subtips: 手机、电脑软硬件
+    - type: like-music
+      bg: https://7.isyangs.cn/66/6738b36015cb7-66.webp
+      tips: 音乐偏好
+      title: Hiphop、民谣、华语流行
+      subtips: 跟 伍十七 一起欣赏更多音乐
+      button: false
+      button_text: 更多推荐
+      button_link: /music/
+  ```
 
-* `title`: The title of the game1.
-* `img`: The img of the game1.
-* `icon`: The icon of the game1.
-* `subtitle`: The subtitle of the game1.
-* `tips_left`: The tips_left of the game1.
-* `tips_right`: The tips_right of the game1.
+  ```yaml tj
+  tj:
+    provider: custom # Value can be 51la (51la website statistics) or custom
+    url: https://api.everfu.cn/pv/ # Need to register and obtain from the 51la official website or set up your own Baidu statistics project and fill in the access address
+    img: https://7.isyangs.cn/1/65eb2e9109826-1.png # Background
+  ```
 
-```yaml game2
-    title: Gaming Hobby
-    img: https://7.isyangs.cn/1/65eb2e0383970-1.png
-    subtitle: Spirit and Fire Will
-    icon: fas fa-dice-d20
-    tips_right: Speedrunner
-```
+  `provider`: 自定义或者 51la
 
-* `title`: The title of the game2.
-* `img`: The img of the game2.
-* `subtitle`: The subtitle of the game2.
-* `icon`: The icon of the game2.
-* `tips_right`: The tips_right of the game2.
+  `url`: 需要注册并从 51la 官方网站获取或者通过 Zhheo 的 自定义脚本。
 
-```yaml likes
-likes:
-  - type: like-technology
-    bg: https://7.isyangs.cn/1/65eb2e3d6616b-1.png
-    tips: Interest
-    title: Science and Technology
-    subtips: Science and Engineering Enthusiast
-  - type: like-music
-    bg: https://7.isyangs.cn/1/65eb2e5f85132-1.png
-    tips: Music Preference
-    title: Folk, Classical, Easy Listening
-    subtips: Enjoy more music with Wang Zhuo Sco
-    button: true
-    button_text: More Recommendations
-    button_link: /music/  
-```
+  `img`: 背景
 
-* `type`: The type of the likes.
-* `bg`: The bg of the likes.
-* `tips`: The tips of the likes.
-* `title`: The title of the likes.
-* `subtips`: The subtips of the likes.
-* `button`: The button of the likes.
-* `button_text`: The button text of the likes.
-* `button_link`: The button link of the likes.
+  ```yaml oneself
+  oneself: # Fill in as needed
+    location: 中国, 湖南 # Location
+    birthYear: 2004 # Birthday
+    university: 江西软件职业技术大学 # Graduated from
+    major: 软件工程 # Major
+    occupation: 学生 # Occupation
+    map: # Map of your location
+      light: https://7.isyangs.cn/1/65eb2ec63a9aa-1.png # Daytime
+      dark: https://7.isyangs.cn/1/65eb2eedc780e-1.png # Nighttime
+  ```
 
-```yaml tj
-tj:
-  provider: # Value can be 51la (51la website statistics) or baidu (Baidu statistics)
-  url: https://v6-widget.51.la/v6/3F15j2vtdTo7PPcN/quote.js # Need to register and obtain from the 51la official website or set up your own Baidu statistics project and fill in the access address
-  img: https://7.isyangs.cn/1/65eb2e9109826-1.png # Background
-```
+  ```yaml cause
+  cause:
+    tip: 初衷
+    title: 为什么建立这个网站？
+    content:
+      <br>创建这个网站的初衷是有一个地方可以 <b>积累知识和兴趣</b>。与他人分享可以让这些成为积累和沉淀。如果我能帮助更多的人并解决他们的问题，那就太好了。
+      <br>
+      与大多数垂直技术博客不同，这里的类别将非常多样，包括 <b>教程和实用知识</b>、<b>生活轶事和建议</b>、<b>各种主题的思考和想法</b>。无论我研究或发现什么，我都会在这里分享。
+      <br>
+      这是创建这个小网站的初衷，也是 <b>我分享生活的方式</b>。我很幸运在这里遇见你，我相信我们可以一起留下一些美好的回忆。
+      <br>
+  ```
 
-* `provider`: The provider of the tj, can be 51la or custom.
-* `url`: The url of the tj, can be obtained from the 51la or custom.
-* `img`: The img of the background.
+  ```yaml tenyear
+  tenyear:
+    tips: 十年之约
+    title: 孤独一人，众乐乐。
+    start: 2024-04-20
+    end: 2034-04-20
+  ```
 
-```yaml oneself
-oneself: # Fill in as needed
-  location: China, Hunan Province # Location
-  birthYear: 2004 # Birthday
-  university: Hunan University # Graduated from
-  major: Software Engineering # Major
-  occupation: Student # Occupation
-  map: # Map of your location
-    light: https://7.isyangs.cn/1/65eb2ec63a9aa-1.png # Daytime
-    dark: https://7.isyangs.cn/1/65eb2eedc780e-1.png # Nighttime
-```
-
-* `location`: The location of the oneself.
-* `birthYear`: The birthYear of the oneself.
-* `university`: The university of the oneself.
-* `major`: The major of the oneself.
-* `occupation`: The occupation of the oneself.
-* `map`: The map of the oneself.
-
-```yaml cause
-cause:
-  tip: Journey
-  title: Why Build a Website?
-  content:
-    <br>When creating this site, the goal was to have a place where I could <b>accumulate knowledge and interests</b>. Sharing with others would allow these to become accumulation and precipitation. If I can help more people and solve their problems, that would be great.
-    <br>
-    Unlike most vertical technical blogs, the categories here will be very diverse, including <b>tutorials and practical knowledge</b>, <b>life anecdotes and tips</b>, and <b>thoughts and ideas on various topics</b>. Whatever I research or discover, I will share it here.
-    <br>
-    This is the original intention of creating this small site, and it is also <b>my way of sharing life</b>. I am fortunate to meet you here, and I believe we can leave behind some wonderful memories together.
-    <br>
-```
-
-```yaml tenyear
-tenyear:
-  tips: Ten-Year Pact
-  title: Loneliness of one, Revelry of many.
-  start: April 20, 2023
-  end: April 20, 2033
-```
-
-* `tips`: The tips of the tenyear.
-* `title`: The title of the tenyear.
-* `start`: The start of the tenyear.
-* `end`: The end of the tenyear.
-
-```yaml award
-award:
-  enable: true
-  description: Thanks to the people who appreciate and support me. Because of you, I feel that writing blogs can create value for you. This will allow me to go further on this path.
-  tips: Total Amount: ¥ {sum}, will be used for the maintenance and updates of the blog. # Must include {sum}, otherwise the total amount will not be displayed
-rewardList: # Bottom donations
-  - name: Yuehua
-    money: 5
-    time: 2023-04-20
-  - name: Gaoxiaocai
-    money: 6.66
-    time: 2023-08-11
-    vip: true
-  - name: Mu Mu
-    money: 5
-    time: 2023-08-11
-  - name: Yuehua
-    money: 56
-    vip: true
-    time: 2023-08-25
-  - name: Gaoxiaocai
-    money: 3.33
-    time: 2023-12-24
-```
-
-* `enable`: The enable of the award.
-* `description`: The description of the award.
-* `tips`: The tips of the award.
-* `rewardList`: The reward list of the award.
+  ```yaml award
+  award:
+    enable: true
+    description: 感谢大家的支持和鼓励。因为你们，我感到写作博客可以为你们创造价值。这将使我在这条路上走得更远。
+    tips: '总金额: ¥ {sum}, 将用于博客的维护和更新。'
+  rewardList: # Bottom donations
+    - name: 悦华
+      money: 5
+      time: 2023-04-20
+      icon: fab fa-weixin
+    - name: 糕小菜
+      money: 6.66
+      time: 2023-08-11
+      icon: fab fa-alipay
+      vip: true
+    - name: 木木
+      money: 5
+      time: 2023-08-11
+      icon: fab fa-weixin
+    - name: 悦华
+      money: 56
+      vip: true
+      time: 2023-08-25
+      icon: fab fa-weixin
+    - name: 糕小菜
+      money: 3.33
+      time: 2023-12-24
+      icon: fab fa-alipay
+  ```
