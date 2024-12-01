@@ -6,8 +6,7 @@ export const shared = defineConfig({
     head: [
         ['link', {rel: 'icon', href: '/favicon.svg', type: 'image/x-icon'}],
         ['meta', {name: 'theme-color', content: '#92f8b8'}],
-        ['meta', {name: 'google-site-verification', content: 'OQ-FnVME50EgIvv5nO4fsNl7EHkEl0vUSoFUe_fAMgY'}],
-        ['script', {src: 'https://u.everfu.cn/script.js', async: "async", 'data-website-id': "c47ace8b-591f-4640-890b-ebf2251a9fb6"}],
+        ['meta', {name: 'google-site-verification', content: 'OQ-FnVME50EgIvv5nO4fsNl7EHkEl0vUSoFUe_fAMgY'}]
     ],
 
     lastUpdated: true,

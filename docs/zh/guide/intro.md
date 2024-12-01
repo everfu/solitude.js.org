@@ -3,7 +3,7 @@ title: 项目介绍
 description: 欢迎使用 Hexo 主题 Solitude
 ---
 
-![Solitude](https://ui.everfu.cn/22ebf03f6e16edada213b0848013b6fc.webp/cover)
+![Solitude](https://s3.qjqq.cn/47/674c72abc0ed9.png!color)
 
 Solitude 是一款设计师风格的主题，它提供了很多易于博客书写的功能，以帮助你构建美丽且优雅的博客站。
 它的目标是使用简洁的代码即可完成复杂的构建。
@@ -29,8 +29,8 @@ Solitude 是一款设计师风格的主题，它提供了很多易于博客书�
 <Box
   :items="[
     //使用FontAwesome图标 + 标签 + 颜色
-    { name: '支付宝', link: 'https://ui.everfu.cn/e95a23ba4f84e2c027bae7a6cbe14b37.png/cover', icon: 'fab fa-alipay', color: '#00a1e9', tag: '赞助' },
-    { name: '微信', link: 'https://ui.everfu.cn/b4056c0b1e5c220c97e344bbda0d97ce.png/cover', icon: 'fab fa-weixin', color: '#2ca83c', tag: '赞助' },
+    { name: '支付宝', link: 'https://s3.qjqq.cn/47/66d00a4c7107d.png!color', icon: 'fab fa-alipay', color: '#00a1e9', tag: '赞助' },
+    { name: '微信', link: 'https://s3.qjqq.cn/47/663742bac8e52.webp!color', icon: 'fab fa-weixin', color: '#2ca83c', tag: '赞助' },
   ]"
 />
 
