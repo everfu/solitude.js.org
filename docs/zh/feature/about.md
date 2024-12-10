@@ -78,25 +78,26 @@ description: 关于页面配置
     subtitle: 解锁创造力
     tags:
       - title: HTML
-        icon: https://npm.elemecdn.com/wleelw-blog-abs@1.0.0/img/icon/HTML.png
+        img: https://npm.elemecdn.com/wleelw-blog-abs@1.0.0/img/icon/HTML.png  #img 可使用图片
+        icon: fab fa-html5  # icon 可使用 Font Awesome 图标 / img 和 icon 属性不应同时使用
         color: "#e9572b"
       - title: Javascript
-        icon: https://npm.elemecdn.com/wleelw-blog-abs@1.0.0/img/icon/JS.png
+        img: https://npm.elemecdn.com/wleelw-blog-abs@1.0.0/img/icon/JS.png
         color: "#f7cb4f"
       - title: Kotlin
-        icon: https://npm.elemecdn.com/wleelw-blog-abs@1.0.0/img/icon/kotlin-logo.svg
+        img: https://npm.elemecdn.com/wleelw-blog-abs@1.0.0/img/icon/kotlin-logo.svg
         color: "#ffffff"
       - title: WebPack
-        icon: https://npm.elemecdn.com/wleelw-blog-abs@1.0.0/img/icon/webpack.png
+        img: https://npm.elemecdn.com/wleelw-blog-abs@1.0.0/img/icon/webpack.png
         color: "#2e3a41"
       - title: Git
-        icon: https://npm.elemecdn.com/wleelw-blog-abs@1.0.0/img/icon/git.png
+        img: https://npm.elemecdn.com/wleelw-blog-abs@1.0.0/img/icon/git.png
         color: "#df5b40"
       - title: Docker
-        icon: https://npm.elemecdn.com/wleelw-blog-abs@1.0.0/img/icon/webpack.png
+        img: https://npm.elemecdn.com/wleelw-blog-abs@1.0.0/img/icon/webpack.png
         color: "#57b6e6"
       - title: Visual Studio
-        icon: https://npm.elemecdn.com/wleelw-blog-abs@1.0.0/img/icon/vs-logo.svg
+        img: https://npm.elemecdn.com/wleelw-blog-abs@1.0.0/img/icon/vs-logo.svg
         color: "#ffffff"
   ```
 

@@ -72,25 +72,26 @@ skills: # Add as needed
     subtitle: Unlock Creativity
     tags:
       - title: HTML
-        icon: https://npm.elemecdn.com/wleelw-blog-abs@1.0.0/img/icon/HTML.png
+        img: https://npm.elemecdn.com/wleelw-blog-abs@1.0.0/img/icon/HTML.png  #The img attribute can be used with images
+        icon: fab fa-html5  # The icon attribute can use Font Awesome icons / the img attribute and icon attribute should not be used at the same time
         color: "#e9572b"
       - title: Javascript
-        icon: https://npm.elemecdn.com/wleelw-blog-abs@1.0.0/img/icon/JS.png
+        img: https://npm.elemecdn.com/wleelw-blog-abs@1.0.0/img/icon/JS.png
         color: "#f7cb4f"
       - title: Kotlin
-        icon: https://npm.elemecdn.com/wleelw-blog-abs@1.0.0/img/icon/kotlin-logo.svg
+        img: https://npm.elemecdn.com/wleelw-blog-abs@1.0.0/img/icon/kotlin-logo.svg
         color: "#ffffff"
       - title: WebPack
-        icon: https://npm.elemecdn.com/wleelw-blog-abs@1.0.0/img/icon/webpack.png
+        img: https://npm.elemecdn.com/wleelw-blog-abs@1.0.0/img/icon/webpack.png
         color: "#2e3a41"
       - title: Git
-        icon: https://npm.elemecdn.com/wleelw-blog-abs@1.0.0/img/icon/git.png
+        img: https://npm.elemecdn.com/wleelw-blog-abs@1.0.0/img/icon/git.png
         color: "#df5b40"
       - title: Docker
-        icon: https://npm.elemecdn.com/wleelw-blog-abs@1.0.0/img/icon/webpack.png
+        img: https://npm.elemecdn.com/wleelw-blog-abs@1.0.0/img/icon/webpack.png
         color: "#57b6e6"
       - title: Visual Studio
-        icon: https://npm.elemecdn.com/wleelw-blog-abs@1.0.0/img/icon/vs-logo.svg
+        img: https://npm.elemecdn.com/wleelw-blog-abs@1.0.0/img/icon/vs-logo.svg
         color: "#ffffff"
 ```
 
