@@ -341,11 +341,11 @@ wordcount: false
 
 主题支持使用 **Latex** 数学公式 当需要使用数学公式时，在文章的 **Front-Matter** 添加。
 
-安装 `hexo-markdown-it` 与 `@renbaoshuo/markdown-it-katex`
+安装 `hexo-renderer-markdown-it` 与 `katex` 与 `@renbaoshuo/markdown-it-katex` 插件
 
 ```bash
 npm un hexo-renderer-marked --save
-npm i hexo-markdown-it @renbaoshuo/markdown-it-katex
+npm i hexo-renderer-markdown-it katex @renbaoshuo/markdown-it-katex
 ```
 
 在配置文件配置并启用 katex 插件

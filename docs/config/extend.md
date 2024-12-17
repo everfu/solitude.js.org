@@ -223,9 +223,29 @@ busuanzi: false
 
 ## Math Formula
 
-> Please refer to the author's article: [Theme: Renderer markdown-it](https://www.efu.me/posts/941787ac.html)
+The theme supports **Latex** mathematical formulas. To use mathematical formulas, add the following to the **Front-Matter** of the article.
 
-The theme supports the use of **Latex** math formulas. When you need to use math formulas, add them to the **Front-Matter** of the article.
+Install the `hexo-renderer-markdown-it`, `katex`, and `@renbaoshuo/markdown-it-katex` plugins:
+
+```bash
+npm un hexo-renderer-marked --save
+npm i hexo-renderer-markdown-it katex @renbaoshuo/markdown-it-katex
+```
+
+Configure and enable the katex plugin in the configuration file:
+
+```yaml [_config.solitude.yml]
+# --------------------------- start ---------------------------
+# Katex
+# Latex formula support
+katex:
+  enable: false
+  # Whether to load on each page
+  per_page: false
+  # Whether to enable copy formula
+  copytex: false
+# --------------------------- end ---------------------------
+```
 
 ## Site Verification
 
