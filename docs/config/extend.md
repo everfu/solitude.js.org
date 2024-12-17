@@ -225,14 +225,14 @@ busuanzi: false
 
 The theme supports **Latex** mathematical formulas. To use mathematical formulas, add the following to the **Front-Matter** of the article.
 
-Install the `hexo-renderer-markdown-it`, `katex`, and `@renbaoshuo/markdown-it-katex` plugins:
+Install the [hexo-renderer-markdown-it](https://github.com/EmptyDreams/swpp-backends), [@renbaoshuo/markdown-it-katex](https://github.com/renbaoshuo/markdown-it-katex) plugins, and complete the setup with reference to the plugin documentation:
 
 ```bash
 npm un hexo-renderer-marked --save
-npm i hexo-renderer-markdown-it katex @renbaoshuo/markdown-it-katex
+npm i hexo-renderer-markdown-it @renbaoshuo/markdown-it-katex
 ```
 
-Configure and enable the katex plugin in the configuration file:
+Configure and enable the katex support in the configuration file:
 
 ```yaml [_config.solitude.yml]
 # --------------------------- start ---------------------------
