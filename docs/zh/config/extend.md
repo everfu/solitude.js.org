@@ -339,22 +339,22 @@ wordcount: false
 
 ## 数学公式
 
-主题支持使用 **Latex** 数学公式 当需要使用数学公式时，在文章的 **Front-Matter** 添加。
+主题支持使用 **LaTeX** 数学公式 当需要使用数学公式时，在文章的 **Front-Matter** 添加 `katex: true`。
 
-安装 `hexo-renderer-markdown-it` 与 `katex` 与 `@renbaoshuo/markdown-it-katex` 插件
+安装 [hexo-renderer-markdown-it](https://github.com/EmptyDreams/swpp-backends), [@renbaoshuo/markdown-it-katex](https://github.com/renbaoshuo/markdown-it-katex) 插件，并按照插件文档完成配置：
 
 ```bash
 npm un hexo-renderer-marked --save
-npm i hexo-renderer-markdown-it katex @renbaoshuo/markdown-it-katex
+npm i hexo-renderer-markdown-it @renbaoshuo/markdown-it-katex
 ```
 
-在配置文件配置并启用 katex 插件
+在配置文件配置并启用 KaTeX 支持：
 
 ```yaml [_config.solitude.yml]
 # --------------------------- start ---------------------------
-# Katex
-# Latex formula support
-# Latex 公式支持
+# KaTeX
+# LaTeX formula support
+# LaTeX 公式支持
 katex:
   enable: false
   # Whether to load on each page
