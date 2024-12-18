@@ -26,6 +26,7 @@ Front Matter 是 Markdown 的一种特殊语法，用于定义页面的元数据
 |    aside     | boolean  | <Badge>可选</Badge> 是否开启侧边栏（默认true）                       |
 |   comment    | boolean  | <Badge>可选</Badge> 显示页面评论模块(默认 true)                      |
 |    cover     | string   | <Badge>可选</Badge> 页面顶部图片URL                                  |
+|    color     | string   | <Badge>可选</Badge> 页面顶部颜色                                  |
 |   reprint    | boolean  | <Badge>可选</Badge> 版权（默认为原创）为true时为转载                 |
 |    katex     | boolean  | <Badge>可选</Badge> 显示 katex(默认 false)                           |
 |    locate    | string   | <Badge>可选</Badge> 文章创作地点                                     |
