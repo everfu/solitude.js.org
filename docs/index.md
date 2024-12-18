@@ -6,7 +6,7 @@ hero:
   text: "A sleek, responsive Hexo theme"
   tagline: "Content-centric, offering an outstanding reading experience."
   image:
-    src: /persona.avif
+    src: /persona.svg
   actions:
     - theme: brand
       text: "Discover Solitude"

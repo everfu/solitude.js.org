@@ -6,7 +6,7 @@ hero:
   text: "简洁、易用、响应式的 Hexo 主题"
   tagline: "专注于内容，提供优秀的阅读体验。"
   image:
-    src: /persona.avif
+    src: /persona.svg
     alt: "Solitude"
   actions:
     - theme: brand
