@@ -223,21 +223,21 @@ busuanzi: false
 
 ## Math Formula
 
-The theme supports **Latex** mathematical formulas. To use mathematical formulas, add the following to the **Front-Matter** of the article.
+The theme supports **LaTeX** mathematical formulas. To use mathematical formulas, add `katex: true` to the **Front-Matter** of the article.
 
-Install the `hexo-renderer-markdown-it`, `katex`, and `@renbaoshuo/markdown-it-katex` plugins:
+Install the [hexo-renderer-markdown-it](https://github.com/EmptyDreams/swpp-backends), [@renbaoshuo/markdown-it-katex](https://github.com/renbaoshuo/markdown-it-katex) plugins, and complete the setup with reference to the plugin documentation:
 
 ```bash
 npm un hexo-renderer-marked --save
-npm i hexo-renderer-markdown-it katex @renbaoshuo/markdown-it-katex
+npm i hexo-renderer-markdown-it @renbaoshuo/markdown-it-katex
 ```
 
-Configure and enable the katex plugin in the configuration file:
+Configure and enable the KaTeX support in the configuration file:
 
 ```yaml [_config.solitude.yml]
 # --------------------------- start ---------------------------
-# Katex
-# Latex formula support
+# KaTeX
+# LaTeX formula support
 katex:
   enable: false
   # Whether to load on each page
