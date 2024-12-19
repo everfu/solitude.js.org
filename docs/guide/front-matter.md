@@ -56,6 +56,7 @@ rightbtnlink:
 | aside         | boolean    | <Badge type="info" text="Optional" /> Enable sidebar (default true)         |
 | comment       | boolean    | <Badge type="info" text="Optional" /> Show page comment module (default true)|
 | cover         | string     | <Badge type="info" text="Optional" /> URL of the top image of the page      |
+| color         | string     | <Badge type="info" text="Optional" /> color of the top of the page          |
 | reprint       | boolean    | <Badge type="info" text="Optional" /> Copyright (default is original)       |
 | katex         | boolean    | <Badge type="info" text="Optional" /> Show katex (default false)            |
 | locate        | string     | <Badge type="info" text="Optional" /> Location of article                   |
