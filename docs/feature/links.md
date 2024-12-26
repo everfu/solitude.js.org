@@ -27,11 +27,11 @@ description: Add friendly links to your site
      type: card  # Display mode, there are two types: card / item
      suffix: 
      link_list:
-       - name: Efu # Link name
-       link: https://www.efu.me # Link address
-       descr: An Open Source worker. # Link description
-       avatar: https://s3.qjqq.cn/47/660a7ece07609.webp!color # Display avatar
-       topimg: https://s3.qjqq.cn/47/660a7ece07609.webp!color # If it is in card mode, it will be displayed
+       - name: Solitude # Link name
+       link: https://solitude.js.org # Link address
+       descr: A sleek, responsive Hexo theme # Link description
+       avatar: https://solitude.js.org/persona.svg # Display avatar
+       topimg: https://s3.qjqq.cn/47/674c6c6783097.png!color # If it is in card mode, it will be displayed
        tag: Blogger
        color: vip
      - class_name: Technology
@@ -39,9 +39,9 @@ description: Add friendly links to your site
      type: item
      suffix: 
      link_list:
-       - name: isYangs # Link name
-       link: https://isyangs.cn # Link address
-       avatar: https://7.isyangs.cn/8/655c9835780a0-8.jpg # Display avatar
+       - name: EverFu # Link name
+       link: https://github.com/everfu # Link address
+       avatar: https://github.com/everfu.png # Display avatar
        descr: A blog by a frontend bug constructor # Link description
   ```
 4. Open the `/links/` page to see the effect.
