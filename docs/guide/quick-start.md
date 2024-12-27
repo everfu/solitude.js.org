@@ -28,27 +28,39 @@ If you find any bugs in the theme or want to add new features, please leave a me
 :::code-group
 ```bash [Stable]
 git clone -b main https://github.com/everfu/hexo-theme-solitude.git themes/solitude
+# Or install as a submodule
+git submodule add -b main https://github.com/everfu/hexo-theme-solitude.git themes/solitude 
 ```
 
 ```bash [Dev]
 git clone -b dev https://github.com/everfu/hexo-theme-solitude.git themes/solitude
+# Or install as a submodule
+git submodule add -b dev https://github.com/everfu/hexo-theme-solitude.git themes/solitude 
 ```
 
-```bash [Upgrade]
+```bash [Initialize & Upgrade]
 git pull
+# Or installed as a submodule
+git submodule update --init
 ```
 == Gitee
 :::code-group
 ```bash [Stable]
 git clone -b main https://gitee.com/everfu/hexo-theme-solitude themes/solitude
+# Or install as a submodule
+git submodule add -b main https://gitee.com/everfu/hexo-theme-solitude themes/solitude 
 ```
 
 ```bash [Dev]
 git clone -b dev https://gitee.com/everfu/hexo-theme-solitude themes/solitude
+# Or install as a submodule
+git submodule add -b dev https://gitee.com/everfu/hexo-theme-solitude themes/solitude 
 ```
 
-```bash [Upgrade]
+```bash [Initialize & Upgrade]
 git pull
+# Or installed as a submodule
+git submodule update --init
 ```
 == npm
 :::code-group
