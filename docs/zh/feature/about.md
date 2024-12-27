@@ -116,7 +116,7 @@ description: 关于页面配置
   personalities:
     tips: 性格
     title: 执行者
-    color: "#56a178"
+    color: "#4298b4"
     type: ESFJ-A
     image: https://www.16personalities.com/static/images/personality-types/avatars/email/large/ENTJ_male.png
     link: https://www.16personalities.com/
