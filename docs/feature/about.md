@@ -118,12 +118,12 @@ careers:
 personalities:
     tips: Personality
     title: Executive
-    color: "#56a178"
+    color: "#4298b4"
     type: ESFJ-A
-    image: https:/example.com/ESFJ-A.svg
+    image: https://www.16personalities.com/static/images/personality-types/avatars/email/large/ESFJ_male.png
     link: https://www.16personalities.com/
-    linkText: 16personalities
-    typeLink: https://www.16personalities.com/ch/esfj-人格
+    linkText: 16Personalities
+    typeLink: https://www.16personalities.com/esfj-personality
     typeName: Executive
     myphoto: https://7.isyangs.cn/1/65eb2d340cad3-1.png
 ```
