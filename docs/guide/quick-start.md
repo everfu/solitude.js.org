@@ -38,7 +38,7 @@ git clone -b dev https://github.com/everfu/hexo-theme-solitude.git themes/solitu
 git submodule add -b dev https://github.com/everfu/hexo-theme-solitude.git themes/solitude 
 ```
 
-```bash [Initialize & Upgrade]
+```bash [Upgrade]
 git pull
 # Or installed as a submodule
 git submodule update --init
@@ -57,7 +57,7 @@ git clone -b dev https://gitee.com/everfu/hexo-theme-solitude themes/solitude
 git submodule add -b dev https://gitee.com/everfu/hexo-theme-solitude themes/solitude 
 ```
 
-```bash [Initialize & Upgrade]
+```bash [Upgrade]
 git pull
 # Or installed as a submodule
 git submodule update --init
