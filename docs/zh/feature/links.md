@@ -20,6 +20,7 @@ description: 为你的站点添加友情链接
 3. 在 `source` 文件夹下添加 `_data` 文件夹并建立名为 `links.yml` 的文件，下方内容为模版，根据要求进行添加。
     ```yaml
     banner_suffix: 
+    swiper: true 
     links:
        - class_name: 推荐 # 分类名称
          descr: 参与本站开发、提供设计灵感、捐助本站的优秀博主 # 分类简介
