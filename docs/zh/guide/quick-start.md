@@ -35,28 +35,40 @@ description: 快速开始使用 Hexo Theme Solitude
 == GitHub
 :::code-group
 ```bash [稳定版]
-git submodule add -b dev https://github.com/everfu/hexo-theme-solitude.git themes/solitude
+git clone -b main https://github.com/everfu/hexo-theme-solitude.git themes/solitude
+# 或安装为子模块
+git submodule add -b main https://github.com/everfu/hexo-theme-solitude.git themes/solitude
 ```
 
 ```bash [开发版]
+git clone -b dev https://github.com/everfu/hexo-theme-solitude.git themes/solitude
+# 或安装为子模块
 git submodule add -b dev https://github.com/everfu/hexo-theme-solitude.git themes/solitude
 ```
 
 ```bash [升级方法]
 git pull
+# 如安装为子模块
+git submodule update --init
 ```
 == Gitee
 :::code-group
 ```bash [稳定版]
+git clone -b main https://gitee.com/everfu/hexo-theme-solitude themes/solitude
+# 或安装为子模块
 git submodule add -b main https://gitee.com/everfu/hexo-theme-solitude themes/solitude
 ```
 
 ```bash [开发版]
+git clone -b dev https://gitee.com/everfu/hexo-theme-solitude themes/solitude
+# 或安装为子模块
 git submodule add -b dev https://gitee.com/everfu/hexo-theme-solitude themes/solitude
 ```
 
 ```bash [升级方法]
 git pull
+# 如安装为子模块
+git submodule update --init
 ```
 == NPM
 :::code-group
