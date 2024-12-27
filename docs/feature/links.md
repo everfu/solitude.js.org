@@ -20,6 +20,7 @@ description: Add friendly links to your site
 3. Add a `_data` folder under the `source` folder and create a file named `links.yml`. The template for the content is as follows, add according to the requirements.
   ```yaml
   banner_suffix: 
+  swiper: true 
   links:
      - class_name: Recommended # Category name
      descr: Excellent bloggers who participate in the development of this site, provide design inspiration, and donate to this site # Category description
