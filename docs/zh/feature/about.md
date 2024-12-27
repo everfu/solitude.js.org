@@ -118,9 +118,9 @@ description: 关于页面配置
     title: 执行者
     color: "#56a178"
     type: ESFJ-A
-    image: https://ui.everfu.cn/cover/202408271816314.svg
+    image: https://www.16personalities.com/static/images/personality-types/avatars/email/large/ENTJ_male.png
     link: https://www.16personalities.com/
-    linkText: 16personalities
+    linkText: 16Personalities
     typeLink: https://www.16personalities.com/ch/esfj-人格
     typeName: 执行者
     myphoto: https://7.isyangs.cn/1/65eb2d340cad3-1.png
