@@ -6,3 +6,4 @@ pnpm-lock.yaml
 docs/.vitepress/cache
 docs/.vitepress/dist
 db.json
+.vitepress/cache
