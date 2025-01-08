@@ -1,1 +1,0 @@
-# Hexo Theme Solitude Documentation
