@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://solitude.js.org
+Host: https://nextui.org
 
 # Sitemaps
-Sitemap: https://solitude.js.org/sitemap.xml
+Sitemap: https://nextui.org/sitemap.xml

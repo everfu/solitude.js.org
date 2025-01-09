@@ -153,4 +153,4 @@ async function getSearchMeta(saveMode: "algolia" | "local" = "local") {
   }
 }
 
-getSearchMeta("algolia");
+getSearchMeta();
