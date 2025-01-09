@@ -10,13 +10,13 @@
           "key": "introduction",
           "title": "介绍",
           "keywords": "介绍, solitude",
-          "path": "/guide/introduction.mdx"
+          "path": "/docs/guide/introduction.mdx"
         },
         {
           "key": "installation",
           "title": "安装",
           "keywords": "快速开始, 安装, 开始, solitude",
-          "path": "/guide/installation.mdx"
+          "path": "/docs/guide/installation.mdx"
         }
       ]
     }
@@ -24,15 +24,21 @@
   "mobileRoutes": [
     {
       "key": "getting-started",
-      "title": "快速开始",
+      "title": "Getting Started",
       "defaultOpen": true,
-      "keywords": "快速开始, 主路由, blog, docs, solitude",
+      "keywords": "getting started, main routes, blog, docs, components, nextui",
       "routes": [
         {
           "key": "docs",
-          "title": "文档",
-          "keywords": "文档, 引导, solitude",
-          "path": "/guide/introduction.mdx"
+          "title": "Documentation",
+          "keywords": "documentation, guide, nextui",
+          "path": "/docs/guide/introduction.mdx"
+        },
+        {
+          "key": "components",
+          "title": "Components",
+          "keywords": "components, nextui",
+          "path": "/docs/components/avatar"
         }
       ]
     }

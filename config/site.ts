@@ -3,7 +3,7 @@ export type SiteConfig = typeof siteConfig;
 export const siteConfig = {
   name: "Solitude 文档",
   description: "无论您的设计经验如何，都可以制作漂亮的网站。",
-  ogImage: "/screenshot.avif",
+  ogImage: "https://nextui.org/twitter-cards/nextui.jpeg",
   author: "everfu",
   email: "o@efu.me",
   siteUrl: "https://solitude.js.org",
@@ -16,7 +16,7 @@ export const siteConfig = {
     description: "无论您的设计经验如何，都可以制作漂亮的网站。",
     images: [
       {
-        url: "/screenshot.avif",
+        url: "https://nextui.org/twitter-cards/nextui.jpeg",
         width: 1200,
         height: 630,
         alt: "Solitude",
@@ -27,7 +27,7 @@ export const siteConfig = {
     card: "summary_large_image",
     title: "Solitude - 美丽、快速和现代的 Hexo 主题",
     description: "无论您的设计经验如何，都可以制作漂亮的网站。",
-    image: "/screenshot.avif",
+    image: "https://nextui.org/twitter-cards/nextui.jpeg",
     creator: "@everfu8",
   },
   links: {
