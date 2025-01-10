@@ -3,3 +3,5 @@ dist/
 .next/
 .vscode/
 .cache.json
+.contentlayer/
+.cache/
