@@ -9,8 +9,8 @@ import { sectionWrapper, titleWrapper, title, subtitle } from "../primitives";
 
 import { FeaturesGrid } from "./features-grid";
 
-import { HeartBoldIcon, PlusLinearIcon, SimpleGridIcon, HeartFilledIcon, GithubIcon } from "@/components/icons";
-import { Sponsor, SPONSOR_TIERS, SPONSOR_COLORS, getTier } from "@/libs/docs/sponsors";
+import { HeartBoldIcon, PlusLinearIcon, HeartFilledIcon, GithubIcon } from "@/components/icons";
+import { Sponsor } from "@/libs/docs/sponsors";
 import { SonarPulse } from "@/components/sonar-pulse";
 import { useIsMobile } from "@/hooks/use-media-query";
 
@@ -21,14 +21,14 @@ export interface SupportProps {
 const supportAccounts = [
   {
     title: "爱发电",
-    description: "赞助作者，伍十七。",
+    description: "国内的小伙伴可以通过爱发电平台为作者赞助，获得一些小礼物。",
     icon: <HeartFilledIcon className="text-pink-500" />,
     href: "https://afdian.com/a/everfu",
     isExternal: true,
   },
   {
     title: "Github",
-    description: "Sponsor the creator, everly(@everfu).",
+    description: "Sponsor the author on Github to support their open source projects.",
     icon: <GithubIcon className="text-pink-500" />,
     href: "https://github.com/sponsors/everfu",
     isExternal: true,
@@ -49,32 +49,13 @@ const getSponsorName = (sponsor: Sponsor) => {
 
 const getSponsorSize = (sponsor: Sponsor, isMobile: boolean) => {
   let size: AvatarProps["size"] = "md";
-  const tier = sponsor.tier || getTier(sponsor.totalAmountDonated);
-
-  switch (tier) {
-    case SPONSOR_TIERS.BRONZE:
-      size = isMobile ? "sm" : "md";
-      break;
-    case SPONSOR_TIERS.SILVER:
-      size = isMobile ? "sm" : "md";
-      break;
-    case SPONSOR_TIERS.GOLD:
-      size = isMobile ? "md" : "lg";
-      break;
-    case SPONSOR_TIERS.PLATINUM:
-      size = isMobile ? "md" : "lg";
-      break;
-    default:
-      size = isMobile ? "sm" : "md";
-  }
+  size = isMobile ? "sm" : "md";
 
   return size;
 };
 
 const getSponsorColor = (sponsor: Sponsor) => {
-  const tier = sponsor.tier || getTier(sponsor.totalAmountDonated);
-
-  return SPONSOR_COLORS[tier] || "default";
+  return "default";
 };
 
 const getSponsorAvatarStyles = (index: number, sponsors: Sponsor[] = []) => {
@@ -125,16 +106,16 @@ export const Support: FC<SupportProps> = ({ sponsors = [] }) => {
       >
         {sponsors.map((sponsor, index) => (
           <Avatar
-            key={`${sponsor.MemberId}-${index}`}
+            key={`${sponsor.login}-${index}`}
             isBordered
             showFallback
             className="absolute cursor-pointer bg-transparent before:bg-white/10 before:content-[''] before:block before:z-[-1] before:absolute before:inset-0 before:backdrop-blur-md before:backdrop-saturate-200"
             color={getSponsorColor(sponsor) as AvatarProps["color"]}
             name={getSponsorName(sponsor)}
             size={getSponsorSize(sponsor, isMobile)}
-            src={sponsor.image}
+            src={sponsor.avatar}
             style={getSponsorAvatarStyles(index, sponsors)}
-            onClick={() => handleExternalLinkClick(sponsor["website"] || sponsor["profile"])}
+            onClick={() => handleExternalLinkClick(sponsor.link)}
           />
         ))}
       </div>
@@ -147,7 +128,7 @@ export const Support: FC<SupportProps> = ({ sponsors = [] }) => {
         <div>
           <div className={titleWrapper({ class: "text-center items-center" })}>
             <div className="flex md:inline-flex flex-col md:flex-row items-center">
-              <h1 className={title({ size: "lg" })}>赞助 Solitude&nbsp;</h1>
+              <h1 className={title({ size: "lg" })}>Sponsor Solitude&nbsp;</h1>
               <HeartBoldIcon
                 className="text-pink-500 animate-heartbeat"
                 size={50}
@@ -158,7 +139,8 @@ export const Support: FC<SupportProps> = ({ sponsors = [] }) => {
             </div>
           </div>
           <p className={subtitle({ class: "md:w-full text-center flex justify-center items-center" })}>
-            为 Solitude 的开发提供支持，让 Solitude 更好地发展。
+            Solitude is an open-source project that is maintained by a single developer. Your support helps me to keep
+            working on this project and make it better.
           </p>
           <Spacer y={12} />
           <FeaturesGrid

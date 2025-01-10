@@ -20,7 +20,6 @@ import {isAppleDevice} from "@react-aria/utils";
 import {clsx} from "@nextui-org/shared-utils";
 import NextLink from "next/link";
 import {usePathname} from "next/navigation";
-import {motion, AnimatePresence} from "framer-motion";
 import {useEffect} from "react";
 import {usePress} from "@react-aria/interactions";
 import {useFocusRing} from "@react-aria/focus";
@@ -33,6 +32,8 @@ import {GithubIcon, SearchLinearIcon} from "@/components/icons";
 import {DocsSidebar} from "@/components/docs/sidebar";
 import {useCmdkStore} from "@/components/cmdk";
 import githubInfo from "@/config/github-info.json";
+import arrowRightUpIcon from "@iconify/icons-solar/arrow-right-up-linear";
+import {Icon} from "@iconify/react/dist/offline";
 
 export interface NavbarProps {
   routes: Route[];
@@ -196,16 +197,35 @@ export const Navbar: FC<NavbarProps> = ({children, routes, mobileRoutes = [], sl
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex basis-1/5 sm:basis-full" justify="end">
-        <ul className="hidden lg:flex gap-4 pr-2 justify-start items-center [&>li>a]:text-sm [&>li>a]:font-medium">
+        <ul className="hidden lg:flex gap-6 pr-2 justify-start items-center [&>li>a]:text-sm [&>li>a]:font-medium">
           <NavbarItem>
             <NextLink
+              target="_blank"
               className={navLinkClasses}
               color="foreground"
-              data-active={pathname.includes("blog")}
+              href="https://qm.qq.com/q/aVhRRV29tS"
+            >
+              QQ群
+              <Icon
+                className="absolute right-[-10px] top-0 outline-none transition-transform group-data-[hover=true]:translate-y-0.5 [&>path]:stroke-[2.5px]"
+                icon={arrowRightUpIcon}
+                width={10}
+              />
+            </NextLink>
+          </NavbarItem>
+          <NavbarItem>
+            <NextLink
+              target="_blank"
+              className={navLinkClasses}
+              color="foreground"
               href="https://www.efu.me"
-              onClick={() => handlePressNavbarItem("Blog", "/blog")}
             >
               作者
+              <Icon
+                className="absolute right-[-10px] top-0 outline-none transition-transform group-data-[hover=true]:translate-y-0.5 [&>path]:stroke-[2.5px]"
+                icon={arrowRightUpIcon}
+                width={10}
+              />
             </NextLink>
           </NavbarItem>
         </ul>
@@ -220,7 +240,7 @@ export const Navbar: FC<NavbarProps> = ({children, routes, mobileRoutes = [], sl
             onPress={() => handlePressNavbarItem("Github", siteConfig.links.github)}
           >
             <GithubIcon />
-            {/* <span className="text-xs font-medium">{githubInfo.stars.formatted}</span> */}
+            <span className="text-xs font-medium">{githubInfo.stars.formatted}</span>
           </Link>
           <ThemeSwitch
             className="border-1 border-default-200 rounded-full h-full min-w-10 min-h-10 flex items-center justify-center"
