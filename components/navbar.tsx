@@ -198,6 +198,21 @@ export const Navbar: FC<NavbarProps> = ({children, routes, mobileRoutes = [], sl
 
       <NavbarContent className="hidden sm:flex basis-1/5 sm:basis-full" justify="end">
         <ul className="hidden lg:flex gap-6 pr-2 justify-start items-center [&>li>a]:text-sm [&>li>a]:font-medium">
+        <NavbarItem>
+            <NextLink
+              target="_blank"
+              className={navLinkClasses}
+              color="foreground"
+              href="https://everfu.github.io/solitude-demo"
+            >
+              预览
+              <Icon
+                className="absolute right-[-10px] top-0 outline-none transition-transform group-data-[hover=true]:translate-y-0.5 [&>path]:stroke-[2.5px]"
+                icon={arrowRightUpIcon}
+                width={10}
+              />
+            </NextLink>
+          </NavbarItem>
           <NavbarItem>
             <NextLink
               target="_blank"
