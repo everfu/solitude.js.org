@@ -5,3 +5,6 @@ dist/
 .cache.json
 .contentlayer/
 .cache/
+
+# Themes
+themes/*

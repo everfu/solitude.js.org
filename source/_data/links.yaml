@@ -1,0 +1,49 @@
+banner_suffix: 
+links:
+    - class_name: 推荐 # 分类名称
+      descr: 参与本站开发、提供设计灵感、捐助本站的优秀博主 # 分类简介
+      type: card  # 显示方式，有两种 card / item
+      suffix: 
+      link_list:
+          - name: 伍十七 # 友链名称
+            link: https://github.com/everfu # 友链地址
+            descr: 一个狂热的开源工作者 # 友链简介
+            avatar: https://avatars.githubusercontent.com/u/74389842?v=4 # 显示头像
+            topimg: https://s3.qjqq.cn/47/674c6c6783097.png!color # 如果是card模式下，将显示
+            tag: 博主
+            color: vip
+    - class_name: 自行提交 # 分类名称
+      descr:  # 分类简介
+      type: item  # 显示方式，有两种 card / item
+      suffix:
+      link_list:
+          - name: 叶泯希 # 友链名称
+            link: https://ymxblog.us.kg # 友链地址
+            avatar: https://ymxblog.us.kg/images/avatar.webp # 显示头像
+            descr: 意义是自己赐予的 # 友链简介
+            topimg:
+            tag: 首个
+            color: pink
+
+          - name: 冰凌的博客 # 友链名称
+            link: https://blog.icewk.org # 友链地址
+            avatar: https://s21.ax1x.com/2024/12/05/pAobTW4.png # 显示头像
+            descr: 去码头整点薯条 # 友链简介
+            topimg:
+            tag: 海鸥
+            color: blue
+
+          - name: 陵长镜 # 友链名称
+            link: https://r1n.top #友链地址
+            avatar: https://r1n.top/avatar_nr.jpg
+            descr: Everything collapses, but you rise. # 友链简介
+            tag: rin
+            color: purple
+
+          - name: 旅禾小栈
+            link: https://home.qqzhi.cc
+            descr: 欢迎来到旅禾小栈！
+            avatar: https://home.qqzhi.cc/img/avatar.webp
+            tag: 旅禾
+            color: "#66ccff"
+            
