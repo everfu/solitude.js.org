@@ -562,8 +562,8 @@ footer:
   # 页脚信息文字
   # 请不要删除主题信息，这是对作者的尊重
   links:
-    # - name: RSS
-    #   url: /atom.xml
+    - name: 订阅
+      url: /atom.xml
     # - name: License
     #   url: https://github.com/everfu/hexo-theme-solitude/blob/main/LICENSE
     #   icon:
