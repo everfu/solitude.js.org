@@ -8,3 +8,5 @@ dist/
 
 # Themes
 themes/*
+public/
+db.json
