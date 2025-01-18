@@ -43,7 +43,7 @@ nav:
       全部分类: /categories/ || fas fa-clone
       全部标签: /tags/ || fas fa-tags
     文档:
-      快速开始: /posts/301e.html
+      快速开始: /posts/301e.html || fas fa-book-open
     演示: /links/
 
   # Right button
@@ -487,7 +487,7 @@ console:
   # Recent comments
   # 最新评论
   recentComment:
-    enable: false
+    enable: true
     # Cache time 1: 1 day / .5 : half a day
     # 缓存时间 1: 1天 / .5 : 半天
     storage: .2
@@ -526,7 +526,7 @@ rightside:
 footer:
   # 社交图标
   information:
-    author: img/logo.png
+    author: /img/logo.png
     left:
       Github: https://github.com/everfu || fab fa-github # 名称: 链接 || 图标
       Bsky: https://bsky.app/profile/efu.me || fab fa-bluesky
@@ -800,6 +800,9 @@ comment:
   # Whether to display the comment count
   # 显示评论数
   count: false
+  # Sidebar displays the total number of comments
+  # Sidebar 显示总评论数
+  sidebar: false
   # PV
   pv: false
   # Avatar
@@ -813,7 +816,7 @@ comment:
   # recent comments(⚠️ Comments need to be configured first.)
   # 最新评论(⚠️ 需要先配置评论)
   newest_comment:
-    enable: true
+    enable: false
     storage: .5 # 缓存时间 1: 1天 / .5 : 半天 / Cache time 1: 1 day .5 : half a day
     limit: 5 # 评论数 / Number of comments
 # Twikoo: https://solitude.js.org/comment/twikoo

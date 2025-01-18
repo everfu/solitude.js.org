@@ -25,14 +25,6 @@ links:
             tag: 首个
             color: pink
 
-          - name: 冰凌的博客 # 友链名称
-            link: https://blog.icewk.org # 友链地址
-            avatar: https://s21.ax1x.com/2024/12/05/pAobTW4.png # 显示头像
-            descr: 去码头整点薯条 # 友链简介
-            topimg:
-            tag: 海鸥
-            color: blue
-
           - name: 陵长镜 # 友链名称
             link: https://r1n.top #友链地址
             avatar: https://r1n.top/avatar_nr.jpg
@@ -46,4 +38,15 @@ links:
             avatar: https://home.qqzhi.cc/img/avatar.webp
             tag: 旅禾
             color: "#66ccff"
+
+    - class_name: 曾今使用过
+      descr: 曾今使用过主题的博主 # 分类简介
+      type: discn
+      link_list:
+        - name: 冰凌的博客 # 友链名称
+          link: https://blog.icewk.org # 友链地址
+          avatar:  # 显示头像
+          descr: 去码头整点薯条 # 友链简介
+          tag: 海鸥
+          color: blue
             

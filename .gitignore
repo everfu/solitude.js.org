@@ -7,6 +7,5 @@ dist/
 .cache/
 
 # Themes
-themes/*
 public/
 db.json
