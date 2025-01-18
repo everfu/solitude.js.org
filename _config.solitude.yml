@@ -860,9 +860,9 @@ giscus:
 # --------------------------- start ---------------------------
 # Search
 search:
-  enable: false
+  enable: true
   # type: 使用的搜索引擎 / search engine
-  type: local # local / algolia
+  type: docsearch # local / algolia
   tags:
     # - Solitude
     # - Hexo
@@ -872,6 +872,11 @@ search:
   local:
     preload: false
     CDN: # url: search.xml
+  docsearch: 
+    appId: 'KNSYWJA80Y'
+    apiKey: '64cec8b7ed869453640daca02f5911fc'
+    indexName: 'solitude-js'
+    option: 
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
