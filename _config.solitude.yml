@@ -248,7 +248,7 @@ post:
     # Copyright
     # 版权
     copyright:
-      enable: true
+      enable: false
       author: /img/logo.png
       # License
       # 许可证
