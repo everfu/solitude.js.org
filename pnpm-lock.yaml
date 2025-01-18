@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@renbaoshuo/markdown-it-katex':
         specifier: ^2.0.2
-        version: 2.0.2(katex@0.16.19)(markdown-it@13.0.2)
+        version: 2.0.2(katex@0.16.21)(markdown-it@13.0.2)
       cheerio:
         specifier: ^1.0.0
         version: 1.0.0
@@ -81,8 +81,8 @@ importers:
         specifier: ^1.0.22
         version: 1.0.22
       hexo-theme-solitude:
-        specifier: ^3.0.3
-        version: 3.0.3
+        specifier: ^3.0.4
+        version: 3.0.4
       hexo-util:
         specifier: ^3.3.0
         version: 3.3.0
@@ -90,8 +90,8 @@ importers:
         specifier: ^6.0.1
         version: 6.0.1
       katex:
-        specifier: ^0.16.19
-        version: 0.16.19
+        specifier: ^0.16.21
+        version: 0.16.21
       moment:
         specifier: ^2.30.1
         version: 2.30.1
@@ -601,8 +601,8 @@ packages:
     resolution: {integrity: sha512-Zf5H2Kxt2xjTvbJvP2ZWLEICxA6j+hAmMzIlypy4xcBg1vKVnx89Wy0GbS+kf5cwCVFFzdCFh2XSCFNULS6csw==}
     engines: {node: '>= 0.4'}
 
-  es-object-atoms@1.0.0:
-    resolution: {integrity: sha512-MZ4iQ6JwHOBQjahnjwaC1ZtIBH+2ohjamzAO3oaHcXYup7qxjF2fixyH+Q71voWHeOkI2q/TnJao/KfXYIZWbw==}
+  es-object-atoms@1.1.1:
+    resolution: {integrity: sha512-FGgH2h8zKNim9ljj7dankFPcICIK9Cp5bm+c2gQSYePhpaG5+esrLODihIorn+Pe6FGJzWhXQotPv73jTaldXA==}
     engines: {node: '>= 0.4'}
 
   es6-object-assign@1.1.0:
@@ -916,8 +916,8 @@ packages:
     resolution: {integrity: sha512-ZIbvRW0h12OeaTLnyd8QIZl8oI0r0/OciFHwcSNKU/0ENhWmMoYsS9gXVnWiW1EhfZy1eT0klm8v4cZeSg2wIw==}
     engines: {node: '>=14'}
 
-  hexo-theme-solitude@3.0.3:
-    resolution: {integrity: sha512-M0qezs9mZYqC4ckgNEDGIVD//WvX7+tPbityCK1waqMGBGcL4Hnni5s3TJjRWiAruFv88ibD7pSorngRIZOBYA==}
+  hexo-theme-solitude@3.0.4:
+    resolution: {integrity: sha512-VUmTS41cMsphXjK1nLqNaooZfIgfh5yaPyw0vVDeAWqccKAS+1pXfX/6FPjuITivna71Gt6peSBN0ls+M6D7Og==}
 
   hexo-util@2.7.0:
     resolution: {integrity: sha512-hQM3h34nhDg0bSe/Tg1lnpODvNkz7h2u0+lZGzlKL0Oufp+5KCAEUX9wal7/xC7ax3/cwEn8IuoU75kNpZLpJQ==}
@@ -1130,8 +1130,8 @@ packages:
   jstransformer@1.0.0:
     resolution: {integrity: sha512-C9YK3Rf8q6VAPDCCU9fnqo3mAfOH6vUGnMcP4AQAYIEpWtfGLpwOTmZ+igtdK5y+VvI2n3CyYSzy4Qh34eq24A==}
 
-  katex@0.16.19:
-    resolution: {integrity: sha512-3IA6DYVhxhBabjSLTNO9S4+OliA3Qvb8pBQXMfC4WxXJgLwZgnfDl0BmB4z6nBMdznBsZ+CGM8DrGZ5hcguDZg==}
+  katex@0.16.21:
+    resolution: {integrity: sha512-XvqR7FgOHtWupfMiigNzmh+MgUVmDGU2kXZm899ZkPfcuoPuFxyHmXsgATDpFZDAXCI8tvinaVcDo8PIIJSo4A==}
     hasBin: true
 
   last-run@2.0.0:
@@ -1146,8 +1146,8 @@ packages:
     resolution: {integrity: sha512-0OO4y2iOHix2W6ujICbKIaEQXvFQHue65vUG3pb5EUomzPI90z9hsA1VsO/dbIIpC53J8gxM9Q4Oho0jrCM/yA==}
     engines: {node: '>= 0.8.0'}
 
-  libphonenumber-js@1.11.17:
-    resolution: {integrity: sha512-Jr6v8thd5qRlOlc6CslSTzGzzQW03uiscab7KHQZX1Dfo4R6n6FDhZ0Hri6/X7edLIDv9gl4VMZXhxTjLnl0VQ==}
+  libphonenumber-js@1.11.18:
+    resolution: {integrity: sha512-okMm/MCoFrm1vByeVFLBdkFIXLSHy/AIK2AEGgY3eoicfWZeOZqv3GfhtQgICkzs/tqorAMm3a4GBg5qNCrqzg==}
 
   liftoff@5.0.0:
     resolution: {integrity: sha512-a5BQjbCHnB+cy+gsro8lXJ4kZluzOijzJ1UVVfyJYZC+IP2pLv1h4+aysQeKuTmyO8NAqfyQAk4HWaP/HjcKTg==}
@@ -1746,8 +1746,8 @@ packages:
     resolution: {integrity: sha512-tO/bf30wBbTsJ7go80j0RzA2rcwX6o7XPBpeFcb+jzoeb4pfMM2zUeSDIkY1AWqeZabWxaQZ/h8N9t35QKDLPQ==}
     engines: {node: '>=10.13.0'}
 
-  undici@6.21.0:
-    resolution: {integrity: sha512-BUgJXc752Kou3oOIuU1i+yZZypyZRqNPW0vqoMPl8VaoalSfeR0D8/t4iAS3yirs79SSMTxTag+ZC86uswv+Cw==}
+  undici@6.21.1:
+    resolution: {integrity: sha512-q/1rj5D0/zayJB2FraXdaWxbhWiNKDvu8naDT2dl1yTlvJp4BLtOcp2a5BvgGNQpYYJzau7tf1WgKv3b+7mqpQ==}
     engines: {node: '>=18.17'}
 
   unpipe@1.0.0:
@@ -1919,9 +1919,9 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  '@renbaoshuo/markdown-it-katex@2.0.2(katex@0.16.19)(markdown-it@13.0.2)':
+  '@renbaoshuo/markdown-it-katex@2.0.2(katex@0.16.21)(markdown-it@13.0.2)':
     dependencies:
-      katex: 0.16.19
+      katex: 0.16.21
       markdown-it: 13.0.2
 
   '@types/minimatch@3.0.5': {}
@@ -2114,7 +2114,7 @@ snapshots:
       parse5: 7.2.1
       parse5-htmlparser2-tree-adapter: 7.1.0
       parse5-parser-stream: 7.1.2
-      undici: 6.21.0
+      undici: 6.21.1
       whatwg-mimetype: 4.0.0
 
   chokidar@3.6.0:
@@ -2132,7 +2132,7 @@ snapshots:
   class-validator@0.14.1:
     dependencies:
       '@types/validator': 13.12.2
-      libphonenumber-js: 1.11.17
+      libphonenumber-js: 1.11.18
       validator: 13.12.0
 
   clean-css@4.2.3:
@@ -2355,7 +2355,7 @@ snapshots:
 
   es-errors@1.3.0: {}
 
-  es-object-atoms@1.0.0:
+  es-object-atoms@1.1.1:
     dependencies:
       es-errors: 1.3.0
 
@@ -2477,7 +2477,7 @@ snapshots:
       call-bind-apply-helpers: 1.0.1
       es-define-property: 1.0.1
       es-errors: 1.3.0
-      es-object-atoms: 1.0.0
+      es-object-atoms: 1.1.1
       function-bind: 1.1.2
       get-proto: 1.0.1
       gopd: 1.2.0
@@ -2488,7 +2488,7 @@ snapshots:
   get-proto@1.0.1:
     dependencies:
       dunder-proto: 1.0.1
-      es-object-atoms: 1.0.0
+      es-object-atoms: 1.1.1
 
   glob-parent@5.1.2:
     dependencies:
@@ -2753,7 +2753,7 @@ snapshots:
     dependencies:
       hexo-util: 3.3.0
 
-  hexo-theme-solitude@3.0.3:
+  hexo-theme-solitude@3.0.4:
     dependencies:
       hexo-renderer-pug: 3.0.0
       hexo-renderer-stylus: 3.0.1
@@ -3020,7 +3020,7 @@ snapshots:
       is-promise: 2.2.2
       promise: 7.3.1
 
-  katex@0.16.19:
+  katex@0.16.21:
     dependencies:
       commander: 8.3.0
 
@@ -3033,7 +3033,7 @@ snapshots:
       prelude-ls: 1.1.2
       type-check: 0.3.2
 
-  libphonenumber-js@1.11.17: {}
+  libphonenumber-js@1.11.18: {}
 
   liftoff@5.0.0:
     dependencies:
@@ -3656,7 +3656,7 @@ snapshots:
       last-run: 2.0.0
       undertaker-registry: 2.0.0
 
-  undici@6.21.0: {}
+  undici@6.21.1: {}
 
   unpipe@1.0.0: {}
 
