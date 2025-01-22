@@ -44,7 +44,9 @@ nav:
       全部标签: /tags/ || fas fa-tags
     文档:
       快速开始: /posts/301e.html || fas fa-book-open
-    演示: /links/
+    页面:
+      相册演示: /gallery/ || fas fa-images
+      友链演示: /links/ || fas fa-link
 
   # Right button
   # 右侧按钮
@@ -682,10 +684,10 @@ highlight:
 # --------------------------- start ---------------------------
 # Lightbox
 # 图片灯箱
-lightbox: false
+lightbox: true
 # warning: Please select any one, but cannot be turned on at the same time.
 # 警告: 请任选其一，但不能同时开启。
-fancybox: false # fancybox
+fancybox: true # fancybox
 mediumZoom: false # mediumZoom
 # --------------------------- end ---------------------------
 
