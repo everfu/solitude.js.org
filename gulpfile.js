@@ -3,25 +3,25 @@ var cleanCSS = require('gulp-clean-css');
 var htmlmin = require('gulp-html-minifier-terser');
 var htmlclean = require('gulp-htmlclean');
 var terser = require('gulp-terser');
-const javascriptObfuscator = require('gulp-javascript-obfuscator');
+// const javascriptObfuscator = require('gulp-javascript-obfuscator');
 
 // 压缩js
 gulp.task('compress', () =>
 gulp.src(['./public/**/*.js', '!./public/**/*.min.js'])
 .pipe(terser())
-.pipe(javascriptObfuscator({
-compact: true,
-controlFlowFlattening: true,
-controlFlowFlatteningThreshold: 0.75,
-deadCodeInjection: true,
-deadCodeInjectionThreshold: 0.4,
-debugProtection: true,
-debugProtectionInterval: 4000,
-disableConsoleOutput: true,
-identifierNamesGenerator: 'hexadecimal',
-log: false,
-renameGlobals: false,
-}))
+// .pipe(javascriptObfuscator({
+// compact: true,
+// controlFlowFlattening: true,
+// controlFlowFlatteningThreshold: 0.75,
+// deadCodeInjection: true,
+// deadCodeInjectionThreshold: 0.4,
+// debugProtection: true,
+// debugProtectionInterval: 4000,
+// disableConsoleOutput: true,
+// identifierNamesGenerator: 'hexadecimal',
+// log: false,
+// renameGlobals: false,
+// }))
 .pipe(gulp.dest('./public'))
 )
 //压缩css
