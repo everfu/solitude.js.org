@@ -964,10 +964,10 @@ post_ai:
 # Google Adsense
 # 谷歌广告
 google_adsense:
-  enable: false
+  enable: true
   # Auto ads
   # 自动广告
-  auto_ads: false
+  auto_ads: true
   # Page-level ads
   # 页面级广告
   enable_page_level_ads: true
@@ -983,7 +983,7 @@ google_adsense:
   # Google Adsense js
   # 谷歌广告 js
   js: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
-  client: # ca-pub-XXXXXXXXXXXXXX
+  client: ca-pub-6338523842252061 # ca-pub-XXXXXXXXXXXXXX
   slot: # 4236388782
 # --------------------------- end ---------------------------
 
