@@ -81,8 +81,8 @@ importers:
         specifier: ^1.0.22
         version: 1.0.22
       hexo-theme-solitude:
-        specifier: ^3.0.5
-        version: 3.0.5
+        specifier: ^3.0.6
+        version: 3.0.6
       hexo-util:
         specifier: ^3.3.0
         version: 3.3.0
@@ -916,8 +916,8 @@ packages:
     resolution: {integrity: sha512-ZIbvRW0h12OeaTLnyd8QIZl8oI0r0/OciFHwcSNKU/0ENhWmMoYsS9gXVnWiW1EhfZy1eT0klm8v4cZeSg2wIw==}
     engines: {node: '>=14'}
 
-  hexo-theme-solitude@3.0.5:
-    resolution: {integrity: sha512-MRwj9eeXQ+pbvyn5B+AouiLOg+vyg+oj8W41N/SnAzAT+5PVGBMx96sliBvV6zVgdEu/nbJ9Lu83iBx8l1SdCA==}
+  hexo-theme-solitude@3.0.6:
+    resolution: {integrity: sha512-a5GpD1Lm/Z4lH1dmuRZbbFqAb0LgiW+aUY2+rAoZMP4hzioOkdLlmVaAkSQS8FvNVeAV3mIvTgluq3z61ThR6w==}
 
   hexo-util@2.7.0:
     resolution: {integrity: sha512-hQM3h34nhDg0bSe/Tg1lnpODvNkz7h2u0+lZGzlKL0Oufp+5KCAEUX9wal7/xC7ax3/cwEn8IuoU75kNpZLpJQ==}
@@ -2753,7 +2753,7 @@ snapshots:
     dependencies:
       hexo-util: 3.3.0
 
-  hexo-theme-solitude@3.0.5:
+  hexo-theme-solitude@3.0.6:
     dependencies:
       hexo-renderer-pug: 3.0.0
       hexo-renderer-stylus: 3.0.1
