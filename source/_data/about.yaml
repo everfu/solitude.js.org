@@ -75,18 +75,17 @@ rewardList: # Bottom donations
     money: 5
     time: 2023-04-20
     icon: fab fa-weixin
+    color: "#09bb07"
   - name: 糕小菜
     money: 6.66
     time: 2023-08-11
     icon: fab fa-alipay
-    vip: true
   - name: 木木
     money: 5
     time: 2023-08-11
     icon: fab fa-weixin
   - name: 悦华
     money: 56
-    vip: true
     time: 2023-08-25
     icon: fab fa-weixin
   - name: 糕小菜

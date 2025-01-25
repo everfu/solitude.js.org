@@ -102,8 +102,8 @@ hometop:
 # Aside
 # 侧边栏
 aside:
-  # Values: about (info card), newestPost (latest article), allInfo (website information), flip (official account QR code), newest_comment (latest comment)
-  # 值: about(信息卡), newestPost(最新文章), allInfo(网站信息), flip(官方账号二维码), newest_comment(最新评论)
+  # Values: about (info card), newestPost (latest article), allInfo (website information), newest_comment (latest comment)
+  # 值: about(信息卡), newestPost(最新文章), allInfo(网站信息), newest_comment(最新评论)
 
   # Sticky: Fixed position / noSticky: Not fixed position
   # Sticky: 固定位置 / noSticky: 不固定位置
@@ -125,7 +125,7 @@ aside:
   my_card:
     author:
       img: https://wsrv.nl/?url=github.com/everfu.png
-      sticker: # url, 24x24 size
+      sticker: https://wsrv.nl/?url=github.com/everfu.png # url, 24x24 size
     description: 只有迎风，风筝才能飞得更高。
     # 内容 / Content
     content: 这是一个普通的程序员，但有一个不平凡的梦想，希望能够改变世界。
@@ -147,16 +147,6 @@ aside:
   # --------------------------- end ---------------------------
 
   # --------------------------- start ---------------------------
-  # Sidebar QR code component
-  # 侧边栏二维码组件
-  flip:
-    favicon: # url (favicon)
-    face: # url (QR code)
-    backface: # url (QR code)
-    backcolor: "var(--efu-blue)" # Background color
-  # --------------------------- end ---------------------------
-
-  # --------------------------- start ---------------------------
   # article table of contents
   # 文章目录
   toc:
@@ -169,19 +159,11 @@ aside:
   # Tags
   # 标签
   tags:
-    enable: false
+    enable: true
     limit: 20 # Number of tags displayed
     # Highlighted tags
     highlight_list:
       # - Hexo
-  # --------------------------- end ---------------------------
-
-  # --------------------------- start ---------------------------
-  # Archive
-  # 归档
-  archive:
-    enable: false
-    type: "month" # month: by month / year: by year
   # --------------------------- end ---------------------------
 
   # --------------------------- start ---------------------------
@@ -499,7 +481,7 @@ console:
     tags: true
     # Archives
     # 归档
-    archive: true
+    archive: month
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -513,8 +495,8 @@ translate:
 # Right-Sidebar
 # 右下角悬停导航栏
 rightside:
-  enable: false
-  percent: false
+  enable: true
+  percent: true
   hide:
     enable: false
     translate: false
