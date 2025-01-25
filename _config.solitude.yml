@@ -582,9 +582,9 @@ meting_api: "https://meting.qjqq.cn/?server=:server&type=:type&id=:id&auth=:auth
 # Capsule music
 # 音乐胶囊
 capsule:
-  enable: false
+  enable: true
   # 歌单 ID / 单曲 ID
-  id: 5144842535
+  id: 8407304077
   # 服务商：netease / qq / xiami / kugou / baidu
   server: netease
   # 类型：playlist / song
@@ -928,16 +928,16 @@ busuanzi_use: 0
 # This part is only supported in mainland China, and we will consider supporting ChatGPT Key in the future.
 # 该部分仅支持中国大陆
 tianli_talk:
-  enable: false
+  enable: true
   title: 智能客服与搜索 # title
-  key: # key
+  key: efd0a84058a25af978278dd67927c53195ba # key
   option:
 post_ai:
-  enable: false
+  enable: true
   modelName: GPT 4
-  key:
-  talk: # 我是 Efu 开发的摘要生成助理EfuGPT，EfuGPT在静态部署时进行摘要的撰写，并且在访客访问时通过EfuCorrection转译后的文本摘要实现工具。我在这里只负责已经生成的摘要显示，你无法与我直接沟通，但我可以回答一些预设的问题。
-  randomPost: false
+  key: efd0a84058a25af978278dd67927c53195ba
+  talk: 我是小七，我可以帮你生成文章摘要。
+  randomPost: true
   report: https://solitude.js.org
   tips: # 此内容根据文章生成，并经过人工审核，仅用于文章内容的解释与总结
 # --------------------------- end ---------------------------
