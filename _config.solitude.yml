@@ -67,7 +67,7 @@ hometop:
   enable: true
   banner:
     title: 一个卡片 UI 主题<br >适用于 Hexo # 大字
-    desc: 
+    desc:
       - 我只是一个普通的程序员
       - 但我有一个不平凡的梦想
       - 我希望能够改变世界
@@ -240,6 +240,9 @@ post:
       # License link
       # 许可证链接
       licenurl: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans
+  ai:
+    enable: true
+    modelName: 小七 GPT
   # Article meta information
   # 文章元信息
   meta:
@@ -350,8 +353,8 @@ font:
 # Background
 # 背景图片
 background:
-  enable: false
-  opacity: .2
+  enable: true
+  opacity: .13
   dark: https://i.pinimg.com/originals/d8/b3/9d/d8b39d12b653810db452c437211aeb2e.png
   light: https://i.pinimg.com/originals/93/57/38/935738ed9657b296c2ef0ebd2151eb66.jpg
 # --------------------------- end ---------------------------
@@ -498,10 +501,10 @@ rightside:
   enable: true
   percent: true
   hide:
-    enable: false
-    translate: false
-    mode: false
-    aside: false
+    enable: true
+    translate: true
+    mode: true
+    aside: true
 # --------------------------- start ---------------------------
 
 # --------------------------- start ---------------------------
@@ -622,7 +625,7 @@ lazyload:
   # post, site
   field: site
   # 加载时替换图
-  placeholder: ''
+  placeholder: ""
   # 加载失败替换图
   errorimg: /img/error_load.avif
 # --------------------------- end ---------------------------
@@ -856,11 +859,11 @@ search:
   local:
     preload: false
     CDN: # url: search.xml
-  docsearch: 
-    appId: 'KNSYWJA80Y'
-    apiKey: '64cec8b7ed869453640daca02f5911fc'
-    indexName: 'solitude-js'
-    option: 
+  docsearch:
+    appId: "KNSYWJA80Y"
+    apiKey: "64cec8b7ed869453640daca02f5911fc"
+    indexName: "solitude-js"
+    option:
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -922,24 +925,6 @@ busuanzi: true
 # 0: Original / 1: Custom
 # 0: 原版 / 1: 自定义版
 busuanzi_use: 0
-# --------------------------- end ---------------------------
-
-# --------------------------- start ---------------------------
-# This part is only supported in mainland China, and we will consider supporting ChatGPT Key in the future.
-# 该部分仅支持中国大陆
-tianli_talk:
-  enable: true
-  title: 智能客服与搜索 # title
-  key: efd0a84058a25af978278dd67927c53195ba # key
-  option:
-post_ai:
-  enable: true
-  modelName: GPT 4
-  key: efd0a84058a25af978278dd67927c53195ba
-  talk: 我是小七，我可以帮你生成文章摘要。
-  randomPost: true
-  report: https://solitude.js.org
-  tips: # 此内容根据文章生成，并经过人工审核，仅用于文章内容的解释与总结
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
