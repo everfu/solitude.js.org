@@ -353,7 +353,7 @@ font:
 # Background
 # 背景图片
 background:
-  enable: true
+  enable: false
   opacity: .13
   dark: https://i.pinimg.com/originals/d8/b3/9d/d8b39d12b653810db452c437211aeb2e.png
   light: https://i.pinimg.com/originals/93/57/38/935738ed9657b296c2ef0ebd2151eb66.jpg
@@ -931,7 +931,7 @@ busuanzi_use: 0
 # Google Adsense
 # 谷歌广告
 google_adsense:
-  enable: true
+  enable: false
   # Auto ads
   # 自动广告
   auto_ads: true
@@ -960,7 +960,7 @@ CDN:
   internal: local # local / cdnjs / jsdelivr / unpkg / custom
   third_party: custom # cdnjs / jsdelivr / unpkg / custom
   version: true # 是否使用版本号
-  custom_format: https://fastly.jsdelivr.net/npm/${name}@${version}/${min_file} # 自定义格式
+  custom_format: https://open.lightxi.com/unpkg/${name}@${version}/${file} # 自定义格式
   # 直接覆盖默认 CDN 链接（优先级最高）
   options:
     # algolia_search
