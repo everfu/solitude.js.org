@@ -18,11 +18,11 @@ links:
       suffix:
       link_list:
           - name: 叶泯希 # 友链名称
-            link: https://ymxblog.us.kg # 友链地址
-            avatar: https://ymxblog.us.kg/images/avatar.webp # 显示头像
+            link: https://blog.418121.xyz # 友链地址
+            avatar: https://blgo.418121.xyz/images/avatar.webp # 显示头像
             descr: 意义是自己赐予的 # 友链简介
             topimg:
-            tag: 首个
+            tag: 叶泯希
             color: pink
 
           - name: 陵长镜 # 友链名称
