@@ -19,7 +19,7 @@ links:
       link_list:
           - name: 叶泯希 # 友链名称
             link: https://blog.418121.xyz # 友链地址
-            avatar: https://blgo.418121.xyz/images/avatar.webp # 显示头像
+            avatar: https://blog.418121.xyz/images/avatar.webp # 显示头像
             descr: 意义是自己赐予的 # 友链简介
             topimg:
             tag: 叶泯希
