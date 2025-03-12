@@ -108,7 +108,7 @@ aside:
   # Sticky: Fixed position / noSticky: Not fixed position
   # Sticky: 固定位置 / noSticky: 不固定位置
   home: # on the homepage
-    noSticky: "about"
+    noSticky: "about,calendar,schedule"
     Sticky: "allInfo"
   post: # on the article page
     noSticky: "about"
@@ -749,12 +749,14 @@ extends:
   # Insert in head
   # 插入到 head
   head:
+    - <link rel="stylesheet" href="/css/schedule.css">
   #  - <script src="https://cdn.bootcdn.net/ajax/libs/pace/1.2.4/pace.min.js"></script>
 
   # Insert in body
   # 插入到 body
   body:
-  #  - <script src="https://cdn.bootcdn.net/ajax/libs/pace/1.2.4/pace.min.js"></script>
+    - <script src="/js/schedule.js"></script>
+    - <script src="https://open.lightxi.com/unpkg/chinese-lunar@0.1.4/lib/chinese-lunar.js"></script>
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -901,9 +903,9 @@ envelope:
 # Brevity Page
 # 即可短文
 brevity:
-  enable: false
-  home_mini: false
-  music: false
+  enable: true
+  home_mini: true
+  music: true
   page: /essay/
   style: 1
   strip: 30

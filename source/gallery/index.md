@@ -3,6 +3,7 @@ title: 图库
 description: 这是一个演示页面，用于展示图片库的功能。
 date: 2025-01-21 19:01:40
 updated: 2025-01-21 19:01:40
+container: true
 ---
 
 <div class="gallery-group-main">
