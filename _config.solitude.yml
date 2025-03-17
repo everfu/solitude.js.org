@@ -779,10 +779,10 @@ pwa:
 comment:
   # Which commenting system to use(e.g. waline or waline,twikoo)
   # 使用哪个评论系统（例如： waline or waline,twikoo）
-  use: # waline, twikoo, valine, artalk, giscus # Up to two comment systems can be turned on at the same time
+  use: twikoo # waline, twikoo, valine, artalk, giscus # Up to two comment systems can be turned on at the same time
   # Whether to display the hot comment switch.
   # 是否显示热门评论开关
-  commentBarrage: false
+  commentBarrage: true
   # Lazy load
   # 懒加载评论区
   lazyload: false
@@ -793,24 +793,24 @@ comment:
   # Sidebar 显示总评论数
   sidebar: false
   # PV
-  pv: false
+  pv: true
   # Avatar
   avatar: https://gravatar.com/avatar
   # Hot comment tips
   # 热评提示
   hot_tip:
-    enable: false
+    enable: true
     # Number of hot comments
     count: 3
   # recent comments(⚠️ Comments need to be configured first.)
   # 最新评论(⚠️ 需要先配置评论)
   newest_comment:
-    enable: false
+    enable: true
     storage: .5 # 缓存时间 1: 1天 / .5 : 半天 / Cache time 1: 1 day .5 : half a day
     limit: 5 # 评论数 / Number of comments
 # Twikoo: https://solitude.js.org/comment/twikoo
 twikoo: # https://twikoo.js.org/
-  envId: # url: https://twikoo.sondy.top/
+  envId: https://twikoo-e.netlify.app/.netlify/functions/twikoo # url: https://twikoo.sondy.top/
   region: # Environment locale, default is ap-shanghai, Tencent cloud environment fill ap-shanghai or ap-guangzhou; Vercel environment do not fill the.
   style: true # Use custom styles when turned on
   accessToken: # AccessToken
@@ -960,7 +960,7 @@ google_adsense:
 # 非必要请勿修改
 CDN:
   internal: local # local / cdnjs / jsdelivr / unpkg / custom
-  third_party: custom # cdnjs / jsdelivr / unpkg / custom
+  third_party: cdnjs # cdnjs / jsdelivr / unpkg / custom
   version: true # 是否使用版本号
   custom_format: https://open.lightxi.com/unpkg/${name}@${version}/${file} # 自定义格式
   # 直接覆盖默认 CDN 链接（优先级最高）
