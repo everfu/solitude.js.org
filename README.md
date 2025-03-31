@@ -1,2 +1,1 @@
-# Solitude Demo/Documentation
-
+# Hexo Theme Solitude Documentation

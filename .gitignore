@@ -1,11 +1,3 @@
-node_modules/
-dist/
-.next/
-.vscode/
-.cache.json
-.contentlayer/
-.cache/
-
-# Themes
-public/
-db.json
+.vitepress/dist
+.vitepress/cache
+.DS_Store

@@ -1,47 +1,11 @@
 {
-  "name": "solitude-demo",
-  "version": "0.0.0",
-  "private": true,
+  "devDependencies": {
+    "vitepress": "^1.6.3",
+    "vitepress-plugin-tabs": "^0.6.0"
+  },
   "scripts": {
-    "build": "hexo generate",
-    "clean": "hexo clean",
-    "deploy": "hexo deploy",
-    "server": "hexo server",
-    "u": "hexo clean && hexo g && gulp"
-  },
-  "hexo": {
-    "version": "7.3.0"
-  },
-  "dependencies": {
-    "@renbaoshuo/markdown-it-katex": "^2.0.2",
-    "cheerio": "^1.0.0",
-    "compress": "^0.99.0",
-    "gulp": "^5.0.0",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-html-minifier-terser": "^7.1.0",
-    "gulp-htmlclean": "^2.7.22",
-    "gulp-javascript-obfuscator": "^1.1.6",
-    "gulp-terser": "^2.1.0",
-    "hexo": "^7.3.0",
-    "hexo-abbrlink": "^2.2.1",
-    "hexo-filter-nofollow": "^2.0.2",
-    "hexo-generator-archive": "^2.0.0",
-    "hexo-generator-category": "^2.0.0",
-    "hexo-generator-feed": "^3.0.0",
-    "hexo-generator-index": "^4.0.0",
-    "hexo-generator-searchdb": "^1.4.1",
-    "hexo-generator-sitemap": "^3.0.1",
-    "hexo-generator-tag": "^2.0.0",
-    "hexo-renderer-markdown-it": "^7.1.1",
-    "hexo-renderer-pug": "^3.0.0",
-    "hexo-renderer-stylus": "^3.0.1",
-    "hexo-server": "^3.0.0",
-    "hexo-solitude-tag": "^1.0.22",
-    "hexo-theme-solitude": "^3.0.15",
-    "hexo-util": "^3.3.0",
-    "hexo-wordcount": "^6.0.1",
-    "katex": "^0.16.21",
-    "moment": "^2.30.1"
-  },
-  "packageManager": "pnpm@10.2.0+sha512.0d27364e0139c6aadeed65ada153135e0ca96c8da42123bd50047f961339dc7a758fc2e944b428f52be570d1bd3372455c1c65fa2e7aa0bfbf931190f9552001"
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  }
 }
