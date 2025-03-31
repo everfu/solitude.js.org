@@ -5,20 +5,63 @@ description: Hexo Theme Solitude 的扩展配置。
 
 # 扩展配置
 
+## 控制台
+
+```yaml
+console:
+  enable: false
+  # Recent comments
+  # 最新评论
+  recentComment:
+    enable: false
+    # Cache time 1: 1 day / .5 : half a day
+    # 缓存时间 1: 1天 / .5 : 半天
+    storage: .2
+  card:
+    # Tags
+    # 标签
+    tags: true
+    # Archives
+    # 归档
+    archive: "month" # month: by month / year: by year
+```
+
+## 右键菜单
+
+```yaml
+rightside:
+  enable: false
+  percent: false
+  hide:
+    enable: false
+    translate: false
+    mode: false
+    aside: false
+```
+
+## 简繁转换
+
+```yaml
+translate:
+  enable: true
+  defaultEncoding: 2 # 1: 默认繁体 2: 默认简体
+  translateDelay: 0 # 首次加载翻译迟疑时间
+```
+
 ## 页脚（Footer）
 
 :::code-group
 
 ```yaml [上方图标]
-# 底部上方一排图标
-# Bottom row of icons
+# 社交图标
 information:
-  left: # 左侧显示图标
-    Github: https://github.com/efuo || st-github-line # 名称：链接 || 图标 / Name: link || icon
-    Mail: mailto:o@efu.me || st-mail-line
-  right: # 右侧显示图标
-    Bilibili: https://space.bilibili.com/1329819902 || st-bilibili-line
-    抖音: https://v.douyin.com/iJsLc8jt/ || st-douyin-fill
+  author: false # img url / false
+  left:
+    # Github: https://github.com/everfu || fab fa-github # 名称: 链接 || 图标
+    # Mail: mailto:o@everfu.org || far fa-envelope
+  right:
+    # Bilibili: https://space.bilibili.com/1329819902 || fab fa-bilibili
+    # Douyin: https://v.douyin.com/iJsLc8jt/ || fab fa-tiktok
 ```
 
 ```yaml [底部导航栏]
@@ -43,23 +86,30 @@ group: # 从左至右 / From left to right
 
 ```yaml [其它]
 # 底部随机友链
-# Random links at the bottom
 # tip：此处的友链是随机显示的，不是固定的
-# tip: The links here are displayed randomly, not fixed
 # warning: 打开前必须先配置links
-# warning: links must be configured before opening
 randomlink: false
-# 隐私助手右侧弹窗，填写路径后开启
-# Privacy assistant right pop-up window, fill in the path to open
-privacy: # /privacy/
-# 版权
-# Copyright
-license: # /license/
-# 页脚右侧链接，例如：ICP备案号、公安备案号等
-# Footer right link, such as: ICP filing number, public security filing number, etc.
+# 备案
+beian:
+  # - name: 湘公网安备43048102000175号
+  #   icon: https://beian.mps.gov.cn/img/logo01.dd7ff50e.png
+  #   url: https://beian.mps.gov.cn/#/query/webSearch
+  # - name: 湘ICP备2024080357号-1
+  #   url: https://beian.miit.gov.cn/
+# 页脚信息文字
 links:
-  - name: 订阅
-    url: /atom.xml
+  # - name: RSS
+  #   url: /atom.xml
+  # - name: License
+  #   url: https://github.com/everfu/hexo-theme-solitude/blob/main/LICENSE
+  #   icon:
+  #     - fas fa-copyright
+  #     - fab fa-creative-commons-by
+  #     - fab fa-creative-commons-nc
+  #     - fab fa-creative-commons-nd
+  # - name: boringbay
+  #   url: https://boringbay.com/
+  #   img: https://boringbay.com/api/badge/www.efu.me
 ```
 
 :::
@@ -69,17 +119,9 @@ links:
 > 自定义 404 页面
 
 ```yaml
-# 404 页面
-# 404 page
 errorpage:
-  # 图片
-  # image
-  img: https://7.isyangs.cn/1/65eb24f94fcbd-1.gif
-  # 文字
-  # text
-  text: =awa= 页面走丢了
-  # 推荐文章列表
-  # Recommended article list
+  img: /img/404.avif
+  text: =awa= Page Not Found # Text
   recommendList: true
 ```
 
@@ -88,56 +130,35 @@ errorpage:
 > 显示在左下角的音乐播放器，根据注解填写对应的歌单 id 和服务商。
 
 ```yaml
-# 音乐胶囊
-# capsule music
 capsule:
   enable: false
-  id: 8407304077 # 歌单id / playlist id
-  server: netease # 播放列表的服务商。netease：网易云 / tencent：腾讯 / kugou：酷狗 / xiami：小米 / baidu：百度 : Music service provider. netease: Netease Cloud / tencent: Tencent / kugou: Kugou / xiaomi: Xiaomi / baidu: Baidu
-  type: playlist # 播放列表的类型。song：单曲 / playlist：歌单 / album：专辑 / artist：歌手 : Type of playlist. song: Single / playlist: Playlist / album: Album / artist: Singer
+  # 歌单 ID / 单曲 ID
+  id: 5144842535
+  # 服务商：netease / qq / xiami / kugou / baidu
+  server: netease
+  # 类型：playlist / song
+  type: playlist
+  volume: 0.8
 ```
-
-::: danger 注意
-QQ 音乐更换了接口，无法播放。
-:::
 
 ## 快捷菜单
 
 ```yaml
 keyboard:
-  enable: false # 是否开启键盘控制 / Whether to enable keyboard control
-  # 键盘控制配置
-  # Keyboard control configuration
+  enable: false
   list:
-  # name: 按键名称
-  # name: Key name
-  # key: 按键
-  # key: Key
-  # func: 方法
-  # func: Function
-  # sco: sco内置方法
-  # sco: sco built-in method
-  # url: 跳转链接
-  # url: Jump link
-  #  - name: 关闭快捷键功能
-  #    key: K
-  #    func: keyboard
-  #  - name: 打开中控台
-  #    key: A
-  #    sco: showConsole
-  #  - name: 播放/暂停音乐
-  #    key: M
-  #    sco: musicToggle
-  #  - name: 打开友情链接
-  #    key: L
-  #    url: /links/
-```
-
-## 中控台扩展
-
-```yaml
-# 中控台扩展：最新评论 + 标签 + 文章
-console_plus: false
+    # - name: 关闭快捷菜单
+    #   key: K
+    #   func: keyboard
+    # - name: 打开控制台
+    #   key: A
+    #   sco: showConsole
+    # - name: 播放/暂停音乐
+    #   key: M
+    #   sco: musicToggle
+    # - name: 打开友链
+    #   key: L
+    #   url: /links/
 ```
 
 ## 懒加载
@@ -145,16 +166,14 @@ console_plus: false
 > 开启懒加载后，图片会在进入可视区域后加载，可以减少网页体积，提高网页加载速度。
 
 ```yaml
-# 懒加载
-# lazyload
 lazyload:
   enable: false
-  # 加载中显示图片
-  # Loading display image
-  placeholder: /img/loading.gif
-  # 加载失败显示图片
-  # Loading failed display image
-  errorimg: /img/error_load.png
+  # post, site
+  field: site
+  # 加载时替换图
+  placeholder: ""
+  # 加载失败替换图
+  errorimg: /img/error_load.avif
 ```
 
 ## 加载动画
@@ -162,14 +181,12 @@ lazyload:
 > 在页面加载时会显示一个页面覆盖内容，加载完成消失。
 
 ```yaml
-# 加载动画
-# Loading animation
 loading:
-  # 全局加载动画
-  # Global loading animation
+  # 全屏加载
   fullpage: false
-  # 顶部加载胶囊
-  # Top loading capsule
+  # 加载图标，不写默认siteicon
+  favicon: /img/favicon.png
+  # Pace 加载
   pace: true
 ```
 
@@ -178,19 +195,18 @@ loading:
 > 开启代码高亮后，代码块会有对应的语言提示，但是会增加网页体积，如果你不需要这个功能，可以关闭。
 
 ```yaml
-# 代码高亮增强
-# Code highlight
 highlight:
   enable: true
-  limit: 200 # 代码行高限制 / Code line limit
-  copy: true # 是否开启复制按钮 / Whether to enable the copy button
-  expand: true # 是否默认展开 / Whether to expand by default
-  # 代码块样式
-  # Code block style
-  theme: default # default: 默认 / mac : apple terminal
-  # 代码配色
-  # Code color
-  color: default # default: 默认  / vscode / solarized-dark / solarized-light / dracula / monokai
+  # 当超过多少字时显示折叠按钮
+  limit: 200
+  # 是否启用复制按钮
+  copy: true
+  # 是否默认展开
+  expand: true
+  # default: 默认 / mac : 苹果终端
+  theme: mac
+  # default / solidity / dracula
+  color: default
 ```
 
 ## 图片灯箱
@@ -207,6 +223,19 @@ fancybox: true
 
 # mediumZoom
 mediumZoom: false
+```
+
+## 纪念日
+
+网站整体变灰
+
+```yaml
+memorial:
+  enable: false
+  date:
+  #  - 7-7
+  #  - 9-18
+  #  - 12-13
 ```
 
 ## Open graph
@@ -235,18 +264,16 @@ Opengraph:
 
 ```yaml
 # 字数统计
-# Word count
 # warning：开启前需要安装字数统计插件
-# warning: You need to install the word count plugin before turning it on
 wordcount: false
 ```
 
-## busuanzi
+## Busuanzi
 
 ```yaml
-# 访问统计
-# Access statistics
 busuanzi: false
+# 0: 原版 / 1: 自定义版
+busuanzi_use: 0
 ```
 
 ## 数学公式
