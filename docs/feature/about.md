@@ -118,6 +118,29 @@ description: 关于页面配置
       tips_right: 跑图大师
 
     likes:
+      - type: "comic"
+        tips: 爱好番剧 # 右上角提示
+        title: 追番 # 标题
+        subtips: "科幻、动漫、喜剧" # 左下小字，可不要
+        list: # 最好就是五个或以上，相信你们肯定没那么少的。
+          - name: 你的名字 # 动漫或影视名
+            href: https://movie.douban.com/subject/26683290/ # B站或豆瓣某个位置
+            cover: https://images.418121.xyz/file/blog/covers/p2910701461.webp  # 封面图
+          - name: 四月是你的谎言
+            href: https://www.bilibili.com/bangumi/media/md1699
+            cover: https://images.418121.xyz/file/blog/covers/p2232343678.webp
+          - name: 流浪地球2
+            href: https://movie.douban.com/subject/35267208/
+            cover: https://images.418121.xyz/file/blog/covers/p2886653882.webp
+          - name: 花束般的恋爱
+            href: https://movie.douban.com/subject/34874432/
+            cover: https://images.418121.xyz/file/blog/covers/p2868462052.webp
+          - name: 天气之子
+            href: https://movie.douban.com/subject/30402296/
+            cover: https://images.418121.xyz/file/blog/covers/p2558022335.webp
+        button: true # false 可以关闭右边按钮
+        button_link: "/pyq/"  # 跳转路径
+        button_text: "观看记录"   # 按钮文字
       - type: like-technology
         bg: https://7.isyangs.cn/1/65eb2e3d6616b-1.png
         tips: 关注偏好
