@@ -37,6 +37,8 @@ description: 添加即刻短文页面
        date: 2023-10-31 15:32
        image:
          - https://7.isyangs.cn/1/65e9de42e32cd-1.png
+         - url: https://7.isyangs.cn/1/65e9de42e32cd-1.png
+           alt: 主题交流群
        link: https://efu.me/
    ```
 
@@ -44,7 +46,7 @@ description: 添加即刻短文页面
 | ---------------- | ------------------------------------------------------------------------------------ |
 | `content`        | 文字内容                                                                             |
 | `date`           | 发布日期，格式建议为 2022/10/26 08:00:00                                             |
-| `image`          | 图片链接, 可填写多张图片                                                             |
+| `image`          | 图片链接, 可填写多张图片，alt为图片描述                                               |
 | `link`           | 左下角链接按钮，填写 URL                                                             |
 | `aplayer.server` | 音乐播放器的服务商，可选 netease / tencent                                           |
 | `aplayer.id`     | 单曲 id，例如：`https://music.163.com/#/song?id=571340283`，`song?id=` 后的数字即 id |
