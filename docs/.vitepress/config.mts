@@ -29,10 +29,8 @@ export default defineConfig({
   themeConfig: {
     logo: "/favicon.png",
     nav: [
-      { text: "作者", link: "https://www.efu.me/" },
       { text: "QQ 群", link: "https://qm.qq.com/q/mYIJRTqo0w" },
-      { text: "预览", link: "https://www.efu.me/" },
-      { text: "晞云云计算", link: "https://www.lightxi.com/" },
+      { text: "预览", link: "https://blog.efu.me/" },
     ],
 
     sidebar: [
@@ -98,14 +96,11 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: "github", link: "https://github.com/everfu/hexo-theme-solitude" },
-      { icon: "twitter", link: "https://twitter.com/everfu8" },
+      { icon: "github", link: "https://github.com/everfu/hexo-theme-solitude" }
     ],
 
     footer: {
-      copyright: `版权所有 © ${new Date().getFullYear()} 伍拾柒`,
-      message:
-        '特别赞助：<a href="https://www.lightxi.com/" target="_blank"><img src="https://www.lightxi.com/favicon.ico" style="height: 24px; display: inline-block; margin-bottom: -8px"/> 晞云云计算</a>',
+      copyright: `版权所有 © ${new Date().getFullYear()} 伍拾柒`
     },
 
     editLink: {
@@ -114,7 +109,7 @@ export default defineConfig({
     },
 
     search: {
-      provider: "algolia",
+      provider: "local",
       options: {
         apiKey: "64cec8b7ed869453640daca02f5911fc",
         appId: "KNSYWJA80Y",

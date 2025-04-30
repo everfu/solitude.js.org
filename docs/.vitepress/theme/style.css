@@ -68,12 +68,14 @@
   --vp-c-danger-2: var(--vp-c-red-2);
   --vp-c-danger-3: var(--vp-c-red-3);
   --vp-c-danger-soft: var(--vp-c-red-soft);
+
+  --vt-c-white-soft: rgba(143, 143, 143, 0.1);
+  --vt-c-white-mute: rgba(127, 125, 125, 0.5);
+  --vt-c-indigo: var(--vp-c-indigo-1);
+  --vt-c-bg-soft: rgba(0, 0, 0, 0.1);
 }
 
-/**
- * Component: Button
- * -------------------------------------------------------------------------- */
-
+/* Component: Button */
 :root {
   --vp-button-brand-border: transparent;
   --vp-button-brand-text: var(--vp-c-white);
@@ -86,23 +88,11 @@
   --vp-button-brand-active-bg: #0d8ecf;
 }
 
-/**
- * Component: Home
- * -------------------------------------------------------------------------- */
-
+/* Component: Home */
 :root {
   --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(
-    120deg,
-    #92f8b8 30%,
-    #1aa5e3
-  );
-
-  --vp-home-hero-image-background-image: linear-gradient(
-    -45deg,
-    #92f8b8 50%,
-    #1aa5e3 50%
-  );
+  --vp-home-hero-name-background: linear-gradient(120deg, #92f8b8 30%, #1aa5e3);
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, #92f8b8 50%, #1aa5e3 50%);
   --vp-home-hero-image-filter: blur(20px);
 }
 
@@ -118,10 +108,7 @@
   }
 }
 
-/**
- * Component: Custom Block
- * -------------------------------------------------------------------------- */
-
+/* Component: Custom Block */
 :root {
   --vp-custom-block-tip-border: transparent;
   --vp-custom-block-tip-text: var(--vp-c-text-1);
@@ -129,14 +116,21 @@
   --vp-custom-block-tip-code-bg: var(--vp-c-brand-soft);
 }
 
-.dark {
-  --vp-c-gutter: var(--vp-c-gray-soft);
+:root {
+  --vp-custom-block-tip-border-shadow: 0 2px 10px rgba(26, 165, 227, 0.2);
 }
 
-/**
- * Component: Algolia
- * -------------------------------------------------------------------------- */
+.dark {
+  --vp-c-gutter: var(--vp-c-gray-soft);
+  --vp-custom-block-tip-border-shadow: 0 2px 10px rgba(26, 165, 227, 0.1);
+}
 
+/* Component: Algolia */
 .DocSearch {
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
+  --docsearch-background: var(--vp-c-default-soft);
+}
+
+.dark .DocSearch {
+  --docsearch-background: var(--vp-c-gray-8);
 }
