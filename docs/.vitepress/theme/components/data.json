@@ -9,6 +9,11 @@
       }
     ],
     "platinum": [
-
+      {
+        "name": "洪墨AI",
+        "url": "https://www.hongmo.ai/",
+        "img": "/hmai.png",
+        "description": "AI 智能助手"
+      }
     ]
   }
