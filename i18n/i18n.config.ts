@@ -43,6 +43,7 @@ export default defineI18nConfig(() => ({
       // TOC
       'Star on GitHub': '在 GitHub 上点 Star',
       'Create Issues': '创建 Issues',
+      'On This Page': '本页内容',
 
       // Footer
       'FOOTER_CREDIT': '制作来自 ❤️ 与 [**伍拾柒**](https://github.com/everfu/)',
