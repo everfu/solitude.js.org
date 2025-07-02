@@ -29,7 +29,7 @@ export default defineI18nConfig(() => ({
       'Getting Started': '快速开始',
       'Learn how to set up and use the Solitude theme.': '了解如何设置和使用 Solitude 主题。',
       'Credits': '鸣谢',
-      'Zhheo Blog': '张洪Heo的博客',
+      'Zhheo': '张洪Heo',
       'Visit Zhheo\'s blog for more information.': '访问张洪Heo的博客以获取更多信息。',
       'Hexo is a fast, simple, and powerful blog framework.': 'Hexo 是一个快速、简单且强大的博客框架。',
       'Sponsor': '赞助',

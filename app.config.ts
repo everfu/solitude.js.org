@@ -33,7 +33,7 @@ export default defineAppConfig({
       },{
         title: 'Credits',
         links: [{
-          title: 'Zhheo Blog',
+          title: 'Zhheo',
           to: 'https://blog.zhheo.com',
           description: 'Visit Zhheo\'s blog for more information.',
           icon: 'lucide:link',
