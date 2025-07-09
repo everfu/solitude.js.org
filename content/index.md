@@ -11,7 +11,7 @@ announcement:
   to: https://github.com/everfu/hexo-theme-solitude/releases
   target: _blank
 actions:
-  - name: Documentation
+  - name: Getting Started
     to: /getting-started/introduction
   - name: GitHub
     variant: outline

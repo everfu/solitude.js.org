@@ -28,7 +28,7 @@ export default defineI18nConfig(() => ({
       'Docs': '文档',
       'Getting Started': '快速开始',
       'Learn how to set up and use the Solitude theme.': '了解如何设置和使用 Solitude 主题。',
-      'Credits': '鸣谢',
+      'Credits': '致谢',
       'Zhheo': '张洪Heo',
       'Visit Zhheo\'s blog for more information.': '访问张洪Heo的博客以获取更多信息。',
       'Hexo is a fast, simple, and powerful blog framework.': 'Hexo 是一个快速、简单且强大的博客框架。',
@@ -46,7 +46,7 @@ export default defineI18nConfig(() => ({
       'On This Page': '本页内容',
 
       // Footer
-      'FOOTER_CREDIT': '制作来自 ❤️ 与 [**伍拾柒**](https://github.com/everfu/)',
+      'FOOTER_CREDIT': '制作来自 ❤️ 与 [**伍拾柒**](https://github.com/everfu)',
       'Sponsor Me': '赞助我',
 
       'Edit this page': '编辑此页面',
