@@ -18,4 +18,16 @@ export default defineNuxtConfig({
     ],
   },
   compatibilityDate: '2025-06-25',
+  modules: [
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots',
+    'nuxt-schema-org',
+    'nuxt-seo-utils',
+    'nuxt-og-image',
+    '@nuxtjs/seo'
+  ],
+  site: { 
+    url: 'https://solitude.js.org', 
+    name: 'solitude-docs',
+  },
 });
