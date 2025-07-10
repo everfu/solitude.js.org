@@ -24,7 +24,8 @@ export default defineNuxtConfig({
     'nuxt-schema-org',
     'nuxt-seo-utils',
     'nuxt-og-image',
-    '@nuxtjs/seo'
+    '@nuxtjs/seo',
+    'nuxt-feedme'
   ],
   site: { 
     url: 'https://solitude.js.org', 

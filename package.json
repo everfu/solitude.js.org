@@ -25,6 +25,7 @@
     "better-sqlite3": "^12.1.1",
     "eslint": "^9.29.0",
     "nuxt": "^3.17.5",
+    "nuxt-feedme": "^1.0.1",
     "nuxt-og-image": "^5.1.9",
     "nuxt-schema-org": "^5.0.6",
     "nuxt-seo-utils": "^7.0.12",
