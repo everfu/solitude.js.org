@@ -31,4 +31,14 @@ export default defineNuxtConfig({
     url: 'https://solitude.js.org', 
     name: 'solitude-docs',
   },
+  app: {
+    head: {
+      meta: [
+        {
+          name: 'google-site-verification',
+          content: 'OQ-FnVME50EgIvv5nO4fsNl7EHkEl0vUSoFUe_fAMgY',
+        }
+      ]
+    }
+  }
 });
