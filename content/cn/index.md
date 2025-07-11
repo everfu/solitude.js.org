@@ -25,6 +25,11 @@ actions:
 Solitude 是一个极简而优雅的 Hexo 主题，专为开发人员和作家设计。
 ::
 
-::div{class="border rounded-lg shadow-md"}
-  :iframe{src="https://blog.zhheo.com" height="700" width="100%" class="rounded-lg" scrolling="no" frameborder="0"}
+::playground
+---
+provider: stackblitz
+repo: everfu/solitude-demo
+branch: main
+file: _config.solitude.yml
+---
 ::

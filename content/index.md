@@ -27,6 +27,11 @@ Welcome to hexo-theme-solitude
 Solitude is a minimalist and elegant Hexo theme designed for developers and writers.
 ::
 
-::div{class="border rounded-lg shadow-md"}
-  :iframe{src="https://blog.zhheo.com" height="700" width="100%" class="rounded-lg" scrolling="no" frameborder="0"}
+::playground
+---
+provider: stackblitz
+repo: everfu/solitude-demo
+branch: main
+file: _config.solitude.yml
+---
 ::
