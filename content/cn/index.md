@@ -16,6 +16,17 @@ actions:
   variant: outline
   to: https://github.com/everfu/hexo-theme-solitude
   leftIcon: 'lucide:github'
+  target: _blank
+- name: 赞助我
+  variant: outline
+  to: https://cdn.lightxi.com/cloudreve/uploads/2025/07/03/M9VJNkNs_wechat-pay.jpg
+  leftIcon: 'ri:wechat-2-line'
+  target: _blank
+- name: 预览
+  variant: outline
+  to: https://everfu.github.io/solitude-demo/
+  target: _blank
+  leftIcon: 'lucide:eye'
 ---
 
 #title

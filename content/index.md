@@ -18,6 +18,16 @@ actions:
     to: https://github.com/everfu/hexo-theme-solitude
     leftIcon: 'lucide:github'
     target: _blank
+  - name: Sponsor
+    variant: outline
+    to: https://ko-fi.com/everfu
+    target: _blank
+    leftIcon: 'lucide:coffee'
+  - name: Preview
+    variant: outline
+    to: https://everfu.github.io/solitude-demo/
+    target: _blank
+    leftIcon: 'lucide:eye'
 ---
 
 #title

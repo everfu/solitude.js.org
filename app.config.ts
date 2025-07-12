@@ -45,29 +45,7 @@ export default defineAppConfig({
           icon: 'lucide:hexagon',
           target: '_blank',
         },
-      ]},{
-        title: 'Sponsor',
-        links: [{
-          title: 'Sponsor on GitHub',
-          to: 'https://github.com/sponsors/everfu',
-          description: 'Support the development of Solitude theme.',
-          icon: 'lucide:heart',
-          target: '_blank',
-        },{
-          title: 'Sponsor on Ko-fi',
-          to: 'https://ko-fi.com/everfu',
-          description: 'Buy me a coffee to support my work.',
-          icon: 'lucide:coffee',
-          target: '_blank',
-        },{
-          title: 'Sponsor on WeChat',
-          to: 'https://cdn.lightxi.com/cloudreve/uploads/2025/07/03/M9VJNkNs_wechat-pay.jpg',
-          description: 'Scan to support me on WeChat',
-          icon: 'ri:wechat-2-line',
-          target: '_blank',
-          isImage: true,
-        }]
-      }],
+      ]}],
       links: [{
         icon: 'ri:qq-line',
         to: 'https://qm.qq.com/q/mYIJRTqo0w',
@@ -147,6 +125,10 @@ export default defineAppConfig({
     footer: {
       credits: 'FOOTER_CREDIT',
       links: [{
+        icon: 'ri:eye-line',
+        to: 'https://everfu.github.io/solitude-demo/',
+        target: '_blank'
+      },{
         icon: 'ri:qq-line',
         to: 'https://qm.qq.com/q/mYIJRTqo0w',
         target: '_blank',

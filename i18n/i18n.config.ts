@@ -32,14 +32,6 @@ export default defineI18nConfig(() => ({
       'Zhheo': '张洪Heo',
       'Visit Zhheo\'s blog for more information.': '访问张洪Heo的博客以获取更多信息。',
       'Hexo is a fast, simple, and powerful blog framework.': 'Hexo 是一个快速、简单且强大的博客框架。',
-      'Sponsor': '赞助',
-      'Sponsor on GitHub': '在 GitHub 上赞助',
-      'Support the development of Solitude theme.': '支持 Solitude 主题的开发。',
-      'Sponsor on Ko-fi': '在 Ko-fi 上赞助',
-      'Buy me a coffee to support my work.': '请我喝杯咖啡以支持我的工作。',
-      'Sponsor on WeChat': '在微信上赞助',
-      'Scan to support me on WeChat': '扫码在微信上赞助我',
-
       // TOC
       'Star on GitHub': '在 GitHub 上点 Star',
       'Create Issues': '创建 Issues',
@@ -47,7 +39,6 @@ export default defineI18nConfig(() => ({
 
       // Footer
       'FOOTER_CREDIT': '制作来自 ❤️ 与 [**伍拾柒**](https://github.com/everfu)',
-      'Sponsor Me': '赞助我',
 
       'Edit this page': '编辑此页面',
       'Back to Top': '返回顶部',
