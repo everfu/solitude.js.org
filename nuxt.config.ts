@@ -2,6 +2,9 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   extends: ['shadcn-docs-nuxt'],
+  image: {
+    domains: ['contrib.rocks']
+  },
   i18n: {
     defaultLocale: 'en',
     locales: [
@@ -27,8 +30,8 @@ export default defineNuxtConfig({
     '@nuxtjs/seo',
     'nuxt-feedme'
   ],
-  site: { 
-    url: 'https://solitude.js.org', 
+  site: {
+    url: 'https://solitude.js.org',
     name: 'solitude-docs',
   },
   app: {
