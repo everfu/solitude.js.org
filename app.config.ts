@@ -3,6 +3,11 @@ export default defineAppConfig({
     site: {
       name: 'solitude docs',
       description: 'Solitude is a minimalist and elegant Hexo theme designed for developers and writers.',
+      umami: {
+        enable: true,
+        src: 'https://cloud.umami.is/script.js',
+        dataWebsiteId: 'c82449b7-d50c-4933-8b1d-90d77fce4cf2',
+      },
     },
     theme: {
       customizable: true,
