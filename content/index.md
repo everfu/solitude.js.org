@@ -36,12 +36,3 @@ Welcome to hexo-theme-solitude
 #description
 Solitude is a minimalist and elegant Hexo theme designed for developers and writers.
 ::
-
-::playground
----
-provider: stackblitz
-repo: everfu/solitude-demo
-branch: main
-file: _config.solitude.yml
----
-::

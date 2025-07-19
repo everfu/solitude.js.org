@@ -35,12 +35,3 @@ actions:
 #description
 Solitude 是一个极简而优雅的 Hexo 主题，专为开发人员和作家设计。
 ::
-
-::playground
----
-provider: stackblitz
-repo: everfu/solitude-demo
-branch: main
-file: _config.solitude.yml
----
-::
