@@ -145,6 +145,7 @@ export default defineAppConfig({
     },
     toc: {
       enable: true,
+      progressBar: true,
       links: [{
         title: 'Star on GitHub',
         icon: 'lucide:star',

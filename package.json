@@ -30,12 +30,13 @@
     "nuxt-schema-org": "^5.0.6",
     "nuxt-seo-utils": "^7.0.13",
     "nuxt-site-config": "^3.2.2",
-    "shadcn-docs-nuxt": "^1.1.2",
+    "shadcn-docs-nuxt": "https://pkg.pr.new/ZTL-UwU/shadcn-docs-nuxt@166",
     "typescript": "^5.8.3",
     "vue": "^3.5.17",
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
+    "@iconify-json/ri": "^1.2.5",
     "@types/bun": "latest"
   },
   "peerDependencies": {
