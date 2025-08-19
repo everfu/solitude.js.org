@@ -14,14 +14,24 @@ export default defineNuxtConfig({
         language: 'en-US',
       },
       {
+        code: 'cn',
+        name: '简体中文',
+        language: 'zh-CN',
+      },
+      {
+        code: 'ja',
+        name: '日本語',
+        language: 'ja-JP',
+      },
+      {
         code: 'fr',
         name: 'Français',
         language: 'fr-FR',
       },
       {
-        code: 'cn',
-        name: '简体中文',
-        language: 'zh-CN',
+        code: 'ru',
+        name: 'Русский',
+        language: 'ru-RU',
       }
     ],
   },

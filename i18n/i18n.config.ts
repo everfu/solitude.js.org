@@ -100,5 +100,87 @@ export default defineI18nConfig(() => ({
       'Radius': 'Rayon',
       'Theme': 'Thème',
     },
+    ru: {
+      // Site
+      'solitude docs': 'Документация Solitude',
+
+      // Header nav
+      'solitude-docs': 'Документация Solitude',
+      'Docs': 'Документация',
+      'Getting Started': 'Начало работы',
+      'Learn how to set up and use the Solitude theme.': 'Узнайте, как настроить и использовать тему Solitude.',
+      'Credits': 'Благодарности',
+      'Zhheo': 'Zhheo',
+      'Visit Zhheo\'s blog for more information.': 'Посетите блог Zhheo для получения дополнительной информации.',
+      'Hexo is a fast, simple, and powerful blog framework.': 'Hexo — это быстрая, простая и мощная платформа для блогов.',
+      
+      // TOC
+      'Star on GitHub': 'Поставить звезду на GitHub',
+      'Create Issues': 'Создать Issues',
+      'On This Page': 'На этой странице',
+
+      // Footer
+      'FOOTER_CREDIT': 'Сделано с ❤️ [**Wang Zhuo**](https://github.com/everfu/)',
+
+      'Edit this page': 'Редактировать эту страницу',
+      'Back to Top': 'Вернуться наверх',
+
+      'Read more at': 'Читать далее в',
+
+      // Search
+      'Search documentation...': 'Поиск в документации...',
+      'Search...': 'Поиск...',
+      'Light': 'Светлая',
+      'Dark': 'Тёмная',
+      'System': 'Системная',
+
+      // Color Picker
+      'Customize': 'Настроить',
+      'Pick a style and color for the docs.': 'Выберите стиль и цвет для документации.',
+      'Color': 'Цвет',
+      'Radius': 'Радиус',
+      'Theme': 'Тема',
+    },
+    ja: {
+      // Site
+      'solitude docs': 'Solitude ドキュメント',
+
+      // Header nav
+      'solitude-docs': 'Solitude ドキュメント',
+      'Docs': 'ドキュメント',
+      'Getting Started': 'はじめに',
+      'Learn how to set up and use the Solitude theme.': 'Solitudeテーマのセットアップと使用方法を学びます。',
+      'Credits': 'クレジット',
+      'Zhheo': 'Zhheo',
+      'Visit Zhheo\'s blog for more information.': 'より詳しい情報はZhheoのブログをご覧ください。',
+      'Hexo is a fast, simple, and powerful blog framework.': 'Hexoは高速でシンプル、そして強力なブログフレームワークです。',
+      
+      // TOC
+      'Star on GitHub': 'GitHubでスター',
+      'Create Issues': 'Issueを作成',
+      'On This Page': 'このページ',
+
+      // Footer
+      'FOOTER_CREDIT': '❤️で作成 [**Wang Zhuo**](https://github.com/everfu/)',
+
+      'Edit this page': 'このページを編集',
+      'Back to Top': 'トップに戻る',
+
+      'Read more at': '詳細はこちら',
+
+      // Search
+      'Search documentation...': 'ドキュメントを検索...',
+      'Search...': '検索...',
+      'Light': 'ライト',
+      'Dark': 'ダーク',
+      'System': 'システム',
+
+      // Color Picker
+      'Customize': 'カスタマイズ',
+      'Pick a style and color for the docs.': 'ドキュメントのスタイルと色を選択してください。',
+      'Color': '色',
+      'Radius': '半径',
+      'Theme': 'テーマ',
+    },
   },
 }));
