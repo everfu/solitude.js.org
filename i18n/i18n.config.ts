@@ -57,7 +57,48 @@ export default defineI18nConfig(() => ({
       'Pick a style and color for the docs.': '为文档选择样式和颜色。',
       'Color': '颜色',
       'Radius': '圆角',
-      'Theme': '主题'
+      'Theme': '主题',
+    },
+    fr: {
+      // Site
+      'solitude docs': 'Documentation Solitude',
+
+      // Header nav
+      'solitude-docs': 'Documentation Solitude',
+      'Docs': 'Documentation',
+      'Getting Started': 'Commencer',
+      'Learn how to set up and use the Solitude theme.': 'Apprenez à configurer et utiliser le thème Solitude.',
+      'Credits': 'Crédits',
+      'Zhheo': 'Zhheo',
+      'Visit Zhheo\'s blog for more information.': 'Visitez le blog de Zhheo pour plus d\'informations.',
+      'Hexo is a fast, simple, and powerful blog framework.': 'Hexo est un framework de blog rapide, simple et puissant.',
+      
+      // TOC
+      'Star on GitHub': 'Étoiler sur GitHub',
+      'Create Issues': 'Créer des Issues',
+      'On This Page': 'Sur cette page',
+
+      // Footer
+      'FOOTER_CREDIT': 'Fait avec ❤️ par [**Wang Zhuo**](https://github.com/everfu/)',
+
+      'Edit this page': 'Modifier cette page',
+      'Back to Top': 'Retour en haut',
+
+      'Read more at': 'En savoir plus sur',
+
+      // Search
+      'Search documentation...': 'Rechercher dans la documentation...',
+      'Search...': 'Rechercher...',
+      'Light': 'Clair',
+      'Dark': 'Sombre',
+      'System': 'Système',
+
+      // Color Picker
+      'Customize': 'Personnaliser',
+      'Pick a style and color for the docs.': 'Choisissez un style et une couleur pour la documentation.',
+      'Color': 'Couleur',
+      'Radius': 'Rayon',
+      'Theme': 'Thème',
     },
   },
 }));

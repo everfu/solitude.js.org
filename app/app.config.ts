@@ -163,5 +163,8 @@ export default defineAppConfig({
       inAside: false,
       style: 'input',
     }
+  },
+  content: {
+    respectPathCase: true,
   }
 });
