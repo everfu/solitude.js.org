@@ -12,6 +12,6 @@ export const sponsorsJsonUrl = 'https://raw.githubusercontent.com/everfu/static/
 // fill this with your actual GitHub info, for example:
 export const gitConfig = {
   user: 'everfu',
-  repo: 'solitude-docs',
+  repo: 'solitude.js.org',
   branch: 'main',
 };
