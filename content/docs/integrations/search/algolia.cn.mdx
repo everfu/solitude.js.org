@@ -1,0 +1,34 @@
+---
+title: "Algolia 搜索"
+description: "Algolia 适合内容较多、需要托管搜索和排序控制的站点。"
+---
+## 用途
+
+Algolia 适合内容较多、需要托管搜索和排序控制的站点。
+
+## 安装
+
+<PmInstall name="hexo-algolia" />
+
+## 主题配置
+
+```yaml
+search:
+  enable: true
+  type: algolia
+```
+
+## Hexo 配置
+
+```yaml
+search:
+  path: search.xml
+  field: post
+  content: true
+```
+
+## 验证
+
+- 生成站点并确认搜索索引文件存在。
+- 分别搜索文章标题、标签和正文短语。
+- 确认私有草稿没有进入生成后的索引。

@@ -1,0 +1,31 @@
+---
+title: "Appearance"
+description: "Configure colors, display mode, fonts, CSS prefixes, and visual defaults."
+icon: "Palette"
+---
+## Purpose
+
+Appearance options shape the first impression of the site. Keep color, typography, and display mode consistent with the writing tone you want.
+
+## Example
+
+```yaml
+style:
+  color:
+    main: '#3b82f6'
+    dark: '#60a5fa'
+  darkmode:
+    enable: true
+    default: auto
+  font:
+    enable: true
+    family: Inter
+  css_prefix: true
+```
+
+## Review checklist
+
+- Text remains readable in light and dark modes.
+- Custom fonts load before layout shift becomes noticeable.
+- Theme colors pass contrast checks on buttons and links.
+- CSS prefixing is enabled only when you need broader browser support.

@@ -1,0 +1,33 @@
+---
+title: "Homepage"
+description: "Configure homepage recommendations, top banner, groups, and entry modules."
+icon: "House"
+---
+## Purpose
+
+The homepage introduces the site and guides readers toward recent or important content. Use it to show a small number of deliberate choices instead of every available module.
+
+## Example
+
+```yaml
+home:
+  top:
+    enable: true
+    banner:
+      title: Welcome
+      description: Notes, projects, and essays
+    recommend:
+      enable: true
+      posts:
+        - /posts/hello-solitude/
+        - /posts/theme-notes/
+  groups:
+    enable: true
+```
+
+## Recommended workflow
+
+1. Start with the top banner and recent posts.
+2. Add recommendations only for evergreen content.
+3. Add groups when readers need clear entry points.
+4. Revisit the homepage after publishing several posts.

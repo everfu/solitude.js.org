@@ -1,0 +1,64 @@
+---
+title: "Music Gallery"
+description: "Configure a dedicated music page backed by a data file and optional Meting API settings."
+---
+## Purpose
+
+Configure a dedicated music page backed by a data file and optional Meting API settings.
+
+## Create the page
+
+Create a page under `source/music/index.md` and set a clear title.
+
+```md
+---
+title: Music Gallery
+date: 2026-01-01
+type: music
+---
+```
+
+## Create the data file
+
+Put repeatable content in `source/_data/music.yml`.
+
+```yaml
+items:
+  - name: Example item
+    description: Replace this with your own content.
+    link: https://example.com
+```
+
+## Theme configuration
+
+Enable the page module in the theme configuration when the feature requires a switch.
+
+```yaml
+pages:
+  music:
+    enable: true
+    data: music.yml
+```
+
+## File structure
+
+<Files>
+  <File name="Blog Directory" />
+  <File name="source" />
+  <File name="_data" />
+  <File name="music.yml" />
+  <File name="music" />
+  <File name="index.md" />
+</Files>
+
+## Field reference
+
+- `name`: display name.
+- `description`: short explanatory text.
+- `link`: optional external or internal URL.
+- `cover`: optional image path when the page layout supports covers.
+- `tags`: optional labels used for grouping or filtering.
+
+<Callout type="success">
+Start with one or two items, confirm the page renders, then expand the data file.
+</Callout>

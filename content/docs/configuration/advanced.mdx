@@ -1,0 +1,40 @@
+---
+title: "Advanced Configuration"
+description: "Configure optional advanced features such as math, verification, extensions, PWA, and word count."
+icon: "SlidersHorizontal"
+---
+## Purpose
+
+Advanced options are useful after the basic site works. Enable them one at a time so problems are easy to trace.
+
+## Example
+
+```yaml
+wordcount:
+  enable: true
+
+katex:
+  enable: true
+  per_page: true
+
+verification:
+  google: ''
+  bing: ''
+
+extend:
+  css:
+    - /css/custom.css
+  js:
+    - /js/custom.js
+
+pwa:
+  enable: false
+```
+
+## Feature notes
+
+- Word count usually requires the Hexo word count plugin.
+- Math rendering should be enabled only on pages that need formulas when possible.
+- Verification tokens belong to search engines and webmaster platforms.
+- Custom CSS and JS should be versioned with your blog source.
+- PWA requires careful testing of cache behavior after deployment.

@@ -1,0 +1,35 @@
+---
+title: "文章配置"
+description: "配置文章默认行为、过期提醒、相关文章和文章列表。"
+icon: "FileText"
+---
+## 用途
+
+文章配置控制文章页的默认行为。单篇文章仍然可以通过 Front Matter 覆盖其中许多设置。
+
+## 示例
+
+```yaml
+post:
+  copyright:
+    enable: true
+    license: CC BY-NC-SA 4.0
+  expiration:
+    enable: true
+    days: 180
+  related:
+    enable: true
+    limit: 6
+  list:
+    date: true
+    tags: true
+    categories: true
+```
+
+## 什么时候按文章覆盖
+
+当某篇文章需要特殊行为时，使用 Front Matter，例如隐藏封面、关闭评论、置顶文章或设置自定义描述。
+
+<Callout type="info">
+主题默认配置应该描述大多数文章的共同规则；单篇 Front Matter 用来描述例外。
+</Callout>

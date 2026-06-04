@@ -1,0 +1,15 @@
+{
+  "title": "Features",
+  "icon": "BookMarked",
+  "pages": [
+    "music",
+    "brevity",
+    "about",
+    "links",
+    "equipment",
+    "message",
+    "recent-comments",
+    "bangumi",
+    "gallery"
+  ]
+}

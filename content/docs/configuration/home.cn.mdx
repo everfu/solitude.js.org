@@ -1,0 +1,33 @@
+---
+title: "首页配置"
+description: "配置首页推荐、顶部横幅、分组和入口模块。"
+icon: "House"
+---
+## 用途
+
+首页用于介绍站点，并把读者引导到近期或重要内容。它应该展示少量有意选择的入口，而不是堆满所有可用模块。
+
+## 示例
+
+```yaml
+home:
+  top:
+    enable: true
+    banner:
+      title: 欢迎
+      description: 笔记、项目与文章
+    recommend:
+      enable: true
+      posts:
+        - /posts/hello-solitude/
+        - /posts/theme-notes/
+  groups:
+    enable: true
+```
+
+## 推荐流程
+
+1. 先启用顶部横幅和近期文章。
+2. 只把长期有价值的内容放进推荐位。
+3. 当读者需要明确入口时再添加分组。
+4. 发布一批文章后，再回头整理首页。

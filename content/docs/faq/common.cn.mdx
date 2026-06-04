@@ -1,0 +1,19 @@
+---
+title: "常见问题"
+description: "Solitude 安装和配置中的高频问题。"
+---
+## 主题没有生效
+
+检查 Hexo 根配置中是否存在 `theme: solitude`。然后运行 `hexo clean` 再重新生成。
+
+## 图片无法加载
+
+使用生成后站点中真实存在的路径。如果图片放在 `source/img/avatar.png`，引用路径应写成 `/img/avatar.png`。
+
+## 特色页面是空白
+
+确认两部分都存在：`source/<page>/index.md` 下的页面文件，以及 `source/_data` 下对应的数据文件。
+
+## 搜索没有结果
+
+重新生成站点并确认搜索索引文件存在。托管搜索还要检查爬虫凭据和索引名称是否与服务商后台一致。

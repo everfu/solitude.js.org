@@ -1,0 +1,41 @@
+---
+title: "Front Matter"
+description: "Use Front Matter to control post and page metadata in Hexo and Solitude."
+icon: "FilePenLine"
+---
+## Purpose
+
+Front Matter is the metadata block at the top of a Markdown file. Hexo reads it first, then Solitude uses those values to render covers, descriptions, tags, categories, comments, and page-specific behavior.
+
+## Basic example
+
+```md
+---
+title: Hello Solitude
+date: 2026-01-01 10:00:00
+updated: 2026-01-02 12:00:00
+description: Notes from the first Solitude setup.
+tags:
+  - Hexo
+  - Solitude
+categories:
+  - Blog
+cover: /img/covers/hello.jpg
+comments: true
+---
+```
+
+## Common fields
+
+- `title`: page or post title.
+- `date`: publish time.
+- `updated`: last meaningful update time.
+- `description`: summary used by cards, SEO, and previews.
+- `tags`: topic labels.
+- `categories`: broader content grouping.
+- `cover`: image used by cards and article header.
+- `comments`: whether comments are enabled for this page.
+
+## Page-specific notes
+
+Feature pages often require a matching layout or data file. Keep the Front Matter focused on page identity, then put repeatable data in `source/_data`.

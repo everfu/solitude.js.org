@@ -1,0 +1,34 @@
+---
+title: "DocSearch"
+description: "DocSearch is designed for documentation sites that qualify for Algolia DocSearch crawling."
+---
+## Purpose
+
+DocSearch is designed for documentation sites that qualify for Algolia DocSearch crawling.
+
+## Install
+
+<PmInstall name="@docsearch/js" />
+
+## Theme configuration
+
+```yaml
+search:
+  enable: true
+  type: docsearch
+```
+
+## Hexo configuration
+
+```yaml
+search:
+  path: search.xml
+  field: post
+  content: true
+```
+
+## Verify
+
+- Generate the site and confirm the search index file exists.
+- Search for a post title, a tag, and a phrase from the article body.
+- Confirm private drafts are not included in the generated index.

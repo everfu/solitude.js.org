@@ -1,0 +1,36 @@
+---
+title: "站点配置"
+description: "配置 Solitude 使用的站点身份、语言、链接和公共资源。"
+icon: "Globe"
+---
+## 用途
+
+站点配置决定主题中反复出现的身份信息：标题、副标题、作者、语言行为和公共资源路径。
+
+## 最小示例
+
+```yaml
+# _config.yml
+title: 我的博客
+subtitle: 笔记与文章
+author: 你的名字
+language: zh-CN
+url: https://example.com
+
+# _config.solitude.yml
+site:
+  name: 我的博客
+  description: 你的名字的笔记与文章
+  icon: /img/avatar.png
+```
+
+## 检查重点
+
+- `url` 与最终部署域名一致。
+- 头像、Logo、favicon 等路径能在生成后的站点访问。
+- Hexo 和主题中的语言设置与内容语言一致。
+- 公开联系方式指向稳定账号，不使用临时测试账号。
+
+## 常见字段
+
+站点规范信息优先写在 Hexo 根配置；Solitude 配置负责这些信息在主题模块中的展示方式。

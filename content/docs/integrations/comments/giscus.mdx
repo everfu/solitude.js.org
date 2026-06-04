@@ -1,0 +1,41 @@
+---
+title: "Giscus Comments"
+description: "Giscus uses GitHub Discussions and works well for developer-oriented sites."
+---
+## Purpose
+
+Giscus uses GitHub Discussions and works well for developer-oriented sites.
+
+## Backend setup
+
+Create or configure the provider backend first. Keep the provider dashboard open while editing the theme configuration so IDs and domains can be copied exactly.
+
+## Theme configuration
+
+```yaml
+comment:
+  enable: true
+  use: giscus
+  giscus:
+    enable: true
+    envId: ''
+    serverURL: ''
+```
+
+## Page behavior
+
+Comments can usually be controlled globally and then overridden by Front Matter.
+
+```md
+---
+title: Example Post
+comments: true
+---
+```
+
+## Verify
+
+- The comment container appears on article pages.
+- The browser console has no provider initialization errors.
+- The configured domain matches the deployed site domain.
+- Test comments can be created, loaded, and moderated.

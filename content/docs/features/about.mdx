@@ -1,0 +1,64 @@
+---
+title: "About Page"
+description: "Build a rich profile page with personal information, skills, timeline, and custom blocks."
+---
+## Purpose
+
+Build a rich profile page with personal information, skills, timeline, and custom blocks.
+
+## Create the page
+
+Create a page under `source/about/index.md` and set a clear title.
+
+```md
+---
+title: About Page
+date: 2026-01-01
+type: about
+---
+```
+
+## Create the data file
+
+Put repeatable content in `source/_data/about.yml`.
+
+```yaml
+items:
+  - name: Example item
+    description: Replace this with your own content.
+    link: https://example.com
+```
+
+## Theme configuration
+
+Enable the page module in the theme configuration when the feature requires a switch.
+
+```yaml
+pages:
+  about:
+    enable: true
+    data: about.yml
+```
+
+## File structure
+
+<Files>
+  <File name="Blog Directory" />
+  <File name="source" />
+  <File name="_data" />
+  <File name="about.yml" />
+  <File name="about" />
+  <File name="index.md" />
+</Files>
+
+## Field reference
+
+- `name`: display name.
+- `description`: short explanatory text.
+- `link`: optional external or internal URL.
+- `cover`: optional image path when the page layout supports covers.
+- `tags`: optional labels used for grouping or filtering.
+
+<Callout type="success">
+Start with one or two items, confirm the page renders, then expand the data file.
+</Callout>

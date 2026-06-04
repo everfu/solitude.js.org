@@ -1,0 +1,34 @@
+---
+title: "本地搜索"
+description: "本地搜索在 Hexo 生成阶段构建索引，不依赖托管搜索服务。"
+---
+## 用途
+
+本地搜索在 Hexo 生成阶段构建索引，不依赖托管搜索服务。
+
+## 安装
+
+<PmInstall name="hexo-generator-search" />
+
+## 主题配置
+
+```yaml
+search:
+  enable: true
+  type: local-search
+```
+
+## Hexo 配置
+
+```yaml
+search:
+  path: search.xml
+  field: post
+  content: true
+```
+
+## 验证
+
+- 生成站点并确认搜索索引文件存在。
+- 分别搜索文章标题、标签和正文短语。
+- 确认私有草稿没有进入生成后的索引。

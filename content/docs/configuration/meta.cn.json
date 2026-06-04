@@ -1,0 +1,14 @@
+{
+  "title": "配置",
+  "icon": "Settings",
+  "pages": [
+    "site",
+    "navigation",
+    "home",
+    "sidebar",
+    "posts",
+    "seo",
+    "appearance",
+    "advanced"
+  ]
+}

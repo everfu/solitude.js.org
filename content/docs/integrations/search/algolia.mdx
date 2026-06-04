@@ -1,0 +1,34 @@
+---
+title: "Algolia Search"
+description: "Algolia is useful for larger sites that need fast hosted search and ranking control."
+---
+## Purpose
+
+Algolia is useful for larger sites that need fast hosted search and ranking control.
+
+## Install
+
+<PmInstall name="hexo-algolia" />
+
+## Theme configuration
+
+```yaml
+search:
+  enable: true
+  type: algolia
+```
+
+## Hexo configuration
+
+```yaml
+search:
+  path: search.xml
+  field: post
+  content: true
+```
+
+## Verify
+
+- Generate the site and confirm the search index file exists.
+- Search for a post title, a tag, and a phrase from the article body.
+- Confirm private drafts are not included in the generated index.

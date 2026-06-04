@@ -1,0 +1,32 @@
+---
+title: "Sidebar"
+description: "Configure profile cards, table of contents, tags, and site information blocks."
+icon: "PanelRight"
+---
+## Purpose
+
+The sidebar supports reading. It can show author identity, article navigation, popular tags, and site information, but each extra block competes with the article body.
+
+## Example
+
+```yaml
+aside:
+  enable: true
+  card:
+    enable: true
+    name: Your Name
+    description: Writing about web, design, and life
+  toc:
+    enable: true
+  tags:
+    enable: true
+  siteinfo:
+    enable: true
+```
+
+## Practical defaults
+
+- Keep the table of contents enabled for long posts.
+- Use the profile card if the site is personal or author-led.
+- Disable low-value counters until they contain meaningful data.
+- Check the mobile layout after adding several sidebar modules.

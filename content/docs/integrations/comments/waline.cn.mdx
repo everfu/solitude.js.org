@@ -1,0 +1,41 @@
+---
+title: "Waline 评论"
+description: "Waline 提供账号、反应和灵活部署能力。"
+---
+## 用途
+
+Waline 提供账号、反应和灵活部署能力。
+
+## 配置后端
+
+先创建或配置服务端。编辑主题配置时建议打开服务商后台，确保 ID、域名和服务地址能准确复制。
+
+## 主题配置
+
+```yaml
+comment:
+  enable: true
+  use: waline
+  waline:
+    enable: true
+    envId: ''
+    serverURL: ''
+```
+
+## 页面行为
+
+评论通常可以先全局开启，再通过 Front Matter 对单篇文章覆盖。
+
+```md
+---
+title: 示例文章
+comments: true
+---
+```
+
+## 验证
+
+- 文章页能看到评论容器。
+- 浏览器控制台没有服务初始化错误。
+- 配置的域名与部署域名一致。
+- 测试评论可以发布、加载和审核。

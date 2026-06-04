@@ -1,0 +1,37 @@
+---
+title: "导航菜单"
+description: "配置菜单分组、页面链接、图标按钮和外部入口。"
+icon: "Navigation"
+---
+## 用途
+
+导航要快速回答一个问题：访客接下来可以去哪里？主菜单保持精简，次要链接放进分组或图标按钮。
+
+## 示例
+
+```yaml
+menu:
+  home:
+    name: 首页
+    url: /
+    icon: fas fa-home
+  archives:
+    name: 归档
+    url: /archives/
+    icon: fas fa-box-archive
+  about:
+    name: 关于
+    url: /about/
+    icon: fas fa-user
+
+rightside:
+  readmode: true
+  aside: true
+```
+
+## 配置建议
+
+- 把常用阅读路径放在前面：首页、归档、分类、标签、关于。
+- 外部资料使用完整 URL，并保持打开方式一致。
+- 不要把所有特色页面都塞进主菜单；数量变多时使用分组。
+- 图标名称要与主题构建中使用的图标库保持一致。

@@ -1,0 +1,40 @@
+---
+title: "高级配置"
+description: "配置数学公式、网站验证、扩展、PWA 和字数统计等可选高级功能。"
+icon: "SlidersHorizontal"
+---
+## 用途
+
+高级配置适合在基础站点已经稳定后再启用。建议一次只打开一个功能，方便定位问题。
+
+## 示例
+
+```yaml
+wordcount:
+  enable: true
+
+katex:
+  enable: true
+  per_page: true
+
+verification:
+  google: ''
+  bing: ''
+
+extend:
+  css:
+    - /css/custom.css
+  js:
+    - /js/custom.js
+
+pwa:
+  enable: false
+```
+
+## 功能说明
+
+- 字数统计通常需要额外安装 Hexo 字数统计插件。
+- 数学公式建议尽量按需启用。
+- 网站验证字段来自搜索引擎或站长平台。
+- 自定义 CSS 和 JS 应该跟随博客源码一起管理。
+- PWA 会影响缓存行为，部署后需要仔细测试。

@@ -1,0 +1,8 @@
+{
+  "title": "Integrations",
+  "icon": "Plug",
+  "pages": [
+    "search",
+    "comments"
+  ]
+}

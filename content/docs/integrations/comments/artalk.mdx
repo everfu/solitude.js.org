@@ -1,0 +1,41 @@
+---
+title: "Artalk Comments"
+description: "Artalk is a self-hosted comment system with moderation and notification features."
+---
+## Purpose
+
+Artalk is a self-hosted comment system with moderation and notification features.
+
+## Backend setup
+
+Create or configure the provider backend first. Keep the provider dashboard open while editing the theme configuration so IDs and domains can be copied exactly.
+
+## Theme configuration
+
+```yaml
+comment:
+  enable: true
+  use: artalk
+  artalk:
+    enable: true
+    envId: ''
+    serverURL: ''
+```
+
+## Page behavior
+
+Comments can usually be controlled globally and then overridden by Front Matter.
+
+```md
+---
+title: Example Post
+comments: true
+---
+```
+
+## Verify
+
+- The comment container appears on article pages.
+- The browser console has no provider initialization errors.
+- The configured domain matches the deployed site domain.
+- Test comments can be created, loaded, and moderated.

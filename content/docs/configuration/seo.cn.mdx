@@ -1,0 +1,64 @@
+---
+title: "SEO"
+description: "配置 Solitude 站点的元数据、canonical、社交预览、robots、sitemap 和语言版本。"
+icon: "SearchCheck"
+---
+## 作用
+
+SEO 配置决定搜索引擎和社交平台如何理解 Solitude 站点。最重要的字段包括 canonical 站点 URL、页面标题、描述、预览图、robots 规则、sitemap 和语言版本关系。
+
+## Canonical 站点 URL
+
+提交搜索引擎前，先确认最终公开域名。
+
+```yaml
+# _config.yml
+url: https://example.com
+
+# _config.solitude.yml
+site:
+  name: 我的博客
+  description: 来自作者的笔记与文章
+```
+
+这里应该填写生产域名，而不是临时预览地址。如果域名变化，更新 URL 并重新生成站点，让 canonical、Open Graph 和 sitemap 都指向同一个主机。
+
+## 标题与描述
+
+每个可索引页面都应该有唯一标题和简短描述。站点身份放在 Hexo 根配置中，页面级元数据放在 Front Matter 中。
+
+```yaml
+---
+title: 部署 Solitude
+description: 发布 Solitude 博客时用于检查稳定元数据的清单。
+---
+```
+
+描述应该写给真实读者看。它不直接保证排名，但会影响搜索结果和链接预览中页面被理解的方式。
+
+## 社交预览
+
+Open Graph 和 Twitter Card 通常复用页面标题、描述、canonical URL 和预览图。建议使用生成站点内的稳定图片路径，并确认最终图片地址无需登录即可访问。
+
+## Robots 与 sitemap
+
+公开页面应允许抓取，并在生产域名稳定后暴露 sitemap。不要阻止渲染页面预览所需的 CSS、JavaScript 或图片资源。
+
+```text
+User-agent: *
+Allow: /
+Sitemap: https://example.com/sitemap.xml
+```
+
+## 语言版本
+
+多语言站点应让每个翻译页面指向对应语言版本。所有语言都使用同一个 canonical 主机，避免生产域名和预览域名混用。
+
+## 检查项
+
+- 站点 URL 与最终部署域名一致。
+- 重要页面都有唯一标题和描述。
+- 预览图可以正常访问。
+- `robots.txt` 指向 sitemap。
+- sitemap 包含公开页面的 canonical URL。
+- 翻译页面之间有正确的语言版本关系。

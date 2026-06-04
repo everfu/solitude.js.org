@@ -1,0 +1,41 @@
+---
+title: "Front Matter"
+description: "使用 Front Matter 控制 Hexo 与 Solitude 中的文章和页面元数据。"
+icon: "FilePenLine"
+---
+## 用途
+
+Front Matter 是 Markdown 文件顶部的元数据块。Hexo 会先读取它，Solitude 再根据这些值渲染封面、描述、标签、分类、评论和页面级行为。
+
+## 基础示例
+
+```md
+---
+title: Hello Solitude
+date: 2026-01-01 10:00:00
+updated: 2026-01-02 12:00:00
+description: 第一次配置 Solitude 的记录。
+tags:
+  - Hexo
+  - Solitude
+categories:
+  - 博客
+cover: /img/covers/hello.jpg
+comments: true
+---
+```
+
+## 常见字段
+
+- `title`：文章或页面标题。
+- `date`：发布时间。
+- `updated`：最后一次有意义的更新时间。
+- `description`：用于卡片、SEO 和预览摘要。
+- `tags`：主题标签。
+- `categories`：更大的内容分组。
+- `cover`：卡片和文章头图使用的图片。
+- `comments`：是否为当前页面启用评论。
+
+## 页面专属说明
+
+特色页面通常还需要匹配布局或数据文件。Front Matter 只负责页面身份；可重复的数据建议放进 `source/_data`。

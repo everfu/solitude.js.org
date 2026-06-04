@@ -1,0 +1,34 @@
+---
+title: "DocSearch 搜索"
+description: "DocSearch 面向符合 Algolia DocSearch 抓取条件的文档站。"
+---
+## 用途
+
+DocSearch 面向符合 Algolia DocSearch 抓取条件的文档站。
+
+## 安装
+
+<PmInstall name="@docsearch/js" />
+
+## 主题配置
+
+```yaml
+search:
+  enable: true
+  type: docsearch
+```
+
+## Hexo 配置
+
+```yaml
+search:
+  path: search.xml
+  field: post
+  content: true
+```
+
+## 验证
+
+- 生成站点并确认搜索索引文件存在。
+- 分别搜索文章标题、标签和正文短语。
+- 确认私有草稿没有进入生成后的索引。

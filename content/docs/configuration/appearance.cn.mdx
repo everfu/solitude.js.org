@@ -1,0 +1,31 @@
+---
+title: "外观配置"
+description: "配置颜色、显示模式、字体、CSS 前缀和视觉默认值。"
+icon: "Palette"
+---
+## 用途
+
+外观配置决定站点的第一印象。颜色、字体和显示模式应该和你希望呈现的写作气质保持一致。
+
+## 示例
+
+```yaml
+style:
+  color:
+    main: '#3b82f6'
+    dark: '#60a5fa'
+  darkmode:
+    enable: true
+    default: auto
+  font:
+    enable: true
+    family: Inter
+  css_prefix: true
+```
+
+## 检查清单
+
+- 明暗模式下文字都保持可读。
+- 自定义字体不会造成明显布局跳动。
+- 主题色在按钮和链接上有足够对比度。
+- 只有需要更广浏览器兼容性时才开启 CSS 前缀。

@@ -1,0 +1,37 @@
+---
+title: "Navigation"
+description: "Configure menu groups, page links, icon buttons, and external entries."
+icon: "Navigation"
+---
+## Purpose
+
+Navigation should answer one question quickly: where can visitors go next? Keep the primary menu short and move secondary links into groups or icon buttons.
+
+## Example
+
+```yaml
+menu:
+  home:
+    name: Home
+    url: /
+    icon: fas fa-home
+  archives:
+    name: Archives
+    url: /archives/
+    icon: fas fa-box-archive
+  about:
+    name: About
+    url: /about/
+    icon: fas fa-user
+
+rightside:
+  readmode: true
+  aside: true
+```
+
+## Design guidance
+
+- Put daily reading paths first: Home, Archives, Categories, Tags, About.
+- Use absolute URLs for external profiles and mark them consistently.
+- Avoid placing every feature page in the top menu; use groups when the list grows.
+- Keep icon names consistent with the icon library used by your theme build.

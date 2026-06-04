@@ -1,0 +1,29 @@
+---
+title: "Tags Plugin"
+description: "Use the Solitude tags plugin to write richer Markdown content."
+icon: "BadgePlus"
+---
+## Purpose
+
+The tags plugin adds theme-aware shortcodes for content that plain Markdown cannot express comfortably. Use it for small visual blocks, not as a replacement for clean article structure.
+
+## Install
+
+<PmInstall name="hexo-solitude-tag" />
+
+## Usage
+
+After installing the plugin, restart Hexo and use the tags documented by the plugin in posts or pages.
+
+```markdown
+{% note info %}
+This is a highlighted note.
+{% endnote %}
+```
+
+## Good practice
+
+- Prefer Markdown headings, lists, and tables for ordinary writing.
+- Use theme tags when the content needs a special visual treatment.
+- Keep tags balanced and avoid nesting complex blocks deeply.
+- Test generated pages after upgrading the plugin.

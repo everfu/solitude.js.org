@@ -1,0 +1,9 @@
+{
+  "title": "搜索",
+  "icon": "Search",
+  "pages": [
+    "local-search",
+    "algolia",
+    "docsearch"
+  ]
+}

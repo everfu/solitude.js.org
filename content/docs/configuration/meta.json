@@ -1,0 +1,14 @@
+{
+  "title": "Configuration",
+  "icon": "Settings",
+  "pages": [
+    "site",
+    "navigation",
+    "home",
+    "sidebar",
+    "posts",
+    "seo",
+    "appearance",
+    "advanced"
+  ]
+}

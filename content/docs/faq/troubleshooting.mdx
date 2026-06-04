@@ -1,0 +1,22 @@
+---
+title: "Troubleshooting"
+description: "A practical checklist for build, layout, and integration problems."
+---
+## Build errors
+
+- Run `hexo clean` before generating.
+- Check YAML indentation in `_config.yml` and `_config.solitude.yml`.
+- Temporarily disable the last feature you enabled.
+- Confirm required plugins are installed in the blog project.
+
+## Layout problems
+
+- Check whether a custom CSS file overrides theme variables.
+- Test with a small number of sidebar and homepage modules.
+- Make sure image dimensions are reasonable for the layout.
+
+## Integration problems
+
+- Verify provider IDs, domains, and API endpoints.
+- Test on the deployed domain when the provider requires domain allowlists.
+- Check the browser console and network panel before changing unrelated options.

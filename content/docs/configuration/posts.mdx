@@ -1,0 +1,35 @@
+---
+title: "Posts"
+description: "Configure default post behavior, expiration reminders, related posts, and article lists."
+icon: "FileText"
+---
+## Purpose
+
+Post configuration controls how article pages behave by default. Front Matter can still override many settings on a single post.
+
+## Example
+
+```yaml
+post:
+  copyright:
+    enable: true
+    license: CC BY-NC-SA 4.0
+  expiration:
+    enable: true
+    days: 180
+  related:
+    enable: true
+    limit: 6
+  list:
+    date: true
+    tags: true
+    categories: true
+```
+
+## When to override per post
+
+Use Front Matter when one article needs special behavior, such as hiding the cover, disabling comments, pinning the article, or using a custom description.
+
+<Callout type="info">
+Theme defaults should describe the common case. Per-post Front Matter should describe exceptions.
+</Callout>

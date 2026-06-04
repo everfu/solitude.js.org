@@ -1,0 +1,29 @@
+---
+title: "主题标签"
+description: "使用 Solitude 主题标签插件编写更丰富的 Markdown 内容。"
+icon: "BadgePlus"
+---
+## 用途
+
+主题标签插件提供与 Solitude 视觉风格匹配的短代码，用来表达普通 Markdown 不太方便承载的内容。它适合做少量视觉增强，不应该替代清晰的文章结构。
+
+## 安装
+
+<PmInstall name="hexo-solitude-tag" />
+
+## 使用
+
+安装后重启 Hexo，即可在文章或页面中使用插件提供的标签。
+
+```markdown
+{% note info %}
+这是一条高亮信息。
+{% endnote %}
+```
+
+## 使用建议
+
+- 普通写作优先使用 Markdown 标题、列表和表格。
+- 只有需要特殊视觉呈现时再使用主题标签。
+- 保持标签成对闭合，避免深层嵌套复杂块。
+- 插件升级后检查生成页面是否正常。

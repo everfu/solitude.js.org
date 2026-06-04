@@ -1,0 +1,19 @@
+---
+title: "Common Questions"
+description: "Answers to frequent Solitude setup and configuration questions."
+---
+## The theme is not applied
+
+Check that Hexo's root configuration contains `theme: solitude`. Then run `hexo clean` before generating again.
+
+## Images do not load
+
+Use paths that exist under the generated public site. When an image is stored in `source/img/avatar.png`, reference it as `/img/avatar.png`.
+
+## A feature page is blank
+
+Confirm both parts exist: the page file under `source/<page>/index.md` and the matching data file under `source/_data`.
+
+## Search has no results
+
+Regenerate the site and confirm the search index file exists. For hosted search, also check that crawler credentials and index names match the provider dashboard.

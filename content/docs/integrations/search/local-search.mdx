@@ -1,0 +1,34 @@
+---
+title: "Local Search"
+description: "Local search builds an index during Hexo generation and does not require a hosted search service."
+---
+## Purpose
+
+Local search builds an index during Hexo generation and does not require a hosted search service.
+
+## Install
+
+<PmInstall name="hexo-generator-search" />
+
+## Theme configuration
+
+```yaml
+search:
+  enable: true
+  type: local-search
+```
+
+## Hexo configuration
+
+```yaml
+search:
+  path: search.xml
+  field: post
+  content: true
+```
+
+## Verify
+
+- Generate the site and confirm the search index file exists.
+- Search for a post title, a tag, and a phrase from the article body.
+- Confirm private drafts are not included in the generated index.
