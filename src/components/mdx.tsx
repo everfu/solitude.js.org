@@ -10,6 +10,7 @@ import { Step, Steps } from 'fumadocs-ui/components/steps';
 import Link from 'next/link';
 import type { ComponentProps, ImgHTMLAttributes, ReactNode } from 'react';
 import { cn } from '@/lib/cn';
+import { RandomAdCard } from '@/components/ads/random-ad-card';
 
 function Badge({ children, type = 'info' }: { children: ReactNode; type?: string }) {
   return <span className={`fd-badge fd-badge-${type}`}>{children}</span>;
@@ -109,6 +110,8 @@ export function getMDXComponents(components?: MDXComponents) {
     img: Image,
     Link,
     PmInstall,
+    RandomAd: RandomAdCard,
+    RandomAdCard,
     ReadMore,
     Step,
     Steps,

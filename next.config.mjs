@@ -23,6 +23,10 @@ const config = {
         protocol: 'https',
         hostname: 'pic1.afdiancdn.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'img.alicdn.com',
+      }
     ],
   },
   async redirects() {

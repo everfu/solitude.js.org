@@ -12,7 +12,9 @@ export default async function Layout({ params, children }: LayoutProps<'/[lang]'
 
   return (
     <div lang={lang} className={`${inter.className} flex min-h-screen flex-col`}>
-      <RootProvider i18n={getI18nProvider(lang)}>{children}</RootProvider>
+      <RootProvider i18n={getI18nProvider(lang)} theme={{ enabled: false }}>
+        {children}
+      </RootProvider>
     </div>
   );
 }

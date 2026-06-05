@@ -13,6 +13,7 @@ import type { Metadata } from 'next';
 import { createRelativeLink } from 'fumadocs-ui/mdx';
 import { docsRoute, gitConfig } from '@/lib/shared';
 import { createDocsMetadata } from '@/lib/seo';
+import { RandomAdCard } from '@/components/ads/random-ad-card';
 
 export default async function Page(props: PageProps<'/[lang]/docs/[[...slug]]'>) {
   const params = await props.params;
@@ -32,6 +33,7 @@ export default async function Page(props: PageProps<'/[lang]/docs/[[...slug]]'>)
       full={page.data.full}
       tableOfContent={{
         style: 'clerk',
+        footer: <RandomAdCard placement="docs-sidebar" className="mt-5" />,
       }}
     >
       <DocsTitle className="text-[1.75em] font-semibold">{page.data.title}</DocsTitle>

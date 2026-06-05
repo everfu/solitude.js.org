@@ -1,6 +1,7 @@
 import type { BaseLayoutProps, LinkItemType } from 'fumadocs-ui/layouts/shared';
 import { BookOpen, Eye, Heart } from 'lucide-react';
 import Image from 'next/image';
+import { ThemeSwitch } from '@/components/theme-switch';
 import { appName, gitConfig } from './shared';
 
 function withLocale(locale: string, path: string) {
@@ -74,6 +75,9 @@ export function baseOptions(locale = 'en'): BaseLayoutProps {
       ),
     },
     links: linkItems(locale),
+    slots: {
+      themeSwitch: ThemeSwitch,
+    },
   };
 }
 
