@@ -1,0 +1,57 @@
+---
+title: "升级到 4.0"
+description: "将 Solitude 3.x 博客迁移到 4.0 的 ES 模块运行时。"
+icon: "RefreshCw"
+---
+Solitude 4.0 是一次主要运行时升级，迁移基线为官方 `v3.0.20...v4.0.0` 比较。开始前请备份博客源码和配置。
+
+## 1. 更新主题
+
+<Tabs items={["npm", "Git"]}>
+<Tab>
+
+```bash
+npm install hexo-theme-solitude@4
+```
+
+</Tab>
+<Tab>
+
+```bash
+git -C themes/solitude fetch --tags
+git -C themes/solitude switch --detach v4.0.0
+```
+
+</Tab>
+</Tabs>
+
+## 2. 合并配置
+
+把 v4 默认配置复制到临时文件，再将自己的值合并进去。不要使用旧 3.x 配置覆盖新文件。
+
+重点检查以下新增或变更项：
+
+- `page.links.async_threshold` 控制友链异步渲染阈值。
+- `theme_color.nav_hover_text.light/dark` 控制导航悬停文字对比度。
+- `search.ai.enable/url` 为本地搜索增加外部 AI 入口。
+- `right_menu.custom_list[].click` 应调用 `Solitude.randomPost()` 或其他受支持的 `Solitude` 动作。
+
+## 3. 迁移自定义 JavaScript
+
+将 `pjax.loadUrl`、`utils.getScript`、`utils.getCSS`、`GLOBAL_CONFIG` 和 `PAGE_CONFIG` 的公开用法迁移到[浏览器 API](/cn/docs/configuration/browser-api) 中的接口。`sco`、`rm`、`ai`、`coverColor` 等松散对象不再是 4.0 扩展契约。
+
+自定义模板应使用 `data-solitude-action`，或在 `window.Solitude` 上注册函数，避免注入功能性内联事件。
+
+## 4. 检查 CDN 与自托管
+
+浏览器入口是 ES 模块。通过 CDN 或其他主机提供主题脚本时，必须使用同一主题版本的完整 `source/js/` 文件，并保留相对目录树；只上传 `main.js` 会导致相对导入失败。
+
+## 5. 清理并回归
+
+```bash
+hexo clean
+hexo generate
+hexo server
+```
+
+反复通过 PJAX 访问首页、文章、归档、友链和音乐页，并测试已启用的搜索与评论、明暗模式、右键菜单、自定义模板以及浏览器前进后退。

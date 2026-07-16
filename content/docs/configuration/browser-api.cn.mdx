@@ -1,0 +1,67 @@
+---
+title: "浏览器 API"
+description: "通过稳定浏览器 API 与 PJAX 生命周期扩展 Solitude 4。"
+icon: "FileText"
+---
+Solitude 4 通过 `window.Solitude` 提供稳定的浏览器扩展入口。具体功能对象和实现细节不属于公共契约。
+
+## 稳定方法
+
+| 方法 | 用途 |
+| --- | --- |
+| `navigate(url)` | 优先通过 PJAX 导航，不可用时执行完整页面跳转。 |
+| `refresh()` | 为当前页面重新初始化主题行为。 |
+| `copy(text)` | 使用主题交互复制文本。 |
+| `toggleTheme()` | 切换明暗模式。 |
+| `loadScript(url, options)` | 加载并缓存脚本请求；选项包括 `async` 和 `attributes`。 |
+| `loadStyle(url, options)` | 加载并缓存样式请求；选项包括 `id`。 |
+| `on(event, handler)` | 订阅 Solitude 生命周期事件，并返回取消订阅函数。 |
+
+```js
+const unsubscribe = window.Solitude.on('afterNavigate', (event) => {
+  console.log('当前页面：', event.detail.page)
+})
+
+window.Solitude.loadScript('/js/widget.js', {
+  attributes: { defer: '' },
+})
+```
+
+## 生命周期事件
+
+- `ready` 在首次初始化完成后触发，提供 `detail.config` 和 `detail.page`。
+- `beforeNavigate` 在 PJAX 替换页面前触发。
+- `afterNavigate` 在刷新完成后触发，提供 `detail.page`。
+- `themeChange` 在主题切换后触发，提供 `detail.mode`。
+
+页面级资源应在 `ready` 与 `afterNavigate` 后注册，并在下次导航前释放，避免每次页面切换都重复添加永久监听器。
+
+## 运行时配置
+
+`Solitude.config` 与 `Solitude.page` 读取当前文档中的 JSON 配置节点。请把它们视为只读运行时上下文；需要修改行为时，应更新源配置并重新生成站点。
+
+## 自定义模板动作
+
+```html
+<button data-solitude-action="openNewsletter">订阅</button>
+```
+
+```js
+window.Solitude.openNewsletter = function () {
+  window.Solitude.navigate('/newsletter/')
+}
+```
+
+事件委托还支持 `data-solitude-url`、`data-solitude-target`、`data-solitude-value`、`data-solitude-prevent="true"` 和 `data-solitude-stop="true"`。
+
+## 旧接口迁移
+
+| Solitude 3.x | Solitude 4.0 |
+| --- | --- |
+| `pjax.loadUrl(url)` | `Solitude.navigate(url)` |
+| `utils.getScript(url, attrs)` | `Solitude.loadScript(url, { attributes: attrs })` |
+| `utils.getCSS(url, id)` | `Solitude.loadStyle(url, { id })` |
+| `GLOBAL_CONFIG` | 只读 `Solitude.config` 上下文 |
+| `PAGE_CONFIG` | 只读 `Solitude.page` 上下文 |
+
+不要依赖 `sco`、`rm`、`ai` 或 `coverColor`。通过 CDN 或自托管主题 JavaScript 时，需要发布同一版本的完整 `source/js/` 文件树，确保 ES 模块相对导入可解析。

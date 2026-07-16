@@ -1,0 +1,448 @@
+{
+  "schemaVersion": 2,
+  "target": ".",
+  "generatedAt": "2026-07-16T11:20:50.369Z",
+  "score": 52,
+  "tenetCoverage": [
+    {
+      "tenetId": "clarity",
+      "name": "Clarity",
+      "status": "at-risk",
+      "findingIds": [
+        "ux.color.scale-wide",
+        "ux.type.scale-wide",
+        "ux.spacing.scale-wide",
+        "ux.depth.shadow-drift"
+      ],
+      "notes": [
+        "Color utility surface is too wide",
+        "Typography scale is drifting",
+        "Spacing scale is too loose"
+      ]
+    },
+    {
+      "tenetId": "feedback",
+      "name": "Feedback",
+      "status": "not-assessed",
+      "findingIds": [],
+      "notes": [
+        "Not assessable by static scan — needs rendered/behavioral evidence (screenshots analyzed by vision, interaction probes). Planned for a future release; until then this tenet is unverified, not verified-good."
+      ]
+    },
+    {
+      "tenetId": "control",
+      "name": "Control",
+      "status": "protected",
+      "findingIds": [],
+      "notes": [
+        "undo paths",
+        "confirmations"
+      ]
+    },
+    {
+      "tenetId": "consistency",
+      "name": "Consistency",
+      "status": "at-risk",
+      "findingIds": [
+        "ux.color.raw-hex",
+        "ux.color.scale-wide",
+        "ux.type.scale-wide",
+        "ux.spacing.scale-wide",
+        "ux.depth.shadow-drift",
+        "ux.maintainability.arbitrary-tailwind"
+      ],
+      "notes": [
+        "Raw colors are leaking into UI code",
+        "Color utility surface is too wide",
+        "Typography scale is drifting"
+      ]
+    },
+    {
+      "tenetId": "accessibility",
+      "name": "Accessibility",
+      "status": "protected",
+      "findingIds": [],
+      "notes": [
+        "focus visibility",
+        "text alternatives"
+      ]
+    },
+    {
+      "tenetId": "error-recovery",
+      "name": "Error Recovery",
+      "status": "not-assessed",
+      "findingIds": [],
+      "notes": [
+        "Not assessable by static scan — needs rendered/behavioral evidence (screenshots analyzed by vision, interaction probes). Planned for a future release; until then this tenet is unverified, not verified-good."
+      ]
+    },
+    {
+      "tenetId": "progressive-disclosure",
+      "name": "Progressive Disclosure",
+      "status": "not-assessed",
+      "findingIds": [],
+      "notes": [
+        "Not assessable by static scan — needs rendered/behavioral evidence (screenshots analyzed by vision, interaction probes). Planned for a future release; until then this tenet is unverified, not verified-good."
+      ]
+    },
+    {
+      "tenetId": "workflow-fit",
+      "name": "Workflow Fit",
+      "status": "at-risk",
+      "findingIds": [
+        "ux.spacing.scale-wide",
+        "ux.maintainability.arbitrary-tailwind"
+      ],
+      "notes": [
+        "Spacing scale is too loose",
+        "Too many arbitrary Tailwind values"
+      ]
+    },
+    {
+      "tenetId": "trust",
+      "name": "Trust",
+      "status": "at-risk",
+      "findingIds": [
+        "ux.color.raw-hex"
+      ],
+      "notes": [
+        "Raw colors are leaking into UI code"
+      ]
+    },
+    {
+      "tenetId": "state-continuity",
+      "name": "State Continuity",
+      "status": "protected",
+      "findingIds": [],
+      "notes": [
+        "persistent session state",
+        "draft preservation"
+      ]
+    }
+  ],
+  "trapRisks": [
+    {
+      "trapId": "ambiguous-affordance",
+      "name": "Ambiguous Affordance",
+      "status": "clear",
+      "riskScore": 0,
+      "findingIds": [],
+      "defaultFix": "Clarify labels, state styling, cursor/focus behavior, and primary/secondary action hierarchy."
+    },
+    {
+      "trapId": "missing-state",
+      "name": "Missing State",
+      "status": "clear",
+      "riskScore": 0,
+      "findingIds": [],
+      "defaultFix": "Add explicit default, loading, empty, error, success, disabled, focus, and selected states."
+    },
+    {
+      "trapId": "silent-system",
+      "name": "Silent System",
+      "status": "not-assessed",
+      "riskScore": 0,
+      "findingIds": [],
+      "defaultFix": "Add progress feedback, status copy, completion receipts, and failure reasons near the action.",
+      "note": "No static-scan evidence path exists for this trap — 'not-assessed' means unverified, not clear."
+    },
+    {
+      "trapId": "choice-overload",
+      "name": "Choice Overload",
+      "status": "watch",
+      "riskScore": 100,
+      "findingIds": [
+        "ux.color.scale-wide",
+        "ux.type.scale-wide",
+        "ux.spacing.scale-wide",
+        "ux.depth.shadow-drift"
+      ],
+      "defaultFix": "Group related choices, reduce simultaneous options, and reveal advanced controls after intent."
+    },
+    {
+      "trapId": "layout-instability",
+      "name": "Layout Instability",
+      "status": "watch",
+      "riskScore": 60,
+      "findingIds": [
+        "ux.spacing.scale-wide",
+        "ux.maintainability.arbitrary-tailwind"
+      ],
+      "defaultFix": "Add responsive constraints, stable dimensions, overflow rules, and route-level breakpoint coverage."
+    },
+    {
+      "trapId": "token-drift",
+      "name": "Token Drift",
+      "status": "present",
+      "riskScore": 100,
+      "findingIds": [
+        "ux.color.raw-hex",
+        "ux.color.scale-wide",
+        "ux.type.scale-wide",
+        "ux.spacing.scale-wide",
+        "ux.depth.shadow-drift",
+        "ux.maintainability.arbitrary-tailwind"
+      ],
+      "defaultFix": "Promote repeated colors, spacing, type, radius, and elevation into semantic tokens and variants."
+    },
+    {
+      "trapId": "inaccessible-interaction",
+      "name": "Inaccessible Interaction",
+      "status": "clear",
+      "riskScore": 0,
+      "findingIds": [],
+      "defaultFix": "Patch semantic markup, focus states, labels, alternatives, contrast, and reduced-motion behavior."
+    },
+    {
+      "trapId": "copy-theater",
+      "name": "Copy Theater",
+      "status": "clear",
+      "riskScore": 0,
+      "findingIds": [],
+      "defaultFix": "Replace decorative or generic copy with task-specific labels, outcomes, and constraints."
+    },
+    {
+      "trapId": "context-leak",
+      "name": "Context Leak",
+      "status": "not-assessed",
+      "riskScore": 0,
+      "findingIds": [],
+      "defaultFix": "Persist current context in receipts, breadcrumbs, session records, and recovery flows.",
+      "note": "No static-scan evidence path exists for this trap — 'not-assessed' means unverified, not clear."
+    },
+    {
+      "trapId": "destructive-default",
+      "name": "Destructive Default",
+      "status": "not-assessed",
+      "riskScore": 0,
+      "findingIds": [],
+      "defaultFix": "Make destructive paths explicit, reversible where possible, and guarded with clear confirmation.",
+      "note": "No static-scan evidence path exists for this trap — 'not-assessed' means unverified, not clear."
+    }
+  ],
+  "findings": [
+    {
+      "id": "ux.color.raw-hex",
+      "title": "Raw colors are leaking into UI code",
+      "severity": "high",
+      "tenetIds": [
+        "consistency",
+        "trust"
+      ],
+      "trapIds": [
+        "token-drift"
+      ],
+      "evidence": [
+        "Hardcoded hex values make redesigns brittle and block consistent theme generation.",
+        "84 unique hex colors",
+        "Affected file: src/app/[lang]/(home)/page.client.tsx",
+        "Affected file: src/app/global.css"
+      ],
+      "recommendation": "Move recurring colors into CSS variables or Tailwind theme tokens.",
+      "source": "app-quality",
+      "provenance": "static-scan",
+      "confidence": 0.91,
+      "affectedFiles": [
+        "src/app/[lang]/(home)/page.client.tsx",
+        "src/app/global.css"
+      ]
+    },
+    {
+      "id": "ux.color.scale-wide",
+      "title": "Color utility surface is too wide",
+      "severity": "medium",
+      "tenetIds": [
+        "consistency",
+        "clarity"
+      ],
+      "trapIds": [
+        "token-drift",
+        "choice-overload"
+      ],
+      "evidence": [
+        "A broad color utility set usually means states and surfaces are being styled case by case.",
+        "105 unique color utilities",
+        "Affected file: src/app/[lang]/(home)/home.data.ts",
+        "Affected file: src/app/[lang]/(home)/layout.tsx",
+        "Affected file: src/app/[lang]/(home)/marquee.tsx"
+      ],
+      "recommendation": "Collapse colors into semantic roles: background, surface, foreground, muted, primary, destructive, success, warning.",
+      "source": "app-quality",
+      "provenance": "static-scan",
+      "confidence": 0.95,
+      "affectedFiles": [
+        "src/app/[lang]/(home)/home.data.ts",
+        "src/app/[lang]/(home)/layout.tsx",
+        "src/app/[lang]/(home)/marquee.tsx",
+        "src/app/[lang]/(home)/page.client.tsx",
+        "src/app/[lang]/(home)/page.tsx",
+        "src/app/[lang]/docs/[[...slug]]/page.tsx",
+        "src/app/[lang]/docs/layout.tsx",
+        "src/app/[lang]/layout.tsx",
+        "src/app/api/chat/route.ts",
+        "src/app/api/search/route.ts",
+        "src/app/global.css",
+        "src/app/layout.tsx"
+      ]
+    },
+    {
+      "id": "ux.type.scale-wide",
+      "title": "Typography scale is drifting",
+      "severity": "medium",
+      "tenetIds": [
+        "clarity",
+        "consistency"
+      ],
+      "trapIds": [
+        "choice-overload",
+        "token-drift"
+      ],
+      "evidence": [
+        "Many text sizes make hierarchy harder to read and harder to maintain.",
+        "17 text size utilities",
+        "Affected file: src/app/[lang]/(home)/page.client.tsx",
+        "Affected file: src/app/[lang]/(home)/page.tsx",
+        "Affected file: src/app/[lang]/docs/[[...slug]]/page.tsx"
+      ],
+      "recommendation": "Use a tighter type ramp and reserve large sizes for page-level hierarchy.",
+      "source": "app-quality",
+      "provenance": "static-scan",
+      "confidence": 0.95,
+      "affectedFiles": [
+        "src/app/[lang]/(home)/page.client.tsx",
+        "src/app/[lang]/(home)/page.tsx",
+        "src/app/[lang]/docs/[[...slug]]/page.tsx",
+        "src/app/[lang]/docs/layout.tsx",
+        "src/app/[lang]/layout.tsx",
+        "src/components/ads/ad-card.tsx",
+        "src/components/ai/search.tsx",
+        "src/components/markdown.tsx",
+        "src/components/mdx.tsx",
+        "src/components/site-footer.tsx",
+        "src/components/theme-switch.tsx"
+      ]
+    },
+    {
+      "id": "ux.spacing.scale-wide",
+      "title": "Spacing scale is too loose",
+      "severity": "medium",
+      "tenetIds": [
+        "clarity",
+        "workflow-fit",
+        "consistency"
+      ],
+      "trapIds": [
+        "choice-overload",
+        "layout-instability",
+        "token-drift"
+      ],
+      "evidence": [
+        "Large spacing variety creates an uneven rhythm across routes and components.",
+        "76 spacing utilities",
+        "Affected file: src/app/[lang]/(home)/page.client.tsx",
+        "Affected file: src/app/[lang]/(home)/page.tsx",
+        "Affected file: src/app/[lang]/docs/[[...slug]]/page.tsx"
+      ],
+      "recommendation": "Normalize spacing around a smaller set of layout and component gaps.",
+      "source": "app-quality",
+      "provenance": "static-scan",
+      "confidence": 0.95,
+      "affectedFiles": [
+        "src/app/[lang]/(home)/page.client.tsx",
+        "src/app/[lang]/(home)/page.tsx",
+        "src/app/[lang]/docs/[[...slug]]/page.tsx",
+        "src/app/[lang]/docs/layout.tsx",
+        "src/app/[lang]/layout.tsx",
+        "src/components/ads/ad-card.tsx",
+        "src/components/ai/search.tsx",
+        "src/components/markdown.tsx",
+        "src/components/mdx.tsx",
+        "src/components/site-footer.tsx",
+        "src/components/theme-switch.tsx"
+      ]
+    },
+    {
+      "id": "ux.depth.shadow-drift",
+      "title": "Shadow styles are inconsistent",
+      "severity": "medium",
+      "tenetIds": [
+        "clarity",
+        "consistency"
+      ],
+      "trapIds": [
+        "choice-overload",
+        "token-drift"
+      ],
+      "evidence": [
+        "Many shadow treatments create noisy depth and weak hierarchy.",
+        "6 shadow utilities",
+        "Affected file: src/app/[lang]/(home)/home.data.ts",
+        "Affected file: src/app/[lang]/(home)/layout.tsx",
+        "Affected file: src/app/[lang]/(home)/marquee.tsx"
+      ],
+      "recommendation": "Define one elevation scale and reserve shadows for layered surfaces.",
+      "source": "app-quality",
+      "provenance": "static-scan",
+      "confidence": 0.95,
+      "affectedFiles": [
+        "src/app/[lang]/(home)/home.data.ts",
+        "src/app/[lang]/(home)/layout.tsx",
+        "src/app/[lang]/(home)/marquee.tsx",
+        "src/app/[lang]/(home)/page.client.tsx",
+        "src/app/[lang]/(home)/page.tsx",
+        "src/app/[lang]/docs/[[...slug]]/page.tsx",
+        "src/app/[lang]/docs/layout.tsx",
+        "src/app/[lang]/layout.tsx",
+        "src/app/api/chat/route.ts",
+        "src/app/api/search/route.ts",
+        "src/app/global.css",
+        "src/app/layout.tsx"
+      ]
+    },
+    {
+      "id": "ux.maintainability.arbitrary-tailwind",
+      "title": "Too many arbitrary Tailwind values",
+      "severity": "medium",
+      "tenetIds": [
+        "consistency",
+        "workflow-fit"
+      ],
+      "trapIds": [
+        "token-drift",
+        "layout-instability"
+      ],
+      "evidence": [
+        "Arbitrary values are useful during exploration but become design debt when repeated.",
+        "65 arbitrary utilities",
+        "Affected file: src/app/[lang]/(home)/page.client.tsx",
+        "Affected file: src/app/[lang]/(home)/page.tsx",
+        "Affected file: src/app/[lang]/docs/[[...slug]]/page.tsx"
+      ],
+      "recommendation": "Promote repeated arbitrary values into tokens or named utilities.",
+      "source": "app-quality",
+      "provenance": "static-scan",
+      "confidence": 0.95,
+      "affectedFiles": [
+        "src/app/[lang]/(home)/page.client.tsx",
+        "src/app/[lang]/(home)/page.tsx",
+        "src/app/[lang]/docs/[[...slug]]/page.tsx",
+        "src/app/[lang]/docs/layout.tsx",
+        "src/components/ads/ad-card.tsx",
+        "src/components/site-footer.tsx"
+      ]
+    }
+  ],
+  "recommendedTweaks": [
+    "Move recurring colors into CSS variables or Tailwind theme tokens.",
+    "Promote repeated colors, spacing, type, radius, and elevation into semantic tokens and variants.",
+    "Collapse colors into semantic roles: background, surface, foreground, muted, primary, destructive, success, warning.",
+    "Group related choices, reduce simultaneous options, and reveal advanced controls after intent.",
+    "Use a tighter type ramp and reserve large sizes for page-level hierarchy.",
+    "Normalize spacing around a smaller set of layout and component gaps.",
+    "Add responsive constraints, stable dimensions, overflow rules, and route-level breakpoint coverage."
+  ],
+  "metadata": {
+    "issueCount": 6,
+    "appQualityScore": 90
+  }
+}

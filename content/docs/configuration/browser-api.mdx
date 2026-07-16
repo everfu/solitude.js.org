@@ -1,0 +1,67 @@
+---
+title: "Browser API"
+description: "Extend Solitude 4 through its stable browser API and PJAX lifecycle."
+icon: "FileText"
+---
+Solitude 4 exposes stable browser integration through `window.Solitude`. Feature-specific objects and implementation details are not public contracts.
+
+## Stable methods
+
+| Method | Purpose |
+| --- | --- |
+| `navigate(url)` | Navigate with PJAX when available, otherwise use a full navigation. |
+| `refresh()` | Reinitialize theme behavior for the current page. |
+| `copy(text)` | Copy text using the theme interaction. |
+| `toggleTheme()` | Toggle light and dark modes. |
+| `loadScript(url, options)` | Load and cache a script request. Options include `async` and `attributes`. |
+| `loadStyle(url, options)` | Load and cache a stylesheet request. Options include `id`. |
+| `on(event, handler)` | Subscribe to a Solitude lifecycle event and return an unsubscribe function. |
+
+```js
+const unsubscribe = window.Solitude.on('afterNavigate', (event) => {
+  console.log('Current page:', event.detail.page)
+})
+
+window.Solitude.loadScript('/js/widget.js', {
+  attributes: { defer: '' },
+})
+```
+
+## Lifecycle events
+
+- `ready` fires after initial theme setup with `detail.config` and `detail.page`.
+- `beforeNavigate` fires before PJAX replaces the page.
+- `afterNavigate` fires after refresh with `detail.page`.
+- `themeChange` fires after a theme switch with `detail.mode`.
+
+Register page-specific resources after `ready` and `afterNavigate`, and dispose them before the next navigation. Avoid permanent listeners that are added again on every page.
+
+## Runtime configuration
+
+`Solitude.config` and `Solitude.page` expose the JSON configuration nodes rendered into the current document. Treat them as read-only runtime context; change behavior through source configuration and regenerate the site.
+
+## Custom template actions
+
+```html
+<button data-solitude-action="openNewsletter">Subscribe</button>
+```
+
+```js
+window.Solitude.openNewsletter = function () {
+  window.Solitude.navigate('/newsletter/')
+}
+```
+
+The dispatcher also supports `data-solitude-url`, `data-solitude-target`, `data-solitude-value`, `data-solitude-prevent="true"`, and `data-solitude-stop="true"`.
+
+## Migrating legacy calls
+
+| Solitude 3.x | Solitude 4.0 |
+| --- | --- |
+| `pjax.loadUrl(url)` | `Solitude.navigate(url)` |
+| `utils.getScript(url, attrs)` | `Solitude.loadScript(url, { attributes: attrs })` |
+| `utils.getCSS(url, id)` | `Solitude.loadStyle(url, { id })` |
+| `GLOBAL_CONFIG` | read-only `Solitude.config` context |
+| `PAGE_CONFIG` | read-only `Solitude.page` context |
+
+Do not integrate against `sco`, `rm`, `ai`, or `coverColor`. For CDN or self-hosted first-party JavaScript, publish the entire same-version `source/js/` tree so relative ES-module imports continue to resolve.

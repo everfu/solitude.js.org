@@ -1,0 +1,57 @@
+---
+title: "Upgrade to 4.0"
+description: "Migrate a Solitude 3.x blog to the ES-module runtime in 4.0."
+icon: "RefreshCw"
+---
+Solitude 4.0 is a major runtime upgrade based on the official `v3.0.20...v4.0.0` comparison. Back up the blog source and configuration before starting.
+
+## 1. Update the theme
+
+<Tabs items={["npm", "Git"]}>
+<Tab>
+
+```bash
+npm install hexo-theme-solitude@4
+```
+
+</Tab>
+<Tab>
+
+```bash
+git -C themes/solitude fetch --tags
+git -C themes/solitude switch --detach v4.0.0
+```
+
+</Tab>
+</Tabs>
+
+## 2. Merge configuration
+
+Copy the v4 default configuration to a temporary file and merge your values into it. Do not replace the new file with an old 3.x configuration.
+
+Review these new or changed entries:
+
+- `page.links.async_threshold` controls asynchronous friend-link rendering.
+- `theme_color.nav_hover_text.light/dark` controls navigation hover contrast.
+- `search.ai.enable/url` adds an external AI entry to local search.
+- `right_menu.custom_list[].click` should call `Solitude.randomPost()` or another supported `Solitude` action.
+
+## 3. Migrate custom JavaScript
+
+Replace public usage of `pjax.loadUrl`, `utils.getScript`, `utils.getCSS`, `GLOBAL_CONFIG`, and `PAGE_CONFIG` with the APIs described in [Browser API](/docs/configuration/browser-api). The loose `sco`, `rm`, `ai`, and `coverColor` objects are not extension contracts in 4.0.
+
+Custom templates should use `data-solitude-action` or register a function on `window.Solitude` instead of injecting functional inline handlers.
+
+## 4. Check CDN and self-hosting
+
+The browser entry is an ES module. If first-party scripts are served from a CDN or another host, keep every file under `source/js/` from the same theme version and preserve its relative directory tree. Serving only `main.js` will break relative imports.
+
+## 5. Clean and regress
+
+```bash
+hexo clean
+hexo generate
+hexo server
+```
+
+Test repeated PJAX navigation through the homepage, a post, archives, links, and music. Also test enabled search and comment providers, theme switching, the context menu, custom templates, and browser back/forward navigation.

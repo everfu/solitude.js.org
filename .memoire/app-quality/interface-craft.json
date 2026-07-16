@@ -1,0 +1,425 @@
+{
+  "schemaVersion": 2,
+  "target": ".",
+  "generatedAt": "2026-07-16T11:24:06.974Z",
+  "score": 49,
+  "dimensions": [
+    {
+      "dimensionId": "focusing-mechanism",
+      "name": "Focusing Mechanism",
+      "lens": "interface-design",
+      "status": "watch",
+      "score": 80,
+      "findingIds": [
+        "craft.type.scale-wide"
+      ],
+      "notes": [
+        "Typography scale is drifting"
+      ]
+    },
+    {
+      "dimensionId": "visual-weight",
+      "name": "Visual Weight",
+      "lens": "visual-design",
+      "status": "needs-work",
+      "score": 24,
+      "findingIds": [
+        "craft.color.raw-hex",
+        "craft.color.scale-wide",
+        "craft.depth.shadow-drift"
+      ],
+      "notes": [
+        "Raw colors are leaking into UI code",
+        "Color utility surface is too wide",
+        "Shadow styles are inconsistent"
+      ]
+    },
+    {
+      "dimensionId": "typographic-hierarchy",
+      "name": "Typographic Hierarchy",
+      "lens": "visual-design",
+      "status": "watch",
+      "score": 80,
+      "findingIds": [
+        "craft.type.scale-wide"
+      ],
+      "notes": [
+        "Typography scale is drifting"
+      ]
+    },
+    {
+      "dimensionId": "spacing-rhythm",
+      "name": "Spacing Rhythm",
+      "lens": "visual-design",
+      "status": "watch",
+      "score": 60,
+      "findingIds": [
+        "craft.spacing.scale-wide",
+        "craft.maintainability.arbitrary-tailwind"
+      ],
+      "notes": [
+        "Spacing scale is too loose",
+        "Too many arbitrary Tailwind values"
+      ]
+    },
+    {
+      "dimensionId": "color-intentionality",
+      "name": "Color Intentionality",
+      "lens": "visual-design",
+      "status": "needs-work",
+      "score": 44,
+      "findingIds": [
+        "craft.color.raw-hex",
+        "craft.color.scale-wide"
+      ],
+      "notes": [
+        "Raw colors are leaking into UI code",
+        "Color utility surface is too wide"
+      ]
+    },
+    {
+      "dimensionId": "shadow-stroke-quality",
+      "name": "Shadow And Stroke Quality",
+      "lens": "visual-design",
+      "status": "watch",
+      "score": 80,
+      "findingIds": [
+        "craft.depth.shadow-drift"
+      ],
+      "notes": [
+        "Shadow styles are inconsistent"
+      ]
+    },
+    {
+      "dimensionId": "icon-consistency",
+      "name": "Icon Consistency",
+      "lens": "conventions",
+      "status": "not-assessed",
+      "score": null,
+      "findingIds": [],
+      "notes": [
+        "Not assessable by static scan — needs rendered/visual evidence. Unverified, not verified-good."
+      ]
+    },
+    {
+      "dimensionId": "information-density",
+      "name": "Information Density",
+      "lens": "interface-design",
+      "status": "watch",
+      "score": 80,
+      "findingIds": [
+        "craft.spacing.scale-wide"
+      ],
+      "notes": [
+        "Spacing scale is too loose"
+      ]
+    },
+    {
+      "dimensionId": "affordance-quality",
+      "name": "Affordance Quality",
+      "lens": "interface-design",
+      "status": "strong",
+      "score": 100,
+      "findingIds": [],
+      "notes": [
+        "control states",
+        "button hierarchy"
+      ]
+    },
+    {
+      "dimensionId": "state-feedback",
+      "name": "State Feedback",
+      "lens": "interface-design",
+      "status": "watch",
+      "score": 80,
+      "findingIds": [
+        "craft.color.scale-wide"
+      ],
+      "notes": [
+        "Color utility surface is too wide"
+      ]
+    },
+    {
+      "dimensionId": "component-cohesion",
+      "name": "Component Cohesion",
+      "lens": "conventions",
+      "status": "watch",
+      "score": 80,
+      "findingIds": [
+        "craft.maintainability.arbitrary-tailwind"
+      ],
+      "notes": [
+        "Too many arbitrary Tailwind values"
+      ]
+    },
+    {
+      "dimensionId": "platform-conventions",
+      "name": "Platform Conventions",
+      "lens": "conventions",
+      "status": "watch",
+      "score": 80,
+      "findingIds": [
+        "craft.maintainability.arbitrary-tailwind"
+      ],
+      "notes": [
+        "Too many arbitrary Tailwind values"
+      ]
+    },
+    {
+      "dimensionId": "motion-restraint",
+      "name": "Motion Restraint",
+      "lens": "conventions",
+      "status": "not-assessed",
+      "score": null,
+      "findingIds": [],
+      "notes": [
+        "Not assessable by static scan — needs rendered/visual evidence. Unverified, not verified-good."
+      ]
+    },
+    {
+      "dimensionId": "responsive-resilience",
+      "name": "Responsive Resilience",
+      "lens": "user-context",
+      "status": "strong",
+      "score": 100,
+      "findingIds": [],
+      "notes": [
+        "breakpoints",
+        "overflow"
+      ]
+    },
+    {
+      "dimensionId": "user-context-care",
+      "name": "User Context Care",
+      "lens": "user-context",
+      "status": "strong",
+      "score": 100,
+      "findingIds": [],
+      "notes": [
+        "job-to-be-done fit",
+        "risk signaling"
+      ]
+    }
+  ],
+  "critique": {
+    "firstImpression": "6 craft signal(s) need attention before the interface reads as polished.",
+    "visualDesign": "5 visual-design signal(s) affect color, type, spacing, visual weight, or depth quality.",
+    "interfaceDesign": "The focusing mechanism, information density, affordances, and state feedback need live-route confirmation.",
+    "consistencyAndConventions": "1 convention signal(s) affect component cohesion, platform expectations, icon consistency, or motion restraint.",
+    "userContext": "User context, responsive resilience, touch ergonomics, and recovery expectations need evidence from the real workflow."
+  },
+  "findings": [
+    {
+      "id": "craft.color.raw-hex",
+      "title": "Raw colors are leaking into UI code",
+      "severity": "high",
+      "lens": "visual-design",
+      "dimensionIds": [
+        "color-intentionality",
+        "visual-weight"
+      ],
+      "evidence": [
+        "Hardcoded hex values make redesigns brittle and block consistent theme generation.",
+        "84 unique hex colors",
+        "Affected file: src/app/[lang]/(home)/page.client.tsx",
+        "Affected file: src/app/global.css"
+      ],
+      "recommendation": "Move recurring colors into CSS variables or Tailwind theme tokens.",
+      "source": "app-quality",
+      "provenance": "static-scan",
+      "confidence": 0.91,
+      "affectedFiles": [
+        "src/app/[lang]/(home)/page.client.tsx",
+        "src/app/global.css"
+      ]
+    },
+    {
+      "id": "craft.color.scale-wide",
+      "title": "Color utility surface is too wide",
+      "severity": "medium",
+      "lens": "visual-design",
+      "dimensionIds": [
+        "color-intentionality",
+        "visual-weight",
+        "state-feedback"
+      ],
+      "evidence": [
+        "A broad color utility set usually means states and surfaces are being styled case by case.",
+        "105 unique color utilities",
+        "Affected file: src/app/[lang]/(home)/home.data.ts",
+        "Affected file: src/app/[lang]/(home)/layout.tsx",
+        "Affected file: src/app/[lang]/(home)/marquee.tsx",
+        "Affected file: src/app/[lang]/(home)/page.client.tsx"
+      ],
+      "recommendation": "Collapse colors into semantic roles: background, surface, foreground, muted, primary, destructive, success, warning.",
+      "source": "app-quality",
+      "provenance": "static-scan",
+      "confidence": 0.95,
+      "affectedFiles": [
+        "src/app/[lang]/(home)/home.data.ts",
+        "src/app/[lang]/(home)/layout.tsx",
+        "src/app/[lang]/(home)/marquee.tsx",
+        "src/app/[lang]/(home)/page.client.tsx",
+        "src/app/[lang]/(home)/page.tsx",
+        "src/app/[lang]/docs/[[...slug]]/page.tsx",
+        "src/app/[lang]/docs/layout.tsx",
+        "src/app/[lang]/layout.tsx",
+        "src/app/api/chat/route.ts",
+        "src/app/api/search/route.ts",
+        "src/app/global.css",
+        "src/app/layout.tsx"
+      ]
+    },
+    {
+      "id": "craft.type.scale-wide",
+      "title": "Typography scale is drifting",
+      "severity": "medium",
+      "lens": "visual-design",
+      "dimensionIds": [
+        "typographic-hierarchy",
+        "focusing-mechanism"
+      ],
+      "evidence": [
+        "Many text sizes make hierarchy harder to read and harder to maintain.",
+        "17 text size utilities",
+        "Affected file: src/app/[lang]/(home)/page.client.tsx",
+        "Affected file: src/app/[lang]/(home)/page.tsx",
+        "Affected file: src/app/[lang]/docs/[[...slug]]/page.tsx",
+        "Affected file: src/app/[lang]/docs/layout.tsx"
+      ],
+      "recommendation": "Use a tighter type ramp and reserve large sizes for page-level hierarchy.",
+      "source": "app-quality",
+      "provenance": "static-scan",
+      "confidence": 0.95,
+      "affectedFiles": [
+        "src/app/[lang]/(home)/page.client.tsx",
+        "src/app/[lang]/(home)/page.tsx",
+        "src/app/[lang]/docs/[[...slug]]/page.tsx",
+        "src/app/[lang]/docs/layout.tsx",
+        "src/app/[lang]/layout.tsx",
+        "src/components/ads/ad-card.tsx",
+        "src/components/ai/search.tsx",
+        "src/components/markdown.tsx",
+        "src/components/mdx.tsx",
+        "src/components/site-footer.tsx",
+        "src/components/theme-switch.tsx"
+      ]
+    },
+    {
+      "id": "craft.spacing.scale-wide",
+      "title": "Spacing scale is too loose",
+      "severity": "medium",
+      "lens": "visual-design",
+      "dimensionIds": [
+        "spacing-rhythm",
+        "information-density"
+      ],
+      "evidence": [
+        "Large spacing variety creates an uneven rhythm across routes and components.",
+        "76 spacing utilities",
+        "Affected file: src/app/[lang]/(home)/page.client.tsx",
+        "Affected file: src/app/[lang]/(home)/page.tsx",
+        "Affected file: src/app/[lang]/docs/[[...slug]]/page.tsx",
+        "Affected file: src/app/[lang]/docs/layout.tsx"
+      ],
+      "recommendation": "Normalize spacing around a smaller set of layout and component gaps.",
+      "source": "app-quality",
+      "provenance": "static-scan",
+      "confidence": 0.95,
+      "affectedFiles": [
+        "src/app/[lang]/(home)/page.client.tsx",
+        "src/app/[lang]/(home)/page.tsx",
+        "src/app/[lang]/docs/[[...slug]]/page.tsx",
+        "src/app/[lang]/docs/layout.tsx",
+        "src/app/[lang]/layout.tsx",
+        "src/components/ads/ad-card.tsx",
+        "src/components/ai/search.tsx",
+        "src/components/markdown.tsx",
+        "src/components/mdx.tsx",
+        "src/components/site-footer.tsx",
+        "src/components/theme-switch.tsx"
+      ]
+    },
+    {
+      "id": "craft.depth.shadow-drift",
+      "title": "Shadow styles are inconsistent",
+      "severity": "medium",
+      "lens": "visual-design",
+      "dimensionIds": [
+        "shadow-stroke-quality",
+        "visual-weight"
+      ],
+      "evidence": [
+        "Many shadow treatments create noisy depth and weak hierarchy.",
+        "6 shadow utilities",
+        "Affected file: src/app/[lang]/(home)/home.data.ts",
+        "Affected file: src/app/[lang]/(home)/layout.tsx",
+        "Affected file: src/app/[lang]/(home)/marquee.tsx",
+        "Affected file: src/app/[lang]/(home)/page.client.tsx"
+      ],
+      "recommendation": "Define one elevation scale and reserve shadows for layered surfaces.",
+      "source": "app-quality",
+      "provenance": "static-scan",
+      "confidence": 0.95,
+      "affectedFiles": [
+        "src/app/[lang]/(home)/home.data.ts",
+        "src/app/[lang]/(home)/layout.tsx",
+        "src/app/[lang]/(home)/marquee.tsx",
+        "src/app/[lang]/(home)/page.client.tsx",
+        "src/app/[lang]/(home)/page.tsx",
+        "src/app/[lang]/docs/[[...slug]]/page.tsx",
+        "src/app/[lang]/docs/layout.tsx",
+        "src/app/[lang]/layout.tsx",
+        "src/app/api/chat/route.ts",
+        "src/app/api/search/route.ts",
+        "src/app/global.css",
+        "src/app/layout.tsx"
+      ]
+    },
+    {
+      "id": "craft.maintainability.arbitrary-tailwind",
+      "title": "Too many arbitrary Tailwind values",
+      "severity": "medium",
+      "lens": "conventions",
+      "dimensionIds": [
+        "component-cohesion",
+        "spacing-rhythm",
+        "platform-conventions"
+      ],
+      "evidence": [
+        "Arbitrary values are useful during exploration but become design debt when repeated.",
+        "65 arbitrary utilities",
+        "Affected file: src/app/[lang]/(home)/page.client.tsx",
+        "Affected file: src/app/[lang]/(home)/page.tsx",
+        "Affected file: src/app/[lang]/docs/[[...slug]]/page.tsx",
+        "Affected file: src/app/[lang]/docs/layout.tsx"
+      ],
+      "recommendation": "Promote repeated arbitrary values into tokens or named utilities.",
+      "source": "app-quality",
+      "provenance": "static-scan",
+      "confidence": 0.95,
+      "affectedFiles": [
+        "src/app/[lang]/(home)/page.client.tsx",
+        "src/app/[lang]/(home)/page.tsx",
+        "src/app/[lang]/docs/[[...slug]]/page.tsx",
+        "src/app/[lang]/docs/layout.tsx",
+        "src/components/ads/ad-card.tsx",
+        "src/components/site-footer.tsx"
+      ]
+    }
+  ],
+  "topOpportunities": [
+    "Move recurring colors into CSS variables or Tailwind theme tokens.",
+    "Collapse colors into semantic roles: background, surface, foreground, muted, primary, destructive, success, warning.",
+    "Use a tighter type ramp and reserve large sizes for page-level hierarchy.",
+    "Normalize spacing around a smaller set of layout and component gaps.",
+    "Define one elevation scale and reserve shadows for layered surfaces.",
+    "Promote repeated arbitrary values into tokens or named utilities."
+  ],
+  "artifactPath": "/var/folders/cz/blt1mjn57t70v_8l9w2sjxk00000gn/T/TemporaryItems/NSIRD_screencaptureui_WU4J5k/截屏2026-07-16 19.22.48.png",
+  "artifactNote": "Screenshot attached for reference only — it was not analyzed. Static-scan findings come from source code, not pixels.",
+  "metadata": {
+    "issueCount": 6,
+    "appQualityScore": 90
+  }
+}
