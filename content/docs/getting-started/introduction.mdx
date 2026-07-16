@@ -1,36 +1,31 @@
 ---
 title: "Introduction"
-description: "Understand Solitude's theme model, modules, and configuration entry points."
+description: "Understand Solitude 4, its requirements, and its configuration model."
 ---
-## What Solitude is
+## What Solitude 4 is
 
-Solitude is a Hexo theme for personal blogs, focused on a calm reading experience, clear information hierarchy, and feature modules that can be enabled as needed. It controls the blog's appearance, article layout, page components, navigation, and third-party integrations. It is not a standalone site generator.
+Solitude 4 is a Hexo theme for personal blogs. It provides homepage modules, post metadata, sidebars, feature pages, search, comments, PWA support, and a browser extension API.
 
-## What the theme provides
+Version 4 rebuilds the browser runtime around native ES modules. Search, music, links, the context menu, translation, post AI, and cover colors are loaded only when their configuration enables them. A unified PJAX lifecycle cleans up page listeners and third-party instances between navigations.
 
-- Homepage sections such as top banners, recommendations, category entries, notices, and content groups.
-- Post page elements such as table of contents, copyright blocks, previous and next posts, tags, categories, and reading metadata.
-- Sidebar modules such as profile cards, site statistics, tags, table of contents, and custom widgets.
-- Feature pages such as About, Links, Gallery, Music, Bangumi, Equipment, and Message.
-- Search and comment integrations including local search, Algolia, DocSearch, Twikoo, Waline, Artalk, Giscus, and Valine.
+## Requirements
 
-## Configuration entry points
+- Hexo 7.0.0 or newer.
+- Node.js 14.0.0 or newer.
+- A recent Chrome, Edge, Firefox, or Safari release. Internet Explorer is not supported.
 
-Solitude's theme options live in `_config.solitude.yml`. The Hexo root `_config.yml` still handles site title, URLs, language, theme name, and other Hexo behavior. Theme modules, appearance, pages, comments, and search are configured through Solitude.
+## Configuration files
+
+`_config.yml` in the blog root controls Hexo itself: title, author, URL, language, and the selected theme. `_config.solitude.yml` controls Solitude modules and appearance.
 
 ```text
-Blog Directory
+my-blog/
   _config.yml
   _config.solitude.yml
-  source
-  themes
-    solitude
+  source/
+  themes/solitude/   # Git installation only
 ```
 
-## Where to go next
-
-If the theme is not installed yet, continue with installation and first run. If your blog already starts correctly, jump into the configuration chapters and adjust the theme by area: homepage, navigation, sidebar, posts, appearance, SEO, and more. Feature pages and third-party integrations can be enabled only when you need them.
-
 <Callout type="info">
-These docs describe the Solitude theme itself: its features, configuration fields, and usage patterns. They do not document how this documentation site was built.
+The examples in these docs target Solitude v4.0.0. Keep the upstream v4 configuration nearby when merging a configuration created for 3.x.
 </Callout>

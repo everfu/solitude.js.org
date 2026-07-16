@@ -1,24 +1,12 @@
 ---
 title: "Local Search"
-description: "Local search builds an index during Hexo generation and does not require a hosted search service."
+description: "Generate a local XML index and enable the Solitude 4 search module."
 ---
-## Purpose
-
-Local search builds an index during Hexo generation and does not require a hosted search service.
-
-## Install
+Install an XML search-index generator in the Hexo blog:
 
 <PmInstall name="hexo-generator-search" />
 
-## Theme configuration
-
-```yaml
-search:
-  enable: true
-  type: local-search
-```
-
-## Hexo configuration
+Configure Hexo `_config.yml`:
 
 ```yaml
 search:
@@ -27,8 +15,19 @@ search:
   content: true
 ```
 
-## Verify
+Configure `_config.solitude.yml`:
 
-- Generate the site and confirm the search index file exists.
-- Search for a post title, a tag, and a phrase from the article body.
-- Confirm private drafts are not included in the generated index.
+```yaml
+search:
+  enable: true
+  type: local
+  tags: [Solitude, Hexo]
+  ai:
+    enable: true
+    url: https://example.com/ai-search
+  local:
+    preload: false
+    CDN: /search.xml
+```
+
+`search.ai.url` is an external link displayed in local search, not an AI request endpoint. After generation, verify `/search.xml` and search by title, tag, and body text.

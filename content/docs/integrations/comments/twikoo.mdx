@@ -1,41 +1,27 @@
 ---
 title: "Twikoo Comments"
-description: "Twikoo works well when you want a comment system with a self-managed backend or cloud function deployment."
+description: "Configure Twikoo as a top-level Solitude 4 comment provider."
 ---
-## Purpose
-
-Twikoo works well when you want a comment system with a self-managed backend or cloud function deployment.
-
-## Backend setup
-
-Create or configure the provider backend first. Keep the provider dashboard open while editing the theme configuration so IDs and domains can be copied exactly.
-
-## Theme configuration
+Configure shared behavior and select the provider in `_config.solitude.yml`:
 
 ```yaml
 comment:
-  enable: true
   use: twikoo
-  twikoo:
-    enable: true
-    envId: ''
-    serverURL: ''
+  commentBarrage: false
+  lazyload: true
+  count: true
+  sidebar: false
+  pv: false
+  avatar: https://gravatar.com/avatar
+
+twikoo:
+  envId: https://your-twikoo.example.com
+  region:
+  style: true
+  accessToken:
+  option:
 ```
 
-## Page behavior
+Provider settings are top-level blocks, not children of `comment`. Set region only for the corresponding Tencent Cloud environment. Keep privileged access tokens out of public repositories.
 
-Comments can usually be controlled globally and then overridden by Front Matter.
-
-```md
----
-title: Example Post
-comments: true
----
-```
-
-## Verify
-
-- The comment container appears on article pages.
-- The browser console has no provider initialization errors.
-- The configured domain matches the deployed site domain.
-- Test comments can be created, loaded, and moderated.
+Use `comment: false` in page Front Matter to disable comments locally. Verify initial load, repeated PJAX navigation, posting, theme switching, count display when supported, and the production domain allowlist.

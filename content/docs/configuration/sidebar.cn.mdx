@@ -1,32 +1,44 @@
 ---
 title: "侧边栏"
-description: "配置个人卡片、目录、标签和站点信息模块。"
+description: "配置侧栏组合、作者信息、目录、标签和站点统计。"
 icon: "PanelRight"
 ---
-## 用途
-
-侧边栏服务于阅读。它可以展示作者身份、文章目录、热门标签和站点信息，但每多一个模块都会分走正文注意力。
-
-## 示例
-
 ```yaml
 aside:
-  enable: true
-  card:
-    enable: true
-    name: 你的名字
-    description: 记录 Web、设计与生活
+  home:
+    noSticky: "about"
+    Sticky: "allInfo"
+  post:
+    noSticky: "about"
+    Sticky: "newestPost"
+  page:
+    noSticky: "about"
+    Sticky: "newestPost,allInfo"
+  position: 1 # 0 左，1 右
+  my_card:
+    author:
+      img: /img/avatar.png
+      sticker: /img/sticker.png
+    description: 记录笔记、项目与生活。
+    content: 欢迎来到我的博客。
+    information:
+      GitHub: https://github.com/example || fab fa-github
   toc:
-    enable: true
+    post: true
+    page: false
+    vague: true
   tags:
     enable: true
+    limit: 20
+    highlight_list:
+      - Solitude
   siteinfo:
-    enable: true
+    postcount: true
+    wordcount: false
+    pv: true
+    uv: true
+    runtimeenable: true
+    runtime: "2023-04-20 00:00:00"
 ```
 
-## 实用默认值
-
-- 长文章建议保留文章目录。
-- 如果站点以个人作者为中心，可以启用个人卡片。
-- 统计类模块在数据不足时可以先关闭。
-- 增加多个侧边栏模块后，要检查移动端布局。
+内建模块名称为 `about`、`newestPost`、`allInfo` 和 `newest_comment`。总字数需要 `hexo-wordcount`；PV 与 UV 需要评论统计或 `busuanzi`。

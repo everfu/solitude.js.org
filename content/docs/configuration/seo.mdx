@@ -1,64 +1,36 @@
 ---
 title: "SEO"
-description: "Configure metadata, canonical URLs, social previews, robots, sitemap, and language alternates for Solitude sites."
+description: "Configure canonical Hexo metadata, Open Graph, verification, robots, and sitemaps."
 icon: "SearchCheck"
 ---
-## Purpose
-
-SEO configuration decides how search engines and social platforms understand a Solitude site. The most important fields are the canonical site URL, page title, description, preview image, robots rules, sitemap, and language alternates.
-
-## Canonical site URL
-
-Set the final public URL before submitting the site to search engines.
+## Canonical metadata
 
 ```yaml
 # _config.yml
+title: My Blog
+subtitle: Notes and projects
+description: Articles by Your Name
+author: Your Name
 url: https://example.com
-
-# _config.solitude.yml
-site:
-  name: My Blog
-  description: Notes and essays from Your Name
 ```
 
-Use the production domain, not a temporary preview URL. If the domain changes, update the URL and regenerate the site so canonical links, Open Graph links, and sitemap entries point to the same host.
+Use the final production origin. Post titles, descriptions, dates, covers, tags, and categories come from Front Matter.
 
-## Titles and descriptions
-
-Every indexable page should have a unique title and a short description. Use the Hexo root config for site identity, then use Front Matter for page-level metadata.
+## Open Graph and verification
 
 ```yaml
----
-title: Deploying Solitude
-description: A checklist for publishing a Solitude blog with stable metadata.
----
+# _config.solitude.yml
+OpenGraph:
+  enable: true
+  options:
+    twitter_card: summary_large_image
+    twitter_site: "@example"
+
+verify_site:
+  - name: google-site-verification
+    content: verification-token
+  - name: baidu-site-verification
+    content: verification-token
 ```
 
-Keep descriptions human-readable. They do not guarantee ranking, but they strongly affect how results and link previews are interpreted.
-
-## Social previews
-
-Open Graph and Twitter cards usually reuse the page title, description, canonical URL, and preview image. Prefer stable image paths under the generated site, and verify that the final image URL can be opened without authentication.
-
-## Robots and sitemap
-
-Allow crawling for public pages and expose a sitemap after the production URL is stable. Avoid blocking CSS, JavaScript, or image assets that are needed to render the page preview.
-
-```text
-User-agent: *
-Allow: /
-Sitemap: https://example.com/sitemap.xml
-```
-
-## Language alternates
-
-For multilingual sites, make sure each translated page links to the matching alternate URL. Use the same canonical host for every language and avoid mixing preview domains with the production domain.
-
-## What to verify
-
-- The site URL matches the final deployment domain.
-- Each important page has a unique title and description.
-- Preview images return a successful response.
-- `robots.txt` points to the sitemap.
-- The sitemap contains canonical URLs for public pages.
-- Translated pages link to each other with language alternates.
+Solitude does not generate `robots.txt` or `sitemap.xml`. Install and configure the relevant Hexo generator plugins, then ensure both use the same production `url`.

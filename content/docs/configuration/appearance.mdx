@@ -1,31 +1,48 @@
 ---
 title: "Appearance"
-description: "Configure colors, display mode, fonts, CSS prefixes, and visual defaults."
+description: "Configure v4 colors, display mode, fonts, loading, highlighting, and images."
 icon: "Palette"
 ---
-## Purpose
-
-Appearance options shape the first impression of the site. Keep color, typography, and display mode consistent with the writing tone you want.
-
-## Example
-
 ```yaml
-style:
-  color:
-    main: '#3b82f6'
-    dark: '#60a5fa'
-  darkmode:
-    enable: true
-    default: auto
-  font:
-    enable: true
-    family: Inter
-  css_prefix: true
+theme_color:
+  dark: "#ffc848"
+  light: "#425AEF"
+  nav_hover_text:
+    dark: "#1b1c20"
+    light: "#ffffff"
+
+display_mode:
+  type: auto # auto / dark / light
+  universe: false
+
+font:
+  font-size: 16px
+  code-font-size: 16px
+  font-family: "Inter, sans-serif"
+  code-font-family: '"JetBrains Mono", monospace'
+
+lazyload:
+  enable: true
+  field: site
+  placeholder: /img/loading.avif
+  errorimg: /img/error_load.avif
+
+loading:
+  fullpage: false
+  favicon: /img/favicon.png
+  pace: true
+
+highlight:
+  enable: true
+  limit: 200
+  copy: true
+  expand: true
+  theme: mac
+  color: default
+
+lightbox: true
+fancybox: true
+mediumZoom: false
 ```
 
-## Review checklist
-
-- Text remains readable in light and dark modes.
-- Custom fonts load before layout shift becomes noticeable.
-- Theme colors pass contrast checks on buttons and links.
-- CSS prefixing is enabled only when you need broader browser support.
+Enable only one lightbox implementation. Check `nav_hover_text` in both modes because it is used over the navigation hover background introduced in v4.

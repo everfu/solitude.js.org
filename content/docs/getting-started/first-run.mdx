@@ -1,10 +1,8 @@
 ---
 title: "First Run"
-description: "Start the local Hexo server and confirm Solitude is loaded correctly."
+description: "Generate a Solitude 4 site and verify its modules load correctly."
 ---
-## Start the preview server
-
-Run Hexo locally from the blog root:
+## Start the local server
 
 ```bash
 hexo clean
@@ -12,27 +10,13 @@ hexo generate
 hexo server
 ```
 
-Open the local address printed by Hexo, usually `http://localhost:4000`.
+Open the URL printed by Hexo, normally `http://localhost:4000`.
 
-## Confirm the theme is active
+## Verify the result
 
-Check these items first:
+- The homepage uses Solitude and static assets return no 404 responses.
+- The browser console has no ES module, configuration JSON, or dynamic import errors.
+- `_config.yml` contains `theme: solitude` and `_config.solitude.yml` exists.
+- Search, comments, music, and other disabled modules are not requested unnecessarily.
 
-- The homepage uses Solitude's layout instead of Hexo's default theme.
-- Static assets load without 404 errors.
-- The browser console does not show missing configuration errors.
-- `_config.yml` contains `theme: solitude`.
-- `_config.solitude.yml` exists in the blog root.
-
-## Where to edit next
-
-After the first successful preview, make changes in this order:
-
-1. Configure site identity in [Site Configuration](/docs/configuration/site).
-2. Adjust menus and homepage modules in [Navigation](/docs/configuration/navigation) and [Homepage](/docs/configuration/home).
-3. Set article defaults in [Posts](/docs/configuration/posts).
-4. Add search or comments only after the base site is stable.
-
-<Callout type="success">
-Once the local preview works, keep changes small and refresh frequently. It is much easier to identify the option that caused a problem.
-</Callout>
+After the base site works, configure identity, navigation, the homepage, the sidebar, and posts in that order. Add search and comments after their external services are ready.

@@ -1,64 +1,40 @@
 ---
 title: "关于页"
-description: "构建包含个人信息、技能、生涯、时间线和自定义模块的关于页。"
+description: "使用 source/_data/about.yml 构建主题内建关于页。"
 ---
-## 用途
+创建 `source/about/index.md`：
 
-构建包含个人信息、技能、生涯、时间线和自定义模块的关于页。
-
-## 创建页面
-
-在 `source/about/index.md` 下创建页面，并设置清晰标题。
-
-```md
+```yaml
 ---
-title: 关于页
-date: 2026-01-01
+title: 关于
 type: about
+comment: false
+aside: false
 ---
 ```
 
-## 创建数据文件
-
-把可重复内容放进 `source/_data/about.yml`。
+模板会直接读取 `source/_data/about.yml`。一个可用的最小数据文件如下：
 
 ```yaml
-items:
-  - name: 示例项目
-    description: 替换为你的实际内容。
-    link: https://example.com
+title: 关于我
+authorinfo:
+  leftTags: [开发者, 写作者]
+  rightTags: [开源, 摄影]
+  image: /img/avatar.png
+contentinfo:
+  sup: 你好，我是
+  name: 你的名字
+  title: 欢迎来到我的站点
+  tip: 关于本站
+  slogan: 为 Web 创造有价值的内容
+  mask:
+    - 认真
+    - 开放
+    - 持续
+motto:
+  title: 座右铭
+  prefix: 保持
+  content: 学习。
 ```
 
-## 主题配置
-
-如果该页面需要开关，在主题配置中启用对应模块。
-
-```yaml
-pages:
-  about:
-    enable: true
-    data: about.yml
-```
-
-## 文件结构
-
-<Files>
-  <File name="博客目录" />
-  <File name="source" />
-  <File name="_data" />
-  <File name="about.yml" />
-  <File name="about" />
-  <File name="index.md" />
-</Files>
-
-## 字段参考
-
-- `name`：展示名称。
-- `description`：简短说明文字。
-- `link`：可选的外部或内部链接。
-- `cover`：页面布局支持时使用的封面图片路径。
-- `tags`：用于分组或筛选的可选标签。
-
-<Callout type="success">
-建议先写一两个项目，确认页面能正常渲染，再继续扩展数据文件。
-</Callout>
+可选顶层区块包括 `skills`、`careers`、`personalities`、`game`、`likes`、`expertise`、`tenyear`、`award` 和 `rewardList`。建议逐个添加，并严格使用 v4 模板实际读取的字段。

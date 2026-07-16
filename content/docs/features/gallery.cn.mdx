@@ -1,64 +1,28 @@
 ---
-title: "画廊页面"
-description: "使用索引页和详情页组织图片相册。"
+title: "相册（第三方）"
+description: "通过第三方 hexo-gallery 标签插件嵌入瀑布流相册。"
 ---
-## 用途
-
-使用索引页和详情页组织图片相册。
-
-## 创建页面
-
-在 `source/gallery/index.md` 下创建页面，并设置清晰标题。
-
-```md
----
-title: 画廊页面
-date: 2026-01-01
-type: gallery
----
-```
-
-## 创建数据文件
-
-把可重复内容放进 `source/_data/gallery.yml`。
-
-```yaml
-items:
-  - name: 示例项目
-    description: 替换为你的实际内容。
-    link: https://example.com
-```
-
-## 主题配置
-
-如果该页面需要开关，在主题配置中启用对应模块。
-
-```yaml
-pages:
-  gallery:
-    enable: true
-    data: gallery.yml
-```
-
-## 文件结构
-
-<Files>
-  <File name="博客目录" />
-  <File name="source" />
-  <File name="_data" />
-  <File name="gallery.yml" />
-  <File name="gallery" />
-  <File name="index.md" />
-</Files>
-
-## 字段参考
-
-- `name`：展示名称。
-- `description`：简短说明文字。
-- `link`：可选的外部或内部链接。
-- `cover`：页面布局支持时使用的封面图片路径。
-- `tags`：用于分组或筛选的可选标签。
-
-<Callout type="success">
-建议先写一两个项目，确认页面能正常渲染，再继续扩展数据文件。
+<Callout type="warning">
+Solitude 4 没有内建的 `gallery` 页面类型。本指南使用第三方块标签，并将其放在普通 Hexo 文章或页面中。
 </Callout>
+
+<PmInstall name="hexo-gallery" />
+
+创建普通页面，并在 Markdown 正文中使用插件标签：
+
+```markdown
+---
+title: 相册
+date: 2026-01-01
+comment: false
+aside: false
+---
+
+{% gallery "title:城市漫步" "author:你的名字" "col:3" "show:6" %}
+/img/gallery/01.jpg
+/img/gallery/02.jpg
+/img/gallery/03.jpg
+{% endgallery %}
+```
+
+插件还支持 `site`、`date`、`platform`、`background`、`titlecolor` 和 `desccolor`。详细说明见[插件仓库](https://github.com/Pidbid/hexo-gallery)；其 CSS、懒加载和 PJAX 行为需要与主题分开测试。

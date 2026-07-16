@@ -1,41 +1,37 @@
 ---
 title: "Front Matter"
-description: "Use Front Matter to control post and page metadata in Hexo and Solitude."
+description: "Control Solitude posts and pages with verified Hexo and theme fields."
 icon: "FilePenLine"
 ---
-## Purpose
+Front Matter is the YAML block at the beginning of a Markdown source file. Hexo owns common metadata; Solitude reads additional display fields.
 
-Front Matter is the metadata block at the top of a Markdown file. Hexo reads it first, then Solitude uses those values to render covers, descriptions, tags, categories, comments, and page-specific behavior.
-
-## Basic example
-
-```md
+```yaml
 ---
 title: Hello Solitude
 date: 2026-01-01 10:00:00
 updated: 2026-01-02 12:00:00
-description: Notes from the first Solitude setup.
-tags:
-  - Hexo
-  - Solitude
-categories:
-  - Blog
+description: Notes from a Solitude 4 upgrade.
+tags: [Hexo, Solitude]
+categories: [Blog]
 cover: /img/covers/hello.jpg
-comments: true
+locate: Shanghai
+comment: true
+toc: true
+aside: true
+katex: false
+color: "#425AEF"
 ---
 ```
 
-## Common fields
+## Fields used by Solitude
 
-- `title`: page or post title.
-- `date`: publish time.
-- `updated`: last meaningful update time.
-- `description`: summary used by cards, SEO, and previews.
-- `tags`: topic labels.
-- `categories`: broader content grouping.
-- `cover`: image used by cards and article header.
-- `comments`: whether comments are enabled for this page.
+- `cover` supplies the post card and header image; without it, `post.default.cover` is used.
+- `description` becomes the post excerpt and is also useful for metadata.
+- `locate` overrides `post.default.locate`.
+- `comment: false` disables comments for the page even when a provider is configured.
+- `toc` and `aside` override the theme defaults for this document.
+- `katex: true` loads KaTeX when global per-page loading is disabled.
+- `color` supplies a fixed page color for cover-color modes that support it.
+- `ai_text` supplies local article summary text when `post.ai.enable` is on.
 
-## Page-specific notes
-
-Feature pages often require a matching layout or data file. Keep the Front Matter focused on page identity, then put repeatable data in `source/_data`.
+Feature pages also use `type`, `data`, `banner`, and page-specific fields documented in their own guides. Use `comment`, not `comments`.

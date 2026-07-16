@@ -1,14 +1,8 @@
 ---
 title: "Installation"
-description: "Install Hexo and the Solitude theme, then prepare the theme configuration."
+description: "Install Solitude 4 and prepare a root theme configuration."
 ---
-## Prerequisites
-
-Install Node.js and make sure your package manager is available. Hexo and Solitude run inside a Hexo blog directory, so create or open that project before installing the theme.
-
-<Steps>
-
-### Install Hexo CLI
+## Create or open a Hexo blog
 
 ```bash
 npm install -g hexo-cli
@@ -17,62 +11,49 @@ cd my-blog
 npm install
 ```
 
-### Install the theme
+## Install Solitude 4
 
-Choose one installation method. NPM is easier to update; Git is convenient when you want to inspect or customize the theme source.
-
-<Tabs items={["npm", "git"]}>
+<Tabs items={["npm", "Git"]}>
 <Tab>
 
 ```bash
-npm install hexo-theme-solitude
+npm install hexo-theme-solitude@4
 ```
 
 </Tab>
 <Tab>
 
 ```bash
-git clone https://github.com/everfu/hexo-theme-solitude.git themes/solitude
+git clone --branch v4.0.0 --depth 1 https://github.com/everfu/hexo-theme-solitude.git themes/solitude
 ```
 
 </Tab>
 </Tabs>
 
-### Enable the theme
-
-Set the theme name in Hexo's root configuration.
+Set the theme in the Hexo root configuration:
 
 ```yaml
 # _config.yml
 theme: solitude
 ```
 
-### Prepare the theme configuration
+## Copy the theme configuration
 
-Copy the theme configuration into the blog root and keep local edits there.
+<Tabs items={["npm", "Git"]}>
+<Tab>
 
 ```bash
 cp node_modules/hexo-theme-solitude/_config.yml _config.solitude.yml
 ```
 
-For Git installation, copy from the theme directory instead:
+</Tab>
+<Tab>
 
 ```bash
 cp themes/solitude/_config.yml _config.solitude.yml
 ```
 
-</Steps>
+</Tab>
+</Tabs>
 
-## Expected structure
-
-<Files>
-  <File name="Blog Directory" />
-  <File name="_config.yml" />
-  <File name="_config.solitude.yml" />
-  <File name="source" />
-  <File name="themes" />
-</Files>
-
-<Callout type="info">
-Keep custom theme settings in the blog root. This makes theme upgrades less risky because your local configuration is not mixed with package files.
-</Callout>
+Edit the root copy. Do not edit package files under `node_modules`. Existing users should merge the new file instead of overwriting their customized configuration; see [Upgrading to 4.0](/docs/getting-started/upgrade-v4).

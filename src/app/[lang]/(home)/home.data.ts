@@ -1,55 +1,34 @@
 import {
-  Bot,
   BookOpen,
-  CheckCircle2,
-  Cloud,
-  Code2,
   Coffee,
   CircleDollarSign,
-  Database,
-  Eye,
-  FileCode2,
-  FileText,
+  Gauge,
   Heart,
-  Image as ImageIcon,
-  Images,
-  Link as LinkIcon,
-  ListTree,
-  MessageCircle,
-  Moon,
-  Music,
-  Palette,
+  Home,
+  Layers3,
   Search,
-  Settings,
-  Sigma,
   Sparkles,
-  Tags,
   type LucideIcon,
   Zap,
 } from 'lucide-react';
 import { sponsorsJsonUrl } from '@/lib/shared';
 
 export const buttonClass =
-  'inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-medium tracking-tight transition-colors';
-
-export const installCommands = {
-  en: [
-    'git clone -b dev https://github.com/everfu/hexo-theme-solitude.git themes/solitude',
-    'theme: solitude',
-    'hexo clean && hexo generate && hexo server',
-  ],
-  cn: [
-    'git clone -b dev https://github.com/everfu/hexo-theme-solitude.git themes/solitude',
-    'theme: solitude',
-    'hexo clean && hexo generate && hexo server',
-  ],
-};
+  'inline-flex min-h-11 items-center justify-center gap-2 rounded-md px-5 py-3 text-sm font-medium transition-[background-color,color,border-color,transform] active:translate-y-px';
 
 export type HomeLocale = 'en' | 'cn';
 
-export type ShowcaseItem = {
+type LocalizedText = Record<HomeLocale, string>;
+
+export type HomeScene = {
+  id: 'home' | 'reading' | 'runtime';
+  index: string;
+  eyebrow: LocalizedText;
+  title: LocalizedText;
+  description: LocalizedText;
+  points: Record<HomeLocale, string[]>;
   icon: LucideIcon;
-  label: string;
+  accent: 'brand' | 'cyan' | 'coral';
 };
 
 export type Sponsor = {
@@ -62,89 +41,16 @@ export type Sponsor = {
   org: boolean;
 };
 
-export const sponsorWays: Array<{
-  href: string;
-  label: Record<HomeLocale, string>;
-  icon: LucideIcon;
-}> = [
-  {
-    href: 'https://afdian.com/a/everfu',
-    label: {
-      en: 'AFDIAN',
-      cn: '爱发电',
-    },
-    icon: Heart,
-  },
-  {
-    href: 'https://ko-fi.com/everfu',
-    label: {
-      en: 'Ko-fi',
-      cn: 'Ko-fi',
-    },
-    icon: Coffee,
-  },
-  {
-    href: 'https://github.com/sponsors/everfu',
-    label: {
-      en: 'GitHub Sponsors',
-      cn: 'GitHub Sponsors',
-    },
-    icon: CircleDollarSign,
-  },
-];
-
-export const showcaseItems: Record<HomeLocale, ShowcaseItem[]> = {
+export const installCommands = {
   en: [
-    { label: 'Pjax', icon: Zap },
-    { label: 'PWA', icon: Cloud },
-    { label: 'Comments', icon: MessageCircle },
-    { label: 'Search', icon: Search },
-    { label: 'Feature Pages', icon: Palette },
-    { label: 'AI Summary', icon: Bot },
-    { label: 'Code Highlight', icon: FileCode2 },
-    { label: 'Front Matter', icon: FileText },
-    { label: 'Lazy Images', icon: ImageIcon },
-    { label: 'Dark Mode', icon: Moon },
-    { label: 'Post TOC', icon: ListTree },
-    { label: 'Gallery', icon: Images },
-    { label: 'Music', icon: Music },
-    { label: 'Links', icon: LinkIcon },
-    { label: 'Moments', icon: Sparkles },
-    { label: 'Equipment', icon: Settings },
-    { label: 'Math', icon: Sigma },
-    { label: 'Lightbox', icon: ImageIcon },
-    { label: 'Tag Plugins', icon: Tags },
-    { label: 'Local Search', icon: Search },
-    { label: 'Algolia', icon: Database },
-    { label: 'DocSearch', icon: BookOpen },
-    { label: 'PWA Cache', icon: Cloud },
-    { label: 'Theme Config', icon: Settings },
+    'npm install hexo-theme-solitude@4',
+    'theme: solitude',
+    'hexo clean && hexo generate && hexo server',
   ],
   cn: [
-    { label: 'Pjax', icon: Zap },
-    { label: 'PWA', icon: Cloud },
-    { label: '评论系统', icon: MessageCircle },
-    { label: '搜索配置', icon: Search },
-    { label: '功能页面', icon: Palette },
-    { label: 'AI 摘要', icon: Bot },
-    { label: '代码高亮', icon: FileCode2 },
-    { label: 'Front Matter', icon: FileText },
-    { label: '图片懒加载', icon: ImageIcon },
-    { label: '深色模式', icon: Moon },
-    { label: '文章目录', icon: ListTree },
-    { label: '相册页面', icon: Images },
-    { label: '音乐馆', icon: Music },
-    { label: '友链页面', icon: LinkIcon },
-    { label: '即刻短文', icon: Sparkles },
-    { label: '装备页面', icon: Settings },
-    { label: '数学公式', icon: Sigma },
-    { label: '灯箱预览', icon: ImageIcon },
-    { label: '主题标签', icon: Tags },
-    { label: '本地搜索', icon: Search },
-    { label: 'Algolia', icon: Database },
-    { label: 'DocSearch', icon: BookOpen },
-    { label: 'PWA 缓存', icon: Cloud },
-    { label: '主题配置', icon: Settings },
+    'npm install hexo-theme-solitude@4',
+    'theme: solitude',
+    'hexo clean && hexo generate && hexo server',
   ],
 };
 
@@ -152,7 +58,7 @@ export const startSteps = {
   cn: [
     {
       title: '安装主题',
-      description: '把 Solitude 放进 Hexo 项目的 themes/solitude 目录，或使用包管理器安装。',
+      description: '通过 npm 安装 Solitude 4，或检出 v4.0.0 Git 标签。',
       command: installCommands.cn[0],
     },
     {
@@ -169,7 +75,7 @@ export const startSteps = {
   en: [
     {
       title: 'Install the theme',
-      description: 'Place Solitude in themes/solitude or install it with your package manager.',
+      description: 'Install Solitude 4 with npm, or check out the v4.0.0 Git tag.',
       command: installCommands.en[0],
     },
     {
@@ -183,26 +89,125 @@ export const startSteps = {
       command: installCommands.en[2],
     },
   ],
-};
+} satisfies Record<HomeLocale, Array<{ title: string; description: string; command: string }>>;
 
-export const featureItems = {
-  cn: [
-    ['流畅浏览体验', 'Pjax、图片懒加载和 PWA，让博客访问更像轻应用。', Zap],
-    ['评论与互动', 'Twikoo、Waline、Valine、Artalk、Giscus 都有清晰配置路径。', MessageCircle],
-    ['搜索与发现', '支持本地搜索、Algolia 和 DocSearch，适配不同规模内容。', Search],
-    ['内容展示组件', '相册、音乐馆、友链、装备、留言等功能页开箱可配。', Palette],
-    ['文章增强', 'AI 摘要、代码高亮、数学公式和灯箱让长文更易读。', FileCode2],
-    ['配置可维护', '全局配置、Front Matter 和主题配置分层整理，便于升级。', Settings],
-  ],
-  en: [
-    ['Fluid browsing', 'Pjax, lazy loaded images, and PWA support make the blog feel app-like.', Zap],
-    ['Comments and interaction', 'Twikoo, Waline, Valine, Artalk, and Giscus are documented paths.', MessageCircle],
-    ['Search and discovery', 'Local search, Algolia, and DocSearch cover different content scales.', Search],
-    ['Content pages', 'Gallery, music, links, equipment, and message pages are ready to configure.', Palette],
-    ['Post enhancements', 'AI summaries, code highlighting, math, and lightbox support improve reading.', FileCode2],
-    ['Maintainable config', 'Global config, Front Matter, and theme options are organized for upgrades.', Settings],
-  ],
-} satisfies Record<HomeLocale, Array<[string, string, LucideIcon]>>;
+export const homeScenes: HomeScene[] = [
+  {
+    id: 'home',
+    index: '01',
+    eyebrow: {
+      cn: '首页体验',
+      en: 'Homepage experience',
+    },
+    title: {
+      cn: '让内容先被看见',
+      en: 'Let the content lead',
+    },
+    description: {
+      cn: '横幅、推荐与近期文章形成清晰的浏览节奏，让第一次到访的人迅速理解你的博客。',
+      en: 'Banners, recommendations, and recent posts create a clear rhythm that makes a blog instantly understandable.',
+    },
+    points: {
+      cn: ['首页横幅', '内容推荐', '分类导航'],
+      en: ['Homepage banner', 'Content picks', 'Category navigation'],
+    },
+    icon: Home,
+    accent: 'brand',
+  },
+  {
+    id: 'reading',
+    index: '02',
+    eyebrow: {
+      cn: '阅读与内容',
+      en: 'Reading and content',
+    },
+    title: {
+      cn: '长文也有呼吸感',
+      en: 'Long-form reading, with room to breathe',
+    },
+    description: {
+      cn: '文章目录、侧栏信息与内容增强各司其职，让技术写作和个人表达保持专注。',
+      en: 'Post navigation, side information, and content enhancements keep technical writing focused and personal.',
+    },
+    points: {
+      cn: ['文章目录', 'AI 摘要', '代码与公式'],
+      en: ['Post outline', 'AI summaries', 'Code and math'],
+    },
+    icon: BookOpen,
+    accent: 'cyan',
+  },
+  {
+    id: 'runtime',
+    index: '03',
+    eyebrow: {
+      cn: '扩展与运行时',
+      en: 'Extensions and runtime',
+    },
+    title: {
+      cn: '按需加载，保持轻盈',
+      en: 'Load on demand, stay lightweight',
+    },
+    description: {
+      cn: '原生 ES 模块、统一 PJAX 生命周期和稳定的浏览器 API，让搜索、评论与音乐等扩展更容易维护。',
+      en: 'Native ES modules, a unified PJAX lifecycle, and a stable browser API keep search, comments, and music maintainable.',
+    },
+    points: {
+      cn: ['原生 ES 模块', '统一 PJAX 生命周期', 'window.Solitude API'],
+      en: ['Native ES modules', 'Unified PJAX lifecycle', 'window.Solitude API'],
+    },
+    icon: Layers3,
+    accent: 'coral',
+  },
+];
+
+export const runtimeModules: Array<{
+  label: string;
+  detail: LocalizedText;
+  icon: LucideIcon;
+}> = [
+  {
+    label: 'PJAX',
+    detail: { cn: '统一生命周期', en: 'Unified lifecycle' },
+    icon: Zap,
+  },
+  {
+    label: 'Search',
+    detail: { cn: '按需搜索', en: 'On-demand search' },
+    icon: Search,
+  },
+  {
+    label: 'API',
+    detail: { cn: '稳定扩展入口', en: 'Stable extension API' },
+    icon: Sparkles,
+  },
+  {
+    label: 'Runtime',
+    detail: { cn: '资源自动清理', en: 'Automatic cleanup' },
+    icon: Gauge,
+  },
+];
+
+export const sponsorWays: Array<{
+  href: string;
+  label: LocalizedText;
+  icon: LucideIcon;
+}> = [
+  {
+    href: 'https://afdian.com/a/everfu',
+    label: { en: 'AFDIAN', cn: '爱发电' },
+    icon: Heart,
+  },
+  {
+    href: 'https://ko-fi.com/everfu',
+    label: { en: 'Ko-fi', cn: 'Ko-fi' },
+    icon: Coffee,
+  },
+  {
+    href: 'https://github.com/sponsors/everfu',
+    label: { en: 'GitHub Sponsors', cn: 'GitHub Sponsors' },
+    icon: CircleDollarSign,
+  },
+];
 
 function isSponsor(value: unknown): value is Omit<Sponsor, 'amount'> & { amount: string | number } {
   if (!value || typeof value !== 'object') return false;
@@ -223,9 +228,7 @@ function isSponsor(value: unknown): value is Omit<Sponsor, 'amount'> & { amount:
 export async function getSponsors(): Promise<Sponsor[]> {
   try {
     const response = await fetch(sponsorsJsonUrl, {
-      next: {
-        revalidate: 3600,
-      },
+      next: { revalidate: 3600 },
     });
 
     if (!response.ok) return [];
@@ -240,11 +243,7 @@ export async function getSponsors(): Promise<Sponsor[]> {
         const amount = Number(item.amount);
         if (!Number.isFinite(amount)) return null;
 
-        return {
-          ...item,
-          amount,
-          index,
-        };
+        return { ...item, amount, index };
       })
       .filter((item): item is Sponsor & { index: number } => item !== null)
       .sort((a, b) => b.amount - a.amount || a.index - b.index)

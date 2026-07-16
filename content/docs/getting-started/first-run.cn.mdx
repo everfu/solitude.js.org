@@ -1,10 +1,8 @@
 ---
 title: "首次运行"
-description: "启动本地 Hexo 服务，并确认 Solitude 已正确加载。"
+description: "生成 Solitude 4 站点并检查模块是否正确加载。"
 ---
-## 启动本地预览
-
-在博客根目录运行 Hexo：
+## 启动本地服务
 
 ```bash
 hexo clean
@@ -12,27 +10,13 @@ hexo generate
 hexo server
 ```
 
-打开 Hexo 输出的本地地址，通常是 `http://localhost:4000`。
+打开 Hexo 输出的地址，通常是 `http://localhost:4000`。
 
-## 确认主题已生效
+## 检查结果
 
-优先检查这些项目：
+- 首页已使用 Solitude，静态资源没有 404。
+- 浏览器控制台没有 ES 模块、配置 JSON 或动态导入错误。
+- `_config.yml` 包含 `theme: solitude`，且根目录存在 `_config.solitude.yml`。
+- 未启用的搜索、评论、音乐等模块不会被无条件请求。
 
-- 首页已经显示 Solitude 的布局，而不是 Hexo 默认主题。
-- 静态资源没有 404。
-- 浏览器控制台没有缺失配置导致的错误。
-- `_config.yml` 中存在 `theme: solitude`。
-- 博客根目录存在 `_config.solitude.yml`。
-
-## 接下来改哪里
-
-首次预览成功后，建议按这个顺序调整：
-
-1. 在 [站点配置](/cn/docs/configuration/site) 中设置站点身份信息。
-2. 在 [导航菜单](/cn/docs/configuration/navigation) 和 [首页配置](/cn/docs/configuration/home) 中调整入口与首页模块。
-3. 在 [文章配置](/cn/docs/configuration/posts) 中设置文章默认行为。
-4. 基础站点稳定后，再添加搜索或评论系统。
-
-<Callout type="success">
-本地预览能跑起来后，建议每次只改少量配置并及时刷新。这样更容易定位是哪一项引起了问题。
-</Callout>
+基础站点正常后，建议依次配置站点身份、导航、首页、侧边栏和文章；搜索与评论应在对应外部服务准备好之后再启用。

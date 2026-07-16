@@ -1,64 +1,27 @@
 ---
 title: "Recent Comments"
-description: "Display recent comment activity as a standalone page."
+description: "Create the built-in recent-comment page from an active provider."
 ---
-## Purpose
+Create `source/recentcomments/index.md`. The page type is singular:
 
-Display recent comment activity as a standalone page.
-
-## Create the page
-
-Create a page under `source/recentcomments/index.md` and set a clear title.
-
-```md
+```yaml
 ---
 title: Recent Comments
-date: 2026-01-01
-type: recentcomments
+type: recentcomment
+banner: true
+desc: Latest discussion
+cover: /img/comments-cover.jpg
+comment: false
+aside: false
 ---
 ```
 
-## Create the data file
-
-Put repeatable content in `source/_data/recent-comments.yml`.
-
 ```yaml
-items:
-  - name: Example item
-    description: Replace this with your own content.
-    link: https://example.com
+recent_comments:
+  enable: true
+  limit: 50
+  cache: 0.2
+  page: /recentcomments/
 ```
 
-## Theme configuration
-
-Enable the page module in the theme configuration when the feature requires a switch.
-
-```yaml
-pages:
-  recentcomments:
-    enable: true
-    data: recent-comments.yml
-```
-
-## File structure
-
-<Files>
-  <File name="Blog Directory" />
-  <File name="source" />
-  <File name="_data" />
-  <File name="recent-comments.yml" />
-  <File name="recentcomments" />
-  <File name="index.md" />
-</Files>
-
-## Field reference
-
-- `name`: display name.
-- `description`: short explanatory text.
-- `link`: optional external or internal URL.
-- `cover`: optional image path when the page layout supports covers.
-- `tags`: optional labels used for grouping or filtering.
-
-<Callout type="success">
-Start with one or two items, confirm the page renders, then expand the data file.
-</Callout>
+The first configured provider in `comment.use` supplies the data. Supported templates are Twikoo, Waline, Valine, and Artalk; Giscus does not provide this recent-comments view.

@@ -1,33 +1,34 @@
 ---
 title: "首页配置"
-description: "配置首页推荐、顶部横幅、分组和入口模块。"
+description: "配置顶部横幅、推荐位、分组和文章列表。"
 icon: "House"
 ---
-## 用途
-
-首页用于介绍站点，并把读者引导到近期或重要内容。它应该展示少量有意选择的入口，而不是堆满所有可用模块。
-
-## 示例
-
 ```yaml
-home:
-  top:
+hometop:
+  enable: true
+  banner:
+    title: 分享技术<br />与日常生活
+    desc:
+      - 开发者的笔记
+      - 项目与实验
+    icon:
+      JavaScript:
+        img: /img/icons/javascript.png
+        color: "#f7cb4f"
+  group:
+    热门: /tags/热门/ || fas fa-fire || linear-gradient(to right,#f65,#ffbf37)
+  recommendList:
     enable: true
-    banner:
-      title: 欢迎
-      description: 笔记、项目与文章
-    recommend:
-      enable: true
-      posts:
-        - /posts/hello-solitude/
-        - /posts/theme-notes/
-  groups:
-    enable: true
+    sup: 推荐
+    title: 从这里开始
+    url: /about/
+    img: /img/default.avif
+    color: none
+
+index_post_list:
+  direction: column # row / column
+  column: 2
+  cover: both
 ```
 
-## 推荐流程
-
-1. 先启用顶部横幅和近期文章。
-2. 只把长期有价值的内容放进推荐位。
-3. 当读者需要明确入口时再添加分组。
-4. 发布一批文章后，再回头整理首页。
+启用即刻短文后，可通过 `brevity.home_mini: true` 在首页加入精简动态。推荐位文案应保持简短，并检查明暗模式下的对比度。

@@ -1,31 +1,48 @@
 ---
 title: "外观配置"
-description: "配置颜色、显示模式、字体、CSS 前缀和视觉默认值。"
+description: "配置 v4 颜色、显示模式、字体、加载效果、代码高亮和图片。"
 icon: "Palette"
 ---
-## 用途
-
-外观配置决定站点的第一印象。颜色、字体和显示模式应该和你希望呈现的写作气质保持一致。
-
-## 示例
-
 ```yaml
-style:
-  color:
-    main: '#3b82f6'
-    dark: '#60a5fa'
-  darkmode:
-    enable: true
-    default: auto
-  font:
-    enable: true
-    family: Inter
-  css_prefix: true
+theme_color:
+  dark: "#ffc848"
+  light: "#425AEF"
+  nav_hover_text:
+    dark: "#1b1c20"
+    light: "#ffffff"
+
+display_mode:
+  type: auto # auto / dark / light
+  universe: false
+
+font:
+  font-size: 16px
+  code-font-size: 16px
+  font-family: "Inter, sans-serif"
+  code-font-family: '"JetBrains Mono", monospace'
+
+lazyload:
+  enable: true
+  field: site
+  placeholder: /img/loading.avif
+  errorimg: /img/error_load.avif
+
+loading:
+  fullpage: false
+  favicon: /img/favicon.png
+  pace: true
+
+highlight:
+  enable: true
+  limit: 200
+  copy: true
+  expand: true
+  theme: mac
+  color: default
+
+lightbox: true
+fancybox: true
+mediumZoom: false
 ```
 
-## 检查清单
-
-- 明暗模式下文字都保持可读。
-- 自定义字体不会造成明显布局跳动。
-- 主题色在按钮和链接上有足够对比度。
-- 只有需要更广浏览器兼容性时才开启 CSS 前缀。
+灯箱实现只能启用一个。`nav_hover_text` 是 v4 新增的导航悬停文字颜色，需要分别检查明暗模式的对比度。

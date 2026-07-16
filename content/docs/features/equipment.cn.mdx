@@ -1,64 +1,32 @@
 ---
 title: "我的装备"
-description: "展示你常用的设备、软件、桌面或工具。"
+description: "创建主题内建装备页及其分组数据。"
 ---
-## 用途
+创建 `source/kit/index.md`，并让 `data` 指向 `source/_data` 下不带扩展名的数据文件：
 
-展示你常用的设备、软件、桌面或工具。
-
-## 创建页面
-
-在 `source/kit/index.md` 下创建页面，并设置清晰标题。
-
-```md
+```yaml
 ---
 title: 我的装备
-date: 2026-01-01
 type: kit
+data: equipment
+banner: true
+desc: 每天使用的工具
+cover: /img/kit-cover.jpg
+comment: true
+aside: false
 ---
 ```
 
-## 创建数据文件
-
-把可重复内容放进 `source/_data/kit.yml`。
-
 ```yaml
-items:
-  - name: 示例项目
-    description: 替换为你的实际内容。
-    link: https://example.com
+# source/_data/equipment.yml
+- class_name: 电脑
+  description: 开发设备
+  equipment_list:
+    - name: 笔记本电脑
+      image: /img/equipment/laptop.jpg
+      specification: 16 GB / 1 TB
+      description: 主力开发设备
+      link: /posts/my-setup/
 ```
 
-## 主题配置
-
-如果该页面需要开关，在主题配置中启用对应模块。
-
-```yaml
-pages:
-  kit:
-    enable: true
-    data: kit.yml
-```
-
-## 文件结构
-
-<Files>
-  <File name="博客目录" />
-  <File name="source" />
-  <File name="_data" />
-  <File name="kit.yml" />
-  <File name="kit" />
-  <File name="index.md" />
-</Files>
-
-## 字段参考
-
-- `name`：展示名称。
-- `description`：简短说明文字。
-- `link`：可选的外部或内部链接。
-- `cover`：页面布局支持时使用的封面图片路径。
-- `tags`：用于分组或筛选的可选标签。
-
-<Callout type="success">
-建议先写一两个项目，确认页面能正常渲染，再继续扩展数据文件。
-</Callout>
+外部 `link` 会在新标签页打开，站内链接保留在当前站点。配置评论服务后，每个装备项会显示快捷回复入口。

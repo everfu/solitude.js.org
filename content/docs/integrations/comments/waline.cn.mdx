@@ -1,41 +1,25 @@
 ---
 title: "Waline 评论"
-description: "Waline 提供账号、反应和灵活部署能力。"
+description: "将 Waline 配置为 Solitude 4 顶层评论服务。"
 ---
-## 用途
-
-Waline 提供账号、反应和灵活部署能力。
-
-## 配置后端
-
-先创建或配置服务端。编辑主题配置时建议打开服务商后台，确保 ID、域名和服务地址能准确复制。
-
-## 主题配置
+在 `_config.solitude.yml` 中配置公共行为并选择服务：
 
 ```yaml
 comment:
-  enable: true
   use: waline
-  waline:
-    enable: true
-    envId: ''
-    serverURL: ''
+  commentBarrage: false
+  lazyload: true
+  count: true
+  sidebar: false
+  pv: false
+  avatar: https://gravatar.com/avatar
+
+waline:
+  envId: https://your-waline.example.com
+  pageview: true
+  option:
 ```
 
-## 页面行为
+服务配置是顶层区块，不是 `comment` 的子项。envId 使用公开 Waline 服务地址，服务专属客户端选项放在 option 下。
 
-评论通常可以先全局开启，再通过 Front Matter 对单篇文章覆盖。
-
-```md
----
-title: 示例文章
-comments: true
----
-```
-
-## 验证
-
-- 文章页能看到评论容器。
-- 浏览器控制台没有服务初始化错误。
-- 配置的域名与部署域名一致。
-- 测试评论可以发布、加载和审核。
+页面 Front Matter 可使用 `comment: false` 单独关闭评论。请验证首次加载、反复 PJAX 导航、发表评论、明暗模式、支持时的计数显示，以及生产域名白名单。

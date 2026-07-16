@@ -1,34 +1,19 @@
 ---
 title: "DocSearch 搜索"
-description: "DocSearch 面向符合 Algolia DocSearch 抓取条件的文档站。"
+description: "在 Solitude 4 中配置现有 Algolia DocSearch 索引。"
 ---
-## 用途
-
-DocSearch 面向符合 Algolia DocSearch 抓取条件的文档站。
-
-## 安装
-
-<PmInstall name="@docsearch/js" />
-
-## 主题配置
+DocSearch 需要已获批准或自托管的爬虫，并且索引已经存在。`_config.solitude.yml` 中只填写公开搜索凭据：
 
 ```yaml
 search:
   enable: true
   type: docsearch
+  docsearch:
+    appId: your-app-id
+    apiKey: your-search-only-key
+    indexName: your-index-name
+    option:
+      insights: true
 ```
 
-## Hexo 配置
-
-```yaml
-search:
-  path: search.xml
-  field: post
-  content: true
-```
-
-## 验证
-
-- 生成站点并确认搜索索引文件存在。
-- 分别搜索文章标题、标签和正文短语。
-- 确认私有草稿没有进入生成后的索引。
+Solitude 会把 `option` 传给 DocSearch 客户端。爬虫凭据不能进入生成站点；部署后检查 DocSearch 样式、脚本、弹窗和结果链接。

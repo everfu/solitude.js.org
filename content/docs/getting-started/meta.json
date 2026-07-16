@@ -4,6 +4,7 @@
   "pages": [
     "introduction",
     "installation",
-    "first-run"
+    "first-run",
+    "upgrade-v4"
   ]
 }

@@ -1,36 +1,31 @@
 ---
 title: "介绍"
-description: "了解 Solitude 主题的定位、模块与配置入口。"
+description: "了解 Solitude 4 的定位、运行要求与配置模型。"
 ---
-## Solitude 是什么
+## Solitude 4 是什么
 
-Solitude 是一个面向个人博客的 Hexo 主题，强调安静的阅读体验、清晰的信息层级，以及可按需开启的功能模块。它负责博客的外观、文章展示、页面组件、导航体验和第三方服务接入，而不是一个独立的网站生成器。
+Solitude 4 是面向个人博客的 Hexo 主题，提供首页模块、文章元信息、侧边栏、特色页面、搜索、评论、PWA 和浏览器扩展 API。
 
-## 主题提供什么
+4.0 使用原生 ES 模块重构了浏览器运行时。搜索、音乐、友链、右键菜单、翻译、文章 AI 和封面取色会按配置动态加载；统一的 PJAX 生命周期会在页面切换时清理监听器和第三方实例。
 
-- 首页顶部、推荐内容、分类入口、公告和其他展示模块。
-- 文章页目录、版权信息、上一篇下一篇、标签、分类和阅读相关信息。
-- 侧边栏个人卡片、站点统计、标签、目录和自定义组件。
-- 关于、友情链接、画廊、音乐馆、追番、装备、留言板等特色页面。
-- 本地搜索、Algolia、DocSearch，以及 Twikoo、Waline、Artalk、Giscus、Valine 等评论系统。
+## 运行要求
 
-## 配置入口
+- Hexo 7.0.0 或更高版本。
+- Node.js 14.0.0 或更高版本。
+- 较新的 Chrome、Edge、Firefox 或 Safari；不支持 Internet Explorer。
 
-Solitude 的主题配置集中在 `_config.solitude.yml`。Hexo 根目录中的 `_config.yml` 仍然负责站点标题、链接、语言、主题名称等 Hexo 基础行为；主题模块、外观、页面、评论和搜索则交给 Solitude 配置。
+## 配置文件
+
+博客根目录的 `_config.yml` 负责 Hexo 的标题、作者、URL、语言和主题选择；`_config.solitude.yml` 负责 Solitude 的模块与外观。
 
 ```text
-博客目录
+my-blog/
   _config.yml
   _config.solitude.yml
-  source
-  themes
-    solitude
+  source/
+  themes/solitude/   # 仅 Git 安装方式
 ```
 
-## 如何继续
-
-如果还没有安装主题，先阅读安装与首次运行；如果已经可以启动博客，可以直接进入配置章节，按首页、导航、侧边栏、文章页、外观、SEO 等区域调整主题。特色页面和第三方集成可以在需要时再开启。
-
 <Callout type="info">
-这份文档围绕 Solitude 主题本身展开：每个章节说明的是主题功能、配置字段和使用方式，而不是如何搭建当前这个文档站点。
+本文档示例以 Solitude v4.0.0 为准。合并从 3.x 沿用的配置时，请同时对照 v4 默认配置。
 </Callout>

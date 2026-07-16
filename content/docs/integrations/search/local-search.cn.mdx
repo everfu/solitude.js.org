@@ -1,24 +1,12 @@
 ---
 title: "本地搜索"
-description: "本地搜索在 Hexo 生成阶段构建索引，不依赖托管搜索服务。"
+description: "生成本地 XML 索引并启用 Solitude 4 搜索模块。"
 ---
-## 用途
-
-本地搜索在 Hexo 生成阶段构建索引，不依赖托管搜索服务。
-
-## 安装
+在 Hexo 博客中安装 XML 搜索索引生成器：
 
 <PmInstall name="hexo-generator-search" />
 
-## 主题配置
-
-```yaml
-search:
-  enable: true
-  type: local-search
-```
-
-## Hexo 配置
+配置 Hexo `_config.yml`：
 
 ```yaml
 search:
@@ -27,8 +15,19 @@ search:
   content: true
 ```
 
-## 验证
+配置 `_config.solitude.yml`：
 
-- 生成站点并确认搜索索引文件存在。
-- 分别搜索文章标题、标签和正文短语。
-- 确认私有草稿没有进入生成后的索引。
+```yaml
+search:
+  enable: true
+  type: local
+  tags: [Solitude, Hexo]
+  ai:
+    enable: true
+    url: https://example.com/ai-search
+  local:
+    preload: false
+    CDN: /search.xml
+```
+
+`search.ai.url` 是本地搜索中显示的外部链接，不是 AI 请求接口。生成后检查 `/search.xml`，并分别按标题、标签和正文进行搜索。

@@ -1,34 +1,26 @@
 ---
 title: "Algolia Search"
-description: "Algolia is useful for larger sites that need fast hosted search and ranking control."
+description: "Connect the Solitude 4 search UI to a Hexo Algolia index."
 ---
-## Purpose
+Create an Algolia application and populate its index using a Hexo Algolia plugin. The index credentials belong in Hexo `_config.yml`:
 
-Algolia is useful for larger sites that need fast hosted search and ranking control.
+```yaml
+algolia:
+  appId: your-app-id
+  apiKey: your-search-only-key
+  indexName: your-index-name
+```
 
-## Install
-
-<PmInstall name="hexo-algolia" />
-
-## Theme configuration
+Enable the theme UI in `_config.solitude.yml`:
 
 ```yaml
 search:
   enable: true
   type: algolia
+  tags: [Solitude, Hexo]
+  algolia:
+    hits:
+      per_page: 6
 ```
 
-## Hexo configuration
-
-```yaml
-search:
-  path: search.xml
-  field: post
-  content: true
-```
-
-## Verify
-
-- Generate the site and confirm the search index file exists.
-- Search for a post title, a tag, and a phrase from the article body.
-- Confirm private drafts are not included in the generated index.
+Use a search-only key in generated pages, never an Admin API key. Upload the index, open the search dialog, and verify pagination plus PJAX navigation from a result.

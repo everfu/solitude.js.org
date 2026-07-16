@@ -1,64 +1,46 @@
 ---
-title: "Micro Essays"
-description: "Create a lightweight page for short thoughts, status updates, and fragments."
+title: "Brevity"
+description: "Create the built-in short-post timeline and its data source."
 ---
-## Purpose
-
-Create a lightweight page for short thoughts, status updates, and fragments.
-
-## Create the page
-
-Create a page under `source/essay/index.md` and set a clear title.
-
-```md
----
-title: Micro Essays
-date: 2026-01-01
-type: essay
----
-```
-
-## Create the data file
-
-Put repeatable content in `source/_data/brevity.yml`.
+Create `source/essay/index.md`:
 
 ```yaml
-items:
-  - name: Example item
-    description: Replace this with your own content.
-    link: https://example.com
+---
+title: Moments
+type: brevity
+banner: true
+desc: Short notes from daily life
+cover: /img/essay-cover.jpg
+comment: true
+aside: false
+---
 ```
 
-## Theme configuration
-
-Enable the page module in the theme configuration when the feature requires a switch.
+Create `source/_data/brevity.yml` as an array:
 
 ```yaml
-pages:
-  essay:
-    enable: true
-    data: brevity.yml
+- date: 2026-01-01 12:00:00
+  content: Solitude 4 is online.
+  location: Shanghai
+  image:
+    - url: /img/moments/release.jpg
+      alt: Release page
+  link: /posts/solitude-4/
+- date: 2026-01-02 18:30:00
+  content: Listening now
+  aplayer:
+    server: netease
+    id: 123456
 ```
 
-## File structure
+```yaml
+brevity:
+  enable: true
+  home_mini: true
+  music: true
+  page: /essay/
+  style: 1
+  strip: 30
+```
 
-<Files>
-  <File name="Blog Directory" />
-  <File name="source" />
-  <File name="_data" />
-  <File name="brevity.yml" />
-  <File name="essay" />
-  <File name="index.md" />
-</Files>
-
-## Field reference
-
-- `name`: display name.
-- `description`: short explanatory text.
-- `link`: optional external or internal URL.
-- `cover`: optional image path when the page layout supports covers.
-- `tags`: optional labels used for grouping or filtering.
-
-<Callout type="success">
-Start with one or two items, confirm the page renders, then expand the data file.
-</Callout>
+Image entries may be strings or objects with `url` and `alt`. Video entries support `video.player` or `video.bilibili`.

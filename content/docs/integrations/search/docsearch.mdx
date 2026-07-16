@@ -1,34 +1,19 @@
 ---
 title: "DocSearch"
-description: "DocSearch is designed for documentation sites that qualify for Algolia DocSearch crawling."
+description: "Configure an existing Algolia DocSearch index in Solitude 4."
 ---
-## Purpose
-
-DocSearch is designed for documentation sites that qualify for Algolia DocSearch crawling.
-
-## Install
-
-<PmInstall name="@docsearch/js" />
-
-## Theme configuration
+DocSearch requires an approved or self-hosted crawler and a populated index. Configure only the public search credentials in `_config.solitude.yml`:
 
 ```yaml
 search:
   enable: true
   type: docsearch
+  docsearch:
+    appId: your-app-id
+    apiKey: your-search-only-key
+    indexName: your-index-name
+    option:
+      insights: true
 ```
 
-## Hexo configuration
-
-```yaml
-search:
-  path: search.xml
-  field: post
-  content: true
-```
-
-## Verify
-
-- Generate the site and confirm the search index file exists.
-- Search for a post title, a tag, and a phrase from the article body.
-- Confirm private drafts are not included in the generated index.
+Solitude passes `option` to the DocSearch client. Keep crawler credentials outside the generated site, and verify the DocSearch stylesheet, script, modal, and result URLs after deployment.

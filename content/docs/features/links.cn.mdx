@@ -1,64 +1,44 @@
 ---
 title: "友情链接"
-description: "使用分类、站点信息和申请说明管理友情链接。"
+description: "配置友链数据与 v4 异步渲染。"
 ---
-## 用途
+创建 `source/links/index.md`：
 
-使用分类、站点信息和申请说明管理友情链接。
-
-## 创建页面
-
-在 `source/links/index.md` 下创建页面，并设置清晰标题。
-
-```md
+```yaml
 ---
 title: 友情链接
-date: 2026-01-01
 type: links
+data: links
+banner: true
+desc: 值得访问的站点
+comment: true
+aside: false
 ---
 ```
 
-## 创建数据文件
-
-把可重复内容放进 `source/_data/links.yml`。
+创建 `source/_data/links.yml`：
 
 ```yaml
-items:
-  - name: 示例项目
-    description: 替换为你的实际内容。
-    link: https://example.com
+swiper: true
+banner_suffix: ""
+links:
+  - class_name: 朋友们
+    descr: 我关注的个人站点
+    type: item # item / card / discn
+    suffix: ""
+    link_list:
+      - name: 示例站点
+        link: https://example.com
+        avatar: https://example.com/avatar.png
+        descr: 一个示例站点
+        tag: 朋友
+        color: "#425AEF"
 ```
 
-## 主题配置
-
-如果该页面需要开关，在主题配置中启用对应模块。
-
 ```yaml
-pages:
+page:
   links:
-    enable: true
-    data: links.yml
+    async_threshold: 200
 ```
 
-## 文件结构
-
-<Files>
-  <File name="博客目录" />
-  <File name="source" />
-  <File name="_data" />
-  <File name="links.yml" />
-  <File name="links" />
-  <File name="index.md" />
-</Files>
-
-## 字段参考
-
-- `name`：展示名称。
-- `description`：简短说明文字。
-- `link`：可选的外部或内部链接。
-- `cover`：页面布局支持时使用的封面图片路径。
-- `tags`：用于分组或筛选的可选标签。
-
-<Callout type="success">
-建议先写一两个项目，确认页面能正常渲染，再继续扩展数据文件。
-</Callout>
+友链总数超过非负整数阈值时，v4 会先渲染占位内容，再异步请求 `/links.json`。只要友链数据存在，Hexo 就会自动生成该 JSON。请分别测试阈值以下的直出模式和阈值以上的异步模式。

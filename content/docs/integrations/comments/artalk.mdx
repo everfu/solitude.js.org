@@ -1,41 +1,25 @@
 ---
 title: "Artalk Comments"
-description: "Artalk is a self-hosted comment system with moderation and notification features."
+description: "Configure Artalk as a top-level Solitude 4 comment provider."
 ---
-## Purpose
-
-Artalk is a self-hosted comment system with moderation and notification features.
-
-## Backend setup
-
-Create or configure the provider backend first. Keep the provider dashboard open while editing the theme configuration so IDs and domains can be copied exactly.
-
-## Theme configuration
+Configure shared behavior and select the provider in `_config.solitude.yml`:
 
 ```yaml
 comment:
-  enable: true
   use: artalk
-  artalk:
-    enable: true
-    envId: ''
-    serverURL: ''
+  commentBarrage: false
+  lazyload: true
+  count: true
+  sidebar: false
+  pv: false
+  avatar: https://gravatar.com/avatar
+
+artalk:
+  server: https://your-artalk.example.com
+  site: My Blog
+  option:
 ```
 
-## Page behavior
+Provider settings are top-level blocks, not children of `comment`. The site value must match the site created in the Artalk dashboard.
 
-Comments can usually be controlled globally and then overridden by Front Matter.
-
-```md
----
-title: Example Post
-comments: true
----
-```
-
-## Verify
-
-- The comment container appears on article pages.
-- The browser console has no provider initialization errors.
-- The configured domain matches the deployed site domain.
-- Test comments can be created, loaded, and moderated.
+Use `comment: false` in page Front Matter to disable comments locally. Verify initial load, repeated PJAX navigation, posting, theme switching, count display when supported, and the production domain allowlist.

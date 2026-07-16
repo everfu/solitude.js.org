@@ -1,37 +1,43 @@
 ---
 title: "Navigation"
-description: "Configure menu groups, page links, icon buttons, and external entries."
+description: "Configure menus, groups, right-side actions, and the context menu."
 icon: "Navigation"
 ---
-## Purpose
-
-Navigation should answer one question quickly: where can visitors go next? Keep the primary menu short and move secondary links into groups or icon buttons.
-
-## Example
+## Navigation bar
 
 ```yaml
-menu:
-  home:
-    name: Home
-    url: /
-    icon: fas fa-home
-  archives:
-    name: Archives
-    url: /archives/
-    icon: fas fa-box-archive
-  about:
-    name: About
-    url: /about/
-    icon: fas fa-user
-
-rightside:
-  readmode: true
-  aside: true
+nav:
+  group:
+    Project:
+      Solitude: https://github.com/everfu/hexo-theme-solitude || /img/pwa/favicon.png
+  menu:
+    Home: /
+    Posts:
+      Archives: /archives/ || fas fa-folder-closed
+      Categories: /categories/ || fas fa-clone
+      Tags: /tags/ || fas fa-tags
+  right:
+    random: true
+    custom:
+      - name: About
+        url: /about/
+        icon: fas fa-user
+        id: about-button
 ```
 
-## Design guidance
+The value before `||` is a URL and the value after it is an icon. Nested menu objects create dropdown groups.
 
-- Put daily reading paths first: Home, Archives, Categories, Tags, About.
-- Use absolute URLs for external profiles and mark them consistently.
-- Avoid placing every feature page in the top menu; use groups when the list grows.
-- Keep icon names consistent with the icon library used by your theme build.
+## Context menu
+
+```yaml
+right_menu:
+  enable: true
+  ctrlOriginalMenu: true
+  custom_list:
+    - name: Random post
+      click: Solitude.randomPost()
+      id: menu-random-post
+      icon: fas fa-tower-broadcast
+```
+
+Use the [Browser API](/docs/configuration/browser-api) for custom actions. Legacy global calls are not supported extension contracts in 4.0.

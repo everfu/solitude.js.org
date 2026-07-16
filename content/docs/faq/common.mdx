@@ -1,19 +1,23 @@
 ---
 title: "Common Questions"
-description: "Answers to frequent Solitude setup and configuration questions."
+description: "Answers to common Solitude 4 installation, configuration, and upgrade questions."
 ---
-## The theme is not applied
+## Why does the site still look like the default Hexo theme?
 
-Check that Hexo's root configuration contains `theme: solitude`. Then run `hexo clean` before generating again.
+Confirm that root `_config.yml` contains `theme: solitude`, then run `hexo clean` before generating again. For npm installation, `hexo-theme-solitude@4` must be present in the blog dependencies.
 
-## Images do not load
+## Should I replace my 3.x configuration with the v4 file?
 
-Use paths that exist under the generated public site. When an image is stored in `source/img/avatar.png`, reference it as `/img/avatar.png`.
+No. Start with the complete v4 default file and merge your customized values into it. This preserves new nested defaults and avoids carrying removed assumptions into 4.0.
 
-## A feature page is blank
+## Why is a feature page blank?
 
-Confirm both parts exist: the page file under `source/<page>/index.md` and the matching data file under `source/_data`.
+Check its exact `type` and data contract. About reads `_data/about.yml`, links use a `data` name such as `links`, equipment uses its Front Matter `data` name, and brevity reads `_data/brevity.yml`. Music, message, and recent comments do not use generic data files.
 
-## Search has no results
+## Why is the comment switch ignored?
 
-Regenerate the site and confirm the search index file exists. For hosted search, also check that crawler credentials and index names match the provider dashboard.
+Use `comment` in Front Matter. The plural `comments` key is not read by Solitude. Provider settings such as `twikoo` and `waline` are top-level theme blocks.
+
+## Are Bangumi and Gallery maintained by Solitude?
+
+No. The guides use third-party Hexo plugins. Their generated markup, APIs, and compatibility are maintained by their respective projects.

@@ -1,33 +1,34 @@
 ---
 title: "Homepage"
-description: "Configure homepage recommendations, top banner, groups, and entry modules."
+description: "Configure the top banner, recommendations, groups, and post list."
 icon: "House"
 ---
-## Purpose
-
-The homepage introduces the site and guides readers toward recent or important content. Use it to show a small number of deliberate choices instead of every available module.
-
-## Example
-
 ```yaml
-home:
-  top:
+hometop:
+  enable: true
+  banner:
+    title: Share technology<br />and everyday life
+    desc:
+      - Notes from a developer
+      - Projects and experiments
+    icon:
+      JavaScript:
+        img: /img/icons/javascript.png
+        color: "#f7cb4f"
+  group:
+    Popular: /tags/popular/ || fas fa-fire || linear-gradient(to right,#f65,#ffbf37)
+  recommendList:
     enable: true
-    banner:
-      title: Welcome
-      description: Notes, projects, and essays
-    recommend:
-      enable: true
-      posts:
-        - /posts/hello-solitude/
-        - /posts/theme-notes/
-  groups:
-    enable: true
+    sup: Featured
+    title: Start here
+    url: /about/
+    img: /img/default.avif
+    color: none
+
+index_post_list:
+  direction: column # row / column
+  column: 2
+  cover: both
 ```
 
-## Recommended workflow
-
-1. Start with the top banner and recent posts.
-2. Add recommendations only for evergreen content.
-3. Add groups when readers need clear entry points.
-4. Revisit the homepage after publishing several posts.
+If the brevity page is enabled, `brevity.home_mini: true` adds its compact feed to the homepage. Keep recommendation copy short and verify both light and dark theme contrast.

@@ -1,36 +1,24 @@
 ---
 title: "Site Configuration"
-description: "Configure the site identity, language, links, and shared assets used by Solitude."
+description: "Configure Hexo identity and the Solitude site mark."
 icon: "Globe"
 ---
-## Purpose
-
-Site configuration defines the identity that appears across the theme: title, subtitle, author information, language behavior, and shared asset paths.
-
-## Minimal example
+Hexo owns canonical site metadata. Solitude owns the mark displayed by the theme.
 
 ```yaml
 # _config.yml
 title: My Blog
-subtitle: Notes and essays
+subtitle: Notes and projects
 author: Your Name
 language: en
 url: https://example.com
 
 # _config.solitude.yml
 site:
-  name: My Blog
-  description: Notes and essays from Your Name
-  icon: /img/avatar.png
+  name:
+    class: text # text / i_class / img
+    custom: My Blog
+  icon: /img/pwa/favicon.png
 ```
 
-## What to verify
-
-- `url` matches the final deployed domain.
-- Avatar, logo, and favicon paths are reachable from the generated site.
-- The language in Hexo and the theme match your content.
-- Public contact links point to stable profiles, not temporary test accounts.
-
-## Common fields
-
-Use Hexo root options for canonical site metadata. Use Solitude options for how that information is presented in theme modules.
+Use `i_class` with an icon class and `img` with an image path. Confirm that the icon and any image-based name exist in the generated site. Do not duplicate Hexo's `title`, `author`, or `url` under `site`.

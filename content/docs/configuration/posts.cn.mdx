@@ -1,35 +1,54 @@
 ---
 title: "文章配置"
-description: "配置文章默认行为、过期提醒、相关文章和文章列表。"
+description: "配置文章默认值、元信息、分享、过期提醒和相关文章。"
 icon: "FileText"
 ---
-## 用途
-
-文章配置控制文章页的默认行为。单篇文章仍然可以通过 Front Matter 覆盖其中许多设置。
-
-## 示例
-
 ```yaml
 post:
+  default:
+    cover:
+      - /img/default.avif
+    locate: China
+    copyright:
+      enable: true
+      author: /img/avatar.png
+      license: CC BY-NC-SA 4.0
+      licenurl: https://creativecommons.org/licenses/by-nc-sa/4.0/
+  ai:
+    enable: false
+    modelName: 本地 AI
+  meta:
+    date: true
+    updated: true
+    locate: false
+    wordcount: true
+    readtime: true
+    pv: false
+    comment: false
+  share:
+    enable: true
+    list: [link, qrcode]
+  covercolor:
+    enable: false
+    mode: local # local / api / ave
+    api: https://example.com/color?img=
+    time: 43200000
+
+expire:
+  enable: true
+  time: 180
+  position: top
+
+related_post:
+  enable: true
+  limit: 4
+  date_type: created
+
+copy:
+  enable: true
   copyright:
     enable: true
-    license: CC BY-NC-SA 4.0
-  expiration:
-    enable: true
-    days: 180
-  related:
-    enable: true
-    limit: 6
-  list:
-    date: true
-    tags: true
-    categories: true
+    limit: 50
 ```
 
-## 什么时候按文章覆盖
-
-当某篇文章需要特殊行为时，使用 Front Matter，例如隐藏封面、关闭评论、置顶文章或设置自定义描述。
-
-<Callout type="info">
-主题默认配置应该描述大多数文章的共同规则；单篇 Front Matter 用来描述例外。
-</Callout>
+`wordcount` 和 `readtime` 依赖 `hexo-wordcount`。单篇文章可以通过 `cover`、`locate`、`comment`、`toc`、`aside`、`copyright` 等 Front Matter 字段覆盖默认值。

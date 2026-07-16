@@ -1,14 +1,8 @@
 ---
 title: "安装"
-description: "安装 Hexo 与 Solitude 主题，并准备主题配置文件。"
+description: "安装 Solitude 4，并准备博客根目录中的主题配置。"
 ---
-## 准备环境
-
-先安装 Node.js，并确认包管理器可用。Hexo 和 Solitude 都运行在 Hexo 博客目录中，因此需要先创建或进入你的博客项目。
-
-<Steps>
-
-### 安装 Hexo CLI
+## 创建或进入 Hexo 博客
 
 ```bash
 npm install -g hexo-cli
@@ -17,62 +11,49 @@ cd my-blog
 npm install
 ```
 
-### 安装主题
+## 安装 Solitude 4
 
-任选一种安装方式。NPM 更便于升级；Git 更适合需要查看或定制主题源码的场景。
-
-<Tabs items={["npm", "git"]}>
+<Tabs items={["npm", "Git"]}>
 <Tab>
 
 ```bash
-npm install hexo-theme-solitude
+npm install hexo-theme-solitude@4
 ```
 
 </Tab>
 <Tab>
 
 ```bash
-git clone https://github.com/everfu/hexo-theme-solitude.git themes/solitude
+git clone --branch v4.0.0 --depth 1 https://github.com/everfu/hexo-theme-solitude.git themes/solitude
 ```
 
 </Tab>
 </Tabs>
 
-### 启用主题
-
-在 Hexo 根配置中设置主题名称。
+在 Hexo 根配置中启用主题：
 
 ```yaml
 # _config.yml
 theme: solitude
 ```
 
-### 准备主题配置
+## 复制主题配置
 
-把主题配置复制到博客根目录，后续本地改动都写在这里。
+<Tabs items={["npm", "Git"]}>
+<Tab>
 
 ```bash
 cp node_modules/hexo-theme-solitude/_config.yml _config.solitude.yml
 ```
 
-如果使用 Git 安装，则从主题目录复制：
+</Tab>
+<Tab>
 
 ```bash
 cp themes/solitude/_config.yml _config.solitude.yml
 ```
 
-</Steps>
+</Tab>
+</Tabs>
 
-## 预期结构
-
-<Files>
-  <File name="博客目录" />
-  <File name="_config.yml" />
-  <File name="_config.solitude.yml" />
-  <File name="source" />
-  <File name="themes" />
-</Files>
-
-<Callout type="info">
-建议把自定义主题配置保存在博客根目录。这样升级主题时，本地配置不会和包内文件混在一起。
-</Callout>
+后续只修改博客根目录中的副本，不要修改 `node_modules` 内的文件。已有用户应合并新配置，而不是覆盖定制内容；参阅[升级到 4.0](/cn/docs/getting-started/upgrade-v4)。

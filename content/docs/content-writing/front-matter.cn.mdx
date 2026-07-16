@@ -1,41 +1,37 @@
 ---
 title: "Front Matter"
-description: "使用 Front Matter 控制 Hexo 与 Solitude 中的文章和页面元数据。"
+description: "使用经过验证的 Hexo 与主题字段控制文章和页面。"
 icon: "FilePenLine"
 ---
-## 用途
+Front Matter 是 Markdown 源文件开头的 YAML 区块。通用元数据由 Hexo 处理，Solitude 会读取额外的展示字段。
 
-Front Matter 是 Markdown 文件顶部的元数据块。Hexo 会先读取它，Solitude 再根据这些值渲染封面、描述、标签、分类、评论和页面级行为。
-
-## 基础示例
-
-```md
+```yaml
 ---
 title: Hello Solitude
 date: 2026-01-01 10:00:00
 updated: 2026-01-02 12:00:00
-description: 第一次配置 Solitude 的记录。
-tags:
-  - Hexo
-  - Solitude
-categories:
-  - 博客
+description: Solitude 4 升级记录。
+tags: [Hexo, Solitude]
+categories: [博客]
 cover: /img/covers/hello.jpg
-comments: true
+locate: 上海
+comment: true
+toc: true
+aside: true
+katex: false
+color: "#425AEF"
 ---
 ```
 
-## 常见字段
+## Solitude 使用的字段
 
-- `title`：文章或页面标题。
-- `date`：发布时间。
-- `updated`：最后一次有意义的更新时间。
-- `description`：用于卡片、SEO 和预览摘要。
-- `tags`：主题标签。
-- `categories`：更大的内容分组。
-- `cover`：卡片和文章头图使用的图片。
-- `comments`：是否为当前页面启用评论。
+- `cover` 用于文章卡片和头图；未设置时使用 `post.default.cover`。
+- `description` 会作为文章摘要，也可用于页面元数据。
+- `locate` 覆盖 `post.default.locate`。
+- 已配置评论服务时，`comment: false` 仍可关闭当前页面评论。
+- `toc` 与 `aside` 覆盖当前文档的主题默认值。
+- 全局未按页加载时，`katex: true` 会为当前页面加载 KaTeX。
+- 支持的封面取色模式可使用 `color` 提供固定颜色。
+- 启用 `post.ai` 后，`ai_text` 提供本地文章摘要文本。
 
-## 页面专属说明
-
-特色页面通常还需要匹配布局或数据文件。Front Matter 只负责页面身份；可重复的数据建议放进 `source/_data`。
+特色页面还会使用 `type`、`data`、`banner` 和页面专属字段，具体见对应指南。评论开关键名是 `comment`，不是 `comments`。

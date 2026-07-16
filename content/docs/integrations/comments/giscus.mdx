@@ -1,41 +1,29 @@
 ---
 title: "Giscus Comments"
-description: "Giscus uses GitHub Discussions and works well for developer-oriented sites."
+description: "Configure Giscus as a top-level Solitude 4 comment provider."
 ---
-## Purpose
-
-Giscus uses GitHub Discussions and works well for developer-oriented sites.
-
-## Backend setup
-
-Create or configure the provider backend first. Keep the provider dashboard open while editing the theme configuration so IDs and domains can be copied exactly.
-
-## Theme configuration
+Configure shared behavior and select the provider in `_config.solitude.yml`:
 
 ```yaml
 comment:
-  enable: true
   use: giscus
-  giscus:
-    enable: true
-    envId: ''
-    serverURL: ''
+  commentBarrage: false
+  lazyload: true
+  count: true
+  sidebar: false
+  pv: false
+  avatar: https://gravatar.com/avatar
+
+giscus:
+  repo: owner/repository
+  repo_id: repository-id
+  category_id: discussion-category-id
+  theme:
+    light: light
+    dark: dark
+  option:
 ```
 
-## Page behavior
+Provider settings are top-level blocks, not children of `comment`. Enable GitHub Discussions and install the Giscus app for the selected repository. Giscus does not support Solitude recent-comment lists or PV counters.
 
-Comments can usually be controlled globally and then overridden by Front Matter.
-
-```md
----
-title: Example Post
-comments: true
----
-```
-
-## Verify
-
-- The comment container appears on article pages.
-- The browser console has no provider initialization errors.
-- The configured domain matches the deployed site domain.
-- Test comments can be created, loaded, and moderated.
+Use `comment: false` in page Front Matter to disable comments locally. Verify initial load, repeated PJAX navigation, posting, theme switching, count display when supported, and the production domain allowlist.

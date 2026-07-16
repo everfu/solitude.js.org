@@ -1,35 +1,54 @@
 ---
 title: "Posts"
-description: "Configure default post behavior, expiration reminders, related posts, and article lists."
+description: "Configure post defaults, metadata, sharing, expiration, and related posts."
 icon: "FileText"
 ---
-## Purpose
-
-Post configuration controls how article pages behave by default. Front Matter can still override many settings on a single post.
-
-## Example
-
 ```yaml
 post:
+  default:
+    cover:
+      - /img/default.avif
+    locate: China
+    copyright:
+      enable: true
+      author: /img/avatar.png
+      license: CC BY-NC-SA 4.0
+      licenurl: https://creativecommons.org/licenses/by-nc-sa/4.0/
+  ai:
+    enable: false
+    modelName: Local AI
+  meta:
+    date: true
+    updated: true
+    locate: false
+    wordcount: true
+    readtime: true
+    pv: false
+    comment: false
+  share:
+    enable: true
+    list: [link, qrcode]
+  covercolor:
+    enable: false
+    mode: local # local / api / ave
+    api: https://example.com/color?img=
+    time: 43200000
+
+expire:
+  enable: true
+  time: 180
+  position: top
+
+related_post:
+  enable: true
+  limit: 4
+  date_type: created
+
+copy:
+  enable: true
   copyright:
     enable: true
-    license: CC BY-NC-SA 4.0
-  expiration:
-    enable: true
-    days: 180
-  related:
-    enable: true
-    limit: 6
-  list:
-    date: true
-    tags: true
-    categories: true
+    limit: 50
 ```
 
-## When to override per post
-
-Use Front Matter when one article needs special behavior, such as hiding the cover, disabling comments, pinning the article, or using a custom description.
-
-<Callout type="info">
-Theme defaults should describe the common case. Per-post Front Matter should describe exceptions.
-</Callout>
+`wordcount` and `readtime` require `hexo-wordcount`. Individual posts can override defaults with Front Matter such as `cover`, `locate`, `comment`, `toc`, `aside`, and `copyright`.

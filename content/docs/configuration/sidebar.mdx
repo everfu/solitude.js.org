@@ -1,32 +1,44 @@
 ---
 title: "Sidebar"
-description: "Configure profile cards, table of contents, tags, and site information blocks."
+description: "Configure sidebar composition, author details, TOC, tags, and site statistics."
 icon: "PanelRight"
 ---
-## Purpose
-
-The sidebar supports reading. It can show author identity, article navigation, popular tags, and site information, but each extra block competes with the article body.
-
-## Example
-
 ```yaml
 aside:
-  enable: true
-  card:
-    enable: true
-    name: Your Name
-    description: Writing about web, design, and life
+  home:
+    noSticky: "about"
+    Sticky: "allInfo"
+  post:
+    noSticky: "about"
+    Sticky: "newestPost"
+  page:
+    noSticky: "about"
+    Sticky: "newestPost,allInfo"
+  position: 1 # 0 left, 1 right
+  my_card:
+    author:
+      img: /img/avatar.png
+      sticker: /img/sticker.png
+    description: Notes, projects, and life.
+    content: Welcome to my blog.
+    information:
+      GitHub: https://github.com/example || fab fa-github
   toc:
-    enable: true
+    post: true
+    page: false
+    vague: true
   tags:
     enable: true
+    limit: 20
+    highlight_list:
+      - Solitude
   siteinfo:
-    enable: true
+    postcount: true
+    wordcount: false
+    pv: true
+    uv: true
+    runtimeenable: true
+    runtime: "2023-04-20 00:00:00"
 ```
 
-## Practical defaults
-
-- Keep the table of contents enabled for long posts.
-- Use the profile card if the site is personal or author-led.
-- Disable low-value counters until they contain meaningful data.
-- Check the mobile layout after adding several sidebar modules.
+The valid built-in block names are `about`, `newestPost`, `allInfo`, and `newest_comment`. Word totals require `hexo-wordcount`; PV and UV require an enabled comment counter or `busuanzi`.

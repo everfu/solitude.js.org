@@ -1,22 +1,32 @@
 ---
 title: "Troubleshooting"
-description: "A practical checklist for build, layout, and integration problems."
+description: "Diagnose Solitude 4 builds, ES modules, PJAX, data files, search, and comments."
 ---
-## Build errors
+## Build and configuration
 
-- Run `hexo clean` before generating.
-- Check YAML indentation in `_config.yml` and `_config.solitude.yml`.
-- Temporarily disable the last feature you enabled.
-- Confirm required plugins are installed in the blog project.
+1. Run `hexo clean` and regenerate.
+2. Validate YAML indentation in both configuration files.
+3. Compare top-level theme keys with the v4.0.0 default configuration.
+4. Disable only the most recently enabled module and reproduce the error.
 
-## Layout problems
+## ES modules and CDN
 
-- Check whether a custom CSS file overrides theme variables.
-- Test with a small number of sidebar and homepage modules.
-- Make sure image dimensions are reasonable for the layout.
+- Confirm that `main.js` is loaded with `type="module"`.
+- Inspect the first failed dynamic import in the browser network panel.
+- Ensure every first-party file comes from the same Solitude version.
+- Preserve the complete relative `source/js/` directory tree on a custom CDN.
+- Do not rewrite module URLs to isolated flattened filenames.
 
-## Integration problems
+## PJAX accumulation
 
-- Verify provider IDs, domains, and API endpoints.
-- Test on the deployed domain when the provider requires domain allowlists.
-- Check the browser console and network panel before changing unrelated options.
+Navigate repeatedly between the same two pages. Duplicate dialogs, players, callbacks, or network requests usually indicate custom code that registers permanent resources on every `afterNavigate`. Subscribe once, or dispose page-specific work before the next navigation.
+
+## Data and integration checks
+
+- Confirm YAML data is an array or object matching the feature guide, not a generic `items` wrapper.
+- Verify `/links.json` when friend-link asynchronous mode is active.
+- Verify `/search.xml` before debugging the local search UI.
+- Test provider URLs and domain allowlists from the deployed origin.
+- Check that only supported providers are used for recent comments and PV counts.
+
+When reporting a problem, include the Solitude version, Hexo and Node versions, relevant configuration with secrets removed, the generated URL, and the first console or network error.

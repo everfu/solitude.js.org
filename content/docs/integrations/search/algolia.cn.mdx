@@ -1,34 +1,26 @@
 ---
 title: "Algolia 搜索"
-description: "Algolia 适合内容较多、需要托管搜索和排序控制的站点。"
+description: "将 Solitude 4 搜索界面连接到 Hexo Algolia 索引。"
 ---
-## 用途
+先创建 Algolia 应用，并通过 Hexo Algolia 插件上传索引。索引凭据写在 Hexo `_config.yml`：
 
-Algolia 适合内容较多、需要托管搜索和排序控制的站点。
+```yaml
+algolia:
+  appId: your-app-id
+  apiKey: your-search-only-key
+  indexName: your-index-name
+```
 
-## 安装
-
-<PmInstall name="hexo-algolia" />
-
-## 主题配置
+在 `_config.solitude.yml` 中启用主题界面：
 
 ```yaml
 search:
   enable: true
   type: algolia
+  tags: [Solitude, Hexo]
+  algolia:
+    hits:
+      per_page: 6
 ```
 
-## Hexo 配置
-
-```yaml
-search:
-  path: search.xml
-  field: post
-  content: true
-```
-
-## 验证
-
-- 生成站点并确认搜索索引文件存在。
-- 分别搜索文章标题、标签和正文短语。
-- 确认私有草稿没有进入生成后的索引。
+生成页面只能使用只读搜索 Key，绝不能暴露 Admin API Key。上传索引后打开搜索框，检查分页和从结果进入页面的 PJAX 导航。
