@@ -35,7 +35,7 @@ export function linkItems(locale = 'en'): LinkItemType[] {
       type: 'main',
       icon: <Eye />,
       text: isCn ? '预览' : 'Preview',
-      url: 'https://everfu.github.io/solitude-demo/',
+      url: 'https://solitude-demo.efu.me',
       external: true,
       active: 'none',
     },

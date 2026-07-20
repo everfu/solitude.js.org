@@ -9,7 +9,7 @@ Solitude Docs 是 [hexo-theme-solitude](https://github.com/everfu/hexo-theme-sol
 Solitude 是一个面向个人博客的 Hexo 主题，提供安静的阅读体验、清晰的信息层级，以及可按需开启的首页模块、侧边栏、文章页功能、特色页面和第三方服务集成。
 
 - 主题仓库：[everfu/hexo-theme-solitude](https://github.com/everfu/hexo-theme-solitude)
-- 示例站点：[Solitude Demo](https://everfu.github.io/solitude-demo/)
+- 示例站点：[Solitude Demo](https://solitude-demo.efu.me/)
 - 发布页面：[Releases](https://github.com/everfu/hexo-theme-solitude/releases)
 - 4.0 发布说明：[Solitude v4.0.0](https://github.com/everfu/hexo-theme-solitude/releases/tag/v4.0.0)
 
