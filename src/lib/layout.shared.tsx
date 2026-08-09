@@ -2,7 +2,7 @@ import type { BaseLayoutProps, LinkItemType } from 'fumadocs-ui/layouts/shared';
 import { BookOpen, Eye, Heart } from 'lucide-react';
 import Image from 'next/image';
 import { ThemeSwitch } from '@/components/theme-switch';
-import { appName, gitConfig } from './shared';
+import { appName, themeRepositoryUrl } from './shared';
 
 function withLocale(locale: string, path: string) {
   if (locale === 'en') return path;
@@ -51,7 +51,7 @@ export function linkItems(locale = 'en'): LinkItemType[] {
       type: 'icon',
       label: 'GitHub',
       text: 'GitHub',
-      url: `https://github.com/${gitConfig.user}/${gitConfig.repo}`,
+      url: themeRepositoryUrl,
       external: true,
       icon: (
         <svg role="img" viewBox="0 0 24 24" fill="currentColor">
