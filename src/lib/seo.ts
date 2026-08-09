@@ -74,6 +74,9 @@ export function createSiteMetadata(): Metadata {
     },
     description: appDescription,
     applicationName: appName,
+    verification: {
+      google: 'OQ-FnVME50EgIvv5nO4fsNl7EHkEl0vUSoFUe_fAMgY',
+    },
     icons: {
       icon: '/favicon.ico',
     },
