@@ -6,6 +6,14 @@ import { i18n } from '../i18n';
 
 const i18nMiddleware = createI18nMiddleware(i18n);
 
+function getBrowserLocale(request: NextRequest) {
+  const cookie = request.cookies.get('FD_LOCALE')?.value;
+  if (cookie === 'en' || cookie === 'cn') return cookie;
+
+  const first = request.headers.get('accept-language')?.split(',')[0]?.trim().toLowerCase();
+  return first?.startsWith('zh') ? 'cn' : 'en';
+}
+
 function getMarkdownRewrite(pathname: string) {
   const isCn = pathname === `/cn${docsRoute}` || pathname.startsWith(`/cn${docsRoute}/`);
   const isEn = pathname === docsRoute || pathname.startsWith(`${docsRoute}/`);
@@ -35,6 +43,10 @@ export function proxy(request: NextRequest, event: NextFetchEvent) {
 
   if (pathname === '/' || pathname === docsRoute || pathname.startsWith(`${docsRoute}/`)) {
     const url = request.nextUrl.clone();
+    if (getBrowserLocale(request) === 'cn') {
+      url.pathname = `/cn${pathname}`;
+      return NextResponse.redirect(url);
+    }
     url.pathname = `/en${pathname}`;
     return NextResponse.rewrite(url);
   }

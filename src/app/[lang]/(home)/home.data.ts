@@ -11,7 +11,7 @@ import {
   type LucideIcon,
   Zap,
 } from 'lucide-react';
-import { sponsorsJsonUrl } from '@/lib/shared';
+import { sponsorsJsonUrl, afdianUrl, githubSponsorUrl } from '@/lib/shared';
 
 export const buttonClass =
   'inline-flex min-h-11 items-center justify-center gap-2 rounded-md px-5 py-3 text-sm font-medium transition-[background-color,color,border-color,transform] active:translate-y-px';
@@ -193,7 +193,7 @@ export const sponsorWays: Array<{
   icon: LucideIcon;
 }> = [
   {
-    href: 'https://afdian.com/a/everfu',
+    href: afdianUrl,
     label: { en: 'AFDIAN', cn: '爱发电' },
     icon: Heart,
   },
@@ -203,7 +203,7 @@ export const sponsorWays: Array<{
     icon: Coffee,
   },
   {
-    href: 'https://github.com/sponsors/everfu',
+    href: githubSponsorUrl,
     label: { en: 'GitHub Sponsors', cn: 'GitHub Sponsors' },
     icon: CircleDollarSign,
   },

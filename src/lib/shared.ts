@@ -8,6 +8,8 @@ export const releaseUrl = 'https://github.com/everfu/hexo-theme-solitude/release
 export const themeRepositoryUrl = 'https://github.com/everfu/hexo-theme-solitude';
 export const previewUrl = 'https://solitude-demo.efu.me';
 export const sponsorsJsonUrl = 'https://raw.githubusercontent.com/everfu/static/master/sponsors.json';
+export const afdianUrl = 'https://afdian.com/a/everfu';
+export const githubSponsorUrl = 'https://github.com/sponsors/everfu';
 
 // fill this with your actual GitHub info, for example:
 export const gitConfig = {

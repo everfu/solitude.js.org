@@ -2,7 +2,7 @@ import type { BaseLayoutProps, LinkItemType } from 'fumadocs-ui/layouts/shared';
 import { BookOpen, Eye, Heart } from 'lucide-react';
 import Image from 'next/image';
 import { ThemeSwitch } from '@/components/theme-switch';
-import { appName, themeRepositoryUrl } from './shared';
+import { appName, themeRepositoryUrl, afdianUrl, githubSponsorUrl } from './shared';
 
 function withLocale(locale: string, path: string) {
   if (locale === 'en') return path;
@@ -43,7 +43,7 @@ export function linkItems(locale = 'en'): LinkItemType[] {
       type: 'main',
       icon: <Heart />,
       text: isCn ? '赞助' : 'Sponsors',
-      url: 'https://ko-fi.com/everfu',
+      url: isCn ? afdianUrl : githubSponsorUrl,
       external: true,
       active: 'none',
     },
