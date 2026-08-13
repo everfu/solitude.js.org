@@ -2,7 +2,7 @@
 
 Solitude Docs 是 [hexo-theme-solitude](https://github.com/everfu/hexo-theme-solitude) 主题的配置文档站点。
 
-这里整理了 Solitude 4.0 的安装、升级、主题配置、浏览器扩展 API、内容写作、功能页面、搜索与评论系统集成等说明，帮助用户在 Hexo 博客中配置并使用 Solitude。
+这里整理了 Solitude 4.0 的安装、升级、主题配置、浏览器 API、内容写作、功能页面、搜索与评论系统集成等说明，帮助用户在 Hexo 博客中配置并使用 Solitude。
 
 ## 关于 Solitude
 
@@ -18,8 +18,8 @@ Solitude 是一个面向个人博客的 Hexo 主题，提供安静的阅读体�
 本项目的文档内容位于 `content/docs`，包含中英文两个版本：
 
 - `getting-started`：主题介绍、安装与首次运行。
-- `getting-started/upgrade-v4`：从 Solitude 3.x 升级到 4.0。
-- `configuration/browser-api`：4.0 浏览器扩展 API 与 PJAX 生命周期。
+- [`getting-started/upgrade-v4`](content/docs/getting-started/upgrade-v4.cn.mdx)：从 Solitude 3.x 升级到 4.0。
+- [`configuration/browser-api`](content/docs/configuration/browser-api.cn.mdx)：Solitude 4 浏览器 API 与 PJAX 生命周期。
 - `content-writing`：文章 Front Matter 与标签插件。
 - `features`：关于、友链、音乐馆、留言板等内建页面，以及相册、追番第三方插件集成。
 - `integrations`：搜索与评论系统集成，包括本地搜索、Algolia、DocSearch、Twikoo、Waline、Artalk、Giscus、Valine 等。

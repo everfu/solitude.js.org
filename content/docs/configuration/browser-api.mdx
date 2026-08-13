@@ -1,21 +1,23 @@
 ---
 title: "Browser API"
-description: "Extend Solitude 4 through its stable browser API and PJAX lifecycle."
+description: "Extend Solitude 4 with its public browser API and PJAX lifecycle."
 icon: "FileText"
 ---
-Solitude 4 exposes stable browser integration through `window.Solitude`. Feature-specific objects and implementation details are not public contracts.
+Solitude 4 exposes its public browser integration surface through `window.Solitude`. Feature-specific objects and implementation details are not public contracts. If you are updating custom code from 3.x, begin with [Upgrade to 4.0](/docs/getting-started/upgrade-v4), then use the legacy-call map below.
 
-## Stable methods
+## Public methods
 
 | Method | Purpose |
 | --- | --- |
-| `navigate(url)` | Navigate with PJAX when available, otherwise use a full navigation. |
-| `refresh()` | Reinitialize theme behavior for the current page. |
-| `copy(text)` | Copy text using the theme interaction. |
-| `toggleTheme()` | Toggle light and dark modes. |
-| `loadScript(url, options)` | Load and cache a script request. Options include `async` and `attributes`. |
-| `loadStyle(url, options)` | Load and cache a stylesheet request. Options include `id`. |
-| `on(event, handler)` | Subscribe to a Solitude lifecycle event and return an unsubscribe function. |
+| `Solitude.navigate(url)` | Navigate with PJAX when available; otherwise, perform a full-page navigation. |
+| `Solitude.refresh()` | Reinitialize Solitude behavior for the current page. |
+| `Solitude.copy(text)` | Copy text and show Solitude's result message. |
+| `Solitude.toggleTheme()` | Toggle light and dark modes. |
+| `Solitude.loadScript(url, options)` | Load and cache a script request. Options include `async` and `attributes`. |
+| `Solitude.loadStyle(url, options)` | Load and cache a stylesheet request. Options include `id`. |
+| `Solitude.on(event, handler)` | Subscribe to a Solitude lifecycle event and return an unsubscribe function. |
+| `Solitude.listen(target, type, handler, options)` | Register a page-scoped DOM listener that is removed before the next PJAX page. |
+| `Solitude.onPageCleanup(disposer)` | Register cleanup for a page-scoped widget, timer, or other resource. |
 
 ```js
 const unsubscribe = window.Solitude.on('afterNavigate', (event) => {
@@ -23,22 +25,25 @@ const unsubscribe = window.Solitude.on('afterNavigate', (event) => {
 })
 
 window.Solitude.loadScript('/js/widget.js', {
-  attributes: { defer: '' },
+  async: false,
+  attributes: { 'data-widget': 'newsletter' },
 })
+
+window.addEventListener('pagehide', unsubscribe, { once: true })
 ```
 
 ## Lifecycle events
 
 - `ready` fires after initial theme setup with `detail.config` and `detail.page`.
-- `beforeNavigate` fires before PJAX replaces the page.
+- `beforeNavigate` fires before PJAX disposes page-scoped resources and replaces the page.
 - `afterNavigate` fires after refresh with `detail.page`.
 - `themeChange` fires after a theme switch with `detail.mode`.
 
-Register page-specific resources after `ready` and `afterNavigate`, and dispose them before the next navigation. Avoid permanent listeners that are added again on every page.
+Subscribe to `ready` and `afterNavigate` once. In page-specific setup, use `Solitude.listen()` for DOM listeners and `Solitude.onPageCleanup()` for widgets, timers, and other resources that must be disposed before the next navigation. Do not add another permanent lifecycle subscription on every page.
 
 ## Runtime configuration
 
-`Solitude.config` and `Solitude.page` expose the JSON configuration nodes rendered into the current document. Treat them as read-only runtime context; change behavior through source configuration and regenerate the site.
+`Solitude.config` and `Solitude.page` expose the JSON configuration objects rendered into the current document. Treat them as read-only runtime context; change behavior through source configuration and regenerate the site.
 
 ## Custom template actions
 
@@ -56,6 +61,8 @@ The dispatcher also supports `data-solitude-url`, `data-solitude-target`, `data-
 
 ## Migrating legacy calls
 
+This table covers JavaScript calls only. Use the complete [Upgrade to 4.0](/docs/getting-started/upgrade-v4) checklist for theme files, configuration, CDN assets, and regression testing.
+
 | Solitude 3.x | Solitude 4.0 |
 | --- | --- |
 | `pjax.loadUrl(url)` | `Solitude.navigate(url)` |
@@ -64,4 +71,4 @@ The dispatcher also supports `data-solitude-url`, `data-solitude-target`, `data-
 | `GLOBAL_CONFIG` | read-only `Solitude.config` context |
 | `PAGE_CONFIG` | read-only `Solitude.page` context |
 
-Do not integrate against `sco`, `rm`, `ai`, or `coverColor`. For CDN or self-hosted first-party JavaScript, publish the entire same-version `source/js/` tree so relative ES-module imports continue to resolve.
+Do not integrate against `sco`, `rm`, `ai`, or `coverColor`. For CDN-hosted or self-hosted Solitude JavaScript, publish the complete same-version `source/js/` tree so relative ES-module imports continue to resolve. See [Troubleshooting](/docs/faq/troubleshooting) for module-loading and PJAX checks.

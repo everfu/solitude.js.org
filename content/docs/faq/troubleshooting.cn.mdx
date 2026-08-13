@@ -2,6 +2,8 @@
 title: "故障排查"
 description: "排查 Solitude 4 构建、ES 模块、PJAX、数据文件、搜索和评论问题。"
 ---
+如果问题出现在从 3.x 升级期间，请先完成[升级到 4.0](/cn/docs/getting-started/upgrade-v4)中的全部步骤，再逐一排查功能模块。
+
 ## 构建与配置
 
 1. 运行 `hexo clean` 并重新生成。
@@ -19,7 +21,7 @@ description: "排查 Solitude 4 构建、ES 模块、PJAX、数据文件、搜�
 
 ## PJAX 资源累积
 
-在相同两个页面间反复切换。重复弹窗、播放器、回调或网络请求通常表示自定义代码在每次 `afterNavigate` 都注册永久资源。应只订阅一次，或在下次导航前释放页面级任务。
+在相同两个页面间反复切换。重复弹窗、播放器、回调或网络请求通常表示自定义代码在每次 `afterNavigate` 都注册永久资源。应只订阅一次，再使用[浏览器 API](/cn/docs/configuration/browser-api)中的页面级清理方法。
 
 ## 数据与集成检查
 

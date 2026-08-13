@@ -2,6 +2,8 @@
 title: "Troubleshooting"
 description: "Diagnose Solitude 4 builds, ES modules, PJAX, data files, search, and comments."
 ---
+If a problem began while updating a 3.x blog, complete [Upgrade to 4.0](/docs/getting-started/upgrade-v4) before isolating individual modules.
+
 ## Build and configuration
 
 1. Run `hexo clean` and regenerate.
@@ -19,7 +21,7 @@ description: "Diagnose Solitude 4 builds, ES modules, PJAX, data files, search, 
 
 ## PJAX accumulation
 
-Navigate repeatedly between the same two pages. Duplicate dialogs, players, callbacks, or network requests usually indicate custom code that registers permanent resources on every `afterNavigate`. Subscribe once, or dispose page-specific work before the next navigation.
+Navigate repeatedly between the same two pages. Duplicate dialogs, players, callbacks, or network requests usually indicate custom code that registers permanent resources on every `afterNavigate`. Subscribe once, then use the page-scoped cleanup methods in [Browser API](/docs/configuration/browser-api).
 
 ## Data and integration checks
 
