@@ -106,6 +106,84 @@ body {
   mask-image: linear-gradient(to bottom, transparent, black 16%, black 84%, transparent);
 }
 
+.home-principle-morph {
+  width: min(72%, 220px);
+  height: 170px;
+  overflow: visible;
+  color: color-mix(in oklab, var(--color-fd-foreground) 42%, transparent);
+  pointer-events: none;
+}
+
+.home-principle-morph path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.home-principle-morph-static {
+  display: none;
+}
+
+.sponsor-journey {
+  position: relative;
+  isolation: isolate;
+  padding-inline: 0.25rem;
+}
+
+.sponsor-journey-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  row-gap: 2.75rem;
+}
+
+.sponsor-journey-path {
+  position: absolute;
+  z-index: -1;
+  overflow: visible;
+  color: var(--color-brand);
+  pointer-events: none;
+}
+
+.sponsor-journey-path path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  vector-effect: non-scaling-stroke;
+}
+
+.sponsor-journey-path-mobile {
+  inset: 1.75rem auto auto 3rem;
+  width: calc(100% - 6rem);
+  height: var(--sponsor-mobile-path-height);
+}
+
+.sponsor-journey-path-desktop {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .sponsor-journey {
+    padding-inline: 2rem;
+  }
+
+  .sponsor-journey-grid {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    row-gap: 4.5rem;
+  }
+
+  .sponsor-journey-path-mobile {
+    display: none;
+  }
+
+  .sponsor-journey-path-desktop {
+    display: block;
+    inset: 2.5rem auto auto -2rem;
+    width: calc(100% + 4rem);
+    height: var(--sponsor-desktop-path-height);
+  }
+}
+
 .home-dot-field {
   background-image: radial-gradient(circle, currentColor 1px, transparent 1px);
   background-size: 14px 14px;
@@ -390,25 +468,8 @@ body {
   filter: drop-shadow(0 26px 22px rgb(0 0 0 / 0.62));
 }
 
-.home-scene-copy,
-.home-scene-visual {
-  animation: home-scene-enter 300ms cubic-bezier(0.22, 1, 0.36, 1) both;
-  will-change: opacity, transform;
-}
-
 .home-scroll-cue {
   animation: home-scroll-cue 1.8s ease-in-out infinite;
-}
-
-@keyframes home-scene-enter {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 @keyframes home-scroll-cue {
@@ -422,28 +483,26 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .home-principle-morph-live {
+    display: none;
+  }
+
+  .home-principle-morph-static {
+    display: inline;
+  }
+
+  .sponsor-portrait {
+    translate: none !important;
+  }
+
+  .sponsor-portrait,
   .home-hero-stage,
-  .home-scene-copy,
-  .home-scene-visual,
   .home-scroll-cue,
   .animate-marquee,
   .animate-marquee-vertical {
     animation: none !important;
     transform: none !important;
     transition-duration: 0ms !important;
-  }
-
-  .home-capability-story {
-    height: auto !important;
-  }
-
-  .home-capability-desktop,
-  .home-capability-markers {
-    display: none !important;
-  }
-
-  .home-capability-mobile {
-    display: grid !important;
   }
 }
 
