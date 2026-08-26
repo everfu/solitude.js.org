@@ -1,0 +1,40 @@
+---
+title: "Installation"
+description: "Install Solitude as a Hugo theme and enable its required output formats."
+---
+
+## Requirements
+
+Install Hugo **v0.164.0 or newer** and Git. Confirm the active binary before continuing:
+
+```bash
+hugo version
+```
+
+## Add the theme
+
+From the root of an existing Hugo site, add the theme as a submodule. The repository uses the `hugo` branch:
+
+```bash
+git submodule add -b hugo https://github.com/everfu/hugo-solitude.git themes/solitude
+```
+
+Enable the theme and declare the output formats used by local search and asynchronous links:
+
+```yaml
+theme: solitude
+
+outputs:
+  home: [HTML, RSS, Search, Links]
+  section: [HTML, RSS]
+  taxonomy: [HTML, RSS]
+  term: [HTML, RSS]
+
+params:
+  solitude:
+    search:
+      enable: true
+      type: local
+```
+
+Copy `themes/solitude/exampleSite/hugo.yaml` as a reference, then merge the values you need into your own configuration. Do not edit the theme's default file in place.

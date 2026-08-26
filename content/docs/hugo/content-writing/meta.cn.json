@@ -1,0 +1,8 @@
+{
+  "title": "内容写作",
+  "icon": "FileText",
+  "pages": [
+    "front-matter",
+    "shortcodes"
+  ]
+}

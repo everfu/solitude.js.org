@@ -1,0 +1,32 @@
+---
+title: "音乐页"
+description: "创建完整音乐页并配置 Meting 播放。"
+---
+
+## 创建页面
+
+创建 `content/music/_index.md`：
+
+```yaml
+---
+title: 音乐页
+type: music
+---
+```
+
+在 `params.solitude.music` 中设置歌单 ID、服务、类型、音量、互斥和顺序。全局胶囊播放器在 `capsule` 下单独配置。
+
+## 配置或数据示例
+
+```yaml
+params:
+  solitude:
+    music:
+      enable: true
+      id: "playlist-id"
+      server: netease
+      type: playlist
+      volume: 0.8
+```
+
+最终结构请对照 `exampleSite/content` 与 `exampleSite/data` 中的对应文件。

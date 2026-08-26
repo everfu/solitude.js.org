@@ -1,0 +1,30 @@
+---
+title: "Brevity Page"
+description: "Publish short updates from data/brevity.yaml."
+---
+
+## Create the page
+
+Create `content/brevity/_index.md`:
+
+```yaml
+---
+title: Brevity Page
+type: brevity
+data: brevity
+---
+```
+
+Entries may include a date, content, location, images, links, music, or video. Configure the public page URL and optional home summary under `params.solitude.brevity`.
+
+## Configuration or data example
+
+```yaml
+items:
+  - date: 2026-08-26T10:00:00+08:00
+    content: Solitude Hugo documentation is online.
+    location: Project repository
+    image: [/img/update.webp]
+```
+
+Compare the final structure with the matching files in `exampleSite/content` and `exampleSite/data`.

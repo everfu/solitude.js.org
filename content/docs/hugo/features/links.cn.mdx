@@ -1,0 +1,34 @@
+---
+title: "友情链接"
+description: "使用 data/links.yaml 维护分组友链与异步输出。"
+---
+
+## 创建页面
+
+创建 `content/links/_index.md`：
+
+```yaml
+---
+title: 友情链接
+type: links
+data: links
+---
+```
+
+分组支持 `card`、`item` 和 `discn` 展示。条目数达到 `page.links.async_threshold` 后，页面会读取生成的 `/links.json`；请保留首页的 `Links` 输出格式。
+
+## 配置或数据示例
+
+```yaml
+links:
+  - class_name: Official
+    class_desc: Solitude resources
+    type: card
+    link_list:
+      - name: Solitude Docs
+        link: https://solitude.js.org/
+        avatar: /img/logo.png
+        descr: Installation and configuration docs
+```
+
+最终结构请对照 `exampleSite/content` 与 `exampleSite/data` 中的对应文件。

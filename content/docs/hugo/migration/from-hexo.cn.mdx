@@ -1,0 +1,23 @@
+---
+title: "从 Hexo 迁移"
+description: "将 Solitude Hexo 站点迁移到 Hugo 原生版本，不携带废弃契约。"
+---
+
+## 迁移前
+
+备份 Hexo 源文件、配置、数据和公共资源。先让干净的 Hugo 站点构建通过，再迁移内容。
+
+## 映射站点模型
+
+- 将根配置和主题配置拆分到 Hugo 标准配置与 `params.solitude`。
+- 将 `updated` 改为 `lastmod`，并把分类、标签、系列、别名和永久链接映射到 Hugo Front Matter。
+- 文章放入 `content/posts/`，站点自有静态资源放入 `static/`。
+- 把 `{% ... %}` Hexo 标签替换为对应 Hugo Shortcodes。
+- 按 `exampleSite/data` 重建 About、Links、Equipment 与 Brevity 数据。
+- 按 Hugo 集成文档重新配置搜索和评论，不要复制插件。
+
+## 主动保留 URL
+
+使用 Front Matter `aliases` 或 Hugo 重定向保留旧地址。运行 `hugo --gc --minify`，比较生成 URL，再测试导航、搜索、评论、RSS、Sitemap 和特色页面。
+
+Hugo 版不会在运行时模拟已移除的 Hexo 字段。

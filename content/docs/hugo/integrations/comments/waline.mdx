@@ -1,0 +1,23 @@
+---
+title: "Waline"
+description: "Connect a Waline server and optional page-view integration."
+---
+
+## Configuration
+
+```yaml
+params:
+  solitude:
+    comment:
+      use: waline
+      lazyload: true
+      count: false
+    waline:
+      serverURL: https://comments.example.com
+      pageview: false
+      option: {}
+```
+
+The server must allow the production domain. Test lazy loading after repeated PJAX navigation.
+
+Set `comment: true` on pages that should mount comments. Verify both a direct load and repeated PJAX navigation.

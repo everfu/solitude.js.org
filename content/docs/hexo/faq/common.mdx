@@ -1,0 +1,23 @@
+---
+title: "Common Questions"
+description: "Answers to common Solitude 4 installation, configuration, and upgrade questions."
+---
+## Why does the site still look like the default Hexo theme?
+
+Confirm that root `_config.yml` contains `theme: solitude`, then run `hexo clean` before generating again. For npm installation, `hexo-theme-solitude@4` must be present in the blog dependencies.
+
+## Should I replace my 3.x configuration with the v4 file?
+
+No. Start with the complete Solitude 4 default file and merge your customized values into it. This preserves new nested defaults and avoids carrying removed assumptions into 4.0. Follow the full [Upgrade to 4.0](/docs/hexo/getting-started/upgrade-v4) checklist before rebuilding.
+
+## Why is a feature page blank?
+
+Check its exact `type` and data contract. About reads `_data/about.yml`, links use a `data` name such as `links`, equipment uses its Front Matter `data` name, and brevity reads `_data/brevity.yml`. Music, message, and recent comments do not use generic data files.
+
+## Why is the comment switch ignored?
+
+Use `comment` in Front Matter. The plural `comments` key is not read by Solitude. Provider settings such as `twikoo` and `waline` are top-level theme blocks.
+
+## Are Bangumi and Gallery maintained by Solitude?
+
+No. The guides use third-party Hexo plugins. Their generated markup, APIs, and compatibility are maintained by their respective projects.

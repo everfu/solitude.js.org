@@ -1,0 +1,29 @@
+---
+title: "常见问题"
+description: "解答环境要求、配置归属、更新和部署问题。"
+---
+
+## 主题需要 Node.js 吗？
+
+不需要。Hugo 通过 Hugo Pipes 编译 CSS 与 TypeScript。请使用 Hugo 0.164.0 或更高版本。
+
+## 应该修改主题配置吗？
+
+不应该。站点值保存在自己的 `hugo.yaml` 中；`exampleSite/hugo.yaml` 只作为参考。
+
+## 如何更新 submodule 安装？
+
+```bash
+git submodule update --remote --merge themes/solitude
+hugo --gc --minify
+```
+
+提交新的 submodule 指针前，应先检查上游变化。
+
+## 自定义 CSS 放在哪里？
+
+在站点创建 `assets/css/custom.css`。
+
+## 可以直接复制 Hexo 配置吗？
+
+不可以。请按照[从 Hexo 迁移](/cn/docs/hugo/migration/from-hexo)。

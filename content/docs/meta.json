@@ -1,11 +1,4 @@
 {
   "title": "Docs",
-  "pages": [
-    "getting-started",
-    "configuration",
-    "content-writing",
-    "features",
-    "integrations",
-    "faq"
-  ]
+  "pages": ["hugo", "hexo"]
 }

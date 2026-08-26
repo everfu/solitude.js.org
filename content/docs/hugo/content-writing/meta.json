@@ -1,0 +1,8 @@
+{
+  "title": "Content Writing",
+  "icon": "FileText",
+  "pages": [
+    "front-matter",
+    "shortcodes"
+  ]
+}

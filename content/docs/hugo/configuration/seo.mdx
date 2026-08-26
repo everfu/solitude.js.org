@@ -1,0 +1,18 @@
+---
+title: "SEO and Outputs"
+description: "Configure canonical site URLs, metadata, feeds, sitemap, robots, and verification."
+---
+
+## Start with Hugo
+
+Set an accurate production `baseURL`, site title, language, and per-page `title` and `description`. Hugo generates canonical URLs, RSS, Sitemap, and robots output from the site model.
+
+```yaml
+baseURL: https://example.com/
+title: My Blog
+enableRobotsTXT: true
+```
+
+Keep `outputs.home` aligned with enabled features. `Search` produces `/search.xml`; `Links` produces `/links.json`.
+
+Use `params.solitude.verify_site` for provider verification entries and configure PWA metadata under `params.solitude.pwa`. Do not put secrets in public Hugo configuration: every value rendered into the static site can be inspected by visitors.

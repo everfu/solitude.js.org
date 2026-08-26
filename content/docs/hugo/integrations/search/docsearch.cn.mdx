@@ -1,0 +1,22 @@
+---
+title: "DocSearch"
+description: "配置 Algolia DocSearch 界面。"
+---
+
+当站点已经由 Algolia DocSearch 索引抓取时，可启用 DocSearch。
+
+```yaml
+params:
+  solitude:
+    search:
+      enable: true
+      type: docsearch
+      docsearch:
+        appId: YOUR_APP_ID
+        apiKey: YOUR_SEARCH_ONLY_KEY
+        indexName: docs
+        placeholder: 搜索文档
+        option: {}
+```
+
+爬虫独立于 Hugo 管理；搜索密钥只授予查询权限，并确认索引中的生产 URL 正确。

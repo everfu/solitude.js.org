@@ -1,0 +1,43 @@
+---
+title: "Front Matter"
+description: "Use Hugo Front Matter to control posts, pages, taxonomies, aliases, and Solitude presentation."
+---
+
+## Post fields
+
+Solitude uses Hugo's content model. A typical post can include:
+
+```yaml
+---
+title: My First Post
+date: 2026-08-26
+lastmod: 2026-08-27
+slug: my-first-post
+description: A concise summary.
+cover: /img/cover.webp
+categories: [Notes]
+tags: [Hugo, Solitude]
+series: [Guides]
+toc: true
+comment: true
+aside: true
+locate: Shanghai
+---
+```
+
+Use `lastmod` for the update date. `aliases` creates Hugo redirects for old URLs, and `draft: true` keeps unfinished content out of normal production builds.
+
+## Feature pages
+
+Feature pages normally use a branch bundle named `_index.md`. Set `type` to select a Solitude layout and `data` when the page should read a site data file.
+
+```yaml
+---
+title: My Equipment
+type: kit
+data: kit
+aliases: [/kit/]
+---
+```
+
+Keep reusable structured content in `data/*.yaml`; keep article-specific presentation in Front Matter.

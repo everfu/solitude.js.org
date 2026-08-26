@@ -1,0 +1,31 @@
+---
+title: "Recent Comments"
+description: "Aggregate recent comments into a dedicated page and sidebar modules."
+---
+
+## Create the page
+
+Create `content/recent-comments/_index.md`:
+
+```yaml
+---
+title: Recent Comments
+type: recentcomment
+---
+```
+
+Enable `recent_comments`, set its limit, cache duration, and page URL, then create the page. Availability depends on the selected comment provider and its public APIs.
+
+## Configuration or data example
+
+```yaml
+params:
+  solitude:
+    recent_comments:
+      enable: true
+      limit: 50
+      cache: 0.2
+      page: /recentcomments/
+```
+
+Compare the final structure with the matching files in `exampleSite/content` and `exampleSite/data`.

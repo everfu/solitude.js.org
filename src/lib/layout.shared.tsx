@@ -2,14 +2,20 @@ import type { BaseLayoutProps, LinkItemType } from 'fumadocs-ui/layouts/shared';
 import { BookOpen, Eye, Heart } from 'lucide-react';
 import Image from 'next/image';
 import { ThemeSwitch } from '@/components/theme-switch';
-import { appName, themeRepositoryUrl, afdianUrl, githubSponsorUrl } from './shared';
+import {
+  appName,
+  afdianUrl,
+  defaultDocsVersion,
+  docsVersionConfig,
+  getDocsStartPath,
+  githubSponsorUrl,
+  type DocsVersion,
+} from './shared';
 
 function withLocale(locale: string, path: string) {
   if (locale === 'en') return path;
   return `/${locale}${path}`;
 }
-
-const docsStartPath = '/docs/getting-started/introduction';
 
 export function logo(size = 24) {
   return (
@@ -20,22 +26,23 @@ export function logo(size = 24) {
   );
 }
 
-export function linkItems(locale = 'en'): LinkItemType[] {
+export function linkItems(locale = 'en', version: DocsVersion = defaultDocsVersion): LinkItemType[] {
   const isCn = locale === 'cn';
+  const versionConfig = docsVersionConfig[version];
 
   return [
     {
       type: 'main',
       icon: <BookOpen />,
       text: isCn ? '文档' : 'Documentation',
-      url: withLocale(locale, docsStartPath),
+      url: withLocale(locale, getDocsStartPath(version)),
       active: 'nested-url',
     },
     {
       type: 'main',
       icon: <Eye />,
       text: isCn ? '预览' : 'Preview',
-      url: 'https://solitude-demo.efu.me',
+      url: versionConfig.previewUrl,
       external: true,
       active: 'none',
     },
@@ -51,7 +58,7 @@ export function linkItems(locale = 'en'): LinkItemType[] {
       type: 'icon',
       label: 'GitHub',
       text: 'GitHub',
-      url: themeRepositoryUrl,
+      url: versionConfig.repositoryUrl,
       external: true,
       icon: (
         <svg role="img" viewBox="0 0 24 24" fill="currentColor">
@@ -62,7 +69,7 @@ export function linkItems(locale = 'en'): LinkItemType[] {
   ];
 }
 
-export function baseOptions(locale = 'en'): BaseLayoutProps {
+export function baseOptions(locale = 'en', version: DocsVersion = defaultDocsVersion): BaseLayoutProps {
   return {
     nav: {
       transparentMode: 'top',
@@ -74,7 +81,7 @@ export function baseOptions(locale = 'en'): BaseLayoutProps {
         </>
       ),
     },
-    links: linkItems(locale),
+    links: linkItems(locale, version),
     slots: {
       themeSwitch: ThemeSwitch,
     },

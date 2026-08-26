@@ -4,12 +4,14 @@ import { z } from 'zod';
 import { source } from '@/lib/source';
 import { Document, type DocumentData } from 'flexsearch';
 import { ChatUIMessage, SearchTool } from '../../../components/ai/search';
+import { defaultDocsVersion, isDocsVersion, type DocsVersion } from '@/lib/shared';
 
 interface CustomDocument extends DocumentData {
   url: string;
   title: string;
   description: string;
   content: string;
+  version: DocsVersion;
 }
 const searchServer = createSearchServer();
 
@@ -31,6 +33,7 @@ async function createSearchServer() {
         description: page.data.description,
         url: page.url,
         content: await page.data.getText('processed'),
+        version: isDocsVersion(page.slugs[0]) ? page.slugs[0] : defaultDocsVersion,
       } as CustomDocument;
     }),
   );
@@ -81,16 +84,20 @@ export async function POST(req: Request) {
 
   const reqJson = await req.json();
   const language = getClientLanguage(reqJson.messages);
+  const version = getClientVersion(reqJson.messages);
   const gateway = createGatewayProvider({ apiKey });
 
   const result = streamText({
     model: gateway.languageModel(model),
     stopWhen: stepCountIs(5),
     tools: {
-      search: searchTool,
+      search: createSearchTool(version),
     },
     messages: [
-      { role: 'system', content: language === 'cn' ? `${systemPrompt}\n${chinesePrompt}` : systemPrompt },
+      {
+        role: 'system',
+        content: `${language === 'cn' ? `${systemPrompt}\n${chinesePrompt}` : systemPrompt}\nThe active documentation edition is ${version}. Only use search results from this edition.`,
+      },
       ...(await convertToModelMessages<ChatUIMessage>(reqJson.messages ?? [], {
         convertDataPart(part) {
           if (part.type === 'data-client')
@@ -133,14 +140,53 @@ function getClientLanguage(messages: unknown): 'en' | 'cn' {
   return 'en';
 }
 
-const searchTool = tool({
-  description: 'Search the docs content and return raw JSON results.',
-  inputSchema: z.object({
-    query: z.string(),
-    limit: z.number().int().min(1).max(100).default(10),
-  }),
-  async execute({ query, limit }) {
-    const search = await searchServer;
-    return await search.searchAsync(query, { limit, merge: true, enrich: true });
-  },
-}) satisfies SearchTool;
+function getClientVersion(messages: unknown): DocsVersion {
+  if (!Array.isArray(messages)) return defaultDocsVersion;
+
+  for (const message of messages) {
+    if (!message || typeof message !== 'object' || !('parts' in message)) continue;
+    const parts = (message as { parts?: unknown }).parts;
+    if (!Array.isArray(parts)) continue;
+
+    for (const part of parts) {
+      if (!part || typeof part !== 'object' || !('type' in part)) continue;
+      if ((part as { type?: unknown }).type !== 'data-client') continue;
+
+      const data = (part as { data?: unknown }).data;
+      if (!data || typeof data !== 'object') continue;
+
+      const version = (data as { version?: unknown }).version;
+      if (typeof version === 'string' && isDocsVersion(version)) return version;
+
+      const location = (data as { location?: unknown }).location;
+      if (typeof location === 'string') {
+        const match = location.match(/\/docs\/(hugo|hexo)(?:\/|$)/);
+        if (match?.[1] && isDocsVersion(match[1])) return match[1];
+      }
+    }
+  }
+
+  return defaultDocsVersion;
+}
+
+function createSearchTool(version: DocsVersion): SearchTool {
+  return tool({
+    description: `Search only the ${version} edition documentation and return raw JSON results.`,
+    inputSchema: z.object({
+      query: z.string(),
+      limit: z.number().int().min(1).max(100).default(10),
+    }),
+    async execute({ query, limit }) {
+      const search = await searchServer;
+      const results = await search.searchAsync(query, {
+        limit: Math.max(limit * 4, 40),
+        merge: true,
+        enrich: true,
+      });
+
+      return results
+        .filter((result) => result.doc?.version === version)
+        .slice(0, limit);
+    },
+  });
+}

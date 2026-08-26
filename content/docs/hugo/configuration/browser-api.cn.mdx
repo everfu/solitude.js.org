@@ -1,0 +1,29 @@
+---
+title: "浏览器 API"
+description: "在 PJAX 导航中使用稳定的 Solitude 浏览器 API。"
+---
+
+## 公共接口
+
+Solitude 通过 `window.Solitude` 暴露稳定的浏览器集成接口：
+
+```js
+window.Solitude.navigate('/archives/')
+window.Solitude.toggleTheme()
+window.Solitude.on('afterNavigate', ({ page }) => {
+  console.log(page)
+})
+```
+
+公共方法包括 `navigate`、`refresh`、`copy`、`toggleTheme`、`loadScript`、`loadStyle`、`on`、`listen` 与 `onPageCleanup`。生命周期事件包括 `ready`、`beforeNavigate`、`afterNavigate` 和 `themeChange`。
+
+## 页面级清理
+
+使用 `listen` 注册 DOM 监听，或通过 `onPageCleanup` 清理资源，避免 PJAX 导航重复绑定：
+
+```js
+Solitude.listen(document, 'click', handleClick)
+Solitude.onPageCleanup(() => observer.disconnect())
+```
+
+功能模块内部对象不属于公共契约。自行托管编译资源时，应发布同一版本的完整 `assets` 输出，确保模块相对导入有效。

@@ -1,0 +1,27 @@
+---
+title: "Shortcodes"
+description: "Use the native Hugo shortcodes bundled with Solitude."
+---
+
+## Syntax
+
+Solitude ships Hugo shortcodes for rich content. Use Hugo delimiters, not Hexo tag syntax:
+
+```html
+{{</* note type="info" */>}}
+This content supports Markdown.
+{{</* /note */>}}
+
+{{</* button url="https://gohugo.io/" text="Hugo" icon="fas fa-link" */>}}
+```
+
+Available families include text and labels (`p`, `span`, `label`), notices (`note`, `subnote`, `fold`), links and media (`button`, `link`, `img`, `audio`, `video`), structure (`tabs`, `timeline`, `gallery`, `series`), and dynamic content (`mermaid`, `chartjs`, `typeit`).
+
+## Rules
+
+- Names and parameters are case-sensitive.
+- Block shortcodes require matching closing tags.
+- Use the example at `exampleSite/content/posts/shortcodes.md` as the buildable reference.
+- Enable the related runtime option, such as `mermaid`, `chart`, `typeit`, or `katex`, before using optional dynamic components.
+
+When migrating, replace every `{% ... %}` Hexo tag with its Hugo shortcode equivalent and run a production build to catch malformed pairs.

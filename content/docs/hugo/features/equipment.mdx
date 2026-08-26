@@ -1,0 +1,33 @@
+---
+title: "Equipment Page"
+description: "Publish an equipment or toolkit page from grouped YAML data."
+---
+
+## Create the page
+
+Create `content/equipment/_index.md`:
+
+```yaml
+---
+title: Equipment Page
+type: kit
+data: kit
+---
+```
+
+Each group has a name and optional description. Items can provide a name, specification, description, image, and detail link.
+
+## Configuration or data example
+
+```yaml
+groups:
+  - name: Productivity
+    description: Tools used every day
+    items:
+      - name: Example device
+        specification: Model
+        description: Why it is useful
+        image: /img/device.webp
+```
+
+Compare the final structure with the matching files in `exampleSite/content` and `exampleSite/data`.

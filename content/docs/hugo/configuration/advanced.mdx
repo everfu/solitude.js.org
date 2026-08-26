@@ -1,0 +1,16 @@
+---
+title: "Advanced Configuration"
+description: "Configure optional modules, custom assets, keyboard actions, and CDN dependencies."
+---
+
+## Optional modules
+
+Advanced features live under `params.solitude`: `right_menu`, `keyboard`, `console`, `translate`, `rightside`, `music`, `capsule`, `mermaid`, `chart`, `typeit`, `katex`, and `memorial`.
+
+Keyboard entries must define exactly one `action` or `url`. Use `mod` for Command on macOS and Ctrl elsewhere.
+
+## Custom assets
+
+Add site CSS at `assets/css/custom.css`. Use `extends.head` and `extends.body` for deliberate HTML additions. External library URLs live under `cdn`; keep compatible script and stylesheet pairs together when overriding a provider.
+
+Custom JavaScript must follow the lifecycle described in [Browser API](/docs/hugo/configuration/browser-api), especially when PJAX navigation is enabled.

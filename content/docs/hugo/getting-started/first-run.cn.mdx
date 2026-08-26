@@ -1,0 +1,41 @@
+---
+title: "首次运行"
+description: "创建第一篇文章、本地预览并完成生产构建。"
+---
+
+## 创建内容
+
+先使用 Hugo 创建文章，再在 Front Matter 中补充 Solitude 字段：
+
+```bash
+hugo new content posts/hello-solitude.md
+```
+
+```yaml
+---
+title: 你好，Solitude
+date: 2026-08-26
+description: 我的第一篇 Solitude Hugo 文章。
+cover: /img/cover.webp
+categories: [记录]
+tags: [Hugo, Solitude]
+toc: true
+comment: true
+---
+```
+
+## 预览与构建
+
+普通站点运行 `hugo server`。如果正在主题仓库中预览随附示例站，需要显式加载主题根目录：
+
+```bash
+hugo server --source exampleSite --themesDir ../.. --theme solitude
+```
+
+生产构建使用：
+
+```bash
+hugo --gc --minify
+```
+
+检查首页、文章、分类、标签、RSS、`search.xml` 与 `links.json`。如果缺少输出，请先对照安装文档检查 `outputs` 和 `outputFormats`。

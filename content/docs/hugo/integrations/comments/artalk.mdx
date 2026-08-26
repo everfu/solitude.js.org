@@ -1,0 +1,23 @@
+---
+title: "Artalk"
+description: "Connect an Artalk server and site identifier."
+---
+
+## Configuration
+
+```yaml
+params:
+  solitude:
+    comment:
+      use: artalk
+      lazyload: true
+      count: false
+    artalk:
+      server: https://comments.example.com
+      site: My Blog
+      option: {}
+```
+
+The `site` value must match Artalk. Keep JavaScript and stylesheet versions compatible when overriding CDN assets.
+
+Set `comment: true` on pages that should mount comments. Verify both a direct load and repeated PJAX navigation.

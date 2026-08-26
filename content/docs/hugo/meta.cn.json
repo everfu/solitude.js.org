@@ -1,0 +1,14 @@
+{
+  "title": "Hugo",
+  "description": "Solitude Hugo 版",
+  "root": true,
+  "pages": [
+    "getting-started",
+    "configuration",
+    "content-writing",
+    "features",
+    "integrations",
+    "migration",
+    "faq"
+  ]
+}

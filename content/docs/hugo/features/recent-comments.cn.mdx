@@ -1,0 +1,31 @@
+---
+title: "最新评论"
+description: "将最新评论聚合到独立页面和侧栏模块。"
+---
+
+## 创建页面
+
+创建 `content/recent-comments/_index.md`：
+
+```yaml
+---
+title: 最新评论
+type: recentcomment
+---
+```
+
+启用 `recent_comments`，设置数量、缓存时间和页面地址，再创建页面。能否聚合取决于所选评论服务及其公开接口。
+
+## 配置或数据示例
+
+```yaml
+params:
+  solitude:
+    recent_comments:
+      enable: true
+      limit: 50
+      cache: 0.2
+      page: /recentcomments/
+```
+
+最终结构请对照 `exampleSite/content` 与 `exampleSite/data` 中的对应文件。

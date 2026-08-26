@@ -1,0 +1,24 @@
+---
+title: "故障排查"
+description: "排查构建失败、资源缺失、搜索输出和运行时重复行为。"
+---
+
+## 构建错误
+
+运行 `hugo version`，确认版本不低于 0.164.0。使用 `hugo --gc --minify`，优先修复第一条模板、YAML 或 Shortcode 错误。
+
+## 样式或脚本缺失
+
+确认 `theme: solitude`、submodule 检出状态和站点自己的 `assets/css/custom.css`。不要跨版本复制编译产物。
+
+## 搜索或友链输出缺失
+
+对照安装示例检查 `mediaTypes`、`outputFormats` 与 `outputs`。干净构建后直接访问 `/search.xml` 和 `/links.json`。
+
+## 切页后行为重复
+
+使用 `Solitude.listen` 或 `Solitude.onPageCleanup`；参阅[浏览器 API](/cn/docs/hugo/configuration/browser-api)。
+
+## 提交问题前
+
+请提供 Hugo 版本、Solitude 提交、最小配置、受影响 URL、第一条错误，以及示例站是否同样复现。

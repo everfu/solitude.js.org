@@ -1,0 +1,24 @@
+---
+title: "Twikoo"
+description: "Connect Twikoo to Solitude posts and feature pages."
+---
+
+## Configuration
+
+```yaml
+params:
+  solitude:
+    comment:
+      use: twikoo
+      lazyload: true
+      count: false
+    twikoo:
+      envId: https://comments.example.com
+      region: ""
+      style: true
+      option: {}
+```
+
+Use the public environment URL expected by the deployment. Keep administrative tokens out of static configuration.
+
+Set `comment: true` on pages that should mount comments. Verify both a direct load and repeated PJAX navigation.

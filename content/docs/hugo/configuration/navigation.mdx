@@ -1,0 +1,25 @@
+---
+title: "Navigation"
+description: "Build Hugo menus and configure Solitude navigation actions."
+---
+
+## Hugo menus
+
+Define primary destinations with Hugo's menu configuration. Use absolute URLs for external links and site-relative paths for local pages.
+
+```yaml
+menus:
+  main:
+    - name: Home
+      pageRef: /
+      weight: 10
+    - name: Archives
+      pageRef: /archives
+      weight: 20
+```
+
+## Solitude actions
+
+`params.solitude.nav.right.random` enables the random-post action. `nav.right.custom` and `nav.group` add site-owned items. Every custom interactive action should have a readable label and a valid URL or supported action.
+
+Use [Browser API](/docs/hugo/configuration/browser-api) for custom runtime behavior; do not rely on private theme objects.

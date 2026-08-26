@@ -1,0 +1,14 @@
+{
+  "title": "特色页面",
+  "icon": "PanelsTopLeft",
+  "pages": [
+    "about",
+    "links",
+    "equipment",
+    "music",
+    "message",
+    "brevity",
+    "recent-comments",
+    "gallery"
+  ]
+}

@@ -45,7 +45,7 @@ function SponsorSection({ lang, sponsors, docsHref }: { lang: HomeLocale; sponso
         <div className="mt-16 grid gap-10 md:mt-20 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
           <div>
             <h3 className="max-w-4xl text-[1.75rem] font-medium leading-[1.15] tracking-[-0.035em] text-fd-foreground md:text-6xl md:leading-[1.04]">{isCn ? '为下一篇文章准备好了吗？' : 'Ready for your next story?'}</h3>
-            <p className="mt-6 max-w-2xl text-base leading-7 text-fd-muted-foreground">{isCn ? '阅读文档、查看真实站点，或直接在 GitHub 上了解 Solitude 4。' : 'Read the docs, explore a live site, or see how Solitude 4 is built on GitHub.'}</p>
+            <p className="mt-6 max-w-2xl text-base leading-7 text-fd-muted-foreground">{isCn ? '阅读 Hugo 文档、查看真实站点，或直接在 GitHub 上了解 Solitude。' : 'Read the Hugo docs, explore a live site, or see how Solitude is built on GitHub.'}</p>
           </div>
           <div className="grid gap-3 sm:flex sm:flex-wrap lg:justify-end">
             <Link href={docsHref} className={cn(buttonClass, 'w-full bg-brand text-brand-foreground hover:bg-brand-200 sm:w-auto')}><BookOpen className="size-4" />{isCn ? '阅读文档' : 'Read Docs'}</Link>
@@ -74,8 +74,8 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
   const { lang } = await params;
   const locale: HomeLocale = lang === 'cn' ? 'cn' : 'en';
   const isCn = locale === 'cn';
-  const installHref = withLocale(lang, '/docs/getting-started/installation');
-  const docsHref = withLocale(lang, '/docs/getting-started/introduction');
+  const installHref = withLocale(lang, '/docs/hugo/getting-started/installation');
+  const docsHref = withLocale(lang, '/docs/hugo/getting-started/introduction');
   const sponsors = await getSponsors();
 
   return (
@@ -90,11 +90,11 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
                 className="inline-flex items-center gap-2 rounded-md border border-brand/40 bg-fd-card/70 px-3 py-2 text-xs font-medium text-brand shadow-sm backdrop-blur transition-colors hover:bg-fd-card"
               >
                 <Sparkles className="size-3.5" />
-                {isCn ? 'Solitude 4.0.0 已发布' : 'Solitude 4.0.0 is available'}
+                {isCn ? 'Solitude Hugo 原生版现已可用' : 'Solitude for Hugo is now available'}
               </Link>
 
               <h1 className="mt-8 text-5xl font-semibold leading-[0.98] text-landing-foreground dark:text-landing-foreground-dark md:text-6xl xl:text-7xl">
-                Solitude 4
+                Solitude for Hugo
                 <span className="mt-3 block max-w-xl text-3xl leading-[1.08] text-landing-foreground/82 dark:text-landing-foreground-dark/82 md:text-4xl xl:text-5xl">
                   {isCn ? '让博客回到内容本身' : 'Bring the focus back to your content'}
                 </span>
@@ -102,8 +102,8 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
 
               <p className="mt-6 max-w-xl text-base leading-7 text-landing-foreground/72 dark:text-landing-foreground-dark/72 md:text-lg">
                 {isCn
-                  ? '原生 ES 模块、统一 PJAX 生命周期与按需加载能力，为 Hexo 带来清晰、流畅、可持续维护的博客体验。'
-                  : 'Native ES modules, a unified PJAX lifecycle, and on-demand features give Hexo a clear, fluid, maintainable blog experience.'}
+                  ? '原生 Go Templates、Hugo Pipes 与标准内容模型，无需 Node.js 也能获得清晰、流畅、可持续维护的博客体验。'
+                  : 'Native Go Templates, Hugo Pipes, and the standard content model deliver a clear, fluid, maintainable blog experience without Node.js.'}
               </p>
 
               <div className="mt-8 flex w-full flex-wrap items-center gap-3">
@@ -122,9 +122,9 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
               </div>
 
               <div className="mt-9 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-fd-border/70 pt-5 text-xs font-medium text-fd-muted-foreground">
-                <span>ES Modules</span>
-                <span>PJAX Lifecycle</span>
-                <span>On-demand</span>
+                <span>Go Templates</span>
+                <span>Hugo Pipes</span>
+                <span>No Node.js</span>
                 <ScrollCue lang={locale} />
               </div>
             </div>

@@ -1,0 +1,24 @@
+---
+title: "Twikoo"
+description: "将 Twikoo 接入 Solitude 文章和特色页面。"
+---
+
+## 配置
+
+```yaml
+params:
+  solitude:
+    comment:
+      use: twikoo
+      lazyload: true
+      count: false
+    twikoo:
+      envId: https://comments.example.com
+      region: ""
+      style: true
+      option: {}
+```
+
+填写部署要求的公开环境地址。管理凭据不要写入静态配置。
+
+需要评论的页面应设置 `comment: true`。同时验证页面直达和反复 PJAX 切换。

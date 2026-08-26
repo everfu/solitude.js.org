@@ -1,0 +1,32 @@
+---
+title: "Music Page"
+description: "Create the full music page and configure Meting playback."
+---
+
+## Create the page
+
+Create `content/music/_index.md`:
+
+```yaml
+---
+title: Music Page
+type: music
+---
+```
+
+Enable `params.solitude.music` with a playlist ID, provider, type, volume, mutex, and order. The global capsule player is configured separately under `capsule`.
+
+## Configuration or data example
+
+```yaml
+params:
+  solitude:
+    music:
+      enable: true
+      id: "playlist-id"
+      server: netease
+      type: playlist
+      volume: 0.8
+```
+
+Compare the final structure with the matching files in `exampleSite/content` and `exampleSite/data`.

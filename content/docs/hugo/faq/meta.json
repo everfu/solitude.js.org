@@ -1,0 +1,8 @@
+{
+  "title": "FAQ",
+  "icon": "MessageCircleQuestionMark",
+  "pages": [
+    "common",
+    "troubleshooting"
+  ]
+}

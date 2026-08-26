@@ -1,6 +1,5 @@
-import { RootProvider } from 'fumadocs-ui/provider/next';
 import { Inter } from 'next/font/google';
-import { getI18nProvider } from '@/lib/i18n';
+import { SiteProvider } from '@/components/site-provider';
 import { i18n } from '../../../i18n';
 
 const inter = Inter({
@@ -12,9 +11,7 @@ export default async function Layout({ params, children }: LayoutProps<'/[lang]'
 
   return (
     <div lang={lang} className={`${inter.className} flex min-h-screen flex-col`}>
-      <RootProvider i18n={getI18nProvider(lang)} theme={{ enabled: false }}>
-        {children}
-      </RootProvider>
+      <SiteProvider lang={lang}>{children}</SiteProvider>
     </div>
   );
 }

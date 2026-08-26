@@ -1,0 +1,23 @@
+---
+title: "Waline"
+description: "连接 Waline 服务并按需启用浏览量。"
+---
+
+## 配置
+
+```yaml
+params:
+  solitude:
+    comment:
+      use: waline
+      lazyload: true
+      count: false
+    waline:
+      serverURL: https://comments.example.com
+      pageview: false
+      option: {}
+```
+
+服务端必须允许生产域名，并在反复 PJAX 切页后测试懒加载。
+
+需要评论的页面应设置 `comment: true`。同时验证页面直达和反复 PJAX 切换。

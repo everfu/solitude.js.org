@@ -1,0 +1,34 @@
+---
+title: "Links Page"
+description: "Maintain grouped links and asynchronous output with data/links.yaml."
+---
+
+## Create the page
+
+Create `content/links/_index.md`:
+
+```yaml
+---
+title: Links Page
+type: links
+data: links
+---
+```
+
+Groups support `card`, `item`, and `discn` presentation. When the entry count reaches `page.links.async_threshold`, the page reads the generated `/links.json`; keep the `Links` home output enabled.
+
+## Configuration or data example
+
+```yaml
+links:
+  - class_name: Official
+    class_desc: Solitude resources
+    type: card
+    link_list:
+      - name: Solitude Docs
+        link: https://solitude.js.org/
+        avatar: /img/logo.png
+        descr: Installation and configuration docs
+```
+
+Compare the final structure with the matching files in `exampleSite/content` and `exampleSite/data`.

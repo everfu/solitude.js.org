@@ -1,0 +1,29 @@
+---
+title: "Message Page"
+description: "Create a dedicated message page backed by the active comment provider."
+---
+
+## Create the page
+
+Create `content/message/_index.md`:
+
+```yaml
+---
+title: Message Page
+type: message
+---
+```
+
+Set `comment: true` on the page and configure exactly one supported comment provider. Optional envelope animation is controlled by `params.solitude.envelope` and its `page` URL.
+
+## Configuration or data example
+
+```yaml
+---
+title: Message Board
+type: message
+comment: true
+---
+```
+
+Compare the final structure with the matching files in `exampleSite/content` and `exampleSite/data`.

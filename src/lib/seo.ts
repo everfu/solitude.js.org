@@ -103,8 +103,8 @@ export function createHomeMetadata(locale: Locale | string): Metadata {
   const isCn = locale === 'cn';
   const title = isCn ? `${themeName} 文档` : `${themeName} Documentation`;
   const description = isCn
-    ? 'Solitude 是一个现代 Hexo 博客主题，这里提供安装、配置、功能页面、搜索和评论集成文档。'
-    : 'Solitude is a modern Hexo blog theme. Find installation, configuration, feature page, search, and comment integration docs.';
+    ? 'Solitude 是一个面向 Hugo 与 Hexo 的现代博客主题，这里提供安装、配置、内容、功能页面、搜索和评论集成文档。'
+    : 'Solitude is a modern blog theme for Hugo and Hexo. Find installation, configuration, content, feature page, search, and comment integration docs.';
   const canonical = toAbsoluteUrl(withLocalePath(locale, '/'));
 
   return {

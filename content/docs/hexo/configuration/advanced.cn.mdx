@@ -1,0 +1,57 @@
+---
+title: "高级配置"
+description: "配置可选渲染、PWA、注入、界面、广告和 CDN 功能。"
+icon: "SlidersHorizontal"
+---
+## 内容与渲染
+
+```yaml
+wordcount: true
+mermaid: true
+chart: false
+typeit: false
+katex:
+  enable: true
+  per_page: false
+  copytex: true
+```
+
+字数统计依赖 `hexo-wordcount`。`katex.per_page: false` 时，可通过页面 Front Matter 的 `katex: true` 按需启用公式。
+
+## PWA 与注入
+
+```yaml
+pwa:
+  enable: true
+  manifest: /manifest.json
+  theme_color: "#425AEF"
+  mask_icon: /img/pwa/favicon.png
+  apple_touch_icon: /img/pwa/favicon.png
+  bookmark_icon: /img/pwa/favicon.png
+  favicon_32_32: /img/pwa/favicon_32.png
+  favicon_16_16: /img/pwa/favicon_16.png
+
+extends:
+  head:
+    - <link rel="stylesheet" href="/css/custom.css">
+  body:
+    - <script src="/js/custom.js"></script>
+```
+
+自定义脚本需要遵循[浏览器 API](/cn/docs/hexo/configuration/browser-api) 中的 Solitude 4 生命周期说明。
+
+## 界面、广告与 CDN
+
+`console`、`keyboard`、`rightside`、`footer`、`translate`、`memorial` 和 `google_adsense` 都是可选顶层配置。请从 v4 默认配置复制完整区块，不要自行拼接不存在的嵌套字段。
+
+```yaml
+CDN:
+  internal: local # local / cdnjs / jsdelivr / unpkg / custom
+  third_party: custom
+  version: true
+  custom_format: https://cdn.jsdelivr.net/npm/${name}@${version}/${min_file}
+  options:
+    # fontawesome: https://example.com/fontawesome.css
+```
+
+`internal` 不为 `local` 时，必须以相同相对路径提供完整的 v4 ES 模块文件树。

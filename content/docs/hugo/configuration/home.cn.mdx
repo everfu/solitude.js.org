@@ -1,0 +1,27 @@
+---
+title: "首页"
+description: "配置首页横幅、推荐分组和文章列表。"
+---
+
+## 首页顶部
+
+```yaml
+params:
+  solitude:
+    hometop:
+      enable: true
+      banner:
+        title: Solitude
+        desc: A fast, elegant and feature-rich Hugo theme
+        icon: {}
+      group: {}
+      recommendList: []
+```
+
+`group` 和 `recommendList` 是由站点配置维护的数组或映射。覆盖数组时应写出希望保留的完整列表；Hugo 会整体替换主题数组。
+
+## 文章卡片
+
+使用 `index_post_list.direction`、`column` 和 `cover` 控制首页列表。单篇文章可在 Front Matter 中提供 `cover`、`description`、分类、标签和推荐信息。
+
+完整可运行结构见 `exampleSite/hugo.yaml`。应从该示例开始配置，不要逐字段照搬 Hexo 的 `_config.solitude.yml`。

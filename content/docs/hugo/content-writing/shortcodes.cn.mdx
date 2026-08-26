@@ -1,0 +1,27 @@
+---
+title: "Shortcodes"
+description: "使用 Solitude 随附的 Hugo 原生 Shortcodes。"
+---
+
+## 语法
+
+Solitude 提供丰富内容所需的 Hugo Shortcodes。请使用 Hugo 边界符，不要继续使用 Hexo 标签语法：
+
+```html
+{{</* note type="info" */>}}
+这里支持 Markdown。
+{{</* /note */>}}
+
+{{</* button url="https://gohugo.io/" text="Hugo" icon="fas fa-link" */>}}
+```
+
+组件包括文本与标签（`p`、`span`、`label`）、提示（`note`、`subnote`、`fold`）、链接与媒体（`button`、`link`、`img`、`audio`、`video`）、结构化内容（`tabs`、`timeline`、`gallery`、`series`）以及动态内容（`mermaid`、`chartjs`、`typeit`）。
+
+## 使用规则
+
+- 名称和参数区分大小写。
+- 块级 Shortcode 必须成对闭合。
+- 以 `exampleSite/content/posts/shortcodes.md` 作为可构建参考。
+- 使用可选动态组件前，先启用对应的 `mermaid`、`chart`、`typeit` 或 `katex` 配置。
+
+迁移文章时，应把每一个 `{% ... %}` Hexo 标签替换为对应 Hugo Shortcode，并运行生产构建检查不完整的标签对。

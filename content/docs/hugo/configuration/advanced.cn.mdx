@@ -1,0 +1,16 @@
+---
+title: "高级配置"
+description: "配置可选模块、自定义资源、键盘操作和 CDN 依赖。"
+---
+
+## 可选模块
+
+高级功能位于 `params.solitude`：`right_menu`、`keyboard`、`console`、`translate`、`rightside`、`music`、`capsule`、`mermaid`、`chart`、`typeit`、`katex` 与 `memorial`。
+
+键盘条目必须只定义一个 `action` 或 `url`。`mod` 在 macOS 表示 Command，在其他系统表示 Ctrl。
+
+## 自定义资源
+
+站点样式写入 `assets/css/custom.css`。需要加入 HTML 时使用 `extends.head` 和 `extends.body`。外部依赖 URL 位于 `cdn`；覆盖服务时应保持脚本和样式版本兼容。
+
+启用 PJAX 后，自定义 JavaScript 必须遵循[浏览器 API](/cn/docs/hugo/configuration/browser-api)中的生命周期规则。

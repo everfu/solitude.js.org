@@ -1,0 +1,27 @@
+---
+title: "Valine"
+description: "Configure Valine comments, visitors, and recent-comment data."
+---
+
+## Configuration
+
+```yaml
+params:
+  solitude:
+    comment:
+      use: valine
+      lazyload: true
+      count: false
+    valine:
+      appId: YOUR_APP_ID
+      appKey: YOUR_APP_KEY
+      serverURLs: ""
+      avatar: mp
+      visitor: false
+      style: true
+      option: {}
+```
+
+Valine can provide visitor counts and recent comments. Restrict the LeanCloud application domain.
+
+Set `comment: true` on pages that should mount comments. Verify both a direct load and repeated PJAX navigation.

@@ -1,18 +1,16 @@
 import Link from 'next/link';
-import { appDescription, appName, previewUrl, themeRepositoryUrl } from '@/lib/shared';
+import { appName, getDocsStartPath, previewUrl, themeRepositoryUrl } from '@/lib/shared';
 import { withLocale } from '@/lib/layout.shared';
 
 type SiteFooterProps = {
   locale: string;
 };
 
-const docsStartPath = '/docs/getting-started/introduction';
-
 export function SiteFooter({ locale }: SiteFooterProps) {
   const isCn = locale === 'cn';
   const links = [
     {
-      href: withLocale(locale, docsStartPath),
+      href: withLocale(locale, getDocsStartPath()),
       label: isCn ? '文档' : 'Docs',
     },
     {

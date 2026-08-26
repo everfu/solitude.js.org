@@ -1,0 +1,36 @@
+---
+title: "站点基础"
+description: "配置站点身份、语言、分页、Taxonomies 与必需输出。"
+---
+
+## Hugo 标准配置
+
+站点身份和 Hugo 行为保留在顶层。Solitude 直接读取 Hugo 标准值，不会在主题参数中重复定义。
+
+```yaml
+baseURL: https://example.com/
+title: 我的博客
+defaultContentLanguage: zh-cn
+pagination:
+  pagerSize: 10
+taxonomies:
+  category: categories
+  tag: tags
+  series: series
+```
+
+启用搜索或异步友链时，请保留安装文档中的 `Search` 与 `Links` 输出格式。多语言站点使用 Hugo 的 `languages` 配置，并按 Hugo 标准方式提供翻译内容。
+
+## Solitude 站点身份
+
+```yaml
+params:
+  solitude:
+    site:
+      name:
+        class: text
+        custom: 我的博客
+      icon: /img/logo.png
+```
+
+站点自己的图片应放在 `static/` 中，并以 `/img/logo.png` 这样的公共路径引用。

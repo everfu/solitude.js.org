@@ -1,0 +1,22 @@
+---
+title: "Algolia"
+description: "Connect Solitude search to an Algolia index."
+---
+
+Create and populate the index outside the theme, then expose only browser-safe search credentials.
+
+```yaml
+params:
+  solitude:
+    search:
+      enable: true
+      type: algolia
+      algolia:
+        appId: YOUR_APP_ID
+        apiKey: YOUR_SEARCH_ONLY_KEY
+        indexName: posts
+        hits:
+          per_page: 6
+```
+
+Never publish an Algolia admin key. Indexed URLs must match the deployed site `baseURL`.

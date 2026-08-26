@@ -1,0 +1,27 @@
+---
+title: "Home Page"
+description: "Configure the home banner, recommendation groups, and post list."
+---
+
+## Home top area
+
+```yaml
+params:
+  solitude:
+    hometop:
+      enable: true
+      banner:
+        title: Solitude
+        desc: A fast, elegant and feature-rich Hugo theme
+        icon: {}
+      group: {}
+      recommendList: []
+```
+
+`group` and `recommendList` are arrays or maps owned by the site configuration. When overriding a list, write the complete list you want to keep; Hugo array merging replaces the theme value as a unit.
+
+## Post cards
+
+Use `index_post_list.direction`, `column`, and `cover` to control the home list. Individual posts can provide `cover`, `description`, categories, tags, and recommendation metadata in Front Matter.
+
+The complete working shape is available in `exampleSite/hugo.yaml`. Start with that example instead of translating a Hexo `_config.solitude.yml` block field by field.

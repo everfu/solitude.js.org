@@ -1,0 +1,43 @@
+---
+title: "Front Matter"
+description: "使用 Hugo Front Matter 控制文章、页面、Taxonomies、别名和 Solitude 展示。"
+---
+
+## 文章字段
+
+Solitude 使用 Hugo 内容模型。典型文章可包含：
+
+```yaml
+---
+title: 我的第一篇文章
+date: 2026-08-26
+lastmod: 2026-08-27
+slug: my-first-post
+description: 简洁的文章摘要。
+cover: /img/cover.webp
+categories: [记录]
+tags: [Hugo, Solitude]
+series: [教程]
+toc: true
+comment: true
+aside: true
+locate: 上海
+---
+```
+
+更新时间使用 `lastmod`。`aliases` 可为旧地址生成 Hugo 重定向；`draft: true` 会让未完成内容不进入普通生产构建。
+
+## 特色页面
+
+特色页面通常使用名为 `_index.md` 的分支包。通过 `type` 选择 Solitude 布局；需要读取站点数据文件时再设置 `data`。
+
+```yaml
+---
+title: 我的装备
+type: kit
+data: kit
+aliases: [/kit/]
+---
+```
+
+可复用的结构化内容放在 `data/*.yaml`，只影响单篇内容的展示值放在 Front Matter。

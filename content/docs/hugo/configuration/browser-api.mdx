@@ -1,0 +1,29 @@
+---
+title: "Browser API"
+description: "Use the stable Solitude browser API across PJAX navigation."
+---
+
+## Public surface
+
+Solitude exposes its stable browser integration surface through `window.Solitude`:
+
+```js
+window.Solitude.navigate('/archives/')
+window.Solitude.toggleTheme()
+window.Solitude.on('afterNavigate', ({ page }) => {
+  console.log(page)
+})
+```
+
+Public methods include `navigate`, `refresh`, `copy`, `toggleTheme`, `loadScript`, `loadStyle`, `on`, `listen`, and `onPageCleanup`. Lifecycle events include `ready`, `beforeNavigate`, `afterNavigate`, and `themeChange`.
+
+## Page-scoped cleanup
+
+Register DOM listeners with `listen`, or return cleanup through `onPageCleanup`, so PJAX navigation cannot duplicate handlers:
+
+```js
+Solitude.listen(document, 'click', handleClick)
+Solitude.onPageCleanup(() => observer.disconnect())
+```
+
+Feature-specific objects are implementation details, not public contracts. When self-hosting compiled assets, publish the complete same-version `assets` output so module-relative imports remain valid.

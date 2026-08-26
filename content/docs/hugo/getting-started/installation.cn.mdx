@@ -1,0 +1,40 @@
+---
+title: "安装"
+description: "将 Solitude 安装为 Hugo 主题，并启用主题需要的输出格式。"
+---
+
+## 环境要求
+
+安装 Hugo **v0.164.0 或更高版本**与 Git，并先确认当前使用的二进制版本：
+
+```bash
+hugo version
+```
+
+## 添加主题
+
+在已有 Hugo 站点根目录中将主题添加为 submodule。仓库使用 `hugo` 分支：
+
+```bash
+git submodule add -b hugo https://github.com/everfu/hugo-solitude.git themes/solitude
+```
+
+启用主题，并声明本地搜索与异步友链需要的输出格式：
+
+```yaml
+theme: solitude
+
+outputs:
+  home: [HTML, RSS, Search, Links]
+  section: [HTML, RSS]
+  taxonomy: [HTML, RSS]
+  term: [HTML, RSS]
+
+params:
+  solitude:
+    search:
+      enable: true
+      type: local
+```
+
+可将 `themes/solitude/exampleSite/hugo.yaml` 作为完整参考，再把需要的配置合并到站点自己的文件中。不要直接修改主题默认配置。

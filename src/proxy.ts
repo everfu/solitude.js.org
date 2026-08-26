@@ -2,12 +2,13 @@ import { NextFetchEvent, NextRequest, NextResponse } from 'next/server';
 import { isMarkdownPreferred } from 'fumadocs-core/negotiation';
 import { docsContentRoute, docsRoute } from '@/lib/shared';
 import { createI18nMiddleware } from 'fumadocs-core/i18n/middleware';
-import { i18n } from '../i18n';
+import { i18n, localeCookieMaxAge, localeCookieName } from '../i18n';
 
 const i18nMiddleware = createI18nMiddleware(i18n);
+const localeRewriteHeader = 'x-solitude-locale-rewrite';
 
 function getBrowserLocale(request: NextRequest) {
-  const cookie = request.cookies.get('FD_LOCALE')?.value;
+  const cookie = request.cookies.get(localeCookieName)?.value;
   if (cookie === 'en' || cookie === 'cn') return cookie;
 
   const first = request.headers.get('accept-language')?.split(',')[0]?.trim().toLowerCase();
@@ -28,8 +29,15 @@ function getMarkdownRewrite(pathname: string) {
     : `${docsContentRoute}${slug}/content.md`;
 }
 
-export function proxy(request: NextRequest, event: NextFetchEvent) {
+export async function proxy(request: NextRequest, event: NextFetchEvent) {
   const { pathname } = request.nextUrl;
+
+  if (
+    request.headers.get(localeRewriteHeader) === 'en'
+    && (pathname === '/en' || pathname.startsWith('/en/'))
+  ) {
+    return NextResponse.next();
+  }
 
   if (pathname.endsWith('.md')) {
     const result = getMarkdownRewrite(pathname);
@@ -48,14 +56,26 @@ export function proxy(request: NextRequest, event: NextFetchEvent) {
       return NextResponse.redirect(url);
     }
     url.pathname = `/en${pathname}`;
-    return NextResponse.rewrite(url);
+    const headers = new Headers(request.headers);
+    headers.set(localeRewriteHeader, 'en');
+    return NextResponse.rewrite(url, { request: { headers } });
   }
 
-  return i18nMiddleware(request, event);
+  const response = await i18nMiddleware(request, event);
+
+  if (response instanceof NextResponse && (pathname === '/en' || pathname.startsWith('/en/'))) {
+    response.cookies.set(localeCookieName, 'en', {
+      maxAge: localeCookieMaxAge,
+      path: '/',
+      sameSite: 'lax',
+    });
+  }
+
+  return response;
 }
 
 export const config = {
   matcher: [
-    '/((?!api|_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml|llms.txt|llms-full.txt|llms.mdx|logo.svg|logo-dark.svg|ProjectIcon|base-useage|showcase).*)',
+    '/((?!api|_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml|llms.txt|llms-full.txt|llms.mdx|og|logo.svg|logo-dark.svg|ProjectIcon|base-useage|showcase).*)',
   ],
 };

@@ -1,0 +1,14 @@
+{
+  "title": "Feature Pages",
+  "icon": "PanelsTopLeft",
+  "pages": [
+    "about",
+    "links",
+    "equipment",
+    "music",
+    "message",
+    "brevity",
+    "recent-comments",
+    "gallery"
+  ]
+}

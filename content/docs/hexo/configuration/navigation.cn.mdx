@@ -1,0 +1,43 @@
+---
+title: "导航菜单"
+description: "配置菜单、分组、右侧按钮和右键菜单。"
+icon: "Navigation"
+---
+## 导航栏
+
+```yaml
+nav:
+  group:
+    项目:
+      Solitude: https://github.com/everfu/hexo-theme-solitude || /img/pwa/favicon.png
+  menu:
+    首页: /
+    文章:
+      归档: /archives/ || fas fa-folder-closed
+      分类: /categories/ || fas fa-clone
+      标签: /tags/ || fas fa-tags
+  right:
+    random: true
+    custom:
+      - name: 关于
+        url: /about/
+        icon: fas fa-user
+        id: about-button
+```
+
+`||` 前是链接，后面是图标；嵌套的菜单对象会生成下拉分组。
+
+## 右键菜单
+
+```yaml
+right_menu:
+  enable: true
+  ctrlOriginalMenu: true
+  custom_list:
+    - name: 随机文章
+      click: Solitude.randomPost()
+      id: menu-random-post
+      icon: fas fa-tower-broadcast
+```
+
+自定义动作请使用[浏览器 API](/cn/docs/hexo/configuration/browser-api)。Solitude 4 不再将旧版全局调用作为公开扩展契约。

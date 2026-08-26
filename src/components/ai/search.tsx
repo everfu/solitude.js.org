@@ -18,6 +18,7 @@ import { useChat, type UseChatHelpers } from '@ai-sdk/react';
 import { DefaultChatTransport, type Tool, type UIMessage, type UIToolInvocation } from 'ai';
 import { Markdown } from '../markdown';
 import { Presence } from '@radix-ui/react-presence';
+import type { DocsVersion } from '../../lib/shared';
 
 export type ChatUIMessage = UIMessage<
   never,
@@ -25,6 +26,7 @@ export type ChatUIMessage = UIMessage<
     client: {
       location: string;
       language: 'en' | 'cn';
+      version: DocsVersion;
     };
   }
 >;
@@ -80,6 +82,7 @@ const Context = createContext<{
   setOpen: (open: boolean) => void;
   chat: UseChatHelpers<ChatUIMessage>;
   language: AISearchLanguage;
+  version: DocsVersion;
 } | null>(null);
 
 export function AISearchPanelHeader({ className, ...props }: ComponentProps<'div'>) {
@@ -163,7 +166,7 @@ export function AISearchInputActions() {
 const StorageKeyInput = '__ai_search_input';
 export function AISearchInput(props: ComponentProps<'form'>) {
   const { status, sendMessage, stop } = useChatContext();
-  const { language } = useAISearchContext();
+  const { language, version } = useAISearchContext();
   const t = translations[language];
   const [input, setInput] = useState(() => localStorage.getItem(StorageKeyInput) ?? '');
   const isLoading = status === 'streaming' || status === 'submitted';
@@ -180,6 +183,7 @@ export function AISearchInput(props: ComponentProps<'form'>) {
           data: {
             location: location.href,
             language,
+            version,
           },
         },
         {
@@ -366,9 +370,11 @@ function Message({ message, ...props }: { message: ChatUIMessage } & ComponentPr
 export function AISearch({
   children,
   lang = 'en',
+  version,
 }: {
   children: ReactNode;
   lang?: string;
+  version: DocsVersion;
 }) {
   const [open, setOpen] = useState(false);
   const language: AISearchLanguage = lang === 'cn' ? 'cn' : 'en';
@@ -381,7 +387,7 @@ export function AISearch({
 
   return (
     <Context
-      value={useMemo(() => ({ chat, open, setOpen, language }), [chat, open, language])}
+      value={useMemo(() => ({ chat, open, setOpen, language, version }), [chat, open, language, version])}
     >
       {children}
     </Context>

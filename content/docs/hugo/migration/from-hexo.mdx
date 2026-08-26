@@ -1,0 +1,23 @@
+---
+title: "Migrate from Hexo"
+description: "Move a Solitude Hexo site to the native Hugo edition without carrying obsolete contracts."
+---
+
+## Before migrating
+
+Back up the Hexo source, configuration, data, and public assets. Make a clean Hugo site build before moving content.
+
+## Map the site model
+
+- Move root and theme settings into Hugo standard configuration and `params.solitude`.
+- Replace `updated` with `lastmod`; map categories, tags, series, aliases, and permalinks to Hugo Front Matter.
+- Put posts under `content/posts/` and site-owned static files under `static/`.
+- Replace `{% ... %}` Hexo tags with matching Hugo shortcodes.
+- Rebuild About, Links, Equipment, and Brevity data from `exampleSite/data`.
+- Configure search and comments from the Hugo integration pages instead of copying plugins.
+
+## Preserve URLs deliberately
+
+Use Front Matter `aliases` or Hugo redirects for old paths. Build with `hugo --gc --minify`, compare output URLs, then test navigation, search, comments, RSS, Sitemap, and feature pages.
+
+The Hugo edition intentionally does not emulate removed Hexo fields at runtime.

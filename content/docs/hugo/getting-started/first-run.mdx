@@ -1,0 +1,41 @@
+---
+title: "First Run"
+description: "Create the first post, preview the site, and make a production build."
+---
+
+## Create content
+
+Create a post with Hugo, then add Solitude fields to its Front Matter:
+
+```bash
+hugo new content posts/hello-solitude.md
+```
+
+```yaml
+---
+title: Hello Solitude
+date: 2026-08-26
+description: My first Solitude Hugo post.
+cover: /img/cover.webp
+categories: [Notes]
+tags: [Hugo, Solitude]
+toc: true
+comment: true
+---
+```
+
+## Preview and build
+
+Run `hugo server` in a normal site. When previewing the example bundled with the theme repository, load the theme root explicitly:
+
+```bash
+hugo server --source exampleSite --themesDir ../.. --theme solitude
+```
+
+Create a production build with:
+
+```bash
+hugo --gc --minify
+```
+
+Verify the home page, post, taxonomies, RSS, `search.xml`, and `links.json`. If an output is missing, compare the `outputs` and `outputFormats` blocks with the installation guide.

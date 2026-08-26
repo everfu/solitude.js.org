@@ -1,0 +1,27 @@
+---
+title: "Valine"
+description: "配置 Valine 评论、访问量和最新评论数据。"
+---
+
+## 配置
+
+```yaml
+params:
+  solitude:
+    comment:
+      use: valine
+      lazyload: true
+      count: false
+    valine:
+      appId: YOUR_APP_ID
+      appKey: YOUR_APP_KEY
+      serverURLs: ""
+      avatar: mp
+      visitor: false
+      style: true
+      option: {}
+```
+
+Valine 可提供访问量与最新评论。请在 LeanCloud 控制台限制应用域名。
+
+需要评论的页面应设置 `comment: true`。同时验证页面直达和反复 PJAX 切换。

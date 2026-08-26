@@ -1,0 +1,39 @@
+---
+title: "Appearance"
+description: "Control theme colors, display mode, fonts, loading, highlighting, and lightboxes."
+---
+
+## Colors and display mode
+
+```yaml
+params:
+  solitude:
+    theme_color:
+      dark: "#ffc848"
+      light: "#425aef"
+      nav_hover_text:
+        dark: "#1b1c20"
+        light: "#ffffff"
+    display_mode:
+      type: auto
+```
+
+`display_mode.type` accepts the theme's automatic mode and follows the visitor's stored choice and system preference.
+
+## Typography and media
+
+Configure `font`, `loading`, `lazyload`, `highlight`, and `lightbox` under `params.solitude`. Highlighting loads Shiki only on pages that contain code blocks and can use separate light and dark themes.
+
+```yaml
+highlight:
+  enable: true
+  copy: true
+  line_numbers: true
+  max_height: 360
+  themes:
+    light: github-light
+    dark: github-dark
+lightbox: fancybox
+```
+
+Use `assets/css/custom.css` for site overrides. Hugo builds it after the theme stylesheet, so copying theme CSS or adding blanket `!important` rules is unnecessary.

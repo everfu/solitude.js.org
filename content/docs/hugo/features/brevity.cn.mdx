@@ -1,0 +1,30 @@
+---
+title: "即刻短文"
+description: "从 data/brevity.yaml 发布短动态。"
+---
+
+## 创建页面
+
+创建 `content/brevity/_index.md`：
+
+```yaml
+---
+title: 即刻短文
+type: brevity
+data: brevity
+---
+```
+
+条目可包含日期、内容、位置、图片、链接、音乐或视频。公开页面地址和首页摘要在 `params.solitude.brevity` 下配置。
+
+## 配置或数据示例
+
+```yaml
+items:
+  - date: 2026-08-26T10:00:00+08:00
+    content: Solitude Hugo documentation is online.
+    location: Project repository
+    image: [/img/update.webp]
+```
+
+最终结构请对照 `exampleSite/content` 与 `exampleSite/data` 中的对应文件。

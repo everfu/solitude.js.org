@@ -1,0 +1,28 @@
+---
+title: "Giscus"
+description: "使用 GitHub Discussions 作为 Solitude 评论后端。"
+---
+
+## 配置
+
+```yaml
+params:
+  solitude:
+    comment:
+      use: giscus
+      lazyload: true
+      count: false
+    giscus:
+      repo: owner/repository
+      repo_id: REPOSITORY_ID
+      category_id: CATEGORY_ID
+      mapping: pathname
+      theme:
+        light: light
+        dark: dark
+      option: {}
+```
+
+启用 Discussions 并安装 Giscus App。上线后保持 `mapping: pathname` 稳定。
+
+需要评论的页面应设置 `comment: true`。同时验证页面直达和反复 PJAX 切换。

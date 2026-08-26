@@ -1,0 +1,27 @@
+---
+title: "文章"
+description: "配置文章元数据、封面、版权、分享、相关文章和过期提示。"
+---
+
+## 默认值与元数据
+
+```yaml
+params:
+  solitude:
+    post:
+      default:
+        cover: [/img/default.avif]
+        locate: China
+        copyright:
+          enable: true
+          license: CC BY-NC-SA 4.0
+      meta:
+        date: true
+        updated: true
+        wordcount: true
+        readtime: true
+```
+
+文章可通过 Front Matter 覆盖 `cover`、`locate`、`comment`、`toc`、`aside` 和版权相关值。更新时间使用 Hugo 的 `lastmod`，不要继续使用 Hexo 的 `updated`。
+
+`related_post` 使用 Hugo Related Content；`expire` 显示时效提示，`post.award`、`post.share`、`post.rss` 与 `post.covercolor` 控制可选文章操作。

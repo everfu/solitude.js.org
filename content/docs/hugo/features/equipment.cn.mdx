@@ -1,0 +1,33 @@
+---
+title: "装备页"
+description: "使用分组 YAML 数据发布装备或工具页。"
+---
+
+## 创建页面
+
+创建 `content/equipment/_index.md`：
+
+```yaml
+---
+title: 装备页
+type: kit
+data: kit
+---
+```
+
+每个分组提供名称和可选说明；条目可包含名称、规格、描述、图片和详情链接。
+
+## 配置或数据示例
+
+```yaml
+groups:
+  - name: Productivity
+    description: Tools used every day
+    items:
+      - name: Example device
+        specification: Model
+        description: Why it is useful
+        image: /img/device.webp
+```
+
+最终结构请对照 `exampleSite/content` 与 `exampleSite/data` 中的对应文件。

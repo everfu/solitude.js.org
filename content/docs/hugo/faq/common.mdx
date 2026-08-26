@@ -1,0 +1,29 @@
+---
+title: "Common Questions"
+description: "Answers about requirements, configuration ownership, updates, and deployment."
+---
+
+## Does the theme require Node.js?
+
+No. Hugo compiles CSS and TypeScript through Hugo Pipes. Use Hugo 0.164.0 or newer.
+
+## Should I edit the theme configuration?
+
+No. Keep values in the site `hugo.yaml`; use `exampleSite/hugo.yaml` as a reference.
+
+## How do I update a submodule install?
+
+```bash
+git submodule update --remote --merge themes/solitude
+hugo --gc --minify
+```
+
+Review upstream changes before committing the updated submodule pointer.
+
+## Where should custom CSS go?
+
+Create `assets/css/custom.css` in the site.
+
+## Can I copy Hexo configuration directly?
+
+No. Follow [Migrate from Hexo](/docs/hugo/migration/from-hexo).

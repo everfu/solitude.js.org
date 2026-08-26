@@ -1,0 +1,13 @@
+{
+  "title": "Hexo",
+  "description": "Solitude Hexo 版",
+  "root": true,
+  "pages": [
+    "getting-started",
+    "configuration",
+    "content-writing",
+    "features",
+    "integrations",
+    "faq"
+  ]
+}

@@ -1,0 +1,31 @@
+---
+title: "关于页"
+description: "使用 Hugo 数据文件构建模块化关于页。"
+---
+
+## 创建页面
+
+创建 `content/about/_index.md`：
+
+```yaml
+---
+title: 关于页
+type: about
+data: about
+---
+```
+
+`sections` 数组同时决定模块选择和渲染顺序。主题只接受已定义的 section 类型；未知类型会让构建明确失败，而不是静默输出空白块。
+
+## 配置或数据示例
+
+```yaml
+title: About Solitude
+sections:
+  - type: intro
+    greeting: Hello
+    name: Solitude
+    description: A Hugo theme for content-focused sites
+```
+
+最终结构请对照 `exampleSite/content` 与 `exampleSite/data` 中的对应文件。

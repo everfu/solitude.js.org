@@ -1,0 +1,25 @@
+---
+title: "导航"
+description: "使用 Hugo Menus 构建菜单，并配置 Solitude 导航操作。"
+---
+
+## Hugo Menus
+
+使用 Hugo 菜单配置主要入口。外部链接使用完整 URL，站内页面使用站点相对路径。
+
+```yaml
+menus:
+  main:
+    - name: 首页
+      pageRef: /
+      weight: 10
+    - name: 归档
+      pageRef: /archives
+      weight: 20
+```
+
+## Solitude 操作
+
+`params.solitude.nav.right.random` 用于启用随机文章；`nav.right.custom` 和 `nav.group` 用于添加站点自有项目。自定义交互项应提供可读标签，以及有效 URL 或主题支持的操作。
+
+自定义运行时行为请使用[浏览器 API](/cn/docs/hugo/configuration/browser-api)，不要依赖主题私有对象。

@@ -13,7 +13,9 @@ export const source = loader({
 });
 
 export function getPageImage(page: (typeof source)['$inferPage']) {
-  const segments = [...page.slugs, 'image.png'];
+  const segments = page.locale && page.locale !== 'en'
+    ? [page.locale, ...page.slugs, 'image.png']
+    : [...page.slugs, 'image.png'];
 
   return {
     segments,
@@ -29,7 +31,7 @@ export function getPageMarkdownUrl(page: (typeof source)['$inferPage']) {
     segments,
     url:
       locale && locale !== 'en'
-        ? `${docsContentRoute}/${locale}/${segments.join('/')}`
+        ? `/llms.mdx/${locale}/docs/${segments.join('/')}`
         : `${docsContentRoute}/${segments.join('/')}`,
   };
 }

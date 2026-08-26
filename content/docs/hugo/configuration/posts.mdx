@@ -1,0 +1,27 @@
+---
+title: "Posts"
+description: "Configure post metadata, covers, copyright, sharing, related content, and expiry notices."
+---
+
+## Defaults and metadata
+
+```yaml
+params:
+  solitude:
+    post:
+      default:
+        cover: [/img/default.avif]
+        locate: China
+        copyright:
+          enable: true
+          license: CC BY-NC-SA 4.0
+      meta:
+        date: true
+        updated: true
+        wordcount: true
+        readtime: true
+```
+
+Posts may override `cover`, `locate`, `comment`, `toc`, `aside`, and copyright-related values in Front Matter. Use Hugo's `lastmod` field instead of Hexo's `updated`.
+
+`related_post` uses Hugo related-content collections. `expire` shows an age notice, while `post.award`, `post.share`, `post.rss`, and `post.covercolor` control optional post actions.

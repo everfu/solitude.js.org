@@ -1,0 +1,26 @@
+---
+title: "Sidebar"
+description: "Arrange sidebar modules for home, post, and feature pages."
+---
+
+## Module order
+
+```yaml
+params:
+  solitude:
+    aside:
+      position: 1
+      home:
+        noSticky: about
+        Sticky: allInfo
+      post:
+        noSticky: about
+        Sticky: newestPost,allInfo
+      page:
+        noSticky: about
+        Sticky: newestPost,allInfo
+```
+
+The built-in block names include `about`, `newestPost`, and `allInfo`. The order in each comma-separated value is the render order.
+
+Configure the author card, table of contents, tag cloud, and site information under `aside.my_card`, `aside.toc`, `aside.tags`, and `aside.siteinfo`. Hugo provides word counts and reading time natively; visitor counts still require an enabled provider.

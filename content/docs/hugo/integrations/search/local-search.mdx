@@ -1,0 +1,22 @@
+---
+title: "Local Search"
+description: "Generate and use the built-in Hugo search index."
+---
+
+Local search requires no external account. Keep the custom `Search` output enabled so Hugo generates `/search.xml`.
+
+```yaml
+outputs:
+  home: [HTML, RSS, Search, Links]
+
+params:
+  solitude:
+    search:
+      enable: true
+      type: local
+      local:
+        preload: false
+        CDN: /search.xml
+```
+
+Use a same-origin path unless you intentionally publish the index to a CDN. Rebuild and request `/search.xml` directly before debugging the search dialog.

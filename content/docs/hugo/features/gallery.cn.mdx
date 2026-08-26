@@ -1,0 +1,19 @@
+---
+title: "图库"
+description: "使用 Solitude Hugo Shortcodes 组合响应式图库。"
+---
+
+## 添加到内容
+
+使用 `gallery` 作为容器、`galleryItem` 放置图片、`galleryGroup` 创建带链接的图库入口。每张图片都应提供有意义的替代文本。
+
+## 配置或数据示例
+
+```yaml
+{{</* gallery columns="2" */>}}
+{{</* galleryItem src="/img/one.webp" alt="First image" */>}}
+{{</* galleryItem src="/img/two.webp" alt="Second image" */>}}
+{{</* /gallery */>}}
+```
+
+最终结构请对照 `exampleSite/content` 与 `exampleSite/data` 中的对应文件。

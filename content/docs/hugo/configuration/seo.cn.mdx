@@ -1,0 +1,18 @@
+---
+title: "SEO 与输出"
+description: "配置规范站点 URL、元数据、Feed、Sitemap、robots 和站点验证。"
+---
+
+## 从 Hugo 标准配置开始
+
+设置准确的生产 `baseURL`、站点标题、语言，以及每个页面的 `title` 和 `description`。Hugo 根据站点模型生成 canonical URL、RSS、Sitemap 与 robots 输出。
+
+```yaml
+baseURL: https://example.com/
+title: 我的博客
+enableRobotsTXT: true
+```
+
+`outputs.home` 应与启用功能保持一致。`Search` 生成 `/search.xml`，`Links` 生成 `/links.json`。
+
+使用 `params.solitude.verify_site` 配置站点验证项，并在 `params.solitude.pwa` 下维护 PWA 元数据。不要把密钥写进公开 Hugo 配置：渲染到静态站点中的值都能被访客查看。

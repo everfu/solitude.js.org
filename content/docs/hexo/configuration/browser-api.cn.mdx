@@ -1,0 +1,74 @@
+---
+title: "浏览器 API"
+description: "通过 Solitude 4 的公开浏览器 API 与 PJAX 生命周期开发扩展。"
+icon: "FileText"
+---
+Solitude 4 通过 `window.Solitude` 提供公开的浏览器 API。具体功能对象和实现细节不属于公共契约。从 3.x 迁移自定义代码时，请先阅读[升级到 4.0](/cn/docs/hexo/getting-started/upgrade-v4)，再参考下方的旧接口对照表。
+
+## 公开方法
+
+| 方法 | 用途 |
+| --- | --- |
+| `Solitude.navigate(url)` | 优先通过 PJAX 导航；不可用时执行完整页面跳转。 |
+| `Solitude.refresh()` | 为当前页面重新初始化 Solitude 行为。 |
+| `Solitude.copy(text)` | 复制文本并显示 Solitude 的操作结果提示。 |
+| `Solitude.toggleTheme()` | 切换明暗模式。 |
+| `Solitude.loadScript(url, options)` | 加载并缓存脚本请求；选项包括 `async` 和 `attributes`。 |
+| `Solitude.loadStyle(url, options)` | 加载并缓存样式请求；选项包括 `id`。 |
+| `Solitude.on(event, handler)` | 订阅 Solitude 生命周期事件，并返回取消订阅函数。 |
+| `Solitude.listen(target, type, handler, options)` | 注册页面级 DOM 监听器，并在下次 PJAX 页面切换前自动移除。 |
+| `Solitude.onPageCleanup(disposer)` | 为页面级组件、定时器或其他资源注册清理函数。 |
+
+```js
+const unsubscribe = window.Solitude.on('afterNavigate', (event) => {
+  console.log('当前页面：', event.detail.page)
+})
+
+window.Solitude.loadScript('/js/widget.js', {
+  async: false,
+  attributes: { 'data-widget': 'newsletter' },
+})
+
+window.addEventListener('pagehide', unsubscribe, { once: true })
+```
+
+## 生命周期事件
+
+- `ready` 在首次初始化完成后触发，提供 `detail.config` 和 `detail.page`。
+- `beforeNavigate` 在 PJAX 清理页面级资源并替换页面前触发。
+- `afterNavigate` 在刷新完成后触发，提供 `detail.page`。
+- `themeChange` 在主题切换后触发，提供 `detail.mode`。
+
+只需订阅一次 `ready` 和 `afterNavigate`。初始化页面级功能时，使用 `Solitude.listen()` 注册 DOM 监听器，并通过 `Solitude.onPageCleanup()` 清理组件、定时器和其他资源。不要在每次页面切换时重复添加永久的生命周期订阅。
+
+## 运行时配置
+
+`Solitude.config` 与 `Solitude.page` 读取当前文档中渲染的 JSON 配置对象。请把它们视为只读运行时上下文；需要修改行为时，应更新源配置并重新生成站点。
+
+## 自定义模板动作
+
+```html
+<button data-solitude-action="openNewsletter">订阅</button>
+```
+
+```js
+window.Solitude.openNewsletter = function () {
+  window.Solitude.navigate('/newsletter/')
+}
+```
+
+事件委托还支持 `data-solitude-url`、`data-solitude-target`、`data-solitude-value`、`data-solitude-prevent="true"` 和 `data-solitude-stop="true"`。
+
+## 旧接口迁移
+
+下表只对应 JavaScript 调用。主题文件、配置、CDN 资源和回归测试请按照完整的[升级到 4.0](/cn/docs/hexo/getting-started/upgrade-v4)清单处理。
+
+| Solitude 3.x | Solitude 4.0 |
+| --- | --- |
+| `pjax.loadUrl(url)` | `Solitude.navigate(url)` |
+| `utils.getScript(url, attrs)` | `Solitude.loadScript(url, { attributes: attrs })` |
+| `utils.getCSS(url, id)` | `Solitude.loadStyle(url, { id })` |
+| `GLOBAL_CONFIG` | 只读 `Solitude.config` 上下文 |
+| `PAGE_CONFIG` | 只读 `Solitude.page` 上下文 |
+
+不要依赖 `sco`、`rm`、`ai` 或 `coverColor`。通过 CDN 或其他主机提供 Solitude JavaScript 时，需要发布同一版本的完整 `source/js/` 文件树，确保 ES 模块相对导入可解析。模块加载与 PJAX 检查请参阅[故障排查](/cn/docs/hexo/faq/troubleshooting)。

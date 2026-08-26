@@ -1,0 +1,22 @@
+---
+title: "DocSearch"
+description: "Configure the Algolia DocSearch interface."
+---
+
+Use DocSearch when the site is already crawled by an Algolia DocSearch index.
+
+```yaml
+params:
+  solitude:
+    search:
+      enable: true
+      type: docsearch
+      docsearch:
+        appId: YOUR_APP_ID
+        apiKey: YOUR_SEARCH_ONLY_KEY
+        indexName: docs
+        placeholder: Search documentation
+        option: {}
+```
+
+Manage the crawler separately from Hugo, restrict the key to search operations, and verify production URLs in the index.

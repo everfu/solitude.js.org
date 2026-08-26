@@ -1,0 +1,39 @@
+---
+title: "外观"
+description: "控制主题色、显示模式、字体、加载、高亮和灯箱。"
+---
+
+## 颜色与显示模式
+
+```yaml
+params:
+  solitude:
+    theme_color:
+      dark: "#ffc848"
+      light: "#425aef"
+      nav_hover_text:
+        dark: "#1b1c20"
+        light: "#ffffff"
+    display_mode:
+      type: auto
+```
+
+`display_mode.type` 的自动模式会结合访客保存的选择与系统偏好。
+
+## 字体与媒体
+
+在 `params.solitude` 下配置 `font`、`loading`、`lazyload`、`highlight` 和 `lightbox`。代码高亮只在包含代码块的页面加载 Shiki，并可分别指定亮色和暗色主题。
+
+```yaml
+highlight:
+  enable: true
+  copy: true
+  line_numbers: true
+  max_height: 360
+  themes:
+    light: github-light
+    dark: github-dark
+lightbox: fancybox
+```
+
+站点覆盖样式请写入 `assets/css/custom.css`。Hugo 会在主题样式之后构建它，无需复制主题 CSS 或滥用 `!important`。

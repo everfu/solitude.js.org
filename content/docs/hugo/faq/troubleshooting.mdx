@@ -1,0 +1,24 @@
+---
+title: "Troubleshooting"
+description: "Diagnose build failures, missing assets, search output, and repeated runtime behavior."
+---
+
+## Build errors
+
+Run `hugo version` and confirm 0.164.0 or newer. Re-run `hugo --gc --minify` and fix the first template, YAML, or shortcode error.
+
+## Missing styles or scripts
+
+Confirm `theme: solitude`, the submodule checkout, and site-owned `assets/css/custom.css`. Do not copy compiled files between versions.
+
+## Search or links output is missing
+
+Compare `mediaTypes`, `outputFormats`, and `outputs` with the installation example. Request `/search.xml` and `/links.json` after a clean build.
+
+## Behavior repeats after navigation
+
+Use `Solitude.listen` or `Solitude.onPageCleanup`; see [Browser API](/docs/hugo/configuration/browser-api).
+
+## Before reporting an issue
+
+Include the Hugo version, Solitude commit, reduced configuration, affected URL, first error, and whether the example site reproduces it.

@@ -1,0 +1,22 @@
+---
+title: "本地搜索"
+description: "生成并使用 Hugo 内建搜索索引。"
+---
+
+本地搜索不需要外部账号。请保留自定义 `Search` 输出，让 Hugo 生成 `/search.xml`。
+
+```yaml
+outputs:
+  home: [HTML, RSS, Search, Links]
+
+params:
+  solitude:
+    search:
+      enable: true
+      type: local
+      local:
+        preload: false
+        CDN: /search.xml
+```
+
+除非明确把索引发布到 CDN，否则应使用同源路径。重新构建并直接访问 `/search.xml` 后，再排查搜索弹窗。

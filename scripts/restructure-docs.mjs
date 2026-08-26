@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
-const root = path.join(process.cwd(), 'content/docs');
+const root = path.join(process.cwd(), 'content/docs/hexo/hexo');
 
 function frontmatter({ title, description, icon }) {
   const lines = ['---'];
@@ -23,8 +23,8 @@ function code(lang, text) {
   return ['```' + lang, text.trim(), '```'].join('\n');
 }
 
-function meta(title, icon, pages) {
-  return JSON.stringify({ title, icon, pages }, null, 2) + '\n';
+function meta(title, icon, pages, extra = {}) {
+  return JSON.stringify({ title, ...extra, icon, pages }, null, 2) + '\n';
 }
 
 const files = new Map();
@@ -40,25 +40,25 @@ function addPair(file, enMeta, cnMeta, enBody, cnBody) {
 
 add(
   'meta.json',
-  meta('Docs', undefined, [
+  meta('Hexo', undefined, [
     'getting-started',
     'configuration',
     'content-writing',
     'features',
     'integrations',
     'faq',
-  ]),
+  ], { description: 'Solitude for Hexo', root: true }),
 );
 add(
   'meta.cn.json',
-  meta('文档', undefined, [
+  meta('Hexo', undefined, [
     'getting-started',
     'configuration',
     'content-writing',
     'features',
     'integrations',
     'faq',
-  ]),
+  ], { description: 'Solitude Hexo 版', root: true }),
 );
 
 addPair(
@@ -77,10 +77,10 @@ addPair(
 Solitude is a Hexo theme for personal sites, blogs, and long-form writing. This documentation is organized around the path most site owners follow: install the theme, make the first run, configure the visible areas, then add content and optional integrations.
 
 <Cards>
-  <Card title="Install Solitude" href="/docs/getting-started/installation" description="Prepare Hexo, install the theme, and place the configuration file." />
-  <Card title="Configure the site" href="/docs/configuration/site" description="Set the site identity, language, assets, navigation, and homepage modules." />
-  <Card title="Write content" href="/docs/content-writing/front-matter" description="Use Front Matter and theme tags to shape posts and pages." />
-  <Card title="Add integrations" href="/docs/integrations/search/local-search" description="Enable search engines and comment systems when your site is ready." />
+  <Card title="Install Solitude" href="/docs/hexo/getting-started/installation" description="Prepare Hexo, install the theme, and place the configuration file." />
+  <Card title="Configure the site" href="/docs/hexo/configuration/site" description="Set the site identity, language, assets, navigation, and homepage modules." />
+  <Card title="Write content" href="/docs/hexo/content-writing/front-matter" description="Use Front Matter and theme tags to shape posts and pages." />
+  <Card title="Add integrations" href="/docs/hexo/integrations/search/local-search" description="Enable search engines and comment systems when your site is ready." />
 </Cards>
 
 ## How the docs are arranged
@@ -98,10 +98,10 @@ Solitude is a Hexo theme for personal sites, blogs, and long-form writing. This 
 Solitude 是一个面向个人站点、博客和长文写作的 Hexo 主题。文档按站点搭建时最常见的路径组织：先安装主题，再完成第一次本地预览，然后配置可见区域，最后补充内容写作能力和第三方集成。
 
 <Cards>
-  <Card title="安装 Solitude" href="/cn/docs/getting-started/installation" description="准备 Hexo、安装主题，并放置主题配置文件。" />
-  <Card title="配置站点" href="/cn/docs/configuration/site" description="设置站点身份、语言、资源、导航和首页模块。" />
-  <Card title="撰写内容" href="/cn/docs/content-writing/front-matter" description="使用 Front Matter 和主题标签控制文章与页面。" />
-  <Card title="添加集成" href="/cn/docs/integrations/search/local-search" description="在站点稳定后启用搜索和评论服务。" />
+  <Card title="安装 Solitude" href="/cn/docs/hexo/getting-started/installation" description="准备 Hexo、安装主题，并放置主题配置文件。" />
+  <Card title="配置站点" href="/cn/docs/hexo/configuration/site" description="设置站点身份、语言、资源、导航和首页模块。" />
+  <Card title="撰写内容" href="/cn/docs/hexo/content-writing/front-matter" description="使用 Front Matter 和主题标签控制文章与页面。" />
+  <Card title="添加集成" href="/cn/docs/hexo/integrations/search/local-search" description="在站点稳定后启用搜索和评论服务。" />
 </Cards>
 
 ## 文档如何组织
@@ -391,9 +391,9 @@ Check these items first:
 
 After the first successful preview, make changes in this order:
 
-1. Configure site identity in [Site Configuration](/docs/configuration/site).
-2. Adjust menus and homepage modules in [Navigation](/docs/configuration/navigation) and [Homepage](/docs/configuration/home).
-3. Set article defaults in [Posts](/docs/configuration/posts).
+1. Configure site identity in [Site Configuration](/docs/hexo/configuration/site).
+2. Adjust menus and homepage modules in [Navigation](/docs/hexo/configuration/navigation) and [Homepage](/docs/hexo/configuration/home).
+3. Set article defaults in [Posts](/docs/hexo/configuration/posts).
 4. Add search or comments only after the base site is stable.
 
 <Callout type="success">
@@ -427,9 +427,9 @@ hexo server
 
 首次预览成功后，建议按这个顺序调整：
 
-1. 在 [站点配置](/cn/docs/configuration/site) 中设置站点身份信息。
-2. 在 [导航菜单](/cn/docs/configuration/navigation) 和 [首页配置](/cn/docs/configuration/home) 中调整入口与首页模块。
-3. 在 [文章配置](/cn/docs/configuration/posts) 中设置文章默认行为。
+1. 在 [站点配置](/cn/docs/hexo/configuration/site) 中设置站点身份信息。
+2. 在 [导航菜单](/cn/docs/hexo/configuration/navigation) 和 [首页配置](/cn/docs/hexo/configuration/home) 中调整入口与首页模块。
+3. 在 [文章配置](/cn/docs/hexo/configuration/posts) 中设置文章默认行为。
 4. 基础站点稳定后，再添加搜索或评论系统。
 
 <Callout type="success">

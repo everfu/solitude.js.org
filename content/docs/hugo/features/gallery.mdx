@@ -1,0 +1,19 @@
+---
+title: "Gallery"
+description: "Compose responsive galleries with Solitude Hugo shortcodes."
+---
+
+## Add it to content
+
+Use `gallery` as the container, `galleryItem` for each image, and `galleryGroup` for a linked collection cover. Images should include meaningful alt text.
+
+## Configuration or data example
+
+```yaml
+{{</* gallery columns="2" */>}}
+{{</* galleryItem src="/img/one.webp" alt="First image" */>}}
+{{</* galleryItem src="/img/two.webp" alt="Second image" */>}}
+{{</* /gallery */>}}
+```
+
+Compare the final structure with the matching files in `exampleSite/content` and `exampleSite/data`.

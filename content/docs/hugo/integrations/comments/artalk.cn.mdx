@@ -1,0 +1,23 @@
+---
+title: "Artalk"
+description: "连接 Artalk 服务与站点标识。"
+---
+
+## 配置
+
+```yaml
+params:
+  solitude:
+    comment:
+      use: artalk
+      lazyload: true
+      count: false
+    artalk:
+      server: https://comments.example.com
+      site: My Blog
+      option: {}
+```
+
+`site` 必须与 Artalk 后台一致。覆盖 CDN 资源时应保持脚本和样式版本兼容。
+
+需要评论的页面应设置 `comment: true`。同时验证页面直达和反复 PJAX 切换。

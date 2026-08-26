@@ -1,0 +1,9 @@
+{
+  "title": "快速开始",
+  "icon": "Rocket",
+  "pages": [
+    "introduction",
+    "installation",
+    "first-run"
+  ]
+}

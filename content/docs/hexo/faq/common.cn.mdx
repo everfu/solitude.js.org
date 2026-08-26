@@ -1,0 +1,23 @@
+---
+title: "常见问题"
+description: "解答 Solitude 4 安装、配置和升级中的常见问题。"
+---
+## 为什么站点仍显示 Hexo 默认主题？
+
+确认根目录 `_config.yml` 包含 `theme: solitude`，再运行 `hexo clean` 后重新生成。使用 npm 安装时，博客依赖中应存在 `hexo-theme-solitude@4`。
+
+## 可以直接用 v4 配置覆盖 3.x 配置吗？
+
+不可以。应以完整的 Solitude 4 默认配置为基础，将自己的定制值合并进去。这样可以保留新增的嵌套默认值，也不会把旧版假设带入 4.0。重新生成站点前，请完成[升级到 4.0](/cn/docs/hexo/getting-started/upgrade-v4)中的全部检查项。
+
+## 为什么特色页面是空白？
+
+检查精确的 `type` 和数据契约：关于页读取 `_data/about.yml`；友链通过 `data` 指定 `links` 等名称；装备页使用 Front Matter 的 `data`；即刻短文读取 `_data/brevity.yml`。音乐、留言和最近评论都不使用通用数据文件。
+
+## 为什么评论开关没有生效？
+
+Front Matter 使用 `comment`。Solitude 不读取复数 `comments`。`twikoo`、`waline` 等服务配置是主题顶层区块。
+
+## 追番与相册由 Solitude 维护吗？
+
+不是。对应指南使用第三方 Hexo 插件，其生成标记、API 和兼容性由各自项目维护。

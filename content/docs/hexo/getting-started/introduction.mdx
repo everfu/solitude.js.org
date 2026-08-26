@@ -1,0 +1,31 @@
+---
+title: "Introduction"
+description: "Understand Solitude 4, its requirements, and its configuration model."
+---
+## What Solitude 4 is
+
+Solitude 4 is a Hexo theme for personal blogs. It provides homepage modules, post metadata, sidebars, feature pages, search, comments, PWA support, and a browser API.
+
+Version 4 rebuilds the browser runtime around native ES modules. Search, music, links, the context menu, translation, post AI, and cover colors are loaded only when their configuration enables them. A unified PJAX lifecycle cleans up page listeners and third-party instances between navigations.
+
+## Requirements
+
+- Hexo 7.0.0 or newer.
+- Node.js 14.0.0 or newer.
+- A recent Chrome, Edge, Firefox, or Safari release. Internet Explorer is not supported.
+
+## Configuration files
+
+`_config.yml` in the blog root controls Hexo itself: title, author, URL, language, and the selected theme. `_config.solitude.yml` controls Solitude modules and appearance.
+
+```text
+my-blog/
+  _config.yml
+  _config.solitude.yml
+  source/
+  themes/solitude/   # Git installation only
+```
+
+<Callout type="info">
+The examples in these docs target Solitude v4.0.0. When moving from 3.x, follow [Upgrade to 4.0](/docs/hexo/getting-started/upgrade-v4) and merge your values into a fresh Solitude 4 configuration.
+</Callout>

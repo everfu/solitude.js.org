@@ -1,0 +1,22 @@
+---
+title: "Algolia"
+description: "将 Solitude 搜索连接到 Algolia 索引。"
+---
+
+先在主题之外创建并填充索引，再只公开浏览器可用的搜索凭据。
+
+```yaml
+params:
+  solitude:
+    search:
+      enable: true
+      type: algolia
+      algolia:
+        appId: YOUR_APP_ID
+        apiKey: YOUR_SEARCH_ONLY_KEY
+        indexName: posts
+        hits:
+          per_page: 6
+```
+
+不要发布 Algolia Admin Key。索引 URL 必须与部署站点的 `baseURL` 一致。

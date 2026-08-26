@@ -1,0 +1,36 @@
+---
+title: "Site Basics"
+description: "Configure site identity, languages, pagination, taxonomies, and required outputs."
+---
+
+## Hugo settings
+
+Keep site identity and Hugo behavior at the top level. Solitude reads standard Hugo values instead of duplicating them under theme parameters.
+
+```yaml
+baseURL: https://example.com/
+title: My Blog
+defaultContentLanguage: en
+pagination:
+  pagerSize: 10
+taxonomies:
+  category: categories
+  tag: tags
+  series: series
+```
+
+Keep the `Search` and `Links` output formats from the installation guide when those features are enabled. For multilingual sites, use Hugo's `languages` configuration and provide translated content in the normal Hugo way.
+
+## Solitude identity
+
+```yaml
+params:
+  solitude:
+    site:
+      name:
+        class: text
+        custom: My Blog
+      icon: /img/logo.png
+```
+
+Place site-owned images in `static/` and reference them from the public root, such as `/img/logo.png`.
