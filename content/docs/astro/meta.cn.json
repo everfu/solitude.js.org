@@ -1,0 +1,16 @@
+{
+  "title": "Astro",
+  "pages": [
+    "getting-started",
+    "configuration",
+    "content-writing",
+    "features",
+    "integrations",
+    "deployment",
+    "migration",
+    "faq",
+    "reference"
+  ],
+  "root": true,
+  "description": "Solitude astro 版"
+}

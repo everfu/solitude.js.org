@@ -1,0 +1,27 @@
+---
+title: "图库"
+description: "在 MDX 页面中组合图片。"
+---
+
+创建 `src/content/pages/gallery.mdx`，写入标题与图库：
+
+```yaml
+---
+title: Gallery
+---
+```
+
+
+
+```mdx
+<Gallery columns={2}>
+<GalleryItem src="/img/demo/cover-getting-started-v2.webp" alt="Create" />
+<GalleryItem src="/img/demo/cover-pagination-v2.webp" alt="Collect" />
+</Gallery>
+```
+
+`Gallery` 设置列数，`GalleryItem` 设置图片和替代文本，`GalleryGroup` 创建图库入口。添加 `/gallery/` 菜单后即可访问。
+
+## 相关文档
+
+[媒体组件](/cn/docs/astro/content-writing/components/media)

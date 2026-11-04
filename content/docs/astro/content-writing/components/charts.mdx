@@ -1,0 +1,60 @@
+---
+title: "Charts and displays"
+description: "Component parameters and copyable examples."
+---
+
+Use these components directly in `.mdx` posts or pages; the theme injects them automatically. Write booleans as `{true}` / `{false}` and objects as JSX expressions. Separate complex Markdown from component tags with blank lines.
+
+Online embeds, repository data, and chart libraries need a network connection. Local media does not require online music to be enabled.
+
+## ChartJS
+
+Render a chart with a Chart.js `config` object or a JSON `code` string. Optional: `id`, `description`, percentage `width`, and `layout`. Requires `theme.chart`.
+
+```mdx
+<ChartJS config={{type:"bar",data:{labels:["Posts","Notes","Projects"],datasets:[{label:"Content",data:[12,8,4]}]}}} description="Local sample data" />
+```
+
+## Mermaid
+
+Render a diagram from Mermaid text in `code`. Requires `theme.mermaid` and its browser script.
+
+```mdx
+<Mermaid code={"graph LR\nA[Content] --> B[Astro] --> C[HTML]"} />
+```
+
+## Score
+
+Render ABC music notation from `score`. `params` accepts an ABCJS rendering options object.
+
+```mdx
+<Score score={"X:1\nT:Simple tune\nM:4/4\nL:1/4\nK:C\nC D E F | G A B c |"} />
+```
+
+## Typeit
+
+Animate typed text. `speed` defaults to 80; children provide the text. Animation requires `theme.typeit`.
+
+```mdx
+<Typeit speed={80}>Capture everyday life in words.</Typeit>
+```
+
+## Checkbox
+
+Show task status. `checked` is a boolean, defaulting to true; `style` adds classes and `label` sets an accessible name. This is a disabled display control, not form input.
+
+```mdx
+<Checkbox checked={true}>Completed task</Checkbox>
+```
+
+## Radio
+
+Show a selection state. `checked` defaults to true; `style` adds classes and `label` sets an accessible name. This is a disabled display control.
+
+```mdx
+<Radio checked={false}>An option</Radio>
+```
+
+## Related guides
+
+[Component index](/docs/astro/reference/components)

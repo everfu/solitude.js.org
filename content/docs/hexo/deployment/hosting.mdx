@@ -1,0 +1,63 @@
+---
+title: "Hosting"
+description: "Publish to a hosting platform or static server."
+---
+
+## Netlify / Vercel
+
+Import the blog repository, use a Node.js version compatible with the theme and plugins, install dependencies, then run `npx hexo clean && npx hexo generate`. Publish `public`; the theme repository alone is not a complete blog.
+
+## GitHub Pages
+
+Set the published URL in your site repository, select GitHub Actions under Settings → Pages, and create `.github/workflows/deploy.yml`:
+
+```yaml
+name: Deploy
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - uses: actions/configure-pages@v5
+      - run: npx hexo clean && npx hexo generate
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+```
+
+The Hexo example assumes an npm lockfile; use your own installation process for other package managers. Configure DNS for a custom domain.
+
+## Static servers
+
+Upload the contents of `public/`; directory requests must resolve to `index.html`. Preserve old post paths, return HTTP 404 for unknown URLs, and configure server redirects for HTTP 301.
+
+## Related guides
+
+[Build and URLs](/docs/hexo/deployment/build)

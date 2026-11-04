@@ -1,0 +1,36 @@
+---
+title: "Message board"
+description: "Enable comments and the message wall."
+---
+
+Create or edit `src/content/pages/message.md`:
+
+```md
+---
+title: Message board
+type: message
+comment: true
+---
+```
+
+A configured global provider enables the comment widget. The wall also needs `theme.envelope.enable`; its aggregation currently uses the Valine API:
+
+```ts
+// src/site.config.ts
+import { defineSolitudeConfig } from './lib/config';
+
+export default defineSolitudeConfig({
+  theme: {
+    comment: { use: 'valine', commentBarrage: true },
+    valine: { appId: 'YOUR_APP_ID', appKey: 'YOUR_CLIENT_KEY',
+      serverURLs: 'https://comments.example.com' },
+    envelope: { enable: true, page: '/message/' },
+  },
+});
+```
+
+Post comment barrages use `theme.comment.commentBarrage`, separately from the envelope wall. Cache durations are in days. Other providers do not imply Valine aggregation support.
+
+## Related guides
+
+[Valine](/docs/astro/integrations/comments/valine)

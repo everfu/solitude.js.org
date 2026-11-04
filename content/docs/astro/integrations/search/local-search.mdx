@@ -1,0 +1,21 @@
+---
+title: "Local search"
+description: "Search generated content without an account."
+---
+
+Local search reads `/search.xml` and is enabled and preloaded in the template. For on-demand loading:
+
+```ts
+// src/site.config.ts
+import { defineSolitudeConfig } from './lib/config';
+
+export default defineSolitudeConfig({
+  theme: { search: { enable: true, type: 'local', local: { preload: false } } },
+});
+```
+
+Production excludes drafts. Posts with `home: false` remain searchable. Check `site`, `base`, and the search data path for subdirectory deployments.
+
+## Related guides
+
+[Site URL](/docs/astro/configuration/site)

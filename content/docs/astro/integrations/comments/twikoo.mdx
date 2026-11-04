@@ -1,0 +1,28 @@
+---
+title: "Twikoo"
+description: "Configure a provider and enable page comments."
+---
+
+Deploy Twikoo and use its public environment URL; set `region` when needed.
+
+## Theme configuration
+
+```ts
+// src/site.config.ts
+import { defineSolitudeConfig } from './lib/config';
+
+export default defineSolitudeConfig({
+  theme: {
+    comment: { use: 'twikoo', lazyload: true },
+    twikoo: { envId: 'https://comments.example.com', region: '' },
+  },
+});
+```
+
+Post `comment` defaults to true; set it to false to disable comments on one post. Special layouts such as About, music, and archives omit the widget.
+
+Test theme changes, direct access, and repeated navigation. See the [Twikoo documentation](https://twikoo.js.org/) for server setup.
+
+## Related guides
+
+[Message board](/docs/astro/features/message) · [Recent comments](/docs/astro/features/recent-comments)

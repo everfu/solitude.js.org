@@ -1,0 +1,28 @@
+---
+title: "Homepage"
+description: "Configure recommendations and the post list."
+---
+
+Merge the example fields into your existing `src/site.config.ts`, keeping your own content.
+
+```ts
+// src/site.config.ts
+import { defineSolitudeConfig } from './lib/config';
+
+export default defineSolitudeConfig({
+  theme: {
+    hometop: {
+      enable: true,
+      recommendList: [{ title: 'Start here', url: '/p/hello-world/',
+        cover: '/img/demo/cover-getting-started-v2.webp', label: 'Guide' }],
+    },
+    index_post_list: { direction: 'column', column: 2, cover: 'both' },
+  },
+});
+```
+
+Recommendations use `recommendList` first, then fill up to five slots by post date. Set an item to `enable: false` to hide it. The feed sorts by sticky weight and date. `home: false` hides a post from homepage areas. The carousel does not render retained `hometop.banner` or `group` fields.
+
+## Related guides
+
+[Configuration reference](/docs/astro/reference/configuration) · [Front matter](/docs/astro/content-writing/front-matter)

@@ -1,0 +1,9 @@
+{
+  "title": "入门",
+  "pages": [
+    "introduction",
+    "installation",
+    "first-run"
+  ],
+  "icon": "Rocket"
+}

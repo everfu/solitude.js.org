@@ -8,11 +8,11 @@ description: "Use the native Hugo shortcodes bundled with Solitude."
 Solitude ships Hugo shortcodes for rich content. Use Hugo delimiters, not Hexo tag syntax:
 
 ```html
-{{</* note type="info" */>}}
+{{< note type="info" >}}
 This content supports Markdown.
-{{</* /note */>}}
+{{< /note >}}
 
-{{</* button url="https://gohugo.io/" text="Hugo" icon="fas fa-link" */>}}
+{{< button url="https://gohugo.io/" text="Hugo" icon="fas fa-link" >}}
 ```
 
 Available families include text and labels (`p`, `span`, `label`), notices (`note`, `subnote`, `fold`), links and media (`button`, `link`, `img`, `audio`, `video`), structure (`tabs`, `timeline`, `gallery`, `series`), and dynamic content (`mermaid`, `chartjs`, `typeit`).
@@ -25,3 +25,7 @@ Available families include text and labels (`p`, `span`, `label`), notices (`not
 - Enable the related runtime option, such as `mermaid`, `chart`, `typeit`, or `katex`, before using optional dynamic components.
 
 When migrating, replace every `{% ... %}` Hexo tag with its Hugo shortcode equivalent and run a production build to catch malformed pairs.
+
+## Related guides
+
+[Continue reading](/docs/hugo/reference/content)

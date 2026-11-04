@@ -1,0 +1,61 @@
+---
+title: "Hosting"
+description: "Publish to a hosting platform or static server."
+---
+
+## Netlify / Vercel
+
+Import the site repository, select Hugo **0.164.0+**, build with `hugo --gc --minify`, and publish `public`. Ensure the environment fetches the theme submodule when used. No Node.js build pipeline is required.
+
+## GitHub Pages
+
+Set the published URL in your site repository, select GitHub Actions under Settings → Pages, and create `.github/workflows/deploy.yml`:
+
+```yaml
+name: Deploy
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 0.164.0
+      - uses: actions/configure-pages@v5
+      - run: hugo --gc --minify
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+```
+
+Configure DNS for a custom domain.
+
+## Static servers
+
+Upload the contents of `public/`; directory requests must resolve to `index.html`. Preserve old post paths, return HTTP 404 for unknown URLs, and configure server redirects for HTTP 301.
+
+## Related guides
+
+[Build and URLs](/docs/hugo/deployment/build)

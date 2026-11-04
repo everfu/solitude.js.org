@@ -1,9 +1,9 @@
 {
-  "title": "Getting Started",
-  "icon": "Rocket",
+  "title": "Getting started",
   "pages": [
     "introduction",
     "installation",
     "first-run"
-  ]
+  ],
+  "icon": "Rocket"
 }

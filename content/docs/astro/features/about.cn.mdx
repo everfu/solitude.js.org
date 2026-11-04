@@ -1,0 +1,42 @@
+---
+title: "关于页"
+description: "修改页面数据与展示。"
+---
+
+内置地址为 `/about/`。可创建 `src/content/pages/about.md` 覆盖默认标题和元信息：
+
+```md
+---
+title: About
+type: about
+data: about
+comment: false
+---
+```
+
+## 数据
+
+编辑 `src/data/about.json`：
+
+```json
+{
+  "title": "About me",
+  "sections": [
+    {
+      "type": "intro",
+      "greeting": "Hello",
+      "name_prefix": "This is",
+      "name": "Your name",
+      "description": "Stories and ideas."
+    }
+  ]
+}
+```
+
+`sections` 决定模块和顺序。已支持 `intro`、`skills_career`、`personality_photo`、`values`、`interests`、`stats_profile`、`story`；`enabled: false` 隐藏模块，未知类型会使构建失败。
+
+`data` 不含扩展名。复制为其他数据文件时同步修改 `data`；文件缺失会使构建失败。页面和菜单独立，需自行添加导航。
+
+## 相关文档
+
+[导航](/cn/docs/astro/configuration/navigation)

@@ -1,16 +1,28 @@
 ---
 title: "主题标签"
-description: "安装并使用 Solitude 标签插件已验证的语法。"
-icon: "BadgePlus"
+description: "区分插件标签与主题内置标签。"
 ---
-`hexo-solitude-tag` 与主题分开维护，请在 Hexo 博客根目录安装：
 
-<PmInstall name="hexo-solitude-tag" />
+标签插件单独安装，v2 需要 Hexo **8** 和 Node.js **20.19+**；Hexo 7 用户使用 `hexo-solitude-tag@1`。
 
-该插件当前公开文档明确提供 YouTube 标签：
+```sh
+npm install hexo-solitude-tag@2
+```
 
-```markdown
+## 标签来源
+
+插件提供 `note`、`subnote`、隐藏内容、按钮、行内图片、标签、时间线、友链、乐谱、系列和 Chart.js。主题提供 Gallery、Mermaid 与 Tabs。
+
+```md
+{% hideInline Secret text,Click to reveal %}
+
+{% btn https://example.com,Visit,fas fa-link,blue outline %}
+
 {% youtube video_id [type] [cookie] %}
 ```
 
-安装后重启 Hexo。使用其他语法前请先在[插件仓库](https://github.com/everfu/hexo-solitude-tag)核对；具有主题外观的短代码并不会由 Solitude 主题自动提供。
+重启 Hexo 后重新生成。完整参数和迁移示例见[插件仓库](https://github.com/everfu/hexo-solitude-tag)。Hugo Shortcodes 和 Astro MDX 不适用于 Hexo。
+
+## 相关文档
+
+[内容参考](/cn/docs/hexo/reference/content)

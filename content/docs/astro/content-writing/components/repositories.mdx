@@ -1,0 +1,44 @@
+---
+title: "Repository cards"
+description: "Component parameters and copyable examples."
+---
+
+Use these components directly in `.mdx` posts or pages; the theme injects them automatically. Write booleans as `{true}` / `{false}` and objects as JSX expressions. Separate complex Markdown from component tags with blank lines.
+
+Online embeds, repository data, and chart libraries need a network connection. Local media does not require online music to be enabled.
+
+## GitHub
+
+Show a GitHub repository. Set `repo` to owner/repository. Data is fetched from the public API in the browser.
+
+```mdx
+<GitHub repo="withastro/astro" />
+```
+
+## GitLab
+
+Show a GitLab project. Set `repo` to namespace/project. The built-in provider targets gitlab.com.
+
+```mdx
+<GitLab repo="gitlab-org/gitlab" />
+```
+
+## Gitee
+
+Show a Gitee repository. Set `repo` to owner/repository. Data is fetched from the public API in the browser.
+
+```mdx
+<Gitee repo="mirrors/vue" />
+```
+
+## Gitea
+
+Show a Gitea repository using `host` (or `server`) and `repo` in owner/repository format. The server must allow browser requests.
+
+```mdx
+<Gitea host="https://codeberg.org" repo="forgejo/forgejo" />
+```
+
+## Related guides
+
+[Component index](/docs/astro/reference/components)

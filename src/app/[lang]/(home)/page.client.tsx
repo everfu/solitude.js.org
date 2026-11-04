@@ -7,6 +7,7 @@ import { useEffect, useRef, useState, type CSSProperties, type PointerEvent as R
 import { ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/cn';
 import type { HomeLocale } from './home.data';
+import { previewUrl } from '@/lib/shared';
 
 const GrainGradient = dynamic(
   () => import('@paper-design/shaders-react').then((mod) => mod.GrainGradient),
@@ -165,10 +166,10 @@ export function HeroThemeStage({ lang }: { lang: HomeLocale }) {
       onPointerLeave={resetTilt}
     >
       <Link
-        href="https://blog.zhheo.com/"
+        href={previewUrl}
         target="_blank"
         rel="noreferrer"
-        aria-label={lang === 'cn' ? '在新标签页打开 Solitude 主题博客演示' : 'Open the Solitude theme blog demo in a new tab'}
+        aria-label={lang === 'cn' ? '在新标签页打开 Astro Solitude 演示' : 'Open the Astro Solitude demo in a new tab'}
         className="group block rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-4 focus-visible:ring-offset-fd-background"
       >
         <div ref={stageRef} style={stageStyle} className="home-hero-stage relative mx-auto aspect-[720/486] w-full max-w-[760px]">
@@ -177,7 +178,7 @@ export function HeroThemeStage({ lang }: { lang: HomeLocale }) {
               <span className="home-macbook-camera" />
               <div className="home-macbook-screen">
                 <Image
-                  src="/showcase/blog-zhheo-desktop.webp"
+                  src="/showcase/astro-home-desktop.png"
                   alt=""
                   fill
                   priority
@@ -202,7 +203,7 @@ export function HeroThemeStage({ lang }: { lang: HomeLocale }) {
               <span className="home-iphone-island" />
               <div className="home-iphone-screen">
                 <Image
-                  src="/showcase/blog-zhheo-mobile.webp"
+                  src="/showcase/astro-post-mobile-dark.png"
                   alt=""
                   fill
                   priority

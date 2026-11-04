@@ -1,28 +1,26 @@
 ---
 title: "Introduction"
-description: "Understand the native Hugo edition of Solitude and how its documentation is organized."
+description: "Learn the Hugo requirements, configuration, and workflow."
 ---
 
-## What Solitude for Hugo is
+Solitude Hugo is a native Hugo blog theme with posts, pages, search, comments, and content shortcodes.
 
-Solitude for Hugo is the native Hugo implementation of the Solitude theme. It uses Go Templates, Hugo Pipes, Menus, Taxonomies, and Page Collections while keeping the familiar Solitude layout, feature pages, sidebars, and interactions.
+## Requirements
 
-The build only needs **Hugo 0.164.0 or newer**. It does not require Node.js, npm, PostCSS, Sass, or Stylus.
+Hugo **0.164.0+** and Git. Normal builds do not require Node.js.
 
-## Where configuration lives
+## File locations
 
-Use standard Hugo configuration for language, taxonomies, output formats, pagination, and site metadata. Solitude-specific settings live under `params.solitude` in `hugo.yaml`.
+| Content | Location |
+| --- | --- |
+| Standard and theme configuration | Site `hugo.yaml`, with theme fields under `params.solitude` |
+| Posts | `content/posts/` |
+| Special pages | `content/page-name/_index.md` |
+| Data / static assets | `data/` / `static/` |
+| Custom styles | `assets/css/custom.css` |
 
-```yaml
-title: My Blog
-theme: solitude
+Start with installation. Existing Hexo content needs configuration, field, and tag conversion.
 
-params:
-  solitude:
-    site:
-      name:
-        class: text
-        custom: My Blog
-```
+## Related guides
 
-Start with [Installation](/docs/hugo/getting-started/installation), then use the configuration, content, feature, and integration sections as references. If you are moving an existing Hexo site, read [Migrate from Hexo](/docs/hugo/migration/from-hexo) before copying configuration.
+[Installation](/docs/hugo/getting-started/installation) · [Import from Hexo](/docs/hugo/migration/from-hexo)

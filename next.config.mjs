@@ -76,12 +76,12 @@ const config = {
     const docsRootRedirects = [
       {
         source: '/docs',
-        destination: '/docs/hugo/getting-started/introduction',
+        destination: '/docs/astro/getting-started/introduction',
         permanent: true,
       },
       {
         source: '/cn/docs',
-        destination: '/cn/docs/hugo/getting-started/introduction',
+        destination: '/cn/docs/astro/getting-started/introduction',
         permanent: true,
       },
     ];

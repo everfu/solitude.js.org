@@ -1,0 +1,43 @@
+---
+title: "Short updates"
+description: "Edit page data and presentation."
+---
+
+The built-in route is `/brevity/`. Create `src/content/pages/brevity.md` to override its title and metadata:
+
+```md
+---
+title: Short updates
+type: brevity
+data: brevity
+comment: false
+---
+```
+
+## Data
+
+Edit `src/data/brevity.json`:
+
+```json
+{
+  "items": [
+    {
+      "date": "2026-10-09T10:00:00+08:00",
+      "content": "Another moment worth keeping.",
+      "location": "At my desk",
+      "image": [
+        "/img/demo/cover-getting-started-v2.webp"
+      ],
+      "link": "/archives/"
+    }
+  ]
+}
+```
+
+Requires `theme.brevity.enable: true`, already enabled in the template. Set `theme.brevity.home_mini: true` for the homepage strip and `theme.brevity.page` for its route.
+
+Omit the extension in `data`. If using a copy, update the data name; missing files fail the build. Add a menu entry separately.
+
+## Related guides
+
+[Navigation](/docs/astro/configuration/navigation)

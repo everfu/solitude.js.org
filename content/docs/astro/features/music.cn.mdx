@@ -1,0 +1,27 @@
+---
+title: "音乐馆与胶囊"
+description: "分别配置音乐页面与跨页播放器。"
+---
+
+音乐馆地址为 `/music/`，默认关闭。将配置合并到现有站点文件，保留其他菜单：
+
+```ts
+// src/site.config.ts
+import { defineSolitudeConfig } from './lib/config';
+
+export default defineSolitudeConfig({
+  menus: [{ name: 'Music', url: '/music/' }],
+  theme: {
+    music: { enable: true, id: 'YOUR_PLAYLIST_ID', server: 'netease', type: 'playlist' },
+    capsule: { enable: true, id: 'YOUR_PLAYLIST_ID', server: 'netease', type: 'playlist' },
+  },
+});
+```
+
+`music` 控制音乐馆，`capsule` 控制跨页播放器。模板胶囊使用示例汽水歌单，发布前替换或关闭。
+
+自定义 `theme.meting_api` 应保留 `:server`、`:type`、`:id` 占位符，API 必须支持所选服务。汽水响应也受支持；可播放性取决于 API 与地区。局部 `Audio`、`Video` 组件独立于这些开关。
+
+## 相关文档
+
+[高级配置](/cn/docs/astro/configuration/advanced)

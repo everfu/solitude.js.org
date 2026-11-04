@@ -1,0 +1,53 @@
+---
+title: "Front matter"
+description: "Manage posts and pages with front matter."
+---
+
+Put posts in `src/content/posts/` and pages in `src/content/pages/`; subdirectories are supported. Use `.md` for ordinary posts and `.mdx` for components.
+
+## Fields
+
+```yaml
+---
+title: A new beginning
+date: 2026-09-11T10:00:00Z
+lastmod: 2026-09-12T09:00:00Z
+description: A short summary.
+slug: a-new-start
+cover: /img/demo/cover-getting-started-v2.webp
+categories: [Life]
+tags: [Notes, Astro]
+series: [Everyday stories]
+home: true
+draft: false
+sticky: 2
+comment: true
+aside: true
+toc: true
+---
+```
+
+| Field | Default / required | Behavior |
+| --- | --- | --- |
+| `title` | Required | Page title |
+| `date` | Required for posts; optional for pages | Publication date; include a time zone |
+| `lastmod` | Optional | Last modification date |
+| `description` | Optional | Summary and page description |
+| `slug` / `url` | Optional | Custom path; see below |
+| `aliases` | `[]` | Additional old URLs that generate redirect pages |
+| `cover` | Optional | Cover image; otherwise the theme chooses a default |
+| `categories` / `tags` / `series` | `[]` | Arrays of category, tag, and series names |
+| `home` | `true` | `false` hides the post only from homepage areas |
+| `draft` | `false` | Visible in development; excluded from production |
+| `sticky` | `false` | `true` equals weight 1; larger numeric weights appear first on the homepage |
+| `comment` | `true` | Allow comments when a global service is configured |
+| `aside` / `toc` | `true` | Sidebar and table of contents; some special layouts omit the sidebar |
+| `random` | `true` | Include in random post selection |
+| `not_cover` | Optional | Omit the large article cover layout |
+| `type` | Optional | Page type; see the Pages guide |
+
+Posts with `home: false` remain accessible through direct URLs, archives, search, and RSS. Drafts are excluded from production. A future date does not schedule publication: a post without `draft: true` is published on the next build.
+
+## Related guides
+
+[Post URLs](/docs/astro/content-writing/urls) · [Media and math](/docs/astro/content-writing/media)

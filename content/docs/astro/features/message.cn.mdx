@@ -1,0 +1,36 @@
+---
+title: "留言板"
+description: "启用评论与留言墙。"
+---
+
+创建或修改 `src/content/pages/message.md`：
+
+```md
+---
+title: Message board
+type: message
+comment: true
+---
+```
+
+全局评论服务配置后，页面可显示评论框。留言墙额外需要 `theme.envelope.enable`；聚合动画目前使用 Valine API：
+
+```ts
+// src/site.config.ts
+import { defineSolitudeConfig } from './lib/config';
+
+export default defineSolitudeConfig({
+  theme: {
+    comment: { use: 'valine', commentBarrage: true },
+    valine: { appId: 'YOUR_APP_ID', appKey: 'YOUR_CLIENT_KEY',
+      serverURLs: 'https://comments.example.com' },
+    envelope: { enable: true, page: '/message/' },
+  },
+});
+```
+
+文章浮动评论由 `theme.comment.commentBarrage` 控制，与信封墙分别配置。缓存时长单位为天。不要将其他评论框服务等同于 Valine 聚合能力。
+
+## 相关文档
+
+[Valine](/cn/docs/astro/integrations/comments/valine)

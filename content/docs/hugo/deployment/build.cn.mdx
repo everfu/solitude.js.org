@@ -1,0 +1,29 @@
+---
+title: "构建与地址"
+description: "生成静态网站并配置发布地址。"
+---
+
+使用 Hugo **0.164.0+**，普通站点在根目录运行：
+
+```sh
+hugo server
+hugo --gc --minify
+```
+
+输出目录为 `public/`。预览主题仓库的示例站时使用 `hugo server --source exampleSite --themesDir ../.. --theme solitude`。
+
+## 域名与子目录
+
+在站点 `hugo.yaml` 设置完整 `baseURL`，子目录包含在地址中：
+
+```yaml
+baseURL: https://example.com/blog/
+languageCode: zh-CN
+title: My blog
+```
+
+修改地址后重新构建。检查规范链接、RSS、`search.xml`、`links.json` 与图片。普通生产构建排除草稿和未来文章；不要使用 `-D` / `-F` 发布未完成内容。
+
+## 相关文档
+
+[托管平台](/cn/docs/hugo/deployment/hosting)

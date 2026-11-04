@@ -1,0 +1,29 @@
+---
+title: "Build and URLs"
+description: "Build a static site and set its published URL."
+---
+
+Use Hexo **7+** and the theme requirement of Node.js **18+**. Tag plugin v2 requires Hexo **8** and Node.js **20.19+**. Run from the blog root:
+
+```sh
+npx hexo clean
+npx hexo generate
+npx hexo server
+```
+
+Publish `public/`; `hexo server` is for local preview.
+
+## Domains and subdirectories
+
+Set the URL in the blog root `_config.yml`:
+
+```yaml
+url: https://example.com/blog
+root: /blog/
+```
+
+Clean and regenerate after changing the theme, URL, or renderer. Check images, taxonomies, RSS, search, and 404. Install generator plugins separately when needed.
+
+## Related guides
+
+[Hosting](/docs/hexo/deployment/hosting)

@@ -1,0 +1,47 @@
+---
+title: "Equipment"
+description: "Edit page data and presentation."
+---
+
+The built-in route is `/equipment/`. Create `src/content/pages/equipment.md` to override its title and metadata:
+
+```md
+---
+title: Equipment
+type: kit
+data: kit
+comment: false
+---
+```
+
+## Data
+
+Edit `src/data/kit.json`:
+
+```json
+{
+  "groups": [
+    {
+      "name": "Creative tools",
+      "description": "Tools I use",
+      "items": [
+        {
+          "name": "Laptop",
+          "specification": "Portable workstation",
+          "description": "Writing and development",
+          "image": "/img/demo/cover-getting-started-v2.webp",
+          "link": "https://example.com"
+        }
+      ]
+    }
+  ]
+}
+```
+
+Use `groups` and preserve the JSON field structure. The route is `/equipment/`; the page type and data name are `kit`.
+
+Omit the extension in `data`. If using a copy, update the data name; missing files fail the build. Add a menu entry separately.
+
+## Related guides
+
+[Navigation](/docs/astro/configuration/navigation)

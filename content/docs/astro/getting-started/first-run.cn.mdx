@@ -1,0 +1,56 @@
+---
+title: "首次运行"
+description: "设置站点信息，写第一篇文章并检查构建。"
+---
+
+## 设置站点
+
+修改 `src/site.config.ts`：
+
+```ts
+// src/site.config.ts
+import { defineSolitudeConfig } from './lib/config';
+
+export default defineSolitudeConfig({
+  site: 'https://example.com',
+  title: 'My blog',
+  description: 'Notes and stories.',
+  locale: 'zh-CN',
+  timeZone: 'Asia/Shanghai',
+  hasCJKLanguage: true,
+  author: { name: 'Your name' },
+});
+```
+
+部署在子目录时增加 `base`，例如 `/blog/`。
+
+## 写第一篇文章
+
+创建 `src/content/posts/hello-world.md`：
+
+```md
+---
+title: Hello, Solitude
+date: 2026-10-09T10:00:00+08:00
+description: My first post.
+tags: [Notes]
+---
+
+Start your story here.
+```
+
+预览 `/p/hello-world/`。删除示例文章时，同时更新菜单、推荐和文章中的链接。
+
+## 检查构建
+
+```sh
+pnpm check
+pnpm build
+pnpm preview
+```
+
+评论和音乐馆默认关闭；音乐胶囊使用示例汽水歌单。发布前替换 `theme.capsule.id` 或关闭胶囊。
+
+## 相关文档
+
+[站点配置](/cn/docs/astro/configuration/site) · [部署](/cn/docs/astro/deployment/build)

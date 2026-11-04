@@ -1,0 +1,26 @@
+---
+title: "Algolia"
+description: "Connect an external search index."
+---
+
+Prepare the application ID, index name, and public search key:
+
+```ts
+// src/site.config.ts
+import { defineSolitudeConfig } from './lib/config';
+
+export default defineSolitudeConfig({
+  theme: { search: {
+    enable: true, type: 'algolia',
+    algolia: { appId: 'YOUR_APP_ID', apiKey: 'YOUR_SEARCH_ONLY_KEY', indexName: 'blog' },
+  } },
+});
+```
+
+Records need `title` and an absolute `permalink` or site-root-relative `path`; responses need `_highlightResult.title`.
+
+The theme supplies the interface; it does not create or synchronize the index. Use public search keys and test empty results, errors, and the production domain.
+
+## Related guides
+
+[Local search](/docs/astro/integrations/search/local-search)

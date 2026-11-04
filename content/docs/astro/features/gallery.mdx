@@ -1,0 +1,27 @@
+---
+title: "Gallery"
+description: "Arrange images in an MDX page."
+---
+
+Create `src/content/pages/gallery.mdx` with a title and gallery:
+
+```yaml
+---
+title: Gallery
+---
+```
+
+
+
+```mdx
+<Gallery columns={2}>
+<GalleryItem src="/img/demo/cover-getting-started-v2.webp" alt="Create" />
+<GalleryItem src="/img/demo/cover-pagination-v2.webp" alt="Collect" />
+</Gallery>
+```
+
+`Gallery` sets columns; `GalleryItem` sets images and alt text; `GalleryGroup` creates gallery links. Add `/gallery/` to navigation.
+
+## Related guides
+
+[Media components](/docs/astro/content-writing/components/media)

@@ -1,0 +1,29 @@
+---
+title: "Giscus"
+description: "Configure a provider and enable page comments."
+---
+
+Enable Discussions on a public repository, install the Giscus App, and use the generated repository and category IDs. Keep path mapping stable.
+
+## Theme configuration
+
+```ts
+// src/site.config.ts
+import { defineSolitudeConfig } from './lib/config';
+
+export default defineSolitudeConfig({
+  theme: {
+    comment: { use: 'giscus', lazyload: true },
+    giscus: { repo: 'owner/repository', repo_id: 'REPOSITORY_ID',
+      category_id: 'CATEGORY_ID', mapping: 'pathname' },
+  },
+});
+```
+
+Post `comment` defaults to true; set it to false to disable comments on one post. Special layouts such as About, music, and archives omit the widget.
+
+Test theme changes, direct access, and repeated navigation. See the [Giscus documentation](https://giscus.app/) for server setup.
+
+## Related guides
+
+[Message board](/docs/astro/features/message) · [Recent comments](/docs/astro/features/recent-comments)

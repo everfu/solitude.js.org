@@ -1,31 +1,26 @@
 ---
 title: "Introduction"
-description: "Understand Solitude 4, its requirements, and its configuration model."
+description: "Learn the Hexo requirements, file locations, and workflow."
 ---
-## What Solitude 4 is
 
-Solitude 4 is a Hexo theme for personal blogs. It provides homepage modules, post metadata, sidebars, feature pages, search, comments, PWA support, and a browser API.
-
-Version 4 rebuilds the browser runtime around native ES modules. Search, music, links, the context menu, translation, post AI, and cover colors are loaded only when their configuration enables them. A unified PJAX lifecycle cleans up page listeners and third-party instances between navigations.
+Solitude 4 is a Hexo blog theme with posts, homepage modules, pages, search, and comment integrations.
 
 ## Requirements
 
-- Hexo 7.0.0 or newer.
-- Node.js 14.0.0 or newer.
-- A recent Chrome, Edge, Firefox, or Safari release. Internet Explorer is not supported.
+- Hexo **7+**, Node.js **18+**, as declared in the theme `package.json`.
+- `hexo-solitude-tag@2` requires Hexo **8** and Node.js **20.19+**.
 
-## Configuration files
+## File locations
 
-`_config.yml` in the blog root controls Hexo itself: title, author, URL, language, and the selected theme. `_config.solitude.yml` controls Solitude modules and appearance.
+| Content | Location |
+| --- | --- |
+| Hexo URL, language, author | `_config.yml` |
+| Theme configuration | `_config.solitude.yml` |
+| Posts and pages | `source/` |
+| Datasets | `source/_data/` |
 
-```text
-my-blog/
-  _config.yml
-  _config.solitude.yml
-  source/
-  themes/solitude/   # Git installation only
-```
+Start with installation. If upgrading from 3.x, merge configuration using the upgrade guide and preserve your own values.
 
-<Callout type="info">
-The examples in these docs target Solitude v4.0.0. When moving from 3.x, follow [Upgrade to 4.0](/docs/hexo/getting-started/upgrade-v4) and merge your values into a fresh Solitude 4 configuration.
-</Callout>
+## Related guides
+
+[Installation](/docs/hexo/getting-started/installation) · [Upgrade to 4.0](/docs/hexo/getting-started/upgrade-v4)

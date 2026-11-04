@@ -1,0 +1,22 @@
+---
+title: "内容参考"
+description: "查阅本版本的内容语法与组件来源。"
+---
+
+使用 Hugo Shortcodes，不使用 Hexo 标签或 Astro JSX。下面列出主题实际提供的 41 个 Shortcodes：
+
+`audio`, `bubble`, `button`, `bvideo`, `card`, `chartjs`, `checkbox`, `flink`, `fold`, `gallery`, `galleryGroup`, `galleryItem`, `gitea`, `gitee`, `github`, `gitlab`, `hideBlock`, `hideInline`, `hideToggle`, `img`, `inlineImg`, `keyboard`, `label`, `link`, `mermaid`, `note`, `p`, `radio`, `score`, `series`, `span`, `spoiler`, `subnote`, `tab`, `tabs`, `timeline`, `timenode`, `typeit`, `video`, `videos`, `youtube`
+
+```html
+{{< note type="info" >}}
+A note with **Markdown**.
+{{< /note >}}
+
+{{< button url="https://example.com" text="Visit" >}}
+```
+
+块级标签需成对闭合，名称和参数区分大小写。完整可构建示例见[示例文章](https://github.com/everfu/hugo-solitude/blob/main/exampleSite/content/posts/shortcodes.md)，参数与默认值见[模板目录](https://github.com/everfu/hugo-solitude/tree/main/layouts/_shortcodes)。
+
+## 相关文档
+
+[Shortcodes](/cn/docs/hugo/content-writing/shortcodes)

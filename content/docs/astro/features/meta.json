@@ -1,0 +1,14 @@
+{
+  "title": "Pages",
+  "pages": [
+    "about",
+    "links",
+    "equipment",
+    "brevity",
+    "music",
+    "message",
+    "recent-comments",
+    "gallery"
+  ],
+  "icon": "PanelsTopLeft"
+}

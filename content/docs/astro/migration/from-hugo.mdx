@@ -1,0 +1,51 @@
+---
+title: "Import from Hugo"
+description: "Preview migration and export to a separate directory."
+---
+
+The importer targets Hugo Solitude configuration and content. The source must contain `hugo.yaml`; normal template use does not require Hugo.
+
+## 1. Preview
+
+Run from the Astro project root:
+
+```sh
+pnpm migrate:hugo --source /path/to/hugo --dry-run
+```
+
+Resolve reports such as unknown shortcodes, missing dates, and custom templates.
+
+## 2. Export
+
+```sh
+pnpm migrate:hugo --source /path/to/hugo --out /path/to/export
+```
+
+Keep output separate from the source; its parent must exist. Prefer a fresh directory, never the active Astro project. Conflicting files, symbolic links, and unresolved issues block export.
+
+## 3. Merge
+
+| Hugo | Astro |
+| --- | --- |
+| `hugo.yaml` | `src/site.config.ts` |
+| `content/` | `src/content/posts/`, `src/content/pages/` |
+| Content media | `public/hugo-content/` |
+| `data/*.yaml`, JSON | `src/data/*.json` |
+| `static/` | `public/` |
+| `assets/css/custom.css` | `src/styles/custom.css` |
+
+The export is not a complete Astro project. Review `migration-report.json`, merge into a template copy, and resolve sample content collisions. Shortcodes become MDX; explicit URLs and recognized permalink patterns are preserved. Complex templates and custom asset pipelines need manual work.
+
+## 4. Validate
+
+```sh
+pnpm check
+pnpm build
+pnpm preview
+```
+
+Check old URLs, images, taxonomies, series, formulas, and redirects. Configure third-party services again.
+
+## Related guides
+
+[MDX components](/docs/astro/reference/components)

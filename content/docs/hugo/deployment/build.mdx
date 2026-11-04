@@ -1,0 +1,29 @@
+---
+title: "Build and URLs"
+description: "Build a static site and set its published URL."
+---
+
+Use Hugo **0.164.0+**. In a regular site, run:
+
+```sh
+hugo server
+hugo --gc --minify
+```
+
+Publish `public/`. To preview the theme repository example, run `hugo server --source exampleSite --themesDir ../.. --theme solitude`.
+
+## Domains and subdirectories
+
+Set the full `baseURL` in site `hugo.yaml`, including the deployment subdirectory:
+
+```yaml
+baseURL: https://example.com/blog/
+languageCode: zh-CN
+title: My blog
+```
+
+Rebuild after URL changes. Check canonical links, RSS, `search.xml`, `links.json`, and images. Normal production builds exclude drafts and future posts; do not publish unfinished content with `-D` / `-F`.
+
+## Related guides
+
+[Hosting](/docs/hugo/deployment/hosting)

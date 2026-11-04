@@ -1,0 +1,25 @@
+---
+title: "SEO and feeds"
+description: "Set the site URL for canonical links and feeds."
+---
+
+Merge the example fields into your existing `src/site.config.ts`, keeping your own content.
+
+```ts
+// src/site.config.ts
+import { defineSolitudeConfig } from './lib/config';
+
+export default defineSolitudeConfig({
+  site: 'https://example.com',
+  base: '/blog/',
+  title: 'My blog',
+  description: 'Notes and stories.',
+  author: { name: 'Your name' },
+});
+```
+
+Posts use `title`, `description`, and `cover`. The theme generates `/index.xml`, taxonomy feeds, `/sitemap.xml`, `/robots.txt`, and `/search.xml`. Check domains and subdirectory prefixes before publishing. PWA settings provide a manifest, not offline caching.
+
+## Related guides
+
+[Configuration reference](/docs/astro/reference/configuration) · [Front matter](/docs/astro/content-writing/front-matter)

@@ -1,0 +1,27 @@
+---
+title: "Music hall and capsule"
+description: "Configure the music page and persistent player separately."
+---
+
+The music hall at `/music/` is disabled by default. Merge this configuration and keep your other menus:
+
+```ts
+// src/site.config.ts
+import { defineSolitudeConfig } from './lib/config';
+
+export default defineSolitudeConfig({
+  menus: [{ name: 'Music', url: '/music/' }],
+  theme: {
+    music: { enable: true, id: 'YOUR_PLAYLIST_ID', server: 'netease', type: 'playlist' },
+    capsule: { enable: true, id: 'YOUR_PLAYLIST_ID', server: 'netease', type: 'playlist' },
+  },
+});
+```
+
+`music` controls the hall; `capsule` controls the persistent player. The template capsule uses a sample Qishui playlist; replace it or disable it before publishing.
+
+A custom `theme.meting_api` must preserve `:server`, `:type`, and `:id`, and support the selected service. Qishui responses are supported; playback depends on the API and region. Local `Audio` and `Video` components work independently.
+
+## Related guides
+
+[Advanced configuration](/docs/astro/configuration/advanced)

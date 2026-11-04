@@ -1,8 +1,8 @@
 {
-  "title": "内容写作",
-  "icon": "Pencil",
+  "title": "写作",
   "pages": [
     "front-matter",
     "tags-plugin"
-  ]
+  ],
+  "icon": "PenLine"
 }

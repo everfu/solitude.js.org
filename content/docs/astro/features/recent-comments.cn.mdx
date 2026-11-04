@@ -1,0 +1,27 @@
+---
+title: "最近评论"
+description: "配置聚合页面和侧栏。"
+---
+
+内置地址为 `/recentcomments/`，页面类型是单数 `recentcomment`。页面、侧栏、文章参与者头像目前使用 Valine API。
+
+```ts
+// src/site.config.ts
+import { defineSolitudeConfig } from './lib/config';
+
+export default defineSolitudeConfig({
+  theme: {
+    comment: { use: 'valine', newest_comment: { enable: true, storage: 0.5, limit: 5 } },
+    valine: { appId: 'YOUR_APP_ID', appKey: 'YOUR_CLIENT_KEY',
+      serverURLs: 'https://comments.example.com' },
+    recent_comments: { enable: true, limit: 50, cache: 0.2, page: '/recentcomments/' },
+    aside: { post: { noSticky: 'about', Sticky: 'newestPost,newest_comment,allInfo' } },
+  },
+});
+```
+
+侧栏需要在相应页面类型的 `Sticky` 或 `noSticky` 加入 `newest_comment`。`cache`、`storage` 的单位是天。空数据和请求失败会显示各自状态。
+
+## 相关文档
+
+[Valine](/cn/docs/astro/integrations/comments/valine)

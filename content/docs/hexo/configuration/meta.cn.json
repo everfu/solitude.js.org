@@ -1,6 +1,5 @@
 {
   "title": "配置",
-  "icon": "Settings",
   "pages": [
     "site",
     "navigation",
@@ -11,5 +10,6 @@
     "appearance",
     "advanced",
     "browser-api"
-  ]
+  ],
+  "icon": "Settings"
 }

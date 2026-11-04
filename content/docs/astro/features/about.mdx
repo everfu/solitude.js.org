@@ -1,0 +1,42 @@
+---
+title: "About"
+description: "Edit page data and presentation."
+---
+
+The built-in route is `/about/`. Create `src/content/pages/about.md` to override its title and metadata:
+
+```md
+---
+title: About
+type: about
+data: about
+comment: false
+---
+```
+
+## Data
+
+Edit `src/data/about.json`:
+
+```json
+{
+  "title": "About me",
+  "sections": [
+    {
+      "type": "intro",
+      "greeting": "Hello",
+      "name_prefix": "This is",
+      "name": "Your name",
+      "description": "Stories and ideas."
+    }
+  ]
+}
+```
+
+`sections` selects and orders modules. Supported types are `intro`, `skills_career`, `personality_photo`, `values`, `interests`, `stats_profile`, and `story`. Set `enabled: false` to hide a section; unknown types fail the build.
+
+Omit the extension in `data`. If using a copy, update the data name; missing files fail the build. Add a menu entry separately.
+
+## Related guides
+
+[Navigation](/docs/astro/configuration/navigation)

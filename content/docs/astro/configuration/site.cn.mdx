@@ -1,0 +1,27 @@
+---
+title: "站点配置"
+description: "设置地址、语言和作者。"
+---
+
+将示例中的字段合并到现有 `src/site.config.ts`，保留自己的内容。
+
+```ts
+// src/site.config.ts
+import { defineSolitudeConfig } from './lib/config';
+
+export default defineSolitudeConfig({
+  site: 'https://example.com',
+  title: 'My blog',
+  description: 'Notes and stories.',
+  locale: 'zh-CN',
+  timeZone: 'Asia/Shanghai',
+  hasCJKLanguage: true,
+  author: { name: 'Your name' },
+});
+```
+
+`site` 用于 canonical、RSS 和 Sitemap；子目录用独立的 `base`。`locale` 支持 `zh-CN`、`zh-TW`、`en`、`es`，只改变内置界面文字。中文内容建议启用 `hasCJKLanguage`。`pagination` 必须是正整数。
+
+## 相关文档
+
+[配置参考](/cn/docs/astro/reference/configuration) · [内容字段](/cn/docs/astro/content-writing/front-matter)

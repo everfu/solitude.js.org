@@ -5,7 +5,7 @@ description: "Aggregate recent comments into a dedicated page and sidebar module
 
 ## Create the page
 
-Create `content/recent-comments/_index.md`:
+Create `content/recentcomments/_index.md`:
 
 ```yaml
 ---
@@ -14,13 +14,19 @@ type: recentcomment
 ---
 ```
 
-Enable `recent_comments`, set its limit, cache duration, and page URL, then create the page. Availability depends on the selected comment provider and its public APIs.
+Enable `recent_comments`, set its limit, cache duration, and page URL, then create the page. Aggregation currently uses the Valine API; configure its client identifiers and service URL. Other comment widgets do not enable aggregation.
 
-## Configuration or data example
+## Example
 
 ```yaml
 params:
   solitude:
+    comment:
+      use: valine
+    valine:
+      appId: YOUR_APP_ID
+      appKey: YOUR_CLIENT_KEY
+      serverURLs: https://comments.example.com
     recent_comments:
       enable: true
       limit: 50
@@ -28,4 +34,7 @@ params:
       page: /recentcomments/
 ```
 
-Compare the final structure with the matching files in `exampleSite/content` and `exampleSite/data`.
+
+## Related guides
+
+[Continue reading](/docs/hugo/configuration/navigation)

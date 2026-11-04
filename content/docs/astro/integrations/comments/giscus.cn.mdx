@@ -1,0 +1,29 @@
+---
+title: "Giscus"
+description: "配置评论服务并启用页面评论。"
+---
+
+启用公开仓库的 Discussions 并安装 Giscus App，使用服务生成的仓库和分类 ID。保持路径映射稳定。
+
+## 主题配置
+
+```ts
+// src/site.config.ts
+import { defineSolitudeConfig } from './lib/config';
+
+export default defineSolitudeConfig({
+  theme: {
+    comment: { use: 'giscus', lazyload: true },
+    giscus: { repo: 'owner/repository', repo_id: 'REPOSITORY_ID',
+      category_id: 'CATEGORY_ID', mapping: 'pathname' },
+  },
+});
+```
+
+文章 `comment` 默认为 true；设为 false 可关闭单篇评论。关于、音乐和归档等特殊布局会省略评论框。
+
+验证主题切换、页面直达和反复切页。完整部署说明见 [Giscus 官方文档](https://giscus.app/)。
+
+## 相关文档
+
+[留言板](/cn/docs/astro/features/message) · [最近评论](/cn/docs/astro/features/recent-comments)

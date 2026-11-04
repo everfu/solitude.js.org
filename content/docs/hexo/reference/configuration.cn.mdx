@@ -1,0 +1,550 @@
+---
+title: "配置参考"
+description: "按字段查阅当前主题的完整默认配置。"
+---
+
+以下默认值来自主题 `_config.yml`。主题设置写入博客根目录 `_config.solitude.yml`，Hexo 标题、作者、语言与 URL 写入根 `_config.yml`。保留自己的值，升级时合并新增字段。
+
+## site
+
+| 字段 | 默认值 |
+| --- | --- |
+| `site.name.class` | `"text"` |
+| `site.name.custom` | `"Solitude"` |
+| `site.icon` | `"/img/logo.png"` |
+
+## nav
+
+| 字段 | 默认值 |
+| --- | --- |
+| `nav.group` | `null` |
+| `nav.menu` | `null` |
+| `nav.right.random` | `false` |
+| `nav.right.custom` | `null` |
+
+## hometop
+
+| 字段 | 默认值 |
+| --- | --- |
+| `hometop.enable` | `false` |
+| `hometop.recommendList` | `null` |
+
+## aside
+
+| 字段 | 默认值 |
+| --- | --- |
+| `aside.home.noSticky` | `"about"` |
+| `aside.home.Sticky` | `"allInfo"` |
+| `aside.post.noSticky` | `"about"` |
+| `aside.post.Sticky` | `"newestPost"` |
+| `aside.page.noSticky` | `"about"` |
+| `aside.page.Sticky` | `"newestPost,allInfo"` |
+| `aside.position` | `1` |
+| `aside.my_card.author.img` | `"/img/logo.png"` |
+| `aside.my_card.author.sticker` | `null` |
+| `aside.my_card.description` | `"只有迎风，风筝才能飞得更高。"` |
+| `aside.my_card.content` | `null` |
+| `aside.my_card.state.morning` | `"✨ 早上好，新的一天开始了"` |
+| `aside.my_card.state.noon` | `"🍲 午餐时间"` |
+| `aside.my_card.state.afternoon` | `"🌞 下午好"` |
+| `aside.my_card.state.night` | `"早点休息"` |
+| `aside.my_card.state.goodnight` | `"晚安 😴"` |
+| `aside.my_card.witty_words` | `null` |
+| `aside.my_card.information` | `null` |
+| `aside.toc.post` | `true` |
+| `aside.toc.page` | `false` |
+| `aside.toc.vague` | `true` |
+| `aside.tags.enable` | `false` |
+| `aside.tags.limit` | `20` |
+| `aside.tags.highlight_list` | `null` |
+| `aside.siteinfo.postcount` | `true` |
+| `aside.siteinfo.wordcount` | `false` |
+| `aside.siteinfo.pv` | `true` |
+| `aside.siteinfo.uv` | `true` |
+| `aside.siteinfo.updatetime` | `true` |
+| `aside.siteinfo.runtimeenable` | `true` |
+| `aside.siteinfo.runtime` | `"2023-04-20 00:00:00"` |
+
+## page
+
+| 字段 | 默认值 |
+| --- | --- |
+| `page.error` | `true` |
+| `page.tags` | `true` |
+| `page.categories` | `true` |
+| `page.archives` | `0` |
+| `page.links.async_threshold` | `200` |
+| `page.default.cover` | `null` |
+
+## post
+
+| 字段 | 默认值 |
+| --- | --- |
+| `post.default.cover` | `null` |
+| `post.default.locate` | `"China"` |
+| `post.default.copyright.enable` | `true` |
+| `post.default.copyright.author` | `"/img/logo.png"` |
+| `post.default.copyright.license` | `"CC BY-NC-SA 4.0"` |
+| `post.default.copyright.licenurl` | `"https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans"` |
+| `post.ai.enable` | `false` |
+| `post.ai.modelName` | `"小七 GPT"` |
+| `post.meta.date` | `false` |
+| `post.meta.updated` | `false` |
+| `post.meta.locate` | `false` |
+| `post.meta.wordcount` | `false` |
+| `post.meta.readtime` | `false` |
+| `post.meta.pv` | `false` |
+| `post.meta.comment` | `false` |
+| `post.award.enable` | `false` |
+| `post.award.appreciators` | `"/about/"` |
+| `post.award.title` | `null` |
+| `post.award.desc` | `null` |
+| `post.award.list` | `null` |
+| `post.share.enable` | `false` |
+| `post.share.list` | `null` |
+| `post.rss` | `null` |
+| `post.covercolor.enable` | `false` |
+| `post.covercolor.mode` | `"local"` |
+| `post.covercolor.api` | `"https://api.qjqq.cn/api/Imgcolor?img="` |
+| `post.covercolor.time` | `43200000` |
+| `post.footer.enable` | `false` |
+| `post.footer.desc` | `null` |
+| `post.footer.button.enable` | `true` |
+| `post.footer.button.name` | `null` |
+| `post.footer.button.url` | `"/about/"` |
+
+## theme_color
+
+| 字段 | 默认值 |
+| --- | --- |
+| `theme_color.dark` | `"#ffc848"` |
+| `theme_color.light` | `"#425AEF"` |
+| `theme_color.nav_hover_text.dark` | `"#1b1c20"` |
+| `theme_color.nav_hover_text.light` | `"#ffffff"` |
+
+## display_mode
+
+| 字段 | 默认值 |
+| --- | --- |
+| `display_mode.type` | `"auto"` |
+| `display_mode.universe` | `false` |
+
+## font
+
+| 字段 | 默认值 |
+| --- | --- |
+| `font.font-size` | `"16px"` |
+| `font.code-font-size` | `"16px"` |
+| `font.font-family` | `"PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif"` |
+| `font.code-font-family` | `"\"monospace\", monospace"` |
+
+## lure
+
+| 字段 | 默认值 |
+| --- | --- |
+| `lure.enable` | `false` |
+| `lure.jump` | `"404 Not Found"` |
+| `lure.back` | `"ヾ(≧∇≦*)ゝHey, hey, you fell for it."` |
+
+## expire
+
+| 字段 | 默认值 |
+| --- | --- |
+| `expire.enable` | `false` |
+| `expire.time` | `30` |
+| `expire.position` | `"top"` |
+| `expire.text_prev` | `"This article expired "` |
+| `expire.text_next` | `" day ago, if the content does not match, please contact the webmaster to update it."` |
+
+## index_post_list
+
+| 字段 | 默认值 |
+| --- | --- |
+| `index_post_list.direction` | `"column"` |
+| `index_post_list.column` | `2` |
+| `index_post_list.cover` | `"both"` |
+
+## related_post
+
+| 字段 | 默认值 |
+| --- | --- |
+| `related_post.enable` | `false` |
+| `related_post.limit` | `2` |
+| `related_post.date_type` | `"created"` |
+
+## right_menu
+
+| 字段 | 默认值 |
+| --- | --- |
+| `right_menu.enable` | `false` |
+| `right_menu.commentBarrage` | `false` |
+| `right_menu.ctrlOriginalMenu` | `false` |
+| `right_menu.translate` | `false` |
+| `right_menu.custom_list` | `null` |
+
+## copy
+
+| 字段 | 默认值 |
+| --- | --- |
+| `copy.enable` | `false` |
+| `copy.copyright.enable` | `false` |
+| `copy.copyright.limit` | `50` |
+
+## mermaid
+
+| 字段 | 默认值 |
+| --- | --- |
+| `mermaid` | `false` |
+
+## chart
+
+| 字段 | 默认值 |
+| --- | --- |
+| `chart` | `false` |
+
+## typeit
+
+| 字段 | 默认值 |
+| --- | --- |
+| `typeit` | `false` |
+
+## console
+
+| 字段 | 默认值 |
+| --- | --- |
+| `console.enable` | `false` |
+| `console.recentComment.enable` | `false` |
+| `console.recentComment.storage` | `0.2` |
+| `console.card.tags` | `true` |
+| `console.card.archive` | `"month"` |
+
+## translate
+
+| 字段 | 默认值 |
+| --- | --- |
+| `translate.enable` | `true` |
+| `translate.defaultEncoding` | `2` |
+| `translate.translateDelay` | `0` |
+
+## rightside
+
+| 字段 | 默认值 |
+| --- | --- |
+| `rightside.enable` | `false` |
+| `rightside.hide.enable` | `false` |
+| `rightside.hide.translate` | `false` |
+| `rightside.hide.mode` | `false` |
+| `rightside.hide.aside` | `false` |
+
+## footer
+
+| 字段 | 默认值 |
+| --- | --- |
+| `footer.information.author` | `false` |
+| `footer.information.left` | `null` |
+| `footer.information.right` | `null` |
+| `footer.group` | `null` |
+| `footer.randomlink` | `false` |
+| `footer.beian` | `null` |
+| `footer.links` | `null` |
+
+## errorpage
+
+| 字段 | 默认值 |
+| --- | --- |
+| `errorpage.img` | `"/img/404.avif"` |
+| `errorpage.text` | `"=awa= Page Not Found"` |
+| `errorpage.recommendList` | `true` |
+
+## meting_api
+
+| 字段 | 默认值 |
+| --- | --- |
+| `meting_api` | `"https://meting.qjqq.cn/?server=:server&type=:type&id=:id&auth=:auth&r=:r"` |
+
+## capsule
+
+| 字段 | 默认值 |
+| --- | --- |
+| `capsule.enable` | `false` |
+| `capsule.id` | `5144842535` |
+| `capsule.server` | `"netease"` |
+| `capsule.type` | `"playlist"` |
+| `capsule.volume` | `0.8` |
+
+## keyboard
+
+| 字段 | 默认值 |
+| --- | --- |
+| `keyboard.enable` | `false` |
+| `keyboard.list` | `null` |
+
+## lazyload
+
+| 字段 | 默认值 |
+| --- | --- |
+| `lazyload.enable` | `false` |
+| `lazyload.field` | `"site"` |
+| `lazyload.placeholder` | `""` |
+| `lazyload.errorimg` | `"/img/error_load.avif"` |
+
+## loading
+
+| 字段 | 默认值 |
+| --- | --- |
+| `loading.fullpage` | `false` |
+| `loading.favicon` | `"/img/logo.png"` |
+| `loading.pace` | `true` |
+
+## highlight
+
+| 字段 | 默认值 |
+| --- | --- |
+| `highlight.enable` | `true` |
+| `highlight.limit` | `200` |
+| `highlight.copy` | `true` |
+| `highlight.expand` | `true` |
+| `highlight.theme` | `"mac"` |
+| `highlight.color` | `"default"` |
+
+## lightbox
+
+| 字段 | 默认值 |
+| --- | --- |
+| `lightbox` | `false` |
+
+## fancybox
+
+| 字段 | 默认值 |
+| --- | --- |
+| `fancybox` | `false` |
+
+## mediumZoom
+
+| 字段 | 默认值 |
+| --- | --- |
+| `mediumZoom` | `false` |
+
+## memorial
+
+| 字段 | 默认值 |
+| --- | --- |
+| `memorial.enable` | `false` |
+| `memorial.date` | `null` |
+
+## OpenGraph
+
+| 字段 | 默认值 |
+| --- | --- |
+| `OpenGraph.enable` | `false` |
+| `OpenGraph.options` | `null` |
+
+## wordcount
+
+| 字段 | 默认值 |
+| --- | --- |
+| `wordcount` | `false` |
+
+## katex
+
+| 字段 | 默认值 |
+| --- | --- |
+| `katex.enable` | `false` |
+| `katex.per_page` | `false` |
+| `katex.copytex` | `false` |
+
+## verify_site
+
+| 字段 | 默认值 |
+| --- | --- |
+| `verify_site` | `null` |
+
+## css_prefix
+
+| 字段 | 默认值 |
+| --- | --- |
+| `css_prefix` | `true` |
+
+## extends
+
+| 字段 | 默认值 |
+| --- | --- |
+| `extends.head` | `null` |
+| `extends.body` | `null` |
+
+## pwa
+
+| 字段 | 默认值 |
+| --- | --- |
+| `pwa.enable` | `false` |
+| `pwa.manifest` | `"/manifest.json"` |
+| `pwa.theme_color` | `"#006a73"` |
+| `pwa.mask_icon` | `"/img/pwa/favicon.png"` |
+| `pwa.apple_touch_icon` | `"/img/pwa/favicon.png"` |
+| `pwa.bookmark_icon` | `"/img/pwa/favicon.png"` |
+| `pwa.favicon_32_32` | `"/img/pwa/favicon_32.png"` |
+| `pwa.favicon_16_16` | `"/img/pwa/favicon_16.png"` |
+
+## comment
+
+| 字段 | 默认值 |
+| --- | --- |
+| `comment.use` | `null` |
+| `comment.commentBarrage` | `false` |
+| `comment.lazyload` | `false` |
+| `comment.count` | `false` |
+| `comment.sidebar` | `false` |
+| `comment.pv` | `false` |
+| `comment.avatar` | `"https://gravatar.com/avatar"` |
+| `comment.hot_tip.enable` | `false` |
+| `comment.hot_tip.count` | `3` |
+| `comment.newest_comment.enable` | `true` |
+| `comment.newest_comment.storage` | `0.5` |
+| `comment.newest_comment.limit` | `5` |
+
+## twikoo
+
+| 字段 | 默认值 |
+| --- | --- |
+| `twikoo.envId` | `null` |
+| `twikoo.region` | `null` |
+| `twikoo.style` | `true` |
+| `twikoo.accessToken` | `null` |
+| `twikoo.option` | `null` |
+
+## waline
+
+| 字段 | 默认值 |
+| --- | --- |
+| `waline.envId` | `null` |
+| `waline.pageview` | `false` |
+| `waline.option` | `null` |
+
+## valine
+
+| 字段 | 默认值 |
+| --- | --- |
+| `valine.appId` | `null` |
+| `valine.appKey` | `null` |
+| `valine.serverURLs` | `null` |
+| `valine.avatar` | `null` |
+| `valine.visitor` | `false` |
+| `valine.style` | `true` |
+| `valine.option` | `null` |
+
+## artalk
+
+| 字段 | 默认值 |
+| --- | --- |
+| `artalk.server` | `null` |
+| `artalk.site` | `null` |
+| `artalk.option` | `null` |
+
+## giscus
+
+| 字段 | 默认值 |
+| --- | --- |
+| `giscus.repo` | `null` |
+| `giscus.repo_id` | `null` |
+| `giscus.category_id` | `null` |
+| `giscus.theme.light` | `"light"` |
+| `giscus.theme.dark` | `"dark"` |
+| `giscus.option` | `null` |
+
+## search
+
+| 字段 | 默认值 |
+| --- | --- |
+| `search.enable` | `false` |
+| `search.type` | `null` |
+| `search.tags` | `null` |
+| `search.algolia` | `null` |
+| `search.local.preload` | `false` |
+| `search.local.CDN` | `null` |
+| `search.docsearch.appId` | `null` |
+| `search.docsearch.apiKey` | `null` |
+| `search.docsearch.indexName` | `null` |
+| `search.docsearch.option` | `null` |
+
+## music
+
+| 字段 | 默认值 |
+| --- | --- |
+| `music.enable` | `false` |
+| `music.id` | `5144842535` |
+| `music.server` | `"netease"` |
+| `music.type` | `"playlist"` |
+| `music.volume` | `0.8` |
+| `music.mutex` | `true` |
+| `music.order` | `"list"` |
+
+## envelope
+
+| 字段 | 默认值 |
+| --- | --- |
+| `envelope.enable` | `false` |
+| `envelope.line` | `10` |
+| `envelope.speed` | `20` |
+| `envelope.hover` | `true` |
+| `envelope.loop` | `true` |
+| `envelope.page` | `"/message/"` |
+
+## brevity
+
+| 字段 | 默认值 |
+| --- | --- |
+| `brevity.enable` | `false` |
+| `brevity.home_mini` | `false` |
+| `brevity.music` | `false` |
+| `brevity.page` | `"/essay/"` |
+| `brevity.style` | `1` |
+| `brevity.strip` | `30` |
+
+## recent_comments
+
+| 字段 | 默认值 |
+| --- | --- |
+| `recent_comments.enable` | `false` |
+| `recent_comments.limit` | `50` |
+| `recent_comments.cache` | `0.2` |
+| `recent_comments.page` | `"/recentcomments/"` |
+
+## busuanzi
+
+| 字段 | 默认值 |
+| --- | --- |
+| `busuanzi` | `false` |
+
+## busuanzi_use
+
+| 字段 | 默认值 |
+| --- | --- |
+| `busuanzi_use` | `0` |
+
+## google_adsense
+
+| 字段 | 默认值 |
+| --- | --- |
+| `google_adsense.enable` | `false` |
+| `google_adsense.auto_ads` | `false` |
+| `google_adsense.enable_page_level_ads` | `true` |
+| `google_adsense.aside_card` | `true` |
+| `google_adsense.post_card` | `true` |
+| `google_adsense.post_content` | `true` |
+| `google_adsense.js` | `"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"` |
+| `google_adsense.client` | `null` |
+| `google_adsense.slot` | `null` |
+
+## CDN
+
+| 字段 | 默认值 |
+| --- | --- |
+| `CDN.internal` | `"local"` |
+| `CDN.third_party` | `"custom"` |
+| `CDN.version` | `true` |
+| `CDN.custom_format` | `"https://cdn.jsdelivr.net/npm/${name}@${version}/${min_file}"` |
+| `CDN.options` | `null` |
+
+## 相关文档
+
+[站点配置](/cn/docs/hexo/configuration/site) · [高级配置](/cn/docs/hexo/configuration/advanced)

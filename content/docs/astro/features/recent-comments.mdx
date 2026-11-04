@@ -1,0 +1,27 @@
+---
+title: "Recent comments"
+description: "Configure the aggregation page and sidebar."
+---
+
+The built-in route is `/recentcomments/`; its page type is singular `recentcomment`. The page, sidebar, and post participant avatars currently use the Valine API.
+
+```ts
+// src/site.config.ts
+import { defineSolitudeConfig } from './lib/config';
+
+export default defineSolitudeConfig({
+  theme: {
+    comment: { use: 'valine', newest_comment: { enable: true, storage: 0.5, limit: 5 } },
+    valine: { appId: 'YOUR_APP_ID', appKey: 'YOUR_CLIENT_KEY',
+      serverURLs: 'https://comments.example.com' },
+    recent_comments: { enable: true, limit: 50, cache: 0.2, page: '/recentcomments/' },
+    aside: { post: { noSticky: 'about', Sticky: 'newestPost,newest_comment,allInfo' } },
+  },
+});
+```
+
+Add `newest_comment` to `Sticky` or `noSticky` for the relevant page type. `cache` and `storage` are in days. Empty data and request failures have distinct states.
+
+## Related guides
+
+[Valine](/docs/astro/integrations/comments/valine)

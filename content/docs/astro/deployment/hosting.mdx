@@ -1,0 +1,64 @@
+---
+title: "Hosting"
+description: "Publish to GitHub Pages, Netlify, Vercel, or a static server."
+---
+
+## GitHub Pages
+
+Set `site` and `base`, then select GitHub Actions under Settings → Pages. Create `.github/workflows/deploy.yml`:
+
+```yaml
+name: Deploy blog
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - uses: actions/configure-pages@v5
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm check
+      - run: pnpm build
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish
+        id: deployment
+        uses: actions/deploy-pages@v4
+```
+
+Check Actions after committing. A custom domain needs Pages and DNS configuration, usually with `base: '/'`.
+
+## Netlify / Vercel
+
+Import your repository and use its declared Node.js and pnpm versions. Install with `pnpm install --frozen-lockfile`, build with `pnpm build`, and publish `dist`. Update `site` and republish when the domain is ready.
+
+## Static servers
+
+Upload the contents of `dist/`; directory paths must resolve to `index.html`. Preserve `.html` post URLs. Unknown paths must return `404.html` with HTTP 404. Aliases are static redirect pages; configure server rules for HTTP 301.
+
+## Related guides
+
+[Build and URLs](/docs/astro/deployment/build)

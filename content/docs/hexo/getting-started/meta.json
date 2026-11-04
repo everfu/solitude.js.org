@@ -1,10 +1,9 @@
 {
-  "title": "Getting Started",
-  "icon": "Rocket",
+  "title": "Getting started",
   "pages": [
     "introduction",
     "installation",
-    "first-run",
-    "upgrade-v4"
-  ]
+    "first-run"
+  ],
+  "icon": "Rocket"
 }

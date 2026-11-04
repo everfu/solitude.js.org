@@ -1,0 +1,28 @@
+---
+title: "Troubleshooting"
+description: "Diagnose path, component, and resource errors."
+---
+
+## Missing images or styles
+
+Check `site`, `base`, and asset paths for repeated prefixes. Put assets in `public/` and omit `public` in URLs. Refresh deployed subdirectory pages directly.
+
+## Components appear as text
+
+Use `.mdx` and JSX expressions for booleans and objects. Separate complex Markdown from tags with blank lines. Do not paste Hugo shortcodes into posts.
+
+## Duplicate route / Missing page data
+
+Check `url`, `slug`, `aliases`, and system paths for collisions. `data` names a file in `src/data/` without `.json`; a missing file fails the build.
+
+## External components fail to load
+
+Check browser requests, feature flags, and `theme.cdn`. A successful build does not establish API availability. Test empty responses, error states, and theme changes with your service.
+
+## Report a problem
+
+Include reproduction steps, Node/pnpm versions, relevant configuration, browser details, and logs in an [Astro issue](https://github.com/everfu/astro-solitude/issues).
+
+## Related guides
+
+[Configuration reference](/docs/astro/reference/configuration)

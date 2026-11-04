@@ -1,0 +1,28 @@
+---
+title: "Build and URLs"
+description: "Build static files and configure domains and subdirectories."
+---
+
+The project generates a static site and needs no server adapter.
+
+```sh
+pnpm install --frozen-lockfile
+pnpm check
+pnpm build
+pnpm preview
+```
+
+Publish the contents of `dist/`. Check home, posts, images, search, and 404 in the production preview. Do not use the development server in production.
+
+## URLs
+
+| Published URL | `site` | `base` |
+| --- | --- | --- |
+| `https://example.com/` | `https://example.com` | `/` |
+| `https://user.github.io/blog/` | `https://user.github.io` | `/blog/` |
+
+Maintain the address in `src/site.config.ts` and rebuild after changes. The template check workflow does not deploy the site.
+
+## Related guides
+
+[Hosting](/docs/astro/deployment/hosting)

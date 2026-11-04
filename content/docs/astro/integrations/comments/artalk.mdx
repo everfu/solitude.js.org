@@ -1,0 +1,28 @@
+---
+title: "Artalk"
+description: "Configure a provider and enable page comments."
+---
+
+Deploy Artalk; keep `site` consistent with the server site name.
+
+## Theme configuration
+
+```ts
+// src/site.config.ts
+import { defineSolitudeConfig } from './lib/config';
+
+export default defineSolitudeConfig({
+  theme: {
+    comment: { use: 'artalk', lazyload: true },
+    artalk: { server: 'https://comments.example.com', site: 'My blog' },
+  },
+});
+```
+
+Post `comment` defaults to true; set it to false to disable comments on one post. Special layouts such as About, music, and archives omit the widget.
+
+Test theme changes, direct access, and repeated navigation. See the [Artalk documentation](https://artalk.js.org/) for server setup.
+
+## Related guides
+
+[Message board](/docs/astro/features/message) · [Recent comments](/docs/astro/features/recent-comments)

@@ -1,0 +1,47 @@
+---
+title: "Friends"
+description: "Edit page data and presentation."
+---
+
+The built-in route is `/links/`. Create `src/content/pages/links.md` to override its title and metadata:
+
+```md
+---
+title: Friends
+type: links
+data: links
+comment: false
+---
+```
+
+## Data
+
+Edit `src/data/links.json`:
+
+```json
+{
+  "links": [
+    {
+      "class_name": "Friends",
+      "class_desc": "Blogs I read",
+      "type": "item",
+      "link_list": [
+        {
+          "name": "Example blog",
+          "link": "https://example.com",
+          "avatar": "/img/logo.png",
+          "descr": "Words and life"
+        }
+      ]
+    }
+  ]
+}
+```
+
+Groups support `item` or `card`; entries also accept `topimg` and `tag`. This page supports additional prose.
+
+Omit the extension in `data`. If using a copy, update the data name; missing files fail the build. Add a menu entry separately.
+
+## Related guides
+
+[Navigation](/docs/astro/configuration/navigation)

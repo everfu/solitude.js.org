@@ -1,0 +1,24 @@
+---
+title: "Images, code, and math"
+description: "Reference static assets, highlight code, and write formulas."
+---
+
+Put images and media in `public/` and omit `public` from URLs. Label fenced code with its language; formulas require `theme.katex.enable: true`.
+
+````md
+![Mountain view](/img/demo/cover-getting-started-v2.webp)
+
+```js
+console.log("Hello");
+```
+
+$E = mc^2$
+````
+
+Use `$$` for block formulas. Configure code copying, line numbers, and height under `theme.highlight`.
+
+The theme handles internal links and asset prefixes in its rendering pipeline. Check raw HTML, CSS URLs, and custom scripts under the actual deployment subdirectory.
+
+## Related guides
+
+[Media components](/docs/astro/content-writing/components/media)

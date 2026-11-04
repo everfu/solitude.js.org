@@ -4,7 +4,7 @@ import { z } from 'zod';
 import { source } from '@/lib/source';
 import { Document, type DocumentData } from 'flexsearch';
 import { ChatUIMessage, SearchTool } from '../../../components/ai/search';
-import { defaultDocsVersion, isDocsVersion, type DocsVersion } from '@/lib/shared';
+import { defaultDocsVersion, docsVersions, isDocsVersion, type DocsVersion } from '@/lib/shared';
 
 interface CustomDocument extends DocumentData {
   url: string;
@@ -16,13 +16,16 @@ interface CustomDocument extends DocumentData {
 const searchServer = createSearchServer();
 
 async function createSearchServer() {
-  const search = new Document<CustomDocument>({
-    document: {
-      id: 'url',
-      index: ['title', 'description', 'content'],
-      store: true,
-    },
-  });
+  const search = Object.fromEntries(docsVersions.map((version) => [
+    version,
+    new Document<CustomDocument>({
+      document: {
+        id: 'url',
+        index: ['title', 'description', 'content'],
+        store: true,
+      },
+    }),
+  ])) as Record<DocsVersion, Document<CustomDocument>>;
 
   const docs = await chunkedAll(
     source.getPages().map(async (page) => {
@@ -39,7 +42,7 @@ async function createSearchServer() {
   );
 
   for (const doc of docs) {
-    if (doc) search.add(doc);
+    if (doc) search[doc.version].add(doc);
   }
 
   return search;
@@ -160,7 +163,7 @@ function getClientVersion(messages: unknown): DocsVersion {
 
       const location = (data as { location?: unknown }).location;
       if (typeof location === 'string') {
-        const match = location.match(/\/docs\/(hugo|hexo)(?:\/|$)/);
+        const match = location.match(/\/docs\/([^/?#]+)(?:[/?#]|$)/);
         if (match?.[1] && isDocsVersion(match[1])) return match[1];
       }
     }
@@ -177,9 +180,9 @@ function createSearchTool(version: DocsVersion): SearchTool {
       limit: z.number().int().min(1).max(100).default(10),
     }),
     async execute({ query, limit }) {
-      const search = await searchServer;
+      const search = (await searchServer)[version];
       const results = await search.searchAsync(query, {
-        limit: Math.max(limit * 4, 40),
+        limit,
         merge: true,
         enrich: true,
       });

@@ -1,14 +1,20 @@
 export const appName = 'Solitude Docs';
-export const appDescription = 'Documentation for the Hugo and Hexo editions of Solitude.';
+export const appDescription = 'Installation, configuration, and writing guides for Solitude on Astro, Hugo, and Hexo.';
 export const themeName = 'Solitude';
 export const docsRoute = '/docs';
 export const docsImageRoute = '/og/docs';
 export const docsContentRoute = '/llms.mdx/docs';
-export const docsVersions = ['hugo', 'hexo'] as const;
+export const docsVersions = ['astro', 'hugo', 'hexo'] as const;
 export type DocsVersion = (typeof docsVersions)[number];
-export const defaultDocsVersion: DocsVersion = 'hugo';
+export const defaultDocsVersion: DocsVersion = 'astro';
 
 export const docsVersionConfig = {
+  astro: {
+    label: 'Astro',
+    repositoryUrl: 'https://github.com/everfu/astro-solitude',
+    releaseUrl: 'https://github.com/everfu/astro-solitude/releases',
+    previewUrl: 'https://astro-solitude.efu.me/',
+  },
   hugo: {
     label: 'Hugo',
     repositoryUrl: 'https://github.com/everfu/hugo-solitude',

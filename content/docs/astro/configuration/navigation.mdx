@@ -1,0 +1,27 @@
+---
+title: "Navigation"
+description: "Configure menus, nested items, and internal links."
+---
+
+Merge the example fields into your existing `src/site.config.ts`, keeping your own content.
+
+```ts
+// src/site.config.ts
+import { defineSolitudeConfig } from './lib/config';
+
+export default defineSolitudeConfig({
+  menus: [
+    { name: 'Articles', url: '/archives/', icon: 'fas fa-folder-closed' },
+    { name: 'Explore', children: [
+      { name: 'About', url: '/about/' },
+      { name: 'Friends', url: '/links/' },
+    ] },
+  ],
+});
+```
+
+Internal links start with `/`; the theme applies `base`. Use absolute URLs for external links. Icons use bundled Font Awesome classes. Arrays replace the entire default array, so include every menu entry you want to keep. Removing a menu does not delete its page.
+
+## Related guides
+
+[Configuration reference](/docs/astro/reference/configuration) · [Front matter](/docs/astro/content-writing/front-matter)

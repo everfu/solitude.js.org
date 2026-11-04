@@ -1,7 +1,7 @@
 {
-  "title": "迁移",
-  "icon": "Waypoints",
+  "title": "迁移与升级",
   "pages": [
     "from-hexo"
-  ]
+  ],
+  "icon": "ArrowRightLeft"
 }

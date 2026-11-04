@@ -1,0 +1,26 @@
+---
+title: "Algolia"
+description: "连接外部搜索索引。"
+---
+
+准备服务的应用 ID、索引名和公开搜索密钥：
+
+```ts
+// src/site.config.ts
+import { defineSolitudeConfig } from './lib/config';
+
+export default defineSolitudeConfig({
+  theme: { search: {
+    enable: true, type: 'algolia',
+    algolia: { appId: 'YOUR_APP_ID', apiKey: 'YOUR_SEARCH_ONLY_KEY', indexName: 'blog' },
+  } },
+});
+```
+
+索引记录需包含 `title`，以及绝对 `permalink` 或相对站点根目录的 `path`；搜索结果需返回 `_highlightResult.title`。
+
+主题提供搜索界面，不负责创建或同步索引。仅使用公开搜索密钥；检查空结果、失败提示与生产域名。
+
+## 相关文档
+
+[本地搜索](/cn/docs/astro/integrations/search/local-search)

@@ -1,28 +1,26 @@
 ---
 title: "介绍"
-description: "了解 Solitude 的 Hugo 原生版本及其文档结构。"
+description: "了解 Hugo 版的环境、配置和使用流程。"
 ---
 
-## Solitude Hugo 是什么
+Solitude Hugo 是原生 Hugo 博客主题，包含文章、特色页面、搜索、评论和内容 Shortcodes。
 
-Solitude Hugo 是 Solitude 主题的 Hugo 原生实现。它使用 Go Templates、Hugo Pipes、Menus、Taxonomies 和 Page Collections，同时保留熟悉的页面结构、特色页面、侧栏和交互体验。
+## 环境
 
-构建站点只需要 **Hugo 0.164.0 或更高版本**，不需要 Node.js、npm、PostCSS、Sass 或 Stylus。
+Hugo **0.164.0+** 和 Git。正常构建不需要 Node.js。
 
-## 配置放在哪里
+## 文件位置
 
-语言、分类体系、输出格式、分页和站点元数据使用 Hugo 标准配置；Solitude 专属配置统一放在 `hugo.yaml` 的 `params.solitude` 下。
+| 内容 | 位置 |
+| --- | --- |
+| 标准配置与主题设置 | 站点 `hugo.yaml`，主题字段在 `params.solitude` |
+| 文章 | `content/posts/` |
+| 特色页面 | `content/页面名/_index.md` |
+| 数据 / 静态资源 | `data/` / `static/` |
+| 自定义样式 | `assets/css/custom.css` |
 
-```yaml
-title: 我的博客
-theme: solitude
+从安装开始。已有 Hexo 内容需转换配置、字段和标签语法。
 
-params:
-  solitude:
-    site:
-      name:
-        class: text
-        custom: 我的博客
-```
+## 相关文档
 
-第一次使用请先阅读[安装](/cn/docs/hugo/getting-started/installation)，再按需要查阅配置、内容、特色页面和集成章节。已有 Hexo 站点应先阅读[从 Hexo 迁移](/cn/docs/hugo/migration/from-hexo)，不要直接复制旧配置。
+[安装](/cn/docs/hugo/getting-started/installation) · [从 Hexo 迁移](/cn/docs/hugo/migration/from-hexo)

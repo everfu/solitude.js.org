@@ -1,0 +1,44 @@
+---
+title: "仓库卡片"
+description: "组件参数与可复制示例。"
+---
+
+在 `.mdx` 文章或页面中直接使用，主题自动注入组件。布尔值写成 `{true}` / `{false}`，对象使用 JSX 表达式。复杂 Markdown 与组件标签之间留空行。
+
+在线嵌入、仓库数据和图表库需要网络；本地媒体不依赖在线音乐开关。
+
+## GitHub
+
+`repo` 使用 owner/repository 格式，浏览器从公开 API 获取数据。
+
+```mdx
+<GitHub repo="withastro/astro" />
+```
+
+## GitLab
+
+`repo` 使用 namespace/project 格式，内置服务指向 gitlab.com。
+
+```mdx
+<GitLab repo="gitlab-org/gitlab" />
+```
+
+## Gitee
+
+`repo` 使用 owner/repository 格式，浏览器从公开 API 获取数据。
+
+```mdx
+<Gitee repo="mirrors/vue" />
+```
+
+## Gitea
+
+`host` 或 `server` 设置服务地址，`repo` 使用 owner/repository 格式；服务必须允许浏览器请求。
+
+```mdx
+<Gitea host="https://codeberg.org" repo="forgejo/forgejo" />
+```
+
+## 相关文档
+
+[组件索引](/cn/docs/astro/reference/components)

@@ -1,0 +1,27 @@
+---
+title: "Site configuration"
+description: "Set the URL, language, and author."
+---
+
+Merge the example fields into your existing `src/site.config.ts`, keeping your own content.
+
+```ts
+// src/site.config.ts
+import { defineSolitudeConfig } from './lib/config';
+
+export default defineSolitudeConfig({
+  site: 'https://example.com',
+  title: 'My blog',
+  description: 'Notes and stories.',
+  locale: 'zh-CN',
+  timeZone: 'Asia/Shanghai',
+  hasCJKLanguage: true,
+  author: { name: 'Your name' },
+});
+```
+
+`site` supplies canonical, RSS, and Sitemap URLs; use a separate `base` for subdirectories. `locale` accepts `zh-CN`, `zh-TW`, `en`, and `es` and only changes built-in UI text. Enable `hasCJKLanguage` for CJK word counting. `pagination` must be a positive integer.
+
+## Related guides
+
+[Configuration reference](/docs/astro/reference/configuration) · [Front matter](/docs/astro/content-writing/front-matter)

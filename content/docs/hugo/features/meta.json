@@ -1,6 +1,5 @@
 {
-  "title": "Feature Pages",
-  "icon": "PanelsTopLeft",
+  "title": "Pages",
   "pages": [
     "about",
     "links",
@@ -10,5 +9,6 @@
     "brevity",
     "recent-comments",
     "gallery"
-  ]
+  ],
+  "icon": "PanelsTopLeft"
 }

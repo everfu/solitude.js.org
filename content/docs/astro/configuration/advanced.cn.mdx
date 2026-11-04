@@ -1,0 +1,27 @@
+---
+title: "高级配置"
+description: "添加自定义资源并启用可选模块。"
+---
+
+将示例中的字段合并到现有 `src/site.config.ts`，保留自己的内容。
+
+```ts
+// src/site.config.ts
+import { defineSolitudeConfig } from './lib/config';
+
+export default defineSolitudeConfig({
+  theme: {
+    mermaid: true,
+    chart: true,
+    typeit: true,
+    katex: { enable: true },
+    keyboard: { enable: true },
+  },
+});
+```
+
+样式放在 `src/styles/custom.css`；HTML 注入用 `theme.extends.head` / `body`，资源地址用 `theme.cdn`。快捷键每项只能指定一个 `action` 或 `url`。对象递归合并，数组整体替换；省略字段使用基础默认值。浏览器配置公开，只填写客户端可使用的标识。
+
+## 相关文档
+
+[配置参考](/cn/docs/astro/reference/configuration) · [内容字段](/cn/docs/astro/content-writing/front-matter)

@@ -1,0 +1,74 @@
+---
+title: "Text and callouts"
+description: "Component parameters and copyable examples."
+---
+
+Use these components directly in `.mdx` posts or pages; the theme injects them automatically. Write booleans as `{true}` / `{false}` and objects as JSX expressions. Separate complex Markdown from component tags with blank lines.
+
+## Note
+
+Add a callout. `type` can be `info`, `success`, `warning`, or `danger`; `style` defaults to `flat`.
+
+```mdx
+<Note type="info">A callout with **Markdown** support.</Note>
+```
+
+## Subnote
+
+Add a supplementary callout. `type` and `style` work like `Note`.
+
+```mdx
+<Subnote type="success">An additional note.</Subnote>
+```
+
+## Bubble
+
+Add a tooltip. `notation` is the explanation, `color` selects a style, and children provide the trigger text.
+
+```mdx
+<Bubble notation="A little more context">Hover for a note</Bubble>
+```
+
+## Label
+
+Highlight a label using children or `text`; `color` selects the style.
+
+```mdx
+<Label color="green">Complete</Label>
+```
+
+## Text
+
+Style inline text. `color` selects a class; children provide the text.
+
+```mdx
+<Text color="red">Something worth highlighting.</Text>
+```
+
+## Paragraph
+
+Style a paragraph. `color` selects a style class; children provide its content.
+
+```mdx
+<Paragraph color="blue">A paragraph with a splash of color.</Paragraph>
+```
+
+## Keyboard
+
+Label a key combination using children or `text`.
+
+```mdx
+<Keyboard>⌘ K</Keyboard>
+```
+
+## Spoiler
+
+Hide spoiler text until hover or focus. Children provide the content; `style` defaults to `block`.
+
+```mdx
+<Spoiler>A little spoiler</Spoiler>
+```
+
+## Related guides
+
+[Component index](/docs/astro/reference/components)

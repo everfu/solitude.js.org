@@ -1,16 +1,28 @@
 ---
-title: "Tags Plugin"
-description: "Install and use syntax verified by the Solitude tags plugin."
-icon: "BadgePlus"
+title: "Theme tags"
+description: "Distinguish plugin tags from theme-provided tags."
 ---
-`hexo-solitude-tag` is maintained separately from the theme. Install it in the Hexo blog root:
 
-<PmInstall name="hexo-solitude-tag" />
+The tag plugin is installed separately. V2 requires Hexo **8** and Node.js **20.19+**; Hexo 7 users should use `hexo-solitude-tag@1`.
 
-The plugin's published interface currently documents the YouTube tag:
+```sh
+npm install hexo-solitude-tag@2
+```
 
-```markdown
+## Tag providers
+
+The plugin provides notes, hidden content, buttons, inline images, labels, timelines, friend links, scores, series, and Chart.js. The theme provides Gallery, Mermaid, and Tabs.
+
+```md
+{% hideInline Secret text,Click to reveal %}
+
+{% btn https://example.com,Visit,fas fa-link,blue outline %}
+
 {% youtube video_id [type] [cookie] %}
 ```
 
-Restart Hexo after installation. Verify additional syntax against the [plugin repository](https://github.com/everfu/hexo-solitude-tag) before using it; theme-looking shortcodes are not automatically provided by Solitude itself.
+Restart Hexo and regenerate. See the [plugin repository](https://github.com/everfu/hexo-solitude-tag) for full parameters and migration examples. Hugo shortcodes and Astro MDX do not work in Hexo.
+
+## Related guides
+
+[Content reference](/docs/hexo/reference/content)

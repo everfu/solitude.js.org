@@ -1,0 +1,8 @@
+{
+  "title": "部署",
+  "pages": [
+    "build",
+    "hosting"
+  ],
+  "icon": "CloudUpload"
+}

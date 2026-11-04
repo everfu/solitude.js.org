@@ -1,0 +1,27 @@
+---
+title: "导航"
+description: "配置菜单、嵌套项和内部链接。"
+---
+
+将示例中的字段合并到现有 `src/site.config.ts`，保留自己的内容。
+
+```ts
+// src/site.config.ts
+import { defineSolitudeConfig } from './lib/config';
+
+export default defineSolitudeConfig({
+  menus: [
+    { name: 'Articles', url: '/archives/', icon: 'fas fa-folder-closed' },
+    { name: 'Explore', children: [
+      { name: 'About', url: '/about/' },
+      { name: 'Friends', url: '/links/' },
+    ] },
+  ],
+});
+```
+
+内部链接从 `/` 开始，主题会应用 `base`；外部链接使用完整地址。图标使用内置 Font Awesome 类名。数组整体替换，修改菜单时应写出要保留的全部条目。删除菜单不会删除对应页面。
+
+## 相关文档
+
+[配置参考](/cn/docs/astro/reference/configuration) · [内容字段](/cn/docs/astro/content-writing/front-matter)

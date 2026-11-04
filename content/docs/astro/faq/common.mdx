@@ -1,0 +1,28 @@
+---
+title: "Common questions"
+description: "Understand drafts, language, pages, and service flags."
+---
+
+## Does a template copy publish my site?
+
+No. Connect a host or upload `dist/`. The check workflow only validates the project.
+
+## Why are comments or music missing?
+
+Configure a global provider and enable the feature. Post `comment: true` does not enable a provider. The music hall and capsule are independent; the template capsule contains a sample playlist.
+
+## How do drafts differ from hidden posts?
+
+`draft: true` is development-only. `home: false` hides homepage areas while keeping direct access, search, and feeds. Future dates do not schedule publication.
+
+## Why does language switching leave some text unchanged?
+
+`locale` controls built-in UI only. Translate posts, menus, and datasets yourself.
+
+## Why is my page absent from the menu?
+
+Pages and navigation are independent. Add an entry to `menus`.
+
+## Related guides
+
+[Integrations](/docs/astro/integrations/comments/waline) · [Update the template](/docs/astro/migration/updates)

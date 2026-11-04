@@ -1,0 +1,69 @@
+---
+title: "Links and collections"
+description: "Component parameters and copyable examples."
+---
+
+Use these components directly in `.mdx` posts or pages; the theme injects them automatically. Write booleans as `{true}` / `{false}` and objects as JSX expressions. Separate complex Markdown from component tags with blank lines.
+
+## Button
+
+Link to a destination with `url`, `text`, and an optional Font Awesome `icon`. `option` adds style classes.
+
+```mdx
+<Button url="/archives/" text="Read the posts" icon="fas fa-book" />
+```
+
+## Link
+
+Show a link summary. Use `url` (or `link`), `title`, and `desc` (or `subtitle`).
+
+```mdx
+<Link title="Astro" desc="Astro website" url="https://astro.build/" />
+```
+
+## Card
+
+Introduce a project with `title` (or `name`), `desc`, `cover` (or `bg`), and `url`. Optional fields include `tag`, `star`, `icon`, and CSS `width` and `height`.
+
+```mdx
+<Card title="Project card" desc="A space to introduce your project." cover="/img/demo/cover-getting-started-v2.webp" url="/about/" tag="Theme" star={5} />
+```
+
+## Flink
+
+Embed link groups. `groups` contains `class_name`, `class_desc`, and `link_list`; link fields match the friends dataset.
+
+```mdx
+<Flink groups={[{class_name:"Official resources",link_list:[{name:"Astro",link:"https://astro.build/",avatar:"/img/logo.png",descr:"Static site framework"}]}]} />
+```
+
+## Series
+
+List posts in a series using `name`. If omitted, the component tries the current post’s first series. Posts are ordered from oldest to newest.
+
+```mdx
+<Series name="Theme essentials" />
+```
+
+## Timeline
+
+Create a timeline with `title`, `color`, and nested `Timenode` children.
+
+```mdx
+<Timeline title="A theme journey" color="blue">
+<Timenode time="Step one" title="Create a site">Start from the template.</Timenode>
+<Timenode time="Step two" title="Start writing">Publish your first post.</Timenode>
+</Timeline>
+```
+
+## Timenode
+
+Add a timeline entry with `time`, `title`, and body content. Place it inside `Timeline`.
+
+```mdx
+<Timeline><Timenode time="Now" title="Keep creating">Keep the moments worth sharing.</Timenode></Timeline>
+```
+
+## Related guides
+
+[Component index](/docs/astro/reference/components)

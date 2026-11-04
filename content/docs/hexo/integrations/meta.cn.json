@@ -1,8 +1,8 @@
 {
-  "title": "集成服务",
-  "icon": "Plug",
+  "title": "集成",
   "pages": [
     "search",
     "comments"
-  ]
+  ],
+  "icon": "Plug"
 }

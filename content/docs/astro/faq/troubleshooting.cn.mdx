@@ -1,0 +1,28 @@
+---
+title: "排查问题"
+description: "定位路径、组件和资源错误。"
+---
+
+## 图片或样式缺失
+
+检查 `site`、`base` 和资源路径，避免重复前缀。资源放在 `public/`，引用时省略 `public`。直接刷新部署子目录内的页面。
+
+## 组件显示为文本
+
+使用 `.mdx`；布尔值和对象用 JSX 表达式。复杂 Markdown 与组件标签留空行，不要直接粘贴 Hugo Shortcodes。
+
+## Duplicate route / Missing page data
+
+检查 `url`、`slug`、`aliases` 与系统路径是否冲突。`data` 指向 `src/data/` 文件名，不含 `.json`；缺失文件会使构建失败。
+
+## 外部组件加载失败
+
+检查浏览器请求、功能开关与 `theme.cdn`。构建成功不代表第三方 API 可用，使用自己的服务核对空响应、失败状态和主题切换。
+
+## 提交问题
+
+提供复现步骤、Node/pnpm 版本、相关配置、浏览器和错误日志，提交到 [Astro 仓库](https://github.com/everfu/astro-solitude/issues)。
+
+## 相关文档
+
+[配置参考](/cn/docs/astro/reference/configuration)

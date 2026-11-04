@@ -1,0 +1,25 @@
+---
+title: "文章配置"
+description: "设置代码、封面和文章默认行为。"
+---
+
+将示例中的字段合并到现有 `src/site.config.ts`，保留自己的内容。
+
+```ts
+// src/site.config.ts
+import { defineSolitudeConfig } from './lib/config';
+
+export default defineSolitudeConfig({
+  theme: {
+    highlight: { enable: true, copy: true, line_numbers: true, max_height: 360 },
+    post: { covercolor: { enable: true, mode: 'local' } },
+    katex: { enable: true },
+  },
+});
+```
+
+`max_height: 0` 不限制代码高度。封面取色基础默认关闭，模板启用本地模式。文章字段如 `toc`、`aside`、`comment` 在 Front Matter 中设置；评论还需要全局服务。
+
+## 相关文档
+
+[配置参考](/cn/docs/astro/reference/configuration) · [内容字段](/cn/docs/astro/content-writing/front-matter)

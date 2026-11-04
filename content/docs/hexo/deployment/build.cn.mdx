@@ -1,0 +1,29 @@
+---
+title: "构建与地址"
+description: "生成静态网站并配置发布地址。"
+---
+
+使用 Hexo **7+** 和主题要求的 Node.js **18+**；若使用标签插件 v2，则需要 Hexo **8** 与 Node.js **20.19+**。在博客根目录运行：
+
+```sh
+npx hexo clean
+npx hexo generate
+npx hexo server
+```
+
+输出目录为 `public/`；`hexo server` 用于本地预览。
+
+## 域名与子目录
+
+在博客根 `_config.yml` 配置地址：
+
+```yaml
+url: https://example.com/blog
+root: /blog/
+```
+
+修改主题、地址或渲染器后先清理再构建。检查图片、分类、RSS、搜索与 404；站点使用的生成器插件须单独安装。
+
+## 相关文档
+
+[托管平台](/cn/docs/hexo/deployment/hosting)

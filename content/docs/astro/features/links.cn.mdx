@@ -1,0 +1,47 @@
+---
+title: "友情链接"
+description: "修改页面数据与展示。"
+---
+
+内置地址为 `/links/`。可创建 `src/content/pages/links.md` 覆盖默认标题和元信息：
+
+```md
+---
+title: Friends
+type: links
+data: links
+comment: false
+---
+```
+
+## 数据
+
+编辑 `src/data/links.json`：
+
+```json
+{
+  "links": [
+    {
+      "class_name": "Friends",
+      "class_desc": "Blogs I read",
+      "type": "item",
+      "link_list": [
+        {
+          "name": "Example blog",
+          "link": "https://example.com",
+          "avatar": "/img/logo.png",
+          "descr": "Words and life"
+        }
+      ]
+    }
+  ]
+}
+```
+
+分组可用 `item` 或 `card`，条目还支持 `topimg`、`tag`。页面可添加正文。
+
+`data` 不含扩展名。复制为其他数据文件时同步修改 `data`；文件缺失会使构建失败。页面和菜单独立，需自行添加导航。
+
+## 相关文档
+
+[导航](/cn/docs/astro/configuration/navigation)

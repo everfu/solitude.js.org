@@ -1,0 +1,27 @@
+---
+title: "Advanced configuration"
+description: "Add custom resources and enable optional features."
+---
+
+Merge the example fields into your existing `src/site.config.ts`, keeping your own content.
+
+```ts
+// src/site.config.ts
+import { defineSolitudeConfig } from './lib/config';
+
+export default defineSolitudeConfig({
+  theme: {
+    mermaid: true,
+    chart: true,
+    typeit: true,
+    katex: { enable: true },
+    keyboard: { enable: true },
+  },
+});
+```
+
+Put styles in `src/styles/custom.css`; use `theme.extends.head` / `body` for HTML and `theme.cdn` for dependency URLs. Each shortcut requires exactly one `action` or `url`. Objects merge recursively; arrays replace defaults. Omitted fields use base defaults. Browser configuration is public; use client-side identifiers only.
+
+## Related guides
+
+[Configuration reference](/docs/astro/reference/configuration) · [Front matter](/docs/astro/content-writing/front-matter)

@@ -1,0 +1,28 @@
+---
+title: "Waline"
+description: "Configure a provider and enable page comments."
+---
+
+Deploy Waline and allow your blog domain on the server.
+
+## Theme configuration
+
+```ts
+// src/site.config.ts
+import { defineSolitudeConfig } from './lib/config';
+
+export default defineSolitudeConfig({
+  theme: {
+    comment: { use: 'waline', lazyload: true },
+    waline: { serverURL: 'https://comments.example.com' },
+  },
+});
+```
+
+Post `comment` defaults to true; set it to false to disable comments on one post. Special layouts such as About, music, and archives omit the widget.
+
+Test theme changes, direct access, and repeated navigation. See the [Waline documentation](https://waline.js.org/) for server setup.
+
+## Related guides
+
+[Message board](/docs/astro/features/message) · [Recent comments](/docs/astro/features/recent-comments)

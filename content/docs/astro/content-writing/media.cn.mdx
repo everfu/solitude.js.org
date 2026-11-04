@@ -1,0 +1,24 @@
+---
+title: "图片、代码与公式"
+description: "引用静态资源，使用代码高亮和数学公式。"
+---
+
+图片和媒体放在 `public/`，引用时省略 `public`。代码块标注语言；公式需要 `theme.katex.enable: true`。
+
+````md
+![Mountain view](/img/demo/cover-getting-started-v2.webp)
+
+```js
+console.log("Hello");
+```
+
+$E = mc^2$
+````
+
+多行公式用 `$$` 包围。代码复制、行号和高度在 `theme.highlight` 中配置。
+
+主题会处理渲染流程中的内部链接与资源前缀；原始 HTML、CSS URL 和自定义脚本需要在真实子目录中检查。
+
+## 相关文档
+
+[媒体组件](/cn/docs/astro/content-writing/components/media)

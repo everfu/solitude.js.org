@@ -1,0 +1,69 @@
+---
+title: "链接与集合"
+description: "组件参数与可复制示例。"
+---
+
+在 `.mdx` 文章或页面中直接使用，主题自动注入组件。布尔值写成 `{true}` / `{false}`，对象使用 JSX 表达式。复杂 Markdown 与组件标签之间留空行。
+
+## Button
+
+按钮链接使用 `url`、`text` 和可选 Font Awesome `icon`，`option` 添加样式类。
+
+```mdx
+<Button url="/archives/" text="Read the posts" icon="fas fa-book" />
+```
+
+## Link
+
+链接摘要使用 `url` 或 `link`、`title`、`desc` 或 `subtitle`。
+
+```mdx
+<Link title="Astro" desc="Astro website" url="https://astro.build/" />
+```
+
+## Card
+
+卡片使用 `title` 或 `name`、`desc`、`cover` 或 `bg`、`url`；可选 `tag`、`star`、`icon`、`width`、`height`。
+
+```mdx
+<Card title="Project card" desc="A space to introduce your project." cover="/img/demo/cover-getting-started-v2.webp" url="/about/" tag="Theme" star={5} />
+```
+
+## Flink
+
+`groups` 接收友链分组，含 `class_name`、`class_desc`、`link_list`；条目字段与友链数据一致。
+
+```mdx
+<Flink groups={[{class_name:"Official resources",link_list:[{name:"Astro",link:"https://astro.build/",avatar:"/img/logo.png",descr:"Static site framework"}]}]} />
+```
+
+## Series
+
+`name` 指定系列，省略时尝试使用当前文章的第一个系列；文章从旧到新排列。
+
+```mdx
+<Series name="Theme essentials" />
+```
+
+## Timeline
+
+用 `title`、`color` 和 `Timenode` 子内容创建时间线。
+
+```mdx
+<Timeline title="A theme journey" color="blue">
+<Timenode time="Step one" title="Create a site">Start from the template.</Timenode>
+<Timenode time="Step two" title="Start writing">Publish your first post.</Timenode>
+</Timeline>
+```
+
+## Timenode
+
+时间线条目使用 `time`、`title` 和子内容，放在 `Timeline` 内。
+
+```mdx
+<Timeline><Timenode time="Now" title="Keep creating">Keep the moments worth sharing.</Timenode></Timeline>
+```
+
+## 相关文档
+
+[组件索引](/cn/docs/astro/reference/components)

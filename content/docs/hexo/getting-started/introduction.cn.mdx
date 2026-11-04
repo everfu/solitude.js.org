@@ -1,31 +1,26 @@
 ---
 title: "介绍"
-description: "了解 Solitude 4 的定位、运行要求与配置模型。"
+description: "了解 Hexo 版的环境、文件位置和使用流程。"
 ---
-## Solitude 4 是什么
 
-Solitude 4 是面向个人博客的 Hexo 主题，提供首页模块、文章元信息、侧边栏、特色页面、搜索、评论、PWA 和浏览器 API。
+Solitude 4 是 Hexo 博客主题，提供文章、首页模块、特色页面、搜索和评论集成。
 
-4.0 使用原生 ES 模块重构了浏览器运行时。搜索、音乐、友链、右键菜单、翻译、文章 AI 和封面取色会按配置动态加载；统一的 PJAX 生命周期会在页面切换时清理监听器和第三方实例。
+## 环境
 
-## 运行要求
+- Hexo **7+**，Node.js **18+**（以主题 `package.json` 为准）。
+- 若使用 `hexo-solitude-tag@2`，需要 Hexo **8** 和 Node.js **20.19+**。
 
-- Hexo 7.0.0 或更高版本。
-- Node.js 14.0.0 或更高版本。
-- 较新的 Chrome、Edge、Firefox 或 Safari；不支持 Internet Explorer。
+## 文件位置
 
-## 配置文件
+| 内容 | 位置 |
+| --- | --- |
+| Hexo 地址、语言、作者 | `_config.yml` |
+| 主题配置 | `_config.solitude.yml` |
+| 文章与页面 | `source/` |
+| 数据文件 | `source/_data/` |
 
-博客根目录的 `_config.yml` 负责 Hexo 的标题、作者、URL、语言和主题选择；`_config.solitude.yml` 负责 Solitude 的模块与外观。
+从安装开始。3.x 用户按升级指南合并配置，保留自己的值。
 
-```text
-my-blog/
-  _config.yml
-  _config.solitude.yml
-  source/
-  themes/solitude/   # 仅 Git 安装方式
-```
+## 相关文档
 
-<Callout type="info">
-本文档示例以 Solitude v4.0.0 为准。从 3.x 迁移时，请按照[升级到 4.0](/cn/docs/hexo/getting-started/upgrade-v4)的步骤，将自己的配置值合并到全新的 Solitude 4 配置中。
-</Callout>
+[安装](/cn/docs/hexo/getting-started/installation) · [升级到 4.0](/cn/docs/hexo/getting-started/upgrade-v4)

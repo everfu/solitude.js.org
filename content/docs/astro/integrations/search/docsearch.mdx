@@ -1,0 +1,26 @@
+---
+title: "DocSearch"
+description: "Connect an external search index."
+---
+
+Prepare the application ID, index name, and public search key:
+
+```ts
+// src/site.config.ts
+import { defineSolitudeConfig } from './lib/config';
+
+export default defineSolitudeConfig({
+  theme: { search: {
+    enable: true, type: 'docsearch',
+    docsearch: { appId: 'YOUR_APP_ID', apiKey: 'YOUR_SEARCH_ONLY_KEY', indexName: 'blog' },
+  } },
+});
+```
+
+Apply for DocSearch and configure a crawler index using the DocSearch result structure.
+
+The theme supplies the interface; it does not create or synchronize the index. Use public search keys and test empty results, errors, and the production domain.
+
+## Related guides
+
+[Local search](/docs/astro/integrations/search/local-search)

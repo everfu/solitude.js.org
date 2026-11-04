@@ -1,0 +1,43 @@
+---
+title: "即刻短文"
+description: "修改页面数据与展示。"
+---
+
+内置地址为 `/brevity/`。可创建 `src/content/pages/brevity.md` 覆盖默认标题和元信息：
+
+```md
+---
+title: Short updates
+type: brevity
+data: brevity
+comment: false
+---
+```
+
+## 数据
+
+编辑 `src/data/brevity.json`：
+
+```json
+{
+  "items": [
+    {
+      "date": "2026-10-09T10:00:00+08:00",
+      "content": "Another moment worth keeping.",
+      "location": "At my desk",
+      "image": [
+        "/img/demo/cover-getting-started-v2.webp"
+      ],
+      "link": "/archives/"
+    }
+  ]
+}
+```
+
+需要 `theme.brevity.enable: true`，模板已启用。首页摘要使用 `theme.brevity.home_mini: true`，地址使用 `theme.brevity.page`。
+
+`data` 不含扩展名。复制为其他数据文件时同步修改 `data`；文件缺失会使构建失败。页面和菜单独立，需自行添加导航。
+
+## 相关文档
+
+[导航](/cn/docs/astro/configuration/navigation)

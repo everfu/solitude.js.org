@@ -1,0 +1,28 @@
+---
+title: "Twikoo"
+description: "配置评论服务并启用页面评论。"
+---
+
+先部署 Twikoo，填写公开环境地址；按部署地区设置 `region`。
+
+## 主题配置
+
+```ts
+// src/site.config.ts
+import { defineSolitudeConfig } from './lib/config';
+
+export default defineSolitudeConfig({
+  theme: {
+    comment: { use: 'twikoo', lazyload: true },
+    twikoo: { envId: 'https://comments.example.com', region: '' },
+  },
+});
+```
+
+文章 `comment` 默认为 true；设为 false 可关闭单篇评论。关于、音乐和归档等特殊布局会省略评论框。
+
+验证主题切换、页面直达和反复切页。完整部署说明见 [Twikoo 官方文档](https://twikoo.js.org/)。
+
+## 相关文档
+
+[留言板](/cn/docs/astro/features/message) · [最近评论](/cn/docs/astro/features/recent-comments)

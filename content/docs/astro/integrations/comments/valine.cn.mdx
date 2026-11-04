@@ -1,0 +1,29 @@
+---
+title: "Valine"
+description: "配置评论服务并启用页面评论。"
+---
+
+使用客户端 App ID/key 与服务地址，并限制允许域名。最新评论、留言墙和参与者头像目前依赖 Valine API；访问量需启用 `visitor` 与相关展示开关。
+
+## 主题配置
+
+```ts
+// src/site.config.ts
+import { defineSolitudeConfig } from './lib/config';
+
+export default defineSolitudeConfig({
+  theme: {
+    comment: { use: 'valine', lazyload: true },
+    valine: { appId: 'YOUR_APP_ID', appKey: 'YOUR_CLIENT_KEY',
+      serverURLs: 'https://comments.example.com', visitor: false },
+  },
+});
+```
+
+文章 `comment` 默认为 true；设为 false 可关闭单篇评论。关于、音乐和归档等特殊布局会省略评论框。
+
+验证主题切换、页面直达和反复切页。完整部署说明见 [Valine 官方文档](https://valine.js.org/)。
+
+## 相关文档
+
+[留言板](/cn/docs/astro/features/message) · [最近评论](/cn/docs/astro/features/recent-comments)

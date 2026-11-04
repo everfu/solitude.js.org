@@ -5,7 +5,7 @@ description: "将最新评论聚合到独立页面和侧栏模块。"
 
 ## 创建页面
 
-创建 `content/recent-comments/_index.md`：
+创建 `content/recentcomments/_index.md`：
 
 ```yaml
 ---
@@ -14,13 +14,19 @@ type: recentcomment
 ---
 ```
 
-启用 `recent_comments`，设置数量、缓存时间和页面地址，再创建页面。能否聚合取决于所选评论服务及其公开接口。
+启用 `recent_comments`，设置数量、缓存时间和页面地址，再创建页面。当前聚合读取 Valine API，需要配置 Valine 的客户端标识与服务地址；其他评论框服务不会启用聚合。
 
-## 配置或数据示例
+## 示例
 
 ```yaml
 params:
   solitude:
+    comment:
+      use: valine
+    valine:
+      appId: YOUR_APP_ID
+      appKey: YOUR_CLIENT_KEY
+      serverURLs: https://comments.example.com
     recent_comments:
       enable: true
       limit: 50
@@ -28,4 +34,6 @@ params:
       page: /recentcomments/
 ```
 
-最终结构请对照 `exampleSite/content` 与 `exampleSite/data` 中的对应文件。
+## 相关文档
+
+[继续阅读](/cn/docs/hugo/configuration/navigation)

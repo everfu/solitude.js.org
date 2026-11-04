@@ -1,0 +1,63 @@
+---
+title: "折叠与分组"
+description: "组件参数与可复制示例。"
+---
+
+在 `.mdx` 文章或页面中直接使用，主题自动注入组件。布尔值写成 `{true}` / `{false}`，对象使用 JSX 表达式。复杂 Markdown 与组件标签之间留空行。
+
+隐藏内容仍在页面源码中，不能用于保存私密信息。
+
+## Fold
+
+原生折叠面板使用 `title`，`open={true}` 默认展开，否则关闭。
+
+```mdx
+<Fold title="Expand this section">A note inside the fold.</Fold>
+```
+
+## HideBlock
+
+点击显示块内容，`text` 或 `title` 为按钮文字，`id` 可选，子内容为隐藏区。
+
+```mdx
+<HideBlock text="Reveal content">Hidden block content.</HideBlock>
+```
+
+## HideInline
+
+点击显示行内内容，`text` 或 `title` 为按钮文字。
+
+```mdx
+<HideInline text="Reveal">Hidden inline content</HideInline>
+```
+
+## HideToggle
+
+切换内容显示状态，`title` 或 `text` 为按钮文字。
+
+```mdx
+<HideToggle title="Toggle content">Open and close this content.</HideToggle>
+```
+
+## Tabs
+
+组合 `Tab` 子内容，可选 `id` 在当前页面中必须唯一。
+
+```mdx
+<Tabs id="demo-tabs">
+<Tab title="Markdown">Text and lists.</Tab>
+<Tab title="MDX">Components and interactions.</Tab>
+</Tabs>
+```
+
+## Tab
+
+放在 `Tabs` 内，使用 `title` 和可选 `icon`。
+
+```mdx
+<Tabs><Tab title="A single panel">Place Tab inside Tabs.</Tab></Tabs>
+```
+
+## 相关文档
+
+[组件索引](/cn/docs/astro/reference/components)

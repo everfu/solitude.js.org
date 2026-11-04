@@ -1,0 +1,26 @@
+---
+title: "外观"
+description: "调整颜色、显示模式、字体和自定义样式。"
+---
+
+将示例中的字段合并到现有 `src/site.config.ts`，保留自己的内容。
+
+```ts
+// src/site.config.ts
+import { defineSolitudeConfig } from './lib/config';
+
+export default defineSolitudeConfig({
+  theme: {
+    theme_color: { light: '#425aef', dark: '#ffc848' },
+    display_mode: { type: 'auto' },
+    font: { font_size: '16px', code_font_size: '14px' },
+    lightbox: 'fancybox',
+  },
+});
+```
+
+`display_mode.type` 支持 `auto`、`light`、`dark`，访客保存的偏好可以覆盖默认模式。额外样式写入 `src/styles/custom.css`。灯箱也支持 `medium-zoom`。
+
+## 相关文档
+
+[配置参考](/cn/docs/astro/reference/configuration) · [内容字段](/cn/docs/astro/content-writing/front-matter)

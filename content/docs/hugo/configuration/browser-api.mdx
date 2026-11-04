@@ -10,9 +10,10 @@ Solitude exposes its stable browser integration surface through `window.Solitude
 ```js
 window.Solitude.navigate('/archives/')
 window.Solitude.toggleTheme()
-window.Solitude.on('afterNavigate', ({ page }) => {
-  console.log(page)
+const stop = window.Solitude.on('afterNavigate', (event) => {
+  console.log(event.detail.page)
 })
+window.addEventListener('pagehide', stop, { once: true })
 ```
 
 Public methods include `navigate`, `refresh`, `copy`, `toggleTheme`, `loadScript`, `loadStyle`, `on`, `listen`, and `onPageCleanup`. Lifecycle events include `ready`, `beforeNavigate`, `afterNavigate`, and `themeChange`.
@@ -22,8 +23,15 @@ Public methods include `navigate`, `refresh`, `copy`, `toggleTheme`, `loadScript
 Register DOM listeners with `listen`, or return cleanup through `onPageCleanup`, so PJAX navigation cannot duplicate handlers:
 
 ```js
-Solitude.listen(document, 'click', handleClick)
-Solitude.onPageCleanup(() => observer.disconnect())
+window.Solitude.listen(document, 'click', () => {
+  console.log('Page click')
+})
+const timer = window.setInterval(() => console.log('Tick'), 1000)
+window.Solitude.onPageCleanup(() => window.clearInterval(timer))
 ```
 
 Feature-specific objects are implementation details, not public contracts. When self-hosting compiled assets, publish the complete same-version `assets` output so module-relative imports remain valid.
+
+## Related guides
+
+[Configuration reference](/docs/hugo/reference/configuration)

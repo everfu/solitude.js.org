@@ -1,0 +1,47 @@
+---
+title: "装备页"
+description: "修改页面数据与展示。"
+---
+
+内置地址为 `/equipment/`。可创建 `src/content/pages/equipment.md` 覆盖默认标题和元信息：
+
+```md
+---
+title: Equipment
+type: kit
+data: kit
+comment: false
+---
+```
+
+## 数据
+
+编辑 `src/data/kit.json`：
+
+```json
+{
+  "groups": [
+    {
+      "name": "Creative tools",
+      "description": "Tools I use",
+      "items": [
+        {
+          "name": "Laptop",
+          "specification": "Portable workstation",
+          "description": "Writing and development",
+          "image": "/img/demo/cover-getting-started-v2.webp",
+          "link": "https://example.com"
+        }
+      ]
+    }
+  ]
+}
+```
+
+使用 `groups` 分组，保留 JSON 字段结构。公开地址为 `/equipment/`，页面类型和数据名为 `kit`。
+
+`data` 不含扩展名。复制为其他数据文件时同步修改 `data`；文件缺失会使构建失败。页面和菜单独立，需自行添加导航。
+
+## 相关文档
+
+[导航](/cn/docs/astro/configuration/navigation)

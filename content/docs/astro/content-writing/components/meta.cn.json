@@ -1,0 +1,12 @@
+{
+  "title": "MDX 组件",
+  "pages": [
+    "text",
+    "disclosure",
+    "media",
+    "links",
+    "repositories",
+    "charts"
+  ],
+  "icon": "Blocks"
+}

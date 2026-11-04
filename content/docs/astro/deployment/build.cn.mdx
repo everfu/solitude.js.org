@@ -1,0 +1,28 @@
+---
+title: "构建与地址"
+description: "生成静态文件，配置域名与子目录。"
+---
+
+项目生成静态网站，不需要服务器适配器。
+
+```sh
+pnpm install --frozen-lockfile
+pnpm check
+pnpm build
+pnpm preview
+```
+
+发布 `dist/` 的内容。生产预览检查首页、文章、图片、搜索与 404；开发服务不能作为生产服务。
+
+## 地址
+
+| 发布地址 | `site` | `base` |
+| --- | --- | --- |
+| `https://example.com/` | `https://example.com` | `/` |
+| `https://user.github.io/blog/` | `https://user.github.io` | `/blog/` |
+
+地址只在 `src/site.config.ts` 中维护，修改后重新构建。模板的检查工作流不会自动部署网站。
+
+## 相关文档
+
+[托管平台](/cn/docs/astro/deployment/hosting)

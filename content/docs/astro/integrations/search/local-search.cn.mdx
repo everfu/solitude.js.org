@@ -1,0 +1,21 @@
+---
+title: "本地搜索"
+description: "无需账号，读取构建生成的搜索数据。"
+---
+
+本地搜索读取 `/search.xml`，模板已启用并预加载。按需加载可改为：
+
+```ts
+// src/site.config.ts
+import { defineSolitudeConfig } from './lib/config';
+
+export default defineSolitudeConfig({
+  theme: { search: { enable: true, type: 'local', local: { preload: false } } },
+});
+```
+
+生产环境不索引草稿。`home: false` 的文章仍可搜索。部署子目录时检查 `site`、`base` 与搜索数据路径。
+
+## 相关文档
+
+[站点地址](/cn/docs/astro/configuration/site)

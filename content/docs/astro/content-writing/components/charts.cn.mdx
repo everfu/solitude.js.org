@@ -1,0 +1,60 @@
+---
+title: "图表与展示"
+description: "组件参数与可复制示例。"
+---
+
+在 `.mdx` 文章或页面中直接使用，主题自动注入组件。布尔值写成 `{true}` / `{false}`，对象使用 JSX 表达式。复杂 Markdown 与组件标签之间留空行。
+
+在线嵌入、仓库数据和图表库需要网络；本地媒体不依赖在线音乐开关。
+
+## ChartJS
+
+`config` 接收 Chart.js 配置对象，`code` 接收 JSON 字符串；可选 `id`、`description`、百分比 `width`、`layout`。需要 `theme.chart`。
+
+```mdx
+<ChartJS config={{type:"bar",data:{labels:["Posts","Notes","Projects"],datasets:[{label:"Content",data:[12,8,4]}]}}} description="Local sample data" />
+```
+
+## Mermaid
+
+`code` 接收 Mermaid 文本，需要 `theme.mermaid` 与对应浏览器脚本。
+
+```mdx
+<Mermaid code={"graph LR\nA[Content] --> B[Astro] --> C[HTML]"} />
+```
+
+## Score
+
+`score` 接收 ABC 乐谱文本，`params` 接收 ABCJS 渲染选项对象。
+
+```mdx
+<Score score={"X:1\nT:Simple tune\nM:4/4\nL:1/4\nK:C\nC D E F | G A B c |"} />
+```
+
+## Typeit
+
+文字动画使用子内容，`speed` 默认 80，需要 `theme.typeit`。
+
+```mdx
+<Typeit speed={80}>Capture everyday life in words.</Typeit>
+```
+
+## Checkbox
+
+显示任务状态，`checked` 默认 true，`style` 添加类名，`label` 设置可访问名称。它是禁用的展示控件。
+
+```mdx
+<Checkbox checked={true}>Completed task</Checkbox>
+```
+
+## Radio
+
+显示选择状态，`checked` 默认 true，`style` 添加类名，`label` 设置可访问名称。它是禁用的展示控件。
+
+```mdx
+<Radio checked={false}>An option</Radio>
+```
+
+## 相关文档
+
+[组件索引](/cn/docs/astro/reference/components)

@@ -1,0 +1,24 @@
+---
+title: "地址与跳转"
+description: "配置文章地址，保留旧链接。"
+---
+
+文章默认 `/p/内容标识/`，页面默认 `/内容标识/`。优先级为 `url` → `slug` → 文件标识。
+
+```yaml
+slug: hello
+url: /notes/hello.html
+aliases:
+  - /old-hello/
+  - /2025/hello.html
+```
+
+示例的规范地址是 `/notes/hello.html`，两个别名生成静态跳转页。
+
+地址必须是站内绝对路径，不能包含查询、片段、反斜线或 `..`；不要重复添加 `base`。内容、别名和系统路由冲突会使构建失败。
+
+静态跳转页不等于 HTTP 301；需要状态码跳转时，在托管平台配置。
+
+## 相关文档
+
+[部署](/cn/docs/astro/deployment/hosting)

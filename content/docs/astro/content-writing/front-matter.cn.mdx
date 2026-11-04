@@ -1,0 +1,53 @@
+---
+title: "内容字段"
+description: "用 Front Matter 管理文章与页面。"
+---
+
+文章放在 `src/content/posts/`，页面放在 `src/content/pages/`；支持子目录。普通文章用 `.md`，组件内容用 `.mdx`。
+
+## 示例
+
+```yaml
+---
+title: A new beginning
+date: 2026-09-11T10:00:00Z
+lastmod: 2026-09-12T09:00:00Z
+description: A short summary.
+slug: a-new-start
+cover: /img/demo/cover-getting-started-v2.webp
+categories: [Life]
+tags: [Notes, Astro]
+series: [Everyday stories]
+home: true
+draft: false
+sticky: 2
+comment: true
+aside: true
+toc: true
+---
+```
+
+## 字段
+
+| 字段 | 默认 / 必填 | 用途 |
+| --- | --- | --- |
+| `title` | 必填 | 标题 |
+| `date` | 文章必填，页面可选 | 发布时间，建议含时区 |
+| `lastmod` / `description` | 可选 | 修改时间 / 摘要 |
+| `slug` / `url` / `aliases` | 可选 / `[]` | 自定义地址 / 旧地址跳转 |
+| `cover` | 可选 | 封面，缺省使用默认图 |
+| `categories` / `tags` / `series` | `[]` | 分类、标签、系列数组 |
+| `home` | `true` | 是否在首页各区域展示 |
+| `draft` | `false` | 草稿，仅开发环境展示 |
+| `sticky` | `false` | `true` 等于权重 1，数字越大越靠前 |
+| `comment` | `true` | 允许评论，仍需全局服务 |
+| `aside` / `toc` | `true` | 侧栏 / 目录 |
+| `random` | `true` | 参与随机文章 |
+| `not_cover` | 可选 | 不显示大封面布局 |
+| `type` / `data` | 可选 | 页面类型 / 数据文件名 |
+
+`home: false` 不影响归档、搜索、RSS 和直接访问。未来日期不会定时发布；未设置 `draft: true` 的文章会在下次构建时发布。
+
+## 相关文档
+
+[文章地址](/cn/docs/astro/content-writing/urls) · [媒体与公式](/cn/docs/astro/content-writing/media)

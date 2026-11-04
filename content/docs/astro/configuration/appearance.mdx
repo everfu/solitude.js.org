@@ -1,0 +1,26 @@
+---
+title: "Appearance"
+description: "Set colors, display mode, fonts, and custom styles."
+---
+
+Merge the example fields into your existing `src/site.config.ts`, keeping your own content.
+
+```ts
+// src/site.config.ts
+import { defineSolitudeConfig } from './lib/config';
+
+export default defineSolitudeConfig({
+  theme: {
+    theme_color: { light: '#425aef', dark: '#ffc848' },
+    display_mode: { type: 'auto' },
+    font: { font_size: '16px', code_font_size: '14px' },
+    lightbox: 'fancybox',
+  },
+});
+```
+
+`display_mode.type` accepts `auto`, `light`, and `dark`; a saved visitor preference can override it. Add styles in `src/styles/custom.css`. The lightbox also supports `medium-zoom`.
+
+## Related guides
+
+[Configuration reference](/docs/astro/reference/configuration) · [Front matter](/docs/astro/content-writing/front-matter)

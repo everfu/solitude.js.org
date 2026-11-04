@@ -1,8 +1,8 @@
 {
-  "title": "Content Writing",
-  "icon": "FileText",
+  "title": "Writing",
   "pages": [
     "front-matter",
     "shortcodes"
-  ]
+  ],
+  "icon": "PenLine"
 }

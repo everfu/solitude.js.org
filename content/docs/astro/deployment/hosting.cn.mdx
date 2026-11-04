@@ -1,0 +1,64 @@
+---
+title: "托管平台"
+description: "发布到 GitHub Pages、Netlify、Vercel 或静态服务器。"
+---
+
+## GitHub Pages
+
+先设置 `site` 与 `base`，在仓库 Settings → Pages 选择 GitHub Actions。创建 `.github/workflows/deploy.yml`：
+
+```yaml
+name: Deploy blog
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - uses: actions/configure-pages@v5
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm check
+      - run: pnpm build
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish
+        id: deployment
+        uses: actions/deploy-pages@v4
+```
+
+提交后查看 Actions 结果。自定义域名需同时配置 Pages 和 DNS，一般使用 `base: '/'`。
+
+## Netlify / Vercel
+
+导入自己的仓库，使用项目声明的 Node.js 与 pnpm 版本。安装命令为 `pnpm install --frozen-lockfile`，构建命令为 `pnpm build`，输出目录为 `dist`。域名确定后更新 `site` 并重新发布。
+
+## 静态服务器
+
+上传 `dist/` 内容，目录地址应解析到 `index.html`，保留 `.html` 文章地址。未知页面返回 `404.html` 和 HTTP 404。别名是静态跳转页；需要 301 时配置服务器规则。
+
+## 相关文档
+
+[构建与地址](/cn/docs/astro/deployment/build)

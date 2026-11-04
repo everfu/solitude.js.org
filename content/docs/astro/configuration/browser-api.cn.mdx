@@ -1,0 +1,31 @@
+---
+title: "浏览器 API"
+description: "通过 window.Solitude 扩展页面交互。"
+---
+
+`window.Solitude` 提供 `navigate`、`refresh`、`copy`、`toggleTheme`、`loadScript`、`loadStyle`、`on`、`listen` 和 `onPageCleanup`。
+
+## 生命周期
+
+```js
+const stop = window.Solitude.on('afterNavigate', () => {
+  console.log('Page ready');
+});
+
+// Remove the subscription when your extension is disposed.
+// stop();
+
+window.Solitude.onPageCleanup(() => {
+  // Dispose page-scoped third-party instances here.
+});
+```
+
+`on` 返回取消订阅函数；事件包括 `ready`、`beforeNavigate`、`afterNavigate`、`themeChange`。脚本应在主题运行时就绪后使用接口。页面实例和监听器在切页前清理，避免重复绑定。
+
+## 与其他版本的区别
+
+Astro 导航使用 Astro View Transitions。不要从 Hugo 或 Hexo 复制 PJAX 实例操作，也不要把兼容别名当作新扩展入口。
+
+## 相关文档
+
+[高级配置](/cn/docs/astro/configuration/advanced)

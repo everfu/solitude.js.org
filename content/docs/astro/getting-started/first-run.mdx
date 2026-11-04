@@ -1,0 +1,56 @@
+---
+title: "First run"
+description: "Set your site identity, write a post, and check the build."
+---
+
+## Configure the site
+
+Edit `src/site.config.ts`: 
+
+```ts
+// src/site.config.ts
+import { defineSolitudeConfig } from './lib/config';
+
+export default defineSolitudeConfig({
+  site: 'https://example.com',
+  title: 'My blog',
+  description: 'Notes and stories.',
+  locale: 'en',
+  timeZone: 'UTC',
+  hasCJKLanguage: false,
+  author: { name: 'Your name' },
+});
+```
+
+For a subdirectory, add `base`, such as `/blog/`.
+
+## Write your first post
+
+Create `src/content/posts/hello-world.md`: 
+
+```md
+---
+title: Hello, Solitude
+date: 2026-10-09T10:00:00+08:00
+description: My first post.
+tags: [Notes]
+---
+
+Start your story here.
+```
+
+Preview `/p/hello-world/`. When removing sample posts, update menus, recommendations, and links to them.
+
+## Check the build
+
+```sh
+pnpm check
+pnpm build
+pnpm preview
+```
+
+Comments and the music hall are disabled. The capsule uses a sample Qishui playlist; replace `theme.capsule.id` or disable it before publishing.
+
+## Related guides
+
+[Site configuration](/docs/astro/configuration/site) · [Deployment](/docs/astro/deployment/build)

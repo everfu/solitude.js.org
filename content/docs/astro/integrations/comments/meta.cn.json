@@ -1,0 +1,11 @@
+{
+  "title": "评论",
+  "pages": [
+    "twikoo",
+    "waline",
+    "valine",
+    "artalk",
+    "giscus"
+  ],
+  "icon": "MessageSquare"
+}

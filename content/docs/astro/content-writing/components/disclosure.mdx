@@ -1,0 +1,63 @@
+---
+title: "Disclosure and grouping"
+description: "Component parameters and copyable examples."
+---
+
+Use these components directly in `.mdx` posts or pages; the theme injects them automatically. Write booleans as `{true}` / `{false}` and objects as JSX expressions. Separate complex Markdown from component tags with blank lines.
+
+Hidden content remains in the page source; it does not protect private information.
+
+## Fold
+
+Create a native disclosure panel with `title`. Set `open={true}` to start expanded; the default is closed.
+
+```mdx
+<Fold title="Expand this section">A note inside the fold.</Fold>
+```
+
+## HideBlock
+
+Reveal a block on click. Set `text` or `title` for the button; children contain the hidden content. Optionally set an `id`.
+
+```mdx
+<HideBlock text="Reveal content">Hidden block content.</HideBlock>
+```
+
+## HideInline
+
+Reveal inline content on click. Set `text` or `title` for the button and put the content inside.
+
+```mdx
+<HideInline text="Reveal">Hidden inline content</HideInline>
+```
+
+## HideToggle
+
+Toggle content visibility. Set `title` or `text` for the button; children contain the hidden content.
+
+```mdx
+<HideToggle title="Toggle content">Open and close this content.</HideToggle>
+```
+
+## Tabs
+
+Group `Tab` children. An optional `id` must be unique on the page.
+
+```mdx
+<Tabs id="demo-tabs">
+<Tab title="Markdown">Text and lists.</Tab>
+<Tab title="MDX">Components and interactions.</Tab>
+</Tabs>
+```
+
+## Tab
+
+Create a panel inside `Tabs`. Set its `title` and optional `icon`.
+
+```mdx
+<Tabs><Tab title="A single panel">Place Tab inside Tabs.</Tab></Tabs>
+```
+
+## Related guides
+
+[Component index](/docs/astro/reference/components)

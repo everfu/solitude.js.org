@@ -1,0 +1,63 @@
+---
+title: "托管平台"
+description: "发布到托管平台或静态服务器。"
+---
+
+## Netlify / Vercel
+
+导入博客仓库，使用满足主题和插件要求的 Node.js 版本，安装依赖后运行 `npx hexo clean && npx hexo generate`，输出目录为 `public`。不要把主题仓库单独作为完整博客部署。
+
+## GitHub Pages
+
+在自己的站点仓库设置发布地址，在 Settings → Pages 选择 GitHub Actions，创建 `.github/workflows/deploy.yml`：
+
+```yaml
+name: Deploy
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - uses: actions/configure-pages@v5
+      - run: npx hexo clean && npx hexo generate
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+```
+
+Hexo 示例使用 npm 锁文件；使用其他包管理器时采用自己的安装方式。自定义域名需配置 DNS。
+
+## 静态服务器
+
+上传 `public/` 内容，目录请求应解析到 `index.html`。保持旧文章路径，未知地址返回 HTTP 404；需要 HTTP 301 时配置服务器跳转。
+
+## 相关文档
+
+[构建与地址](/cn/docs/hexo/deployment/build)

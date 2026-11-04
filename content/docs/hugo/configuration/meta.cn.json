@@ -1,6 +1,5 @@
 {
-  "title": "主题配置",
-  "icon": "Settings",
+  "title": "配置",
   "pages": [
     "site",
     "appearance",
@@ -11,5 +10,6 @@
     "seo",
     "advanced",
     "browser-api"
-  ]
+  ],
+  "icon": "Settings"
 }

@@ -1,0 +1,18 @@
+---
+title: "Update the template"
+description: "Keep your content while integrating upstream changes."
+---
+
+Template copies do not synchronize automatically and are not independently upgradeable npm themes.
+
+1. Commit and back up configuration, posts, data, and styles.
+2. Compare upstream theme and dependency changes on a separate branch; integrate the changes you need.
+3. Check, build, and preview. Review content and old URLs before publishing.
+
+Template and upstream histories may be independent; do not force unrelated histories together.
+
+```sh
+pnpm check
+pnpm build
+pnpm preview
+```

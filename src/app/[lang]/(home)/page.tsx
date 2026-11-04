@@ -4,7 +4,7 @@ import { SiteFooter } from '@/components/site-footer';
 import { cn } from '@/lib/cn';
 import { withLocale } from '@/lib/layout.shared';
 import { createHomeMetadata } from '@/lib/seo';
-import { previewUrl, releaseUrl, themeRepositoryUrl } from '@/lib/shared';
+import { defaultDocsVersion, getDocsStartPath, previewUrl, releaseUrl, themeRepositoryUrl } from '@/lib/shared';
 import { HomePrinciples } from './home-experience';
 import { HeroBackground, HeroThemeStage, ScrollCue } from './page.client';
 import { SponsorJourney } from './sponsor-journey';
@@ -45,7 +45,7 @@ function SponsorSection({ lang, sponsors, docsHref }: { lang: HomeLocale; sponso
         <div className="mt-16 grid gap-10 md:mt-20 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
           <div>
             <h3 className="max-w-4xl text-[1.75rem] font-medium leading-[1.15] tracking-[-0.035em] text-fd-foreground md:text-6xl md:leading-[1.04]">{isCn ? '为下一篇文章准备好了吗？' : 'Ready for your next story?'}</h3>
-            <p className="mt-6 max-w-2xl text-base leading-7 text-fd-muted-foreground">{isCn ? '阅读 Hugo 文档、查看真实站点，或直接在 GitHub 上了解 Solitude。' : 'Read the Hugo docs, explore a live site, or see how Solitude is built on GitHub.'}</p>
+            <p className="mt-6 max-w-2xl text-base leading-7 text-fd-muted-foreground">{isCn ? '阅读 Astro 文档，预览主题，开始自己的博客。' : 'Read the Astro docs, preview the theme, and start your blog.'}</p>
           </div>
           <div className="grid gap-3 sm:flex sm:flex-wrap lg:justify-end">
             <Link href={docsHref} className={cn(buttonClass, 'w-full bg-brand text-brand-foreground hover:bg-brand-200 sm:w-auto')}><BookOpen className="size-4" />{isCn ? '阅读文档' : 'Read Docs'}</Link>
@@ -74,8 +74,8 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
   const { lang } = await params;
   const locale: HomeLocale = lang === 'cn' ? 'cn' : 'en';
   const isCn = locale === 'cn';
-  const installHref = withLocale(lang, '/docs/hugo/getting-started/installation');
-  const docsHref = withLocale(lang, '/docs/hugo/getting-started/introduction');
+  const installHref = withLocale(lang, `/docs/${defaultDocsVersion}/getting-started/installation`);
+  const docsHref = withLocale(lang, getDocsStartPath());
   const sponsors = await getSponsors();
 
   return (
@@ -90,11 +90,11 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
                 className="inline-flex items-center gap-2 rounded-md border border-brand/40 bg-fd-card/70 px-3 py-2 text-xs font-medium text-brand shadow-sm backdrop-blur transition-colors hover:bg-fd-card"
               >
                 <Sparkles className="size-3.5" />
-                {isCn ? 'Solitude Hugo 原生版现已可用' : 'Solitude for Hugo is now available'}
+                {isCn ? 'Solitude for Astro' : 'Solitude for Astro'}
               </Link>
 
               <h1 className="mt-8 text-5xl font-semibold leading-[0.98] text-landing-foreground dark:text-landing-foreground-dark md:text-6xl xl:text-7xl">
-                Solitude for Hugo
+                Solitude for Astro
                 <span className="mt-3 block max-w-xl text-3xl leading-[1.08] text-landing-foreground/82 dark:text-landing-foreground-dark/82 md:text-4xl xl:text-5xl">
                   {isCn ? '让博客回到内容本身' : 'Bring the focus back to your content'}
                 </span>
@@ -102,8 +102,8 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
 
               <p className="mt-6 max-w-xl text-base leading-7 text-landing-foreground/72 dark:text-landing-foreground-dark/72 md:text-lg">
                 {isCn
-                  ? '原生 Go Templates、Hugo Pipes 与标准内容模型，无需 Node.js 也能获得清晰、流畅、可持续维护的博客体验。'
-                  : 'Native Go Templates, Hugo Pipes, and the standard content model deliver a clear, fluid, maintainable blog experience without Node.js.'}
+                  ? '用 Markdown 和 MDX 写作，自由配置页面，构建静态博客。也提供 Hugo 与 Hexo 版本。'
+                  : 'Write with Markdown and MDX, configure your pages, and build a static blog. Hugo and Hexo editions are also available.'}
               </p>
 
               <div className="mt-8 flex w-full flex-wrap items-center gap-3">
@@ -122,9 +122,9 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
               </div>
 
               <div className="mt-9 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-fd-border/70 pt-5 text-xs font-medium text-fd-muted-foreground">
-                <span>Go Templates</span>
-                <span>Hugo Pipes</span>
-                <span>No Node.js</span>
+                <span>Astro</span>
+                <span>Markdown / MDX</span>
+                <span>{isCn ? '静态部署' : 'Static output'}</span>
                 <ScrollCue lang={locale} />
               </div>
             </div>

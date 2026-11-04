@@ -1,0 +1,33 @@
+---
+title: "Sidebar and footer"
+description: "Configure the sidebar for home, posts, and pages."
+---
+
+Merge the example fields into your existing `src/site.config.ts`, keeping your own content.
+
+```ts
+// src/site.config.ts
+import { defineSolitudeConfig } from './lib/config';
+
+export default defineSolitudeConfig({
+  theme: {
+    aside: {
+      home: { noSticky: 'about', Sticky: 'allInfo' },
+      post: { noSticky: 'about', Sticky: 'newestPost,allInfo' },
+      page: { noSticky: 'about', Sticky: 'newestPost,allInfo' },
+      my_card: {
+        author: { img: '/img/logo.png' },
+        description: 'Notes from everyday life.',
+        content: 'Welcome to my blog.',
+      },
+    },
+    footer: { information: { right: [{ name: 'RSS', url: '/index.xml' }] } },
+  },
+});
+```
+
+`noSticky` and case-sensitive `Sticky` contain comma-separated module names: `about`, `newestPost`, `newest_comment`, and `allInfo`. Recent comments require a service. Some special page layouts omit the sidebar.
+
+## Related guides
+
+[Configuration reference](/docs/astro/reference/configuration) · [Front matter](/docs/astro/content-writing/front-matter)

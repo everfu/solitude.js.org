@@ -1,0 +1,61 @@
+---
+title: "托管平台"
+description: "发布到托管平台或静态服务器。"
+---
+
+## Netlify / Vercel
+
+导入站点仓库，设置 Hugo 版本为 **0.164.0+**，构建命令为 `hugo --gc --minify`，输出目录为 `public`。Git submodule 安装应确保构建环境拉取主题。无需 Node.js 构建流水线。
+
+## GitHub Pages
+
+在自己的站点仓库设置发布地址，在 Settings → Pages 选择 GitHub Actions，创建 `.github/workflows/deploy.yml`：
+
+```yaml
+name: Deploy
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 0.164.0
+      - uses: actions/configure-pages@v5
+      - run: hugo --gc --minify
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+```
+
+自定义域名需配置 DNS。
+
+## 静态服务器
+
+上传 `public/` 内容，目录请求应解析到 `index.html`。保持旧文章路径，未知地址返回 HTTP 404；需要 HTTP 301 时配置服务器跳转。
+
+## 相关文档
+
+[构建与地址](/cn/docs/hugo/deployment/build)

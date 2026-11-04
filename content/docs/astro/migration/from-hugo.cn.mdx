@@ -1,0 +1,51 @@
+---
+title: "从 Hugo 迁移"
+description: "预览迁移，再导出到独立目录。"
+---
+
+导入器针对 Hugo Solitude 配置与内容，源目录必须包含 `hugo.yaml`。正常使用模板不需要 Hugo。
+
+## 1. 预览
+
+在 Astro 项目根目录运行：
+
+```sh
+pnpm migrate:hugo --source /path/to/hugo --dry-run
+```
+
+先处理未知 Shortcode、缺失日期和自定义模板等报告项。
+
+## 2. 导出
+
+```sh
+pnpm migrate:hugo --source /path/to/hugo --out /path/to/export
+```
+
+输出目录必须与源目录分离，父目录需存在；建议使用新目录，不要导出到正在使用的 Astro 项目。冲突文件、符号链接和未解决问题会阻止导出。
+
+## 3. 合并
+
+| Hugo | Astro |
+| --- | --- |
+| `hugo.yaml` | `src/site.config.ts` |
+| `content/` | `src/content/posts/`, `src/content/pages/` |
+| Content media | `public/hugo-content/` |
+| `data/*.yaml`, JSON | `src/data/*.json` |
+| `static/` | `public/` |
+| `assets/css/custom.css` | `src/styles/custom.css` |
+
+导出不是完整 Astro 项目。检查 `migration-report.json` 后合并到模板副本，处理示例内容冲突。Shortcodes 转为 MDX；明确 URL 和可识别的 permalink 模式会保留。复杂模板与自定义资源流水线需手动处理。
+
+## 4. 验证
+
+```sh
+pnpm check
+pnpm build
+pnpm preview
+```
+
+核对旧地址、图片、分类、系列、公式与跳转，重新配置第三方服务。
+
+## 相关文档
+
+[MDX 组件](/cn/docs/astro/reference/components)

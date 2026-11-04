@@ -1,8 +1,8 @@
 {
   "title": "常见问题",
-  "icon": "MessageCircleQuestionMark",
   "pages": [
     "common",
     "troubleshooting"
-  ]
+  ],
+  "icon": "CircleQuestionMark"
 }

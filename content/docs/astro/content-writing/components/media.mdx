@@ -1,0 +1,95 @@
+---
+title: "Images and media"
+description: "Component parameters and copyable examples."
+---
+
+Use these components directly in `.mdx` posts or pages; the theme injects them automatically. Write booleans as `{true}` / `{false}` and objects as JSX expressions. Separate complex Markdown from component tags with blank lines.
+
+Online embeds, repository data, and chart libraries need a network connection. Local media does not require online music to be enabled.
+
+## Image
+
+Display an image with `src` and `alt`. Optional `caption` adds a figure caption and `style` sets image CSS.
+
+```mdx
+<Image src="/img/demo/cover-shortcodes-v2.webp" alt="Solitude component example" caption="Bundled sample image" />
+```
+
+## InlineImage
+
+Display a small inline image using `src`, `alt`, and a CSS `height` such as `32px`.
+
+```mdx
+<InlineImage src="/img/logo.png" alt="Solitude" height="32px" />
+```
+
+## Gallery
+
+Arrange images in a grid with `columns`. Place `GalleryItem` components inside.
+
+```mdx
+<Gallery columns={2}>
+<GalleryItem src="/img/demo/cover-getting-started-v2.webp" alt="Create" />
+<GalleryItem src="/img/demo/cover-pagination-v2.webp" alt="Collect" />
+</Gallery>
+```
+
+## GalleryItem
+
+Display a gallery image with `src` and `alt`, usually inside `Gallery`.
+
+```mdx
+<GalleryItem src="/img/demo/cover-getting-started-v2.webp" alt="Gallery image" />
+```
+
+## GalleryGroup
+
+Create a gallery entry with `title` (or `name`), cover `img`, and destination `url`. Children provide the description.
+
+```mdx
+<GalleryGroup title="Explore the gallery" img="/img/demo/cover-shortcodes-v2.webp" url="/about/">A collection of moments.</GalleryGroup>
+```
+
+## Audio
+
+Play audio. Set `src` or `url` to the file, and `name` to its accessible label.
+
+```mdx
+<Audio src="/media/shortcodes/t-rex-roar.mp3" name="Sample audio" />
+```
+
+## Video
+
+Play a video with `src` (or `url`) and optional `poster`, using the native browser player.
+
+```mdx
+<Video src="/media/shortcodes/flower.mp4" poster="/img/demo/cover-shortcodes-v2.webp" />
+```
+
+## Videos
+
+Display a video grid. `sources` is an array of media paths; `col` defaults to 2.
+
+```mdx
+<Videos col={2} sources={["/media/shortcodes/flower.mp4"]} />
+```
+
+## BVideo
+
+Embed Bilibili using a `bvid` (or `id`). The browser loads a third-party player.
+
+```mdx
+<BVideo bvid="BV1GJ411x7h7" />
+```
+
+## YouTube
+
+Embed a YouTube video by `id`. The default uses the nocookie domain; set `privacy={false}` for the regular domain.
+
+```mdx
+<YouTube id="aqz-KE-bpKQ" />
+```
+
+## Related guides
+
+[Component index](/docs/astro/reference/components)

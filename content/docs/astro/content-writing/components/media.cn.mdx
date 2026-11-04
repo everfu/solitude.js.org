@@ -1,0 +1,95 @@
+---
+title: "图片与媒体"
+description: "组件参数与可复制示例。"
+---
+
+在 `.mdx` 文章或页面中直接使用，主题自动注入组件。布尔值写成 `{true}` / `{false}`，对象使用 JSX 表达式。复杂 Markdown 与组件标签之间留空行。
+
+在线嵌入、仓库数据和图表库需要网络；本地媒体不依赖在线音乐开关。
+
+## Image
+
+图片使用 `src` 和 `alt`，`caption` 添加图注，`style` 设置 CSS。
+
+```mdx
+<Image src="/img/demo/cover-shortcodes-v2.webp" alt="Solitude component example" caption="Bundled sample image" />
+```
+
+## InlineImage
+
+行内图片使用 `src`、`alt` 和 CSS `height`，例如 `32px`。
+
+```mdx
+<InlineImage src="/img/logo.png" alt="Solitude" height="32px" />
+```
+
+## Gallery
+
+用 `columns` 设置列数，内部放置 `GalleryItem`。
+
+```mdx
+<Gallery columns={2}>
+<GalleryItem src="/img/demo/cover-getting-started-v2.webp" alt="Create" />
+<GalleryItem src="/img/demo/cover-pagination-v2.webp" alt="Collect" />
+</Gallery>
+```
+
+## GalleryItem
+
+用 `src` 和 `alt` 显示图片，通常放在 `Gallery` 内。
+
+```mdx
+<GalleryItem src="/img/demo/cover-getting-started-v2.webp" alt="Gallery image" />
+```
+
+## GalleryGroup
+
+图库入口使用 `title` 或 `name`、封面 `img`、目标 `url`；子内容为说明。
+
+```mdx
+<GalleryGroup title="Explore the gallery" img="/img/demo/cover-shortcodes-v2.webp" url="/about/">A collection of moments.</GalleryGroup>
+```
+
+## Audio
+
+播放音频，`src` 或 `url` 为文件地址，`name` 为可访问名称。
+
+```mdx
+<Audio src="/media/shortcodes/t-rex-roar.mp3" name="Sample audio" />
+```
+
+## Video
+
+原生播放器使用 `src` 或 `url` 和可选 `poster`。
+
+```mdx
+<Video src="/media/shortcodes/flower.mp4" poster="/img/demo/cover-shortcodes-v2.webp" />
+```
+
+## Videos
+
+视频网格的 `sources` 为媒体路径数组，`col` 默认 2。
+
+```mdx
+<Videos col={2} sources={["/media/shortcodes/flower.mp4"]} />
+```
+
+## BVideo
+
+通过 `bvid` 或 `id` 嵌入 Bilibili，浏览器加载第三方播放器。
+
+```mdx
+<BVideo bvid="BV1GJ411x7h7" />
+```
+
+## YouTube
+
+通过 `id` 嵌入视频，默认使用 nocookie 域名，`privacy={false}` 使用常规域名。
+
+```mdx
+<YouTube id="aqz-KE-bpKQ" />
+```
+
+## 相关文档
+
+[组件索引](/cn/docs/astro/reference/components)

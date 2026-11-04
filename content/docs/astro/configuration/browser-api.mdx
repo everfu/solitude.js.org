@@ -1,0 +1,31 @@
+---
+title: "Browser API"
+description: "Extend interactions through window.Solitude."
+---
+
+`window.Solitude` exposes `navigate`, `refresh`, `copy`, `toggleTheme`, `loadScript`, `loadStyle`, `on`, `listen`, and `onPageCleanup`.
+
+## Lifecycle
+
+```js
+const stop = window.Solitude.on('afterNavigate', () => {
+  console.log('Page ready');
+});
+
+// Remove the subscription when your extension is disposed.
+// stop();
+
+window.Solitude.onPageCleanup(() => {
+  // Dispose page-scoped third-party instances here.
+});
+```
+
+`on` returns an unsubscribe function. Events include `ready`, `beforeNavigate`, `afterNavigate`, and `themeChange`. Use the API after the theme runtime is ready. Dispose page instances and listeners before navigation to avoid duplicate bindings.
+
+## Edition differences
+
+Astro navigation uses Astro View Transitions. Do not copy Hugo or Hexo PJAX instance operations or use compatibility aliases as new extension APIs.
+
+## Related guides
+
+[Advanced configuration](/docs/astro/configuration/advanced)

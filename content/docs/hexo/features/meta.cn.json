@@ -1,6 +1,5 @@
 {
   "title": "特色页面",
-  "icon": "BookMarked",
   "pages": [
     "music",
     "brevity",
@@ -11,5 +10,6 @@
     "recent-comments",
     "bangumi",
     "gallery"
-  ]
+  ],
+  "icon": "PanelsTopLeft"
 }

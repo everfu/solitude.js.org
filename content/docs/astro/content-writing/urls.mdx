@@ -1,0 +1,24 @@
+---
+title: "URLs and redirects"
+description: "Configure content URLs and preserve old links."
+---
+
+Posts default to `/p/content-id/`; pages default to `/content-id/`. Precedence is `url` → `slug` → file identifier.
+
+```yaml
+slug: hello
+url: /notes/hello.html
+aliases:
+  - /old-hello/
+  - /2025/hello.html
+```
+
+The canonical URL is `/notes/hello.html`; both aliases generate static redirect pages.
+
+Use absolute internal paths without queries, fragments, backslashes, or `..`; do not repeat `base`. Conflicts between content, aliases, and system routes fail the build.
+
+Static redirect pages are not HTTP 301 responses. Configure HTTP redirects on your host when needed.
+
+## Related guides
+
+[Deployment](/docs/astro/deployment/hosting)

@@ -1,0 +1,25 @@
+---
+title: "Post configuration"
+description: "Configure code, cover colors, and post defaults."
+---
+
+Merge the example fields into your existing `src/site.config.ts`, keeping your own content.
+
+```ts
+// src/site.config.ts
+import { defineSolitudeConfig } from './lib/config';
+
+export default defineSolitudeConfig({
+  theme: {
+    highlight: { enable: true, copy: true, line_numbers: true, max_height: 360 },
+    post: { covercolor: { enable: true, mode: 'local' } },
+    katex: { enable: true },
+  },
+});
+```
+
+`max_height: 0` removes the code height limit. Cover color sampling is disabled in base defaults but enabled in local mode by the template. Set `toc`, `aside`, and `comment` in front matter; comments also need a global provider.
+
+## Related guides
+
+[Configuration reference](/docs/astro/reference/configuration) · [Front matter](/docs/astro/content-writing/front-matter)

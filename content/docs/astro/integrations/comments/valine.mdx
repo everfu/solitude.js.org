@@ -1,0 +1,29 @@
+---
+title: "Valine"
+description: "Configure a provider and enable page comments."
+---
+
+Use client App ID/key and service URL, and restrict allowed domains. Recent comments, message walls, and participant avatars currently require the Valine API. Page views also need `visitor` and the display flags.
+
+## Theme configuration
+
+```ts
+// src/site.config.ts
+import { defineSolitudeConfig } from './lib/config';
+
+export default defineSolitudeConfig({
+  theme: {
+    comment: { use: 'valine', lazyload: true },
+    valine: { appId: 'YOUR_APP_ID', appKey: 'YOUR_CLIENT_KEY',
+      serverURLs: 'https://comments.example.com', visitor: false },
+  },
+});
+```
+
+Post `comment` defaults to true; set it to false to disable comments on one post. Special layouts such as About, music, and archives omit the widget.
+
+Test theme changes, direct access, and repeated navigation. See the [Valine documentation](https://valine.js.org/) for server setup.
+
+## Related guides
+
+[Message board](/docs/astro/features/message) · [Recent comments](/docs/astro/features/recent-comments)

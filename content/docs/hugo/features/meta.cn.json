@@ -1,6 +1,5 @@
 {
   "title": "特色页面",
-  "icon": "PanelsTopLeft",
   "pages": [
     "about",
     "links",
@@ -10,5 +9,6 @@
     "brevity",
     "recent-comments",
     "gallery"
-  ]
+  ],
+  "icon": "PanelsTopLeft"
 }

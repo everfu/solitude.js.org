@@ -1,0 +1,33 @@
+---
+title: "侧栏与页脚"
+description: "分别设置首页、文章和页面侧栏。"
+---
+
+将示例中的字段合并到现有 `src/site.config.ts`，保留自己的内容。
+
+```ts
+// src/site.config.ts
+import { defineSolitudeConfig } from './lib/config';
+
+export default defineSolitudeConfig({
+  theme: {
+    aside: {
+      home: { noSticky: 'about', Sticky: 'allInfo' },
+      post: { noSticky: 'about', Sticky: 'newestPost,allInfo' },
+      page: { noSticky: 'about', Sticky: 'newestPost,allInfo' },
+      my_card: {
+        author: { img: '/img/logo.png' },
+        description: 'Notes from everyday life.',
+        content: 'Welcome to my blog.',
+      },
+    },
+    footer: { information: { right: [{ name: 'RSS', url: '/index.xml' }] } },
+  },
+});
+```
+
+`noSticky` 与大小写敏感的 `Sticky` 是逗号分隔的模块名，可用 `about`、`newestPost`、`newest_comment`、`allInfo`。最近评论需要额外配置服务。部分特色页面布局不显示侧栏。
+
+## 相关文档
+
+[配置参考](/cn/docs/astro/reference/configuration) · [内容字段](/cn/docs/astro/content-writing/front-matter)

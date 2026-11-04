@@ -1,0 +1,9 @@
+{
+  "title": "Search",
+  "pages": [
+    "local-search",
+    "algolia",
+    "docsearch"
+  ],
+  "icon": "Search"
+}

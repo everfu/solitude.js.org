@@ -1,0 +1,22 @@
+---
+title: "Content reference"
+description: "Find content syntax and providers for this edition."
+---
+
+Use Hugo shortcodes, not Hexo tags or Astro JSX. The theme provides these 41 shortcodes:
+
+`audio`, `bubble`, `button`, `bvideo`, `card`, `chartjs`, `checkbox`, `flink`, `fold`, `gallery`, `galleryGroup`, `galleryItem`, `gitea`, `gitee`, `github`, `gitlab`, `hideBlock`, `hideInline`, `hideToggle`, `img`, `inlineImg`, `keyboard`, `label`, `link`, `mermaid`, `note`, `p`, `radio`, `score`, `series`, `span`, `spoiler`, `subnote`, `tab`, `tabs`, `timeline`, `timenode`, `typeit`, `video`, `videos`, `youtube`
+
+```html
+{{< note type="info" >}}
+A note with **Markdown**.
+{{< /note >}}
+
+{{< button url="https://example.com" text="Visit" >}}
+```
+
+Close block tags in pairs. Names and parameters are case-sensitive. See the [buildable showcase](https://github.com/everfu/hugo-solitude/blob/main/exampleSite/content/posts/shortcodes.md) and [templates](https://github.com/everfu/hugo-solitude/tree/main/layouts/_shortcodes) for complete parameters and defaults.
+
+## Related guides
+
+[Shortcodes](/docs/hugo/content-writing/shortcodes)

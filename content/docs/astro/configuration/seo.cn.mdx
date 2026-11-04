@@ -1,0 +1,25 @@
+---
+title: "SEO 与订阅"
+description: "配置站点地址，生成规范链接与订阅输出。"
+---
+
+将示例中的字段合并到现有 `src/site.config.ts`，保留自己的内容。
+
+```ts
+// src/site.config.ts
+import { defineSolitudeConfig } from './lib/config';
+
+export default defineSolitudeConfig({
+  site: 'https://example.com',
+  base: '/blog/',
+  title: 'My blog',
+  description: 'Notes and stories.',
+  author: { name: 'Your name' },
+});
+```
+
+文章使用 `title`、`description` 与 `cover`。主题生成 `/index.xml`、分类订阅、`/sitemap.xml`、`/robots.txt` 和 `/search.xml`。发布前检查地址与子目录前缀；PWA 配置只生成 manifest，不提供离线缓存。
+
+## 相关文档
+
+[配置参考](/cn/docs/astro/reference/configuration) · [内容字段](/cn/docs/astro/content-writing/front-matter)

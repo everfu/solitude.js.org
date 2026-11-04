@@ -1,0 +1,74 @@
+---
+title: "文本与提示"
+description: "组件参数与可复制示例。"
+---
+
+在 `.mdx` 文章或页面中直接使用，主题自动注入组件。布尔值写成 `{true}` / `{false}`，对象使用 JSX 表达式。复杂 Markdown 与组件标签之间留空行。
+
+## Note
+
+提示块的 `type` 支持 `info`、`success`、`warning`、`danger`；`style` 默认 `flat`。
+
+```mdx
+<Note type="info">A callout with **Markdown** support.</Note>
+```
+
+## Subnote
+
+补充提示的 `type`、`style` 与 `Note` 一致。
+
+```mdx
+<Subnote type="success">An additional note.</Subnote>
+```
+
+## Bubble
+
+显示提示，`notation` 是说明，`color` 选择样式，子内容为触发文字。
+
+```mdx
+<Bubble notation="A little more context">Hover for a note</Bubble>
+```
+
+## Label
+
+使用子内容或 `text` 显示标签，`color` 选择样式。
+
+```mdx
+<Label color="green">Complete</Label>
+```
+
+## Text
+
+`color` 选择行内文字样式，子内容为文字。
+
+```mdx
+<Text color="red">Something worth highlighting.</Text>
+```
+
+## Paragraph
+
+`color` 选择段落样式，子内容为文字。
+
+```mdx
+<Paragraph color="blue">A paragraph with a splash of color.</Paragraph>
+```
+
+## Keyboard
+
+使用子内容或 `text` 标注按键组合。
+
+```mdx
+<Keyboard>⌘ K</Keyboard>
+```
+
+## Spoiler
+
+悬停或聚焦时显示剧透内容，`style` 默认 `block`。隐藏组件只改变显示，不保护隐私。
+
+```mdx
+<Spoiler>A little spoiler</Spoiler>
+```
+
+## 相关文档
+
+[组件索引](/cn/docs/astro/reference/components)
