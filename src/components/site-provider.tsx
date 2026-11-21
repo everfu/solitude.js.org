@@ -1,11 +1,19 @@
 'use client';
 
 import type { ReactNode } from 'react';
-import { usePathname, useRouter } from 'next/navigation';
-import { RootProvider } from 'fumadocs-ui/provider/next';
+import { useParams, usePathname, useRouter } from 'next/navigation';
+import Image from 'next/image';
+import Link from 'next/link';
+import { FrameworkProvider, type Framework } from 'fumadocs-core/framework';
+import { RootProvider } from 'fumadocs-ui/provider/base';
 import { getI18nProvider } from '@/lib/i18n';
 import { defaultDocsVersion, isDocsVersion } from '@/lib/shared';
 import { i18n, localeCookieMaxAge, localeCookieName } from '../../i18n';
+
+// English pages are prerendered under /en, while the public page tree omits it.
+function usePublicPathname() {
+  return usePathname().replace(/^\/en(?=\/|$)/, '') || '/';
+}
 
 function getLocalizedPath(locale: string) {
   const url = new URL(window.location.href);
@@ -25,7 +33,7 @@ function getLocalizedPath(locale: string) {
 
 export function SiteProvider({ lang, children }: { lang: string; children: ReactNode }) {
   const router = useRouter();
-  const pathname = usePathname();
+  const pathname = usePublicPathname();
   const versionSegment = pathname.split('/').find((segment, index, segments) => (
     segments[index - 1] === 'docs' && isDocsVersion(segment)
   ));
@@ -41,17 +49,25 @@ export function SiteProvider({ lang, children }: { lang: string; children: React
   }
 
   return (
-    <RootProvider
-      key={`${lang}-${docsVersion}`}
-      i18n={{ ...getI18nProvider(lang), onLocaleChange: changeLocale }}
-      search={{
-        options: {
-          defaultTag: docsVersion,
-        },
-      }}
-      theme={{ enabled: false }}
+    <FrameworkProvider
+      usePathname={usePublicPathname}
+      useParams={useParams}
+      useRouter={useRouter}
+      Link={Link as Framework['Link']}
+      Image={Image as Framework['Image']}
     >
-      {children}
-    </RootProvider>
+      <RootProvider
+        key={`${lang}-${docsVersion}`}
+        i18n={{ ...getI18nProvider(lang), onLocaleChange: changeLocale }}
+        search={{
+          options: {
+            defaultTag: docsVersion,
+          },
+        }}
+        theme={{ enabled: false }}
+      >
+        {children}
+      </RootProvider>
+    </FrameworkProvider>
   );
 }

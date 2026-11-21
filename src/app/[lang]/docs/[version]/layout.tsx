@@ -1,3 +1,5 @@
+import './reading.css';
+import { MessageCircle } from 'lucide-react';
 import { notFound } from 'next/navigation';
 import { source } from '@/lib/source';
 import { DocsLayout } from 'fumadocs-ui/layouts/docs';
@@ -38,6 +40,7 @@ export default async function Layout({
   return (
     <DocsLayout
       {...base}
+      containerProps={{ className: 'solitude-docs' }}
       links={linkItems(lang, version).filter((item) => item.type === 'icon')}
       nav={{
         ...base.nav,
@@ -55,8 +58,9 @@ export default async function Layout({
         <AISearchPanel />
         <AISearchTrigger
           position="float"
-          className="rounded-full bg-fd-primary px-4 py-2 text-sm font-medium text-fd-primary-foreground hover:bg-fd-primary/90"
+          className="docs-ai-trigger inline-flex items-center justify-center gap-1.5 rounded-full bg-fd-primary px-4 py-2 text-sm font-medium text-fd-primary-foreground hover:bg-fd-primary/90"
         >
+          <MessageCircle aria-hidden size={14} />
           {lang === 'cn' ? '问 AI' : 'Ask AI'}
         </AISearchTrigger>
         {children}

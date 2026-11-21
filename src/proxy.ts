@@ -76,6 +76,6 @@ export async function proxy(request: NextRequest, event: NextFetchEvent) {
 
 export const config = {
   matcher: [
-    '/((?!api|_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml|llms.txt|llms-full.txt|llms.mdx|og|logo.svg|logo-dark.svg|ProjectIcon|base-useage|showcase).*)',
+    '/((?!api|_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml|llms.txt|llms-full.txt|llms.mdx|og|logo.svg|logo-dark.svg|ProjectIcon|base-useage|showcase|ads/).*)',
   ],
 };

@@ -101,14 +101,14 @@ export function createSiteMetadata(): Metadata {
 
 export function createHomeMetadata(locale: Locale | string): Metadata {
   const isCn = locale === 'cn';
-  const title = isCn ? `${themeName} 文档` : `${themeName} Documentation`;
+  const title = isCn ? `${themeName} 开源博客主题` : `${themeName} — Open-source blog theme`;
   const description = isCn
-    ? 'Solitude 的 Astro、Hugo 与 Hexo 文档：安装、配置、写作、页面、部署与服务集成。'
-    : 'Solitude documentation for Astro, Hugo, and Hexo: installation, configuration, writing, pages, deployment, and integrations.';
+    ? '用 Solitude 写文章、整理相册、收藏朋友的博客。探索 Astro、Hugo 和 Hexo 版本及主题实景。'
+    : 'Explore Solitude, an open-source personal blog theme for Astro, Hugo, and Hexo. Publish stories, curate photo galleries, and share your favorite blogs.';
   const canonical = toAbsoluteUrl(withLocalePath(locale, '/'));
 
   return {
-    title,
+    title: { absolute: title },
     description,
     alternates: {
       canonical,

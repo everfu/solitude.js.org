@@ -27,7 +27,7 @@ export const ads: AdItem[] = [
   // },
   {
     link: 'https://www.aliyun.com/minisite/goods?userCode=yltowy3u',
-    image: 'https://img.alicdn.com/imgextra/i1/O1CN01JOLCyL1MysL7GoLbX_!!6000000001504-2-tps-638-244.png',
+    image: '/ads/cloud.webp',
     icon: 'cloud',
     eyebrow: '云服务精选',
     title: '云小站官方上云',
@@ -37,7 +37,7 @@ export const ads: AdItem[] = [
   },
   {
     link: 'https://www.aliyun.com/minisite/goods?userCode=yltowy3u',
-    image: 'https://img.alicdn.com/imgextra/i2/O1CN01f9BFze20Gz0qCaUQS_!!6000000006823-2-tps-638-244.png',
+    image: '/ads/ai.webp',
     icon: 'cloud',
     eyebrow: 'AI 长效权益',
     title: '云聚AI 长效权益',
@@ -47,7 +47,7 @@ export const ads: AdItem[] = [
   },
   {
     link: 'https://www.aliyun.com/minisite/goods?userCode=yltowy3u',
-    image: 'https://img.alicdn.com/imgextra/i2/O1CN01CBxUho1TOslO8XL1j_!!6000000002373-2-tps-638-244.png',
+    image: '/ads/deployment.webp',
     icon: 'cloud',
     eyebrow: '快速部署',
     title: '分钟级部署OpenClaw',
